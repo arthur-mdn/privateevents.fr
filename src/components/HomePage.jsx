@@ -23,7 +23,7 @@ function HomePage() {
           <section className="hero__inner section section--hero" aria-labelledby="hero-title">
             <div className="hero__copy">
               <p className="eyebrow">
-                DJ &amp; karaoké — Vaucluse, Avignon, Carpentras, Orange, Var &amp; Provence
+                DJ &amp; karaoké - Vaucluse, Avignon, Carpentras, Orange, Var &amp; Provence
               </p>
               <h1 id="hero-title" className="heading-hero">
                 Donnez vie à vos soirées avec DJ Mika
@@ -39,7 +39,7 @@ function HomePage() {
                 <p>
                   Que votre événement se tienne près d&apos;<strong>Avignon</strong>, de <strong>Carpentras</strong>,
                   d&apos;<strong>Orange</strong> ou sur la côte varoise, la prestation s&apos;adapte au lieu, au nombre
-                  d&apos;invités et au ton que vous souhaitez donner à la soirée — du cocktail au dernier titre.
+                  d&apos;invités et au ton que vous souhaitez donner à la soirée. Du cocktail au dernier titre.
                 </p>
               </div>
               <div className="hero__actions">
@@ -72,7 +72,7 @@ function HomePage() {
             </p>
             <p>
               Le <strong>matériel de sonorisation</strong> et les réglages sont dimensionnés selon la surface et le
-              public — objectif clarté du son, dynamique maîtrisée et volume adapté. Pour le <strong>karaoké</strong>,
+              public. Objectif clarté du son, dynamique maîtrisée et volume adapté. Pour le <strong>karaoké</strong>,
               le catalogue et l&apos;animation sont pensés pour inclure tout le monde tout en gardant le rythme de la
               fête.
             </p>
@@ -111,7 +111,7 @@ function HomePage() {
           >
             <p>
               Des classiques intemporels aux hits actuels : le programme s&apos;ajuste à vos goûts et à ceux de vos
-              invités pour une ambiance homogène tout au long de l&apos;événement — sans rupture de ton ni temps morts.
+              invités pour une ambiance homogène tout au long de l&apos;événement. Sans rupture de ton ni temps morts.
             </p>
           </FeatureSplit>
 
@@ -146,7 +146,7 @@ function HomePage() {
           >
             <p>
               Mariages, anniversaires, soirées d&apos;entreprise, team building ou séminaire : la formule est ajustée
-              au format de votre événement — du discours en micro à la piste de danse, en passant par les créneaux
+              au format de votre événement. Du discours en micro à la piste de danse, en passant par les créneaux
               karaoké si vous le souhaitez.
             </p>
           </FeatureSplit>

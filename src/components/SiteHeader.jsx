@@ -5,7 +5,7 @@ export function SiteHeader() {
         <a className="site-header__brand" href="https://privateevents.fr/">
           <img
             src="/elements/logo.png"
-            alt="Private Events — DJ Mika"
+            alt="Private Events - DJ Mika"
             width={140}
             height={56}
             decoding="async"

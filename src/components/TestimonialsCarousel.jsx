@@ -4,10 +4,6 @@ import { testimonials } from '../content/testimonials.js';
 
 const AUTO_INTERVAL_MS = 8000;
 
-/**
- * @param {object} props
- * @param {number} props.value Note entière entre 1 et 5.
- */
 function StarRating({ value }) {
   const n = Number(value);
   const rounded = Math.min(5, Math.max(1, Number.isFinite(n) ? Math.round(n) : 5));
@@ -38,10 +34,12 @@ export function TestimonialsCarousel() {
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [carouselInView, setCarouselInView] = useState(false);
   const labelId = useId();
   const introId = `${labelId}-intro`;
   const viewportRef = useRef(null);
   const slideRefs = useRef([]);
+  const carouselRegionRef = useRef(null);
 
   const syncViewportHeight = useCallback(() => {
     const viewport = viewportRef.current;
@@ -79,6 +77,19 @@ export function TestimonialsCarousel() {
     return () => mq.removeEventListener('change', update);
   }, []);
 
+  useEffect(() => {
+    const el = carouselRegionRef.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        setCarouselInView(Boolean(entry?.isIntersecting));
+      },
+      { threshold: 0.2, rootMargin: '0px' },
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
   const go = useCallback(
     (delta) => {
       setIndex((i) => (i + delta + count) % count);
@@ -87,10 +98,10 @@ export function TestimonialsCarousel() {
   );
 
   useEffect(() => {
-    if (reduceMotion || paused || count <= 1) return;
+    if (reduceMotion || paused || count <= 1 || !carouselInView) return;
     const timer = window.setInterval(() => go(1), AUTO_INTERVAL_MS);
     return () => window.clearInterval(timer);
-  }, [go, paused, reduceMotion, count]);
+  }, [go, paused, reduceMotion, count, carouselInView]);
 
   const onKeyDown = (e) => {
     if (e.key === 'ArrowLeft') {
@@ -116,6 +127,7 @@ export function TestimonialsCarousel() {
         </header>
 
         <div
+          ref={carouselRegionRef}
           className="testimonial-carousel"
           role="region"
           aria-roledescription="carrousel"
