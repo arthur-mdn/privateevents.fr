@@ -1,16 +1,28 @@
 //components/HeroSection.jsx
-import {FaEnvelope, FaPhone} from "react-icons/fa6";
+import {FaEnvelope, FaMessage, FaPhone} from "react-icons/fa6";
+import ContactForm from "./ContactForm.jsx";
+import {useState} from "react";
 
 const playList = [
     {
+        name: 'Mix Live - Rap Francais 2024',
+        description: 'Un mix de 30 minutes réalisé en live, rap francais 2024. En téléchargement libre.',
+        writer: 'DJ Mika - Private Events',
+        img: '/elements/covers/private-events-mix-rap-2024.png',
+        src: '/recordings/Mix_Rap_Francais_2024_DJ-MIKA_Private-Events.wav',
+        id: 2,
+    },
+    {
         name: 'Mix généraliste de 1970 à aujourd\'hui',
-        description: 'Vous trouverez un mix généraliste en téléchargement libre avec des titres des années 1970 à nos jours.',
+        description: 'Vous trouverez un mix généraliste réalisé en live, en téléchargement libre avec des titres des années 1970 à nos jours.',
         writer: 'DJ Mika - Private Events',
         img: '/elements/covers/mix-1970-2024.png',
-        src: '/recordings/DJ-MIKA_private-events_2024-03-01-10.mp3',
+        src: '/recordings/Mix_Generaliste_DJ-MIKA_Private-Events_2024.mp3',
         id: 1,
-    },
+    }
 ]
+
+
 
 function Player (){
     return (
@@ -36,6 +48,8 @@ function Player (){
 }
 
 function HeroSection() {
+    const [selectedSubject, setSelectedSubject] = useState('prise de contact');
+
     return (
         <>
             <div style={{width: "100%", padding: 0, position: "fixed", backgroundColor: "#191100ba"}}>
@@ -45,7 +59,7 @@ function HeroSection() {
                     <div className={"fr ai-c links"}
                          style={{padding: "1rem 2rem", borderRadius: '1rem', gap: '1rem', color: "white"}}>
                         <a href={"#repertoire"}>Répertoire</a>
-                        <a href={"#contact"}>Contact</a>
+                        <a href={"#contact"} >Contact</a>
                     </div>
                 </navbar>
             </div>
@@ -66,14 +80,17 @@ function HeroSection() {
 
                         </div>
                         <div className={"fr g1"}>
-                            <a className={"button fr g0-5 ai-c"} href="mailto:contact@privateevents.fr"><FaEnvelope/>Email</a>
-                            <a className={"button fr g0-5 ai-c"} href="callto:0782737661"><FaPhone/>Téléphone</a>
-                        </div>
-                        <div className={"tags"}>
-                            <p>Ambiance musicale</p>
-                            <p>Karaoké</p>
-                        </div>
+                            <a className={"button fr g0-5 ai-c"} href={"#contact"} onClick={() => {
+                                setTimeout(() => {
+                                    setSelectedSubject("prise de contact")
+                                }, 50)
+                            }}><FaMessage/>Contact</a>
                     </div>
+                    <div className={"tags"}>
+                        <p>Ambiance musicale</p>
+                        <p>Karaoké</p>
+                    </div>
+            </div>
 
                 </section>
             </div>
@@ -94,17 +111,23 @@ function HeroSection() {
             <section id={"repertoire"}>
                 <div className={"fc g1"}>
                     <h2 className="text-gradient">Répertoire</h2>
-                    <p> Merci pour votre écoute et pour vos commentaires. N’hésitez à proposer des listes de 10 à 15 titres pour que je vous propose des sets sur mesures gratuitement. Bonne écoute. </p>
+                    <p> Merci pour votre écoute et pour vos commentaires. N’hésitez à proposer des listes de 10 à 15
+                        titres pour que je vous propose des sets sur mesures gratuitement. Bonne écoute. </p>
                     <div className={"fc g1"}>
                         {/* Audio player file /elements/records/2024-12.mp3 */}
                         <Player/>
+                    </div>
+                    <div className={"fc ai-c"}>
+                        <a href="#contact" className={"button"}
+                           onClick={() => setSelectedSubject("demander set sur mesure gratuit")}>Demander un set sur
+                            mesure gratuit</a>
                     </div>
                 </div>
             </section>
 
             <section>
                 <div className={"fr ai-c herosection"}>
-                    <img src={"/elements/photos/dj-experience.jpeg"} alt={"dj"}/>
+                    <img src={"/elements/photos/dj-experience.png"} alt={"dj"}/>
                     <div>
                         <h2 className="text-gradient">Un répertoire musical varié pour tous les goûts</h2>
                         <p>Notre répertoire s'étend des grands classiques qui traversent les époques aux dernières
@@ -132,7 +155,7 @@ function HeroSection() {
 
             <section>
                 <div className={"fr ai-c herosection"}>
-                    <img src={"/elements/photos/dj-setup.jpeg"} alt={"dj"}/>
+                    <img src={"/elements/photos/dj-setup.png"} alt={"dj"}/>
                     <div>
                         <h2 className="text-gradient">Un équipement de qualité</h2>
                         <p>La qualité de votre expérience est notre priorité. C'est pourquoi DJ Mika utilise
@@ -154,7 +177,7 @@ function HeroSection() {
                             qui marque les esprits.
                         </p>
                     </div>
-                    <img src={"/elements/photos/dj-soiree.jpeg"} alt={"dj"}/>
+                    <img src={"/elements/photos/dj-soiree.png"} alt={"dj"}/>
                 </div>
             </section>
 
@@ -189,19 +212,19 @@ function HeroSection() {
 
             <section id={"contact"}>
                 <div className={"fc g1"}>
-                    <h2 className="text-gradient">Contact</h2>
-                    <div className={"fr g1"}>
-                        <a className={"button fr g0-5 ai-c"}
-                           href="mailto:contact@privateevents.fr"><FaEnvelope/>Email</a>
-                        <a className={"button fr g0-5 ai-c"} href="callto:0782737661"><FaPhone/>Téléphone</a>
-                    </div>
+                    <ContactForm subject={selectedSubject} onSubjectChange={setSelectedSubject} />
+                </div>
+                <br/>
+                <div className={"fr g1 fw-w"}>
+                    <a className={"button fr g0-5 ai-c"} href="mailto:contact@privateevents.fr"><FaEnvelope/>contact@privateevents.fr</a>
+                    <a className={"button fr g0-5 ai-c"} href="callto:0782737661"><FaPhone/>0782737661</a>
                 </div>
             </section>
 
-            <section id={"contact"}>
+            <section>
                 <div className={"fc g1"}>
-                    <div className={"fr"} style={{gap:'0.3rem',fontSize:'1rem', opacity:0.8}}>
-                        Site réalisé par <a style={{color: "#C7B28F", textDecoration:'underline'}} href={"https://mondon.pro"}>Arthur Mondon</a>
+                    <div className={"fr"} style={{gap: '0.3rem', fontSize: '1rem', opacity: 0.8}}>
+                    Site réalisé par <a style={{color: "#C7B28F", textDecoration:'underline'}} href={"https://mondon.pro"}>Arthur Mondon</a>
                     </div>
                 </div>
             </section>
