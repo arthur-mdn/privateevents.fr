@@ -4,6 +4,7 @@ import { SiteHeader } from './SiteHeader.jsx';
 import { SiteFooter } from './SiteFooter.jsx';
 import { FeatureSplit } from './FeatureSplit.jsx';
 import { AudioShowcase } from './AudioShowcase.jsx';
+import TestimonialsCarousel from './TestimonialsCarousel.jsx';
 import ContactForm from './ContactForm.jsx';
 
 function HomePage() {
@@ -21,17 +22,24 @@ function HomePage() {
           <div className="hero__overlay" aria-hidden />
           <section className="hero__inner section section--hero" aria-labelledby="hero-title">
             <div className="hero__copy">
-              <p className="eyebrow">Événements privés &amp; soirées corporate</p>
+              <p className="eyebrow">
+                DJ &amp; karaoké — Vaucluse, Avignon, Carpentras, Orange, Var &amp; Provence
+              </p>
               <h1 id="hero-title" className="heading-hero">
                 Donnez vie à vos soirées avec DJ Mika
               </h1>
               <div className="prose">
                 <p>
-                  Besoin d&apos;une ambiance musicale et de karaoké pour vos événements privés ou vos soirées
-                  d&apos;entreprise ? DJ Mika conçoit une expérience mémorable, adaptée à votre public.
+                  <strong>Private Events</strong> propose une <strong>animation musicale professionnelle</strong> pour vos{' '}
+                  <strong>mariages</strong>, <strong>anniversaires</strong>, soirées privées et{' '}
+                  <strong>événements corporate</strong> dans le <strong>Vaucluse</strong> et partout en{' '}
+                  <strong>Provence</strong>. Ambiance sur mesure, <strong>karaoké</strong> sur demande, et une écoute
+                  attentive de vos goûts musicaux.
                 </p>
                 <p>
-                  Prestations sur mesure, répertoire varié et matériel professionnel pour sublimer chaque moment.
+                  Que votre événement se tienne près d&apos;<strong>Avignon</strong>, de <strong>Carpentras</strong>,
+                  d&apos;<strong>Orange</strong> ou sur la côte varoise, la prestation s&apos;adapte au lieu, au nombre
+                  d&apos;invités et au ton que vous souhaitez donner à la soirée — du cocktail au dernier titre.
                 </p>
               </div>
               <div className="hero__actions">
@@ -41,33 +49,47 @@ function HomePage() {
                   onClick={() => goContact('prise de contact')}
                 >
                   <FaMessage aria-hidden />
-                  Nous contacter
+                  Demander un devis
                 </a>
               </div>
               <ul className="tag-list" aria-label="Prestations">
-                <li>Ambiance musicale</li>
+                <li>Animation DJ</li>
                 <li>Karaoké</li>
-                <li>Provence &amp; au-delà</li>
+                <li>Soirées corporate</li>
               </ul>
             </div>
           </section>
         </div>
 
-        <section className="section section--tight">
-          <h2 className="heading-section">Une expérience musicale soignée</h2>
+        <section className="section section--tight" id="presentation">
+          <h2 className="heading-section">Une expérience musicale pensée pour votre événement</h2>
           <div className="prose prose--measure">
             <p>
-              Fort de plusieurs années d&apos;expérience dans l&apos;animation musicale, DJ Mika sait captiver son
-              public. Expertise, équipement de qualité et écoute de vos envies : la soirée prend la tonalité que vous
-              souhaitez, du début à la fin.
+              Chaque prestation commence par un échange sur vos attentes : styles musicaux, moments forts de la soirée
+              (entrée des mariés, discours, ouverture de bal), contraintes du lieu et ambiance souhaitée. Cette
+              préparation permet une <strong>programmation cohérente</strong> et des transitions fluides, pour que vous
+              puissiez vous concentrer sur vos invités.
+            </p>
+            <p>
+              Le <strong>matériel de sonorisation</strong> et les réglages sont dimensionnés selon la surface et le
+              public — objectif clarté du son, dynamique maîtrisée et volume adapté. Pour le <strong>karaoké</strong>,
+              le catalogue et l&apos;animation sont pensés pour inclure tout le monde tout en gardant le rythme de la
+              fête.
+            </p>
+            <h3 className="heading-sub">Pour qui ?</h3>
+            <p>
+              Mariages au cœur du <strong>Luberon</strong> ou en plein centre d&apos;<strong>Avignon</strong>, soirées
+              de fin d&apos;année en entreprise, lancements et anniversaires : la même exigence de qualité et de
+              réactivité, qu&apos;il s&apos;agisse d&apos;une petite réception ou d&apos;un grand événement.
             </p>
           </div>
         </section>
 
         <section id="repertoire" className="section">
-          <h2 className="heading-section">Répertoire</h2>
+          <h2 className="heading-section">Répertoire &amp; écoutes</h2>
           <p className="lead">
-            Merci pour votre écoute. Proposez une liste de 10 à 15 titres&nbsp;: un set personnalisé vous est offert.
+            Écoutez des extraits de mixes en libre accès. Envoyez une liste de 10 à 15 titres pour recevoir une
+            proposition de <strong>set personnalisé gratuitement</strong>.
           </p>
           <AudioShowcase />
           <div className="section__cta">
@@ -88,8 +110,8 @@ function HomePage() {
             imageAlt="DJ en prestation, équipement et ambiance festive"
           >
             <p>
-              Des classiques intemporels aux hits actuels&nbsp;: le programme s&apos;ajuste à vos goûts et à ceux de vos
-              invités pour une ambiance parfaite tout au long de l&apos;événement.
+              Des classiques intemporels aux hits actuels : le programme s&apos;ajuste à vos goûts et à ceux de vos
+              invités pour une ambiance homogène tout au long de l&apos;événement — sans rupture de ton ni temps morts.
             </p>
           </FeatureSplit>
 
@@ -100,8 +122,8 @@ function HomePage() {
             reverse
           >
             <p>
-              Un large choix de titres et un matériel pro pour que chacun vive son moment sous les projecteurs — la
-              convivialité au centre de la soirée.
+              Un large choix de titres et du matériel adapté pour que chacun profite du moment : la prestation
+              privilégie la convivialité tout en conservant une animation fluide pour l&apos;ensemble de la soirée.
             </p>
           </FeatureSplit>
 
@@ -111,8 +133,8 @@ function HomePage() {
             imageAlt="Installation son et lumières professionnelle"
           >
             <p>
-              Son clair, lumières soignées&nbsp;: chaque détail technique est pensé pour la qualité perçue par vos
-              invités.
+              Son clair, installations propres et, selon la formule, effets lumineux pour renforcer l&apos;atmosphère.
+              Chaque détail technique est pensé pour la qualité perçue par vos invités et le respect du lieu.
             </p>
           </FeatureSplit>
 
@@ -123,8 +145,9 @@ function HomePage() {
             reverse
           >
             <p>
-              Mariages, anniversaires, soirées d&apos;entreprise&nbsp;: une prestation professionnelle et un suivi
-              personnalisé de votre premier échange jusqu&apos;au dernier morceau.
+              Mariages, anniversaires, soirées d&apos;entreprise, team building ou séminaire : la formule est ajustée
+              au format de votre événement — du discours en micro à la piste de danse, en passant par les créneaux
+              karaoké si vous le souhaitez.
             </p>
           </FeatureSplit>
 
@@ -134,33 +157,61 @@ function HomePage() {
             imageAlt="Prestation DJ en région Provence"
           >
             <p>
-              Basé en Vaucluse, DJ Mika se déplace dans le Var et les départements voisins — d&apos;Avignon aux
-              événements en bord de mer ou au cœur du Luberon.
+              Basé dans le <strong>Vaucluse</strong>, les déplacements s&apos;organisent dans le <strong>Var</strong>,
+              les <strong>Bouches-du-Rhône</strong> et les départements voisins selon disponibilités. N&apos;hésitez pas
+              à préciser votre commune (par ex. <strong>Carpentras</strong>, <strong>Orange</strong>, bord de mer ou
+              village du Luberon) lors de votre demande.
             </p>
           </FeatureSplit>
         </div>
 
-        <aside className="testimonial" aria-labelledby="testimonial-title">
-          <div className="testimonial__inner section">
-            <h2 id="testimonial-title" className="visually-hidden">
-              Témoignage client
-            </h2>
-            <blockquote className="testimonial__quote" cite="https://privateevents.fr">
-              <p>
-                «&nbsp;Ravi d&apos;avoir choisi DJ Mika pour animer ma soirée. Il a su créer une ambiance qui a rendu
-                l&apos;événement inoubliable.&nbsp;»
-              </p>
-            </blockquote>
-            <p className="testimonial__date">
-              <time dateTime="2023-12-06">6 décembre 2023</time>
-            </p>
-          </div>
-        </aside>
+        <TestimonialsCarousel />
+
+        <section id="faq" className="section section--faq">
+          <h2 className="heading-section">Questions fréquentes</h2>
+          <p className="lead">
+            Informations utiles avant de demander un <strong>devis DJ</strong> ou une date pour votre soirée.
+          </p>
+          <dl className="faq-list">
+            <div className="faq-item">
+              <dt>Dans quelles zones intervenez-vous ?</dt>
+              <dd>
+                Principalement le <strong>Vaucluse</strong> et la région d&apos;<strong>Avignon</strong>,{' '}
+                <strong>Carpentras</strong>, <strong>Orange</strong>, ainsi que le <strong>Var</strong> et d&apos;autres
+                déplacements en <strong>Provence-Alpes-Côte d&apos;Azur</strong> sur accord préalable selon la date.
+              </dd>
+            </div>
+            <div className="faq-item">
+              <dt>Le matériel son et lumière est-il inclus ?</dt>
+              <dd>
+                Oui : l&apos;offre inclut l&apos;équipement adapté au lieu et au nombre d&apos;invités (sonorisation,
+                micros pour discours ou karaoké, mise en lumière selon la formule). Le détail figure dans le devis après
+                qualification de votre projet.
+              </dd>
+            </div>
+            <div className="faq-item">
+              <dt>Comment obtenir un devis pour un mariage ou une soirée d&apos;entreprise ?</dt>
+              <dd>
+                Utilisez le <a href="#contact">formulaire de contact</a> ou appelez le{' '}
+                <a href="tel:+33782737661">07&nbsp;82&nbsp;73&nbsp;76&nbsp;61</a> en indiquant la date, le lieu et le
+                type d&apos;événement. Réponse dans les meilleurs délais avec une proposition personnalisée.
+              </dd>
+            </div>
+            <div className="faq-item">
+              <dt>Peut-on mélanger DJ et karaoké sur la même soirée ?</dt>
+              <dd>
+                Oui, c&apos;est une combinaison fréquente : des créneaux karaoké peuvent s&apos;intégrer dans la
+                programmation DJ pour varier les moments forts sans casser l&apos;ambiance générale.
+              </dd>
+            </div>
+          </dl>
+        </section>
 
         <section id="contact" className="section section--contact">
-          <h2 className="heading-section">Contact</h2>
+          <h2 className="heading-section">Contact &amp; réservations</h2>
           <p className="lead">
-            Devis, disponibilités ou idées de playlist&nbsp;: écrivez-nous ou appelez-nous directement.
+            <strong>Devis gratuit</strong>, disponibilités et idées de playlist : écrivez-nous ou appelez-nous
+            directement.
           </p>
           <ContactForm subject={selectedSubject} onSubjectChange={setSelectedSubject} />
           <ul className="contact-chips" aria-label="Coordonnées">

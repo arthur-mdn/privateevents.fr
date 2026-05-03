@@ -19,6 +19,16 @@ export function SiteHeader() {
               </a>
             </li>
             <li>
+              <a className="site-nav__link" href="#temoignages">
+                Avis
+              </a>
+            </li>
+            <li>
+              <a className="site-nav__link" href="#faq">
+                FAQ
+              </a>
+            </li>
+            <li>
               <a className="site-nav__link" href="#contact">
                 Contact
               </a>
