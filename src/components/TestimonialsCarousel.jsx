@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useId, useState } from 'react';
+import { useCallback, useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaStar, FaRegStar } from 'react-icons/fa6';
 import { testimonials } from '../content/testimonials.js';
 
@@ -40,6 +40,36 @@ export function TestimonialsCarousel() {
   const [reduceMotion, setReduceMotion] = useState(false);
   const labelId = useId();
   const introId = `${labelId}-intro`;
+  const viewportRef = useRef(null);
+  const slideRefs = useRef([]);
+
+  const syncViewportHeight = useCallback(() => {
+    const viewport = viewportRef.current;
+    if (!viewport) return;
+    if (count <= 1) {
+      viewport.style.height = '';
+      return;
+    }
+    const slide = slideRefs.current[index];
+    if (!slide) return;
+    const h = slide.getBoundingClientRect().height;
+    viewport.style.height = `${Math.ceil(h)}px`;
+  }, [count, index]);
+
+  useLayoutEffect(() => {
+    syncViewportHeight();
+    if (count <= 1) return;
+    const slide = slideRefs.current[index];
+    const viewport = viewportRef.current;
+    if (!slide || !viewport) return;
+    const ro = new ResizeObserver(() => syncViewportHeight());
+    ro.observe(slide);
+    window.addEventListener('resize', syncViewportHeight);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', syncViewportHeight);
+    };
+  }, [count, index, syncViewportHeight]);
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -102,15 +132,18 @@ export function TestimonialsCarousel() {
         >
           <div className="testimonial-carousel__surface">
             <p className="testimonial-carousel__eyebrow">Avis client</p>
-            <div className="testimonial-carousel__viewport">
+            <div className="testimonial-carousel__viewport" ref={viewportRef}>
               <div
                 className="testimonial-carousel__track"
                 style={{ transform: `translateX(-${index * 100}%)` }}
                 aria-label={`Témoignage ${index + 1} sur ${count}`}
               >
-                {testimonials.map((t) => (
+                {testimonials.map((t, i) => (
                   <div
                     key={t.id}
+                    ref={(el) => {
+                      slideRefs.current[i] = el;
+                    }}
                     className="testimonial-carousel__slide"
                     role="group"
                     aria-roledescription="diapositive"
@@ -182,12 +215,6 @@ export function TestimonialsCarousel() {
               </div>
             ) : null}
           </div>
-
-          {!reduceMotion && count > 1 ? (
-            <p className="testimonial__hint" aria-hidden>
-              Les avis défilent automatiquement — survolez la zone du carrousel pour mettre en pause.
-            </p>
-          ) : null}
         </div>
       </div>
     </section>
