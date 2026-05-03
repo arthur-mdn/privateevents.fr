@@ -1,11 +1,7 @@
-import HeroSection from "./components/HeroSection.jsx";
-function App() {
+import HomePage from './components/HomePage.jsx';
 
-  return (
-    <>
-        <HeroSection/>
-    </>
-  )
+function App() {
+  return <HomePage />;
 }
 
-export default App
+export default App;
