@@ -5,6 +5,7 @@ import { SiteFooter } from './SiteFooter.jsx';
 import { FeatureSplit } from './FeatureSplit.jsx';
 import { AudioShowcase } from './AudioShowcase.jsx';
 import TestimonialsCarousel from './TestimonialsCarousel.jsx';
+import GallerySection from './GallerySection.jsx';
 import ContactForm from './ContactForm.jsx';
 
 function HomePage() {
@@ -166,6 +167,8 @@ function HomePage() {
         </div>
 
         <TestimonialsCarousel />
+
+        <GallerySection />
 
         <section id="faq" className="section section--faq">
           <h2 className="heading-section">Questions fréquentes</h2>
