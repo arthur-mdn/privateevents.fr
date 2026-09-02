@@ -597,7 +597,7 @@ main {
   justify-content: flex-end;
   background-image: url('/elements/gallery/mariage-dansant-lumieres.jpg');
   background-size: cover;
-  background-position: center top;
+  background-position: center;
 }
 
 .hero__overlay {
