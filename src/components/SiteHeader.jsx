@@ -1,4 +1,12 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+
+const navItems = [
+  { to: '/mariage', label: 'Mariage' },
+  { to: '/prestations', label: 'Prestations' },
+  { to: '/realisations', label: 'Réalisations' },
+  { to: '/avis', label: 'Avis' },
+  { to: '/a-propos', label: 'À propos' },
+];
 
 export function SiteHeader() {
   return (
@@ -12,33 +20,25 @@ export function SiteHeader() {
             height={56}
             decoding="async"
           />
-        </a>
+        </Link>
         <nav className="site-nav" aria-label="Navigation principale">
           <ul className="site-nav__list">
-            <li>
-              <a className="site-nav__link" href="#repertoire">
-                Répertoire
-              </a>
-            </li>
-            <li>
-              <a className="site-nav__link" href="#temoignages">
-                Avis
-              </a>
-            </li>
-            <li>
-              <a className="site-nav__link" href="#galerie">
-                Galerie
-              </a>
-            </li>
-            <li>
-              <a className="site-nav__link" href="#faq">
-                FAQ
-              </a>
-            </li>
-            <li>
-              <a className="site-nav__link" href="#contact">
-                Contact
-              </a>
+            {navItems.map(({ to, label }) => (
+              <li key={to}>
+                <NavLink
+                  className={({ isActive }) =>
+                    `site-nav__link${isActive ? ' is-active' : ''}`
+                  }
+                  to={to}
+                >
+                  {label}
+                </NavLink>
+              </li>
+            ))}
+            <li className="site-nav__cta">
+              <Link className="btn btn--primary btn--header" to="/mon-evenement">
+                Construire mon événement
+              </Link>
             </li>
           </ul>
         </nav>

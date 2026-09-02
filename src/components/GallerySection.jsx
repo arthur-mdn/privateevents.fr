@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { FaChevronLeft, FaChevronRight, FaXmark } from 'react-icons/fa6';
 import { galleryItems } from '../content/gallery.js';
@@ -46,12 +47,11 @@ export function GallerySection() {
   return (
     <section id="galerie" className="section section--gallery" aria-labelledby={titleId}>
       <h2 id={titleId} className="heading-section">
-        Galerie
+        Réalisations
       </h2>
       <p className="lead gallery__lead">
         Quelques instants capturés lors de <strong>mariages</strong>, <strong>soirées privées</strong> et{' '}
-        <strong>événements corporate</strong> en <strong>Provence</strong> : ambiance, matériel et moments partagés
-        avec les invités.
+        <strong>événements corporate</strong> dans le <strong>Sud de la France</strong>.
       </p>
 
       <ul className="gallery-grid" aria-label="Galerie photos des prestations DJ Mika">
@@ -85,6 +85,12 @@ export function GallerySection() {
           </li>
         ))}
       </ul>
+
+      <div className="section__cta">
+        <Link className="btn btn--secondary" to="/realisations">
+          Voir toutes les réalisations
+        </Link>
+      </div>
 
       <dialog
         ref={dialogRef}
