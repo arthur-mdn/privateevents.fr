@@ -1,8 +1,8 @@
 import { PageMeta } from '../components/PageMeta.jsx';
+import { EventLandingContent } from '../components/shared/EventLandingContent.jsx';
 import { SiteFooter } from '../components/SiteFooter.jsx';
 import { SiteHeader } from '../components/SiteHeader.jsx';
-import { MariagePageContent } from '../components/mariage/MariagePageContent.jsx';
-import { mariageFaq } from '../content/mariagePage.js';
+import { mariageFaq, mariageLandingContent } from '../content/mariagePage.js';
 import { buildLandingJsonLd, routeMeta } from '../seo/siteMeta.js';
 
 const mariageJsonLd = buildLandingJsonLd('/mariage', 'Mariage', mariageFaq);
@@ -13,7 +13,7 @@ export function MariagePage() {
       <PageMeta path="/mariage" {...routeMeta['/mariage']} jsonLd={mariageJsonLd} />
       <SiteHeader />
       <main id="contenu-principal">
-        <MariagePageContent />
+        <EventLandingContent content={mariageLandingContent} />
       </main>
       <SiteFooter />
     </>

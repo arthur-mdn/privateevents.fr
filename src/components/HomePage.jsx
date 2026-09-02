@@ -101,10 +101,25 @@ function HomePage() {
           </dl>
         </section>
 
+        <section className="section section--cta-banner" aria-labelledby="home-cta-title">
+          <div className="cta-banner">
+            <h2 id="home-cta-title" className="heading-section">
+              Parlez-nous de votre événement
+            </h2>
+            <p className="lead">
+              Décrivez votre projet en quelques minutes : type d&apos;événement, date, lieu, ambiance et
+              prestations souhaitées. Une réponse personnalisée vous est adressée ensuite.
+            </p>
+            <Link className="btn btn--primary" to="/mon-evenement">
+              Construire mon événement
+            </Link>
+          </div>
+        </section>
+
         <section id="contact" className="section section--contact">
           <h2 className="heading-section">Contact</h2>
           <p className="lead">
-            Disponibilités, idées de playlist ou questions sur votre projet : écrivez-nous ou appelez-nous
+            Disponibilités, idées de playlist ou questions rapides : écrivez-nous ou appelez-nous
             directement.
           </p>
           <ContactForm subject={selectedSubject} onSubjectChange={setSelectedSubject} />
