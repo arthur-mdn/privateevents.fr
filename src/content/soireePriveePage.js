@@ -94,7 +94,7 @@ export const soireePriveeLandingContent = {
         title: 'Soirée en extérieur',
         description: 'Jardin, terrasse ou pool party avec sonorisation et éclairage adaptés.',
         image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-        imageAlt: 'Sonorisation et éclairage pour l’anniversaire de famille L. en extérieur',
+        imageAlt: 'Sonorisation et éclairage pour l’anniversaire de Louis en extérieur',
       },
       {
         title: 'Soirée en salle',
@@ -173,7 +173,7 @@ export const soireePriveeLandingContent = {
     outcome:
       'Ambiance fluide du cocktail à la piste pleine, installation discrète et adaptée au jardin.',
     image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-    imageAlt: 'Sonorisation et éclairage pour l’anniversaire de famille L. à Sorgues',
+    imageAlt: 'Sonorisation et éclairage pour l’anniversaire de Louis à Sorgues',
   },
   gallery: {
     anchorId: 'galerie-soiree-privee',

@@ -174,7 +174,7 @@ const realisationProjectsUnsorted = [
   },
   {
     id: 'anniversaire-sorgues',
-    title: 'Anniversaire de famille L.',
+    title: 'Anniversaire de Louis',
     type: 'Anniversaire',
     location: 'Sorgues, Vaucluse',
     date: '2025-09-19',

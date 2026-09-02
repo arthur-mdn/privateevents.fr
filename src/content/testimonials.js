@@ -32,8 +32,8 @@ const testimonialsUnsorted = [
     id: '2025-09',
     quote:
       'DJ Mika a su s’adapter au lieu et au thème de la fête. Ambiance fluide du cocktail jusqu’au dernier titre.',
-    author: 'Famille L.',
-    context: 'Anniversaire de famille — Sorgues',
+    author: 'Père de Louis',
+    context: 'Anniversaire de Louis — Sorgues',
     dateISO: '2025-09-19',
     rating: 5,
     realisationId: 'anniversaire-sorgues',

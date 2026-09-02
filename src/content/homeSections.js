@@ -35,7 +35,7 @@ export const eventTypes = [
     description: 'Une prestation pensée autour du lieu, du format et de vos envies.',
     href: '/soiree-privee',
     image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-    imageAlt: 'Sonorisation et éclairage pour l’anniversaire de famille L. en extérieur',
+    imageAlt: 'Sonorisation pour l’anniversaire de Louis en extérieur',
   },
   {
     title: 'Entreprise',

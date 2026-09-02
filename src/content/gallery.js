@@ -21,8 +21,8 @@ export const galleryItems = [
   {
     id: 'anniversaire-jeunes-sorgues-2026',
     src: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-    alt: 'Sonorisation et éclairage DJ Mika en extérieur pour l’anniversaire de famille L. à Sorgues',
-    caption: 'Anniversaire famille L. — Sorgues',
+    alt: 'Sonorisation et éclairage DJ Mika en extérieur pour l’anniversaire de Louis à Sorgues',
+    caption: 'Anniversaire Louis — Sorgues',
     orientation: 'landscape',
     width: 1536,
     height: 1152,
