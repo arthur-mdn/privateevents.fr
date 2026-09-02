@@ -91,7 +91,7 @@ function HomePage() {
             <div className="faq-item">
               <dt>Peut-on combiner DJ et prestations complémentaires ?</dt>
               <dd>
-                Oui : karaoké, photobooth, musiciens live ou autres options peuvent s&apos;intégrer dans une
+                Oui : karaoké, photobooth, vidéobooth, musiciens live ou autres options peuvent s&apos;intégrer dans une
                 prestation cohérente, construite avec vous en amont.
               </dd>
             </div>

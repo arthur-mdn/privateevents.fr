@@ -105,7 +105,7 @@ export const routeMeta = {
   '/prestations': {
     title: 'Prestations DJ & animations | Private Events',
     description:
-      'DJ, sonorisation, éclairage, karaoké, photobooth, artistes et prestations complémentaires pour vos événements en Provence.',
+      'DJ, sonorisation, éclairage, karaoké, photobooth, vidéobooth, artistes et prestations complémentaires pour vos événements en Provence.',
   },
   '/realisations': {
     title: 'Réalisations & galeries | Private Events',
@@ -140,15 +140,11 @@ export const routeMeta = {
 };
 
 export const placeholderRoutes = [
-  { path: '/mariage', heading: 'DJ mariage' },
   { path: '/anniversaire', heading: 'DJ anniversaire' },
   { path: '/soiree-privee', heading: 'Soirée privée' },
   { path: '/entreprise', heading: 'Événement entreprise' },
   { path: '/prestations', heading: 'Prestations' },
-  { path: '/realisations', heading: 'Réalisations' },
-  { path: '/avis', heading: 'Avis clients' },
   { path: '/a-propos', heading: 'À propos' },
-  { path: '/mon-evenement', heading: 'Construire mon événement' },
   { path: '/mentions-legales', heading: 'Mentions légales' },
   { path: '/politique-de-confidentialite', heading: 'Politique de confidentialité' },
 ];
