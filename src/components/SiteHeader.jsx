@@ -88,6 +88,14 @@ export function SiteHeader() {
           className={`site-nav${menuOpen ? ' is-open' : ''}`}
           aria-label="Navigation principale"
         >
+          <button
+            type="button"
+            className="site-nav__close"
+            aria-label="Fermer le menu"
+            onClick={closeMenu}
+          >
+            <FaXmark aria-hidden />
+          </button>
           <ul className="site-nav__list">
             {navItems.map(({ to, label }) => (
               <li key={to}>
