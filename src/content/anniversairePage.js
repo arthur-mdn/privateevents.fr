@@ -94,7 +94,7 @@ export const anniversaireLandingContent = {
         title: 'Apéritif & accueil',
         description: 'Ambiance légère et chaleureuse pour accueillir vos invités.',
         image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-        imageAlt: 'Sonorisation et éclairage pour un anniversaire en extérieur',
+        imageAlt: 'Sonorisation et éclairage pour un anniversaire de famille en extérieur',
       },
       {
         title: 'Repas',
@@ -106,7 +106,7 @@ export const anniversaireLandingContent = {
         title: 'Soirée dansante',
         description: 'Programmation sur mesure et jeux de lumières jusqu\'au bout de la nuit.',
         image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
-        imageAlt: 'Ambiance lumineuse lors d\'un anniversaire de 18 ans',
+        imageAlt: 'Ambiance lumineuse et jeux de lumières pour une soirée dansante',
       },
       {
         title: 'Animations',

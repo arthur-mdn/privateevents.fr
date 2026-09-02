@@ -45,7 +45,7 @@ export function GalleryGrid({ items, ariaLabel = 'Galerie photos' }) {
     <>
       <ul className="gallery-grid" aria-label={ariaLabel}>
         {items.map((item) => (
-          <li key={item.id} className={`gallery-item gallery-item--${item.orientation}`}>
+          <li key={item.id} className="gallery-item">
             <figure className="gallery-item__figure">
               <button
                 type="button"

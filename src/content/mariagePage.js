@@ -115,6 +115,10 @@ export const mariagePopularOptions = [
     description: 'Saxophone, violon ou autre instrument pour le cocktail ou l\'ouverture de bal.',
   },
   {
+    title: 'Drag queen',
+    description: 'Une performance live pour marquer un moment fort de la soirée.',
+  },
+  {
     title: 'Étincelles froides',
     description: 'Mise en scène des temps forts avec effets visuels adaptés au lieu.',
   },

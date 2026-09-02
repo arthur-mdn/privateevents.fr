@@ -94,13 +94,13 @@ export const soireePriveeLandingContent = {
         title: 'Soirée en extérieur',
         description: 'Jardin, terrasse ou pool party avec sonorisation et éclairage adaptés.',
         image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-        imageAlt: 'Sonorisation et éclairage pour une soirée privée en extérieur',
+        imageAlt: 'Sonorisation et éclairage pour l’anniversaire de famille L. en extérieur',
       },
       {
         title: 'Soirée en salle',
         description: 'Ambiance club ou lounge, jeux de lumières et programmation sur mesure.',
         image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
-        imageAlt: 'Ambiance lumineuse lors d\'une soirée privée',
+        imageAlt: 'Ambiance lumineuse lors de la soirée Yogan',
       },
       {
         title: 'Réveillon & fêtes',
@@ -166,14 +166,14 @@ export const soireePriveeLandingContent = {
   },
   caseStudy: {
     title: 'Exemple de prestation',
-    meta: ['Soirée privée — Sorgues', '2026', 'Prestation en extérieur'],
+    meta: ['Anniversaire de famille — Sorgues', '2025', 'Prestation en extérieur'],
     brief:
-      'Fête privée en jardin avec sonorisation et éclairage adaptés au lieu, programmation sur mesure pour un public jeune et festif.',
+      'Anniversaire de famille en jardin avec sonorisation et éclairage adaptés au lieu, programmation sur mesure pour tous les âges.',
     prestations: ['DJ', 'Sonorisation extérieure', 'Éclairage', 'Programmation sur mesure'],
     outcome:
       'Ambiance fluide du cocktail à la piste pleine, installation discrète et adaptée au jardin.',
     image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-    imageAlt: 'Sonorisation et éclairage pour une soirée privée à Sorgues',
+    imageAlt: 'Sonorisation et éclairage pour l’anniversaire de famille L. à Sorgues',
   },
   gallery: {
     anchorId: 'galerie-soiree-privee',

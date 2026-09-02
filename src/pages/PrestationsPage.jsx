@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PageMeta } from '../components/PageMeta.jsx';
 import { PageHero } from '../components/shared/PageHero.jsx';
+import { PhotoCarousel } from '../components/shared/PhotoCarousel.jsx';
 import { SiteFooter } from '../components/SiteFooter.jsx';
 import { SiteHeader } from '../components/SiteHeader.jsx';
 import {
@@ -58,15 +59,24 @@ export function PrestationsPage() {
                   </div>
                 </dl>
               </div>
-              <img
-                className="prestation-detail__img"
-                src={section.image}
-                alt={section.imageAlt}
-                width={560}
-                height={380}
-                loading="lazy"
-                decoding="async"
-              />
+              {section.images?.length > 1 ? (
+                <PhotoCarousel
+                  images={section.images}
+                  className="prestation-detail__carousel"
+                  imgClassName="prestation-detail__img"
+                  label={`Photos : ${section.title}`}
+                />
+              ) : (
+                <img
+                  className="prestation-detail__img"
+                  src={section.images?.[0]?.src ?? section.image}
+                  alt={section.images?.[0]?.alt ?? section.imageAlt}
+                  width={section.images?.[0]?.width ?? 560}
+                  height={section.images?.[0]?.height ?? 380}
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
             </div>
           </section>
         ))}

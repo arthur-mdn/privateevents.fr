@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PageMeta } from '../components/PageMeta.jsx';
 import { PageHero } from '../components/shared/PageHero.jsx';
+import { PhotoCarousel } from '../components/shared/PhotoCarousel.jsx';
 import { SiteFooter } from '../components/SiteFooter.jsx';
 import { SiteHeader } from '../components/SiteHeader.jsx';
 import { GalleryGrid } from '../components/shared/PageSections.jsx';
@@ -32,7 +33,7 @@ export function RealisationsPage() {
           title="Projets et galerie photo"
           intro="Mariages, anniversaires et événements corporate animés en Provence. Quelques projets récents et l'ensemble de nos photos."
           titleId="realisations-hero-title"
-          image="/elements/gallery/mariage-dansant-lumieres.jpg"
+          image="/elements/gallery/mariage-laura-maxime-soiree-nuit.webp"
         />
 
         <section className="section" aria-labelledby="projects-title">
@@ -47,19 +48,15 @@ export function RealisationsPage() {
               const testimonial = project.testimonialId
                 ? getTestimonialById(project.testimonialId)
                 : null;
-              const cover = images[0];
 
               return (
-                <li key={project.id} className="project-card">
-                  {cover ? (
-                    <img
-                      className="project-card__img"
-                      src={cover.src}
-                      alt={cover.alt}
-                      width={cover.width}
-                      height={cover.height}
-                      loading="lazy"
-                      decoding="async"
+                <li key={project.id} id={project.id} className="project-card">
+                  {images.length > 0 ? (
+                    <PhotoCarousel
+                      images={images}
+                      className="project-card__carousel"
+                      imgClassName="project-card__img"
+                      label={`Photos : ${project.title}`}
                     />
                   ) : null}
                   <div className="project-card__body">
@@ -67,6 +64,9 @@ export function RealisationsPage() {
                     <h3 className="project-card__title">{project.title}</h3>
                     {project.location ? (
                       <p className="project-card__location">{project.location}</p>
+                    ) : null}
+                    {project.dateLabel ? (
+                      <p className="project-card__guests">{project.dateLabel}</p>
                     ) : null}
                     {project.guests ? (
                       <p className="project-card__guests">{project.guests}</p>
@@ -79,11 +79,14 @@ export function RealisationsPage() {
                     </ul>
                     {testimonial ? (
                       <blockquote className="project-card__quote">
-                        <p>«&nbsp;{testimonial.quote.slice(0, 180)}
+                        <p>
+                          «&nbsp;{testimonial.quote.slice(0, 180)}
                           {testimonial.quote.length > 180 ? '…' : ''}&nbsp;»
                         </p>
                         <footer>
                           — {testimonial.author}, {testimonial.context}
+                          {' · '}
+                          <Link to={`/avis#avis-${testimonial.id}`}>Voir l&apos;avis</Link>
                         </footer>
                       </blockquote>
                     ) : null}

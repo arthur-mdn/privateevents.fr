@@ -59,6 +59,7 @@ export const prestationGroups = [
     title: 'Artistes',
     options: [
       { id: 'musicien-live', label: 'Musicien live' },
+      { id: 'drag-queen', label: 'Drag queen' },
       { id: 'magicien', label: 'Magicien' },
       { id: 'mentaliste', label: 'Mentaliste' },
       { id: 'hypnose', label: 'Hypnose' },

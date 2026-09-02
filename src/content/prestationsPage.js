@@ -45,7 +45,7 @@ export const prestationsSections = [
     integration:
       'Combiné avec la prestation DJ. Dimensionné selon la surface et les contraintes du lieu.',
     image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
-    imageAlt: 'Ambiance lumineuse lors d\'une soirée',
+    imageAlt: 'Ambiance lumineuse bleue lors de la soirée Yogan',
   },
   {
     id: 'animations',
@@ -70,21 +70,46 @@ export const prestationsSections = [
       'Des souvenirs instantanés ou un reportage complet que vos invités et vous conserverez.',
     integration:
       'Coordonné avec le réseau de partenaires. Installation et timing adaptés au déroulement.',
-    image: '/elements/gallery/anniversaire-50-ans-loriol-2026.jpg',
-    imageAlt: 'Installation festive pour anniversaire',
+    image: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
+    imageAlt: 'Vidéobooth pour capturer des souvenirs vidéo lors d’une soirée',
+    images: [
+      {
+        id: 'videobooth-souvenirs-soiree',
+        src: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
+        alt: 'Vidéobooth pour capturer des souvenirs vidéo lors d’une soirée',
+        width: 1536,
+        height: 1024,
+      },
+    ],
   },
   {
     id: 'artistes',
     title: 'Artistes & performances',
     what:
-      'Musiciens live, magicien, mentaliste, humoriste et autres performances sur demande.',
-    forEvents: 'Mariages (cocktail, ouverture de bal), inaugurations et événements premium.',
+      'Musiciens live, drag queen, magicien, mentaliste, humoriste et autres performances sur demande.',
+    forEvents: 'Mariages (cocktail, ouverture de bal), anniversaires, inaugurations et événements premium.',
     brings:
       'Des moments live marquants qui complètent la prestation DJ et créent des souvenirs forts.',
     integration:
       'Coordonné avec le DJ pour les transitions. Sélection de partenaires selon votre projet et budget.',
-    image: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
-    imageAlt: 'Ouverture de bal avec effets visuels',
+    image: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
+    imageAlt: 'Spectacle drag queen Aquarii proposé parmi les animations Private Events',
+    images: [
+      {
+        id: 'drag-queen-aquarii-animation',
+        src: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
+        alt: 'Spectacle drag queen Aquarii proposé parmi les animations Private Events',
+        width: 1440,
+        height: 1440,
+      },
+      {
+        id: 'anniversaire-18-ans-mathys-saint-cyr-sur-mer-drag-queen',
+        src: '/elements/gallery/anniversaire-18-ans-mathys-saint-cyr-sur-mer-drag-queen.jpeg',
+        alt: 'Spectacle drag queen Aquarii lors d’un anniversaire à Saint-Cyr-sur-Mer',
+        width: 5712,
+        height: 4284,
+      },
+    ],
   },
   {
     id: 'mise-en-scene',
