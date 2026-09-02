@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaqSection, GalleryGrid, WeddingTestimonials } from './PageSections.jsx';
 import { EventLandingHero } from './EventLandingHero.jsx';
+import { PopularOptionCard } from './PopularOptionCard.jsx';
 import { getRulesIcon } from './rulesIcons.js';
 
 export function EventLandingContent({ content }) {
@@ -170,12 +171,15 @@ export function EventLandingContent({ content }) {
             {options.title}
           </h2>
           {options.lead ? <p className="lead">{options.lead}</p> : null}
-          <ul className="option-grid">
+          <ul className="popular-option-grid">
             {options.items.map((option) => (
-              <li key={option.title} className="option-card">
-                <h3 className="option-card__title">{option.title}</h3>
-                <p className="option-card__desc">{option.description}</p>
-              </li>
+              <PopularOptionCard
+                key={option.title}
+                title={option.title}
+                description={option.description}
+                image={option.image}
+                helpKey={option.helpKey}
+              />
             ))}
           </ul>
         </section>

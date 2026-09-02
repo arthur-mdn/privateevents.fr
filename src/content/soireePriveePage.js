@@ -141,26 +141,55 @@ export const soireePriveeLandingContent = {
       {
         title: 'Karaoké',
         description: 'Un créneau participatif pour varier la soirée.',
+        image: {
+          src: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+          alt: 'Poste DJ avec microphone pour animation karaoké',
+        },
+        helpKey: 'karaoke',
       },
       {
         title: 'Photobooth & vidéobooth',
         description: 'Des souvenirs instantanés pour vos invités.',
+        image: {
+          src: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
+          alt: 'Vidéobooth lors d\'une soirée privée',
+        },
+        helpKey: 'videobooth',
       },
       {
         title: 'Éclairage & effets',
         description: 'Mise en lumière du lieu et effets visuels.',
+        image: {
+          src: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
+          alt: 'DJ en mixage avec éclairage bleu lors d\'une soirée privée',
+        },
+        helpKey: 'eclairage',
       },
       {
         title: 'Blind test & quiz',
         description: 'Animations ludiques pour impliquer vos invités.',
+        image: {
+          src: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
+          alt: 'Ambiance lumineuse lors d\'une soirée entre amis',
+        },
+        helpKey: 'quiz',
       },
       {
         title: 'Sonorisation extérieure',
         description: 'Installation adaptée pour jardin ou terrasse.',
+        image: {
+          src: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
+          alt: 'Sonorisation et éclairage pour une fête en extérieur',
+        },
       },
       {
         title: 'Musicien live',
         description: 'Un moment live pour marquer le début de la soirée dansante.',
+        image: {
+          src: '/elements/gallery/mariage-laura-maxime-exterieur-animation.webp',
+          alt: 'Animation musicale en extérieur lors d\'une soirée privée',
+        },
+        helpKey: 'musicien-live',
       },
     ],
   },

@@ -123,7 +123,7 @@ export const mariageLandingContent = {
       {
         title: 'Entrée des mariés',
         description:
-          'Animation « hola » et mise en musique de votre entrée en salle, pour un moment fort avant la soirée.',
+          'Entrée en salle adaptée à vos goûts : une ou plusieurs entrées, animations et mini-jeux pour un moment fort avant la soirée.',
         image: '/elements/gallery/mariage-hola-entree-des-maries.webp',
         imageAlt: 'Mariée passant sous une haie d’honneur formée par les invités à l’entrée en salle',
       },
@@ -161,47 +161,100 @@ export const mariageLandingContent = {
       {
         title: 'Ouverture de bal',
         description: 'Musique personnalisée, effets visuels et coordination du moment.',
+        image: {
+          src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
+          alt: 'Ouverture de bal avec effets visuels lors d\'un mariage',
+        },
       },
       {
-        title: 'Entrée des mariés (hola)',
+        title: 'Entrée des mariés',
         description:
-          'Mise en musique et animation de votre entrée en salle, avec haie d\'honneur si vous le souhaitez.',
+          'Mise en musique et animations selon vos envies : une ou plusieurs entrées, haie d\'honneur, jeux. Le format s\'adapte à vos goûts.',
+        image: {
+          src: '/elements/gallery/mariage-hola-entree-des-maries.webp',
+          alt: 'Mariée passant sous une haie d\'honneur formée par les invités à l\'entrée en salle',
+        },
+        helpKey: 'hola-entree',
       },
       {
         title: 'Micro pour les discours',
         description: 'Sonorisation dédiée aux toasts et interventions pendant le repas.',
+        image: {
+          src: '/elements/gallery/mariage-table-discours.webp',
+          alt: 'Invité au micro lors d\'un discours pendant le repas de mariage',
+        },
+        helpKey: 'micro-discours',
       },
       {
         title: 'Karaoké',
         description: 'Un créneau participatif pour varier la soirée sans casser l\'ambiance.',
+        image: {
+          src: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+          alt: 'Poste DJ avec microphone pour animation karaoké',
+        },
+        helpKey: 'karaoke',
       },
       {
         title: 'Photobooth & vidéobooth',
         description: 'Des souvenirs instantanés que vos invités repartent avec.',
+        image: {
+          src: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
+          alt: 'Vidéobooth lors d\'une soirée de mariage',
+        },
+        helpKey: 'videobooth',
       },
       {
         title: 'Musicien live',
         description: 'Saxophone, violon ou autre instrument pour le cocktail ou l\'ouverture de bal.',
+        image: {
+          src: '/elements/gallery/mariage-laura-maxime-exterieur-animation.webp',
+          alt: 'Animation musicale en extérieur lors d\'un mariage',
+        },
+        helpKey: 'musicien-live',
       },
       {
         title: 'Drag queen',
         description: 'Une performance live pour marquer un moment fort de la soirée.',
+        image: {
+          src: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
+          alt: 'Spectacle drag queen Aquarii lors d\'une soirée',
+        },
+        helpKey: 'drag-queen',
       },
       {
         title: 'Étincelles froides',
         description: 'Mise en scène des temps forts avec effets visuels adaptés au lieu.',
+        image: {
+          src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
+          alt: 'Machine à étincelles froides lors d\'une ouverture de bal',
+        },
+        helpKey: 'etincelles',
       },
       {
         title: 'Machine à fumée',
         description: 'Effet de volume et d\'ambiance pour sublimer lumières et ouvertures de bal.',
+        image: {
+          src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
+          alt: 'Ouverture de bal avec effet de fumée',
+        },
+        helpKey: 'machine-fumee',
       },
       {
         title: 'Machine à bulles',
         description: 'Effet léger et festif pour cocktail, piste ou photos.',
+        image: {
+          src: '/elements/gallery/mariage-laura-maxime-exterieur.webp',
+          alt: 'Ambiance festive en extérieur lors d\'un mariage',
+        },
+        helpKey: 'machine-bulles',
       },
       {
         title: 'Sonorisation cérémonie',
         description: 'Diffusion sonore pour la cérémonie en extérieur ou dans un lieu non équipé.',
+        image: {
+          src: '/elements/gallery/mariage-laura-maxime-ceremonie-piscine.webp',
+          alt: 'Sonorisation de cérémonie laïque au bord de la piscine',
+        },
       },
     ],
   },

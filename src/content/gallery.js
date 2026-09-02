@@ -148,7 +148,7 @@ export const galleryItems = [
     id: 'mariage-hola-entree-des-maries',
     src: '/elements/gallery/mariage-hola-entree-des-maries.webp',
     alt: 'Mariée passant sous une haie d’honneur formée par les invités à l’entrée en salle',
-    caption: 'Mariage - hola et entrée des mariés',
+    caption: 'Mariage - entrée des mariés',
     orientation: 'landscape',
     width: 1200,
     height: 800,

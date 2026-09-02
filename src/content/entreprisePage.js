@@ -153,26 +153,55 @@ export const entrepriseLandingContent = {
       {
         title: 'Sonorisation & micros',
         description: 'Diffusion sonore pour discours, interventions et animations.',
+        image: {
+          src: '/elements/photos/microphone-sans-fil-regie-dj.webp',
+          alt: 'Microphone sans fil et régie DJ pour prises de parole',
+        },
+        helpKey: 'micro-discours',
       },
       {
         title: 'Karaoké d\'entreprise',
         description: 'Animation participative pour fédérer les équipes.',
+        image: {
+          src: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+          alt: 'Poste DJ avec microphone pour animation karaoké corporate',
+        },
+        helpKey: 'karaoke',
       },
       {
         title: 'Blind test & quiz',
         description: 'Team building musical adapté à votre public.',
+        image: {
+          src: '/elements/gallery/inauguration-entreprise-frejus-buffet-annees-80.webp',
+          alt: 'Buffet thème années 80 lors d\'un événement d\'entreprise',
+        },
+        helpKey: 'quiz',
       },
       {
         title: 'Photobooth corporate',
         description: 'Souvenirs personnalisés avec branding entreprise.',
+        image: {
+          src: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
+          alt: 'Vidéobooth pour souvenirs lors d\'un événement corporate',
+        },
+        helpKey: 'photobooth',
       },
       {
         title: 'Éclairage d\'ambiance',
         description: 'Mise en lumière du lieu et de votre identité visuelle.',
+        image: {
+          src: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
+          alt: 'Setup DJ professionnel avec éclairage pour événement corporate',
+        },
+        helpKey: 'eclairage',
       },
       {
         title: 'Coordination multi-prestataires',
         description: 'Interlocuteur unique pour synchroniser les temps forts.',
+        image: {
+          src: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
+          alt: 'DJ Mika anime une inauguration corporate à Marseille',
+        },
       },
     ],
   },

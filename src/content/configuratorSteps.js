@@ -45,7 +45,7 @@ export const prestationGroups = [
       { id: 'sono-cocktail', label: 'Sonorisation cocktail' },
       { id: 'sono-ceremonie', label: 'Sonorisation cérémonie' },
       { id: 'micro-discours', label: 'Micro pour les discours' },
-      { id: 'hola-entree', label: 'Entrée des mariés (hola)' },
+      { id: 'hola-entree', label: 'Entrée des mariés' },
       { id: 'karaoke', label: 'Karaoké' },
       { id: 'quiz', label: 'Quiz / blind test' },
     ],
@@ -228,7 +228,7 @@ export const prestationHelp = {
   },
   'hola-entree': {
     description:
-      'Animation de l\'entrée des mariés en salle (hola / haie d\'honneur), avec mise en musique du moment.',
+      'Mise en musique et animation de votre entrée en salle, adaptée à vos goûts. Possibilité de plusieurs entrées, animations ou mini-jeux.',
     image: '/elements/gallery/mariage-hola-entree-des-maries.webp',
     imageAlt: 'Mariée passant sous une haie d’honneur formée par les invités à l’entrée en salle',
     href: '/prestations#animations',

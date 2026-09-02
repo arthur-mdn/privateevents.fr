@@ -106,7 +106,7 @@ export const prestationsSections = [
     id: 'animations',
     title: 'Animations',
     what:
-      'Karaoké, quiz, blind test, entrée des mariés (hola) et animations participatives animées par micro pour varier la soirée.',
+      'Karaoké, quiz, blind test, entrée des mariés et animations participatives animées par micro pour varier la soirée.',
     forEvents: 'Mariages, anniversaires, soirées privées, team building et soirées d\'entreprise.',
     brings:
       'Des moments interactifs qui impliquent vos invités sans casser l\'ambiance générale.',
