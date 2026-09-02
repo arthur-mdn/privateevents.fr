@@ -38,14 +38,23 @@ export const prestationsSections = [
     id: 'eclairage',
     title: 'Éclairage',
     what:
-      'Mise en lumière du lieu avec jeux de lumières, éclairage d\'ambiance et effets visuels pour les temps forts.',
+      'Mise en lumière du lieu avec jeux de lumières, lasers, éclairage d\'ambiance et effets visuels pour les temps forts.',
     forEvents: 'Soirées dansantes, ouvertures de bal, inaugurations et événements en salle ou extérieur.',
     brings:
-      'Une atmosphère visuelle qui transforme le lieu et met en valeur les moments clés de la soirée.',
+      'Une atmosphère visuelle qui transforme le lieu : projecteurs, lasers et ambiances colorées mettent en valeur les moments clés.',
     integration:
       'Combiné avec la prestation DJ. Dimensionné selon la surface et les contraintes du lieu.',
-    image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
-    imageAlt: 'Ambiance lumineuse bleue lors de la soirée Yogan',
+    image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
+    imageAlt: 'Éclairages dynamiques et lasers lors d’un mariage en intérieur',
+    images: [
+      {
+        id: 'mariage-interieur-lumieres-dynamiques',
+        src: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
+        alt: 'Éclairages dynamiques et lasers lors d’un mariage en intérieur avec DJ Mika',
+        width: 1024,
+        height: 1536,
+      },
+    ],
   },
   {
     id: 'animations',
@@ -64,10 +73,10 @@ export const prestationsSections = [
     id: 'photos-video',
     title: 'Photos & vidéo',
     what:
-      'Photobooth, vidéobooth, photographe professionnel et diaporama photo ou vidéo personnalisé.',
+      'Photobooth, vidéobooth, photographe professionnel et vidéo personnalisée (diaporama photo ou vidéo).',
     forEvents: 'Mariages, anniversaires, soirées privées et événements corporate.',
     brings:
-      'Des souvenirs instantanés ou un reportage complet que vos invités et vous conserverez.',
+      'Des souvenirs instantanés, une vidéo personnalisée ou un reportage complet que vos invités et vous conserverez.',
     integration:
       'Coordonné avec le réseau de partenaires. Installation et timing adaptés au déroulement.',
     image: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
@@ -79,6 +88,20 @@ export const prestationsSections = [
         alt: 'Vidéobooth pour capturer des souvenirs vidéo lors d’une soirée',
         width: 1536,
         height: 1024,
+      },
+      {
+        id: 'video-personnalisee-mariage-laura-maxime',
+        src: '/elements/photos/prestations/video-personnalisee-mariage-laura-maxime.gif',
+        alt: 'Extrait de vidéo personnalisée pour le mariage de Laura et Maxime',
+        width: 720,
+        height: 406,
+      },
+      {
+        id: 'video-personnalisee-anniversaire-caroline',
+        src: '/elements/photos/prestations/video-personnalisee-anniversaire-caroline.gif',
+        alt: 'Extrait de vidéo personnalisée pour l’anniversaire de Caroline',
+        width: 720,
+        height: 406,
       },
     ],
   },
@@ -123,6 +146,36 @@ export const prestationsSections = [
       'Planifié en amont avec le DJ et les autres prestataires. Feu d\'artifice extérieur sous réserve des autorisations.',
     image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
     imageAlt: 'Ouverture de bal avec fumée lourde et lumières',
+    images: [
+      {
+        id: 'mariage-avignon-2025-machine-a-fumee',
+        src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
+        alt: 'Ouverture de bal d’un mariage à Avignon avec fumée lourde et éclairages',
+        width: 1024,
+        height: 1536,
+      },
+      {
+        id: 'mariage-avignon-2025-machine-etincelles-artifice',
+        src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
+        alt: 'Machine à étincelles froides pour l’ouverture de bal d’un mariage à Avignon',
+        width: 1024,
+        height: 1536,
+      },
+      {
+        id: 'anniversaire-18ans-jeunes-ambiances-lumiere',
+        src: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
+        alt: 'Ambiance lumineuse et mise en scène pour un anniversaire de 18 ans',
+        width: 1536,
+        height: 1152,
+      },
+      {
+        id: 'mariage-laura-maxime-soiree-nuit',
+        src: '/elements/gallery/mariage-laura-maxime-soiree-nuit.webp',
+        alt: 'Mise en scène nocturne et soirée dansante au mariage de Laura et Maxime',
+        width: 1400,
+        height: 1050,
+      },
+    ],
   },
   {
     id: 'services',
