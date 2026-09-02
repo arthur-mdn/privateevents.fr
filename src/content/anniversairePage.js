@@ -111,8 +111,8 @@ export const anniversaireLandingContent = {
       {
         title: 'Animations',
         description: 'Karaoké, blind test ou moments participatifs pour varier la soirée.',
-        image: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
-        imageAlt: 'Microphone et poste DJ pour animation karaoké ou micro lors d’un anniversaire',
+        image: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
+        imageAlt: 'Quiz musical et blind test animé devant les invités lors d’un anniversaire',
       },
     ],
   },
@@ -160,8 +160,8 @@ export const anniversaireLandingContent = {
         title: 'Blind test',
         description: 'Animation ludique adaptée à votre génération et à vos invités.',
         image: {
-          src: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
-          alt: 'Ambiance lumineuse lors d\'une soirée dansante d\'anniversaire',
+          src: '/elements/photos/prestations/quiz-musical-gros-plan-net.webp',
+          alt: 'Gros plan sur le filet de quiz musical pour un blind test d’anniversaire',
         },
         helpKey: 'quiz',
       },

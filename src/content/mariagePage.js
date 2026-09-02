@@ -243,8 +243,8 @@ export const mariageLandingContent = {
         title: 'Machine à bulles',
         description: 'Effet léger et festif pour cocktail, piste ou photos.',
         image: {
-          src: '/elements/gallery/mariage-laura-maxime-exterieur.webp',
-          alt: 'Ambiance festive en extérieur lors d\'un mariage',
+          src: '/elements/photos/prestations/machine-a-bulles-soiree-dansante.webp',
+          alt: 'Piste de danse remplie de bulles sous éclairages violets lors d’une soirée',
         },
         helpKey: 'machine-bulles',
       },

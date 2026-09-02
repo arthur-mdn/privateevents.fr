@@ -189,8 +189,8 @@ export const prestationHelp = {
   'machine-bulles': {
     description:
       'Machine à bulles pour une ambiance légère, souvent appréciée en cocktail ou pour un temps photo.',
-    image: null,
-    imageAlt: '',
+    image: '/elements/photos/prestations/machine-a-bulles-soiree-dansante.webp',
+    imageAlt: 'Piste de danse remplie de bulles sous éclairages violets lors d’une soirée',
     href: '/prestations#mise-en-scene',
     linkLabel: 'Voir Mise en scène',
   },
@@ -237,8 +237,8 @@ export const prestationHelp = {
   quiz: {
     description:
       'Quiz ou blind test animé pour impliquer vos invités sans casser le rythme de la soirée.',
-    image: null,
-    imageAlt: '',
+    image: '/elements/photos/prestations/quiz-musical-gros-plan-net.webp',
+    imageAlt: 'Gros plan sur le filet de quiz musical pour un blind test animé',
     href: '/prestations#animations',
     linkLabel: 'Voir Animations',
   },

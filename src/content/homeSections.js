@@ -60,8 +60,8 @@ export const servicePillars = [
     summary: 'Des moments participatifs pour varier la soirée sans casser l\'ambiance.',
     examples: ['Karaoké', 'Quiz et blind test', 'Animations participatives', 'Animation micro'],
     href: '/prestations',
-    image: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
-    imageAlt: 'Poste DJ avec ordinateur et microphone sans fil pour animation micro',
+    image: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
+    imageAlt: 'Quiz musical et blind test animé devant le public lors d’une soirée',
   },
   {
     title: 'Photos & souvenirs',

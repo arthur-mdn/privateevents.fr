@@ -112,9 +112,23 @@ export const prestationsSections = [
       'Des moments interactifs qui impliquent vos invités sans casser l\'ambiance générale.',
     integration:
       'Créneaux dédiés intégrés dans la programmation DJ. Matériel karaoké et micro inclus.',
-    image: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
-    imageAlt: 'Poste DJ avec ordinateur et microphone sans fil pour animation micro',
+    image: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
+    imageAlt: 'Quiz musical et blind test animé devant le public lors d’une soirée Private Events',
     images: [
+      {
+        id: 'quiz-musical-large-avec-public',
+        src: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
+        alt: 'Quiz musical et blind test animé devant le public lors d’une soirée Private Events',
+        width: 1318,
+        height: 1305,
+      },
+      {
+        id: 'quiz-musical-gros-plan-net',
+        src: '/elements/photos/prestations/quiz-musical-gros-plan-net.webp',
+        alt: 'Gros plan sur le filet de quiz musical pour un blind test animé',
+        width: 1400,
+        height: 1077,
+      },
       {
         id: 'poste-dj-ordinateur-micro-exterieur',
         src: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
@@ -229,6 +243,13 @@ export const prestationsSections = [
         alt: 'Ouverture de bal d’un mariage à Avignon avec fumée lourde et éclairages',
         width: 1024,
         height: 1536,
+      },
+      {
+        id: 'machine-a-bulles-soiree-dansante',
+        src: '/elements/photos/prestations/machine-a-bulles-soiree-dansante.webp',
+        alt: 'Piste de danse remplie de bulles sous éclairages violets lors d’une soirée',
+        width: 1200,
+        height: 799,
       },
       {
         id: 'mariage-avignon-2025-machine-etincelles-artifice',

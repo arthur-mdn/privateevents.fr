@@ -169,8 +169,8 @@ export const soireePriveeLandingContent = {
         title: 'Blind test & quiz',
         description: 'Animations ludiques pour impliquer vos invités.',
         image: {
-          src: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
-          alt: 'Ambiance lumineuse lors d\'une soirée entre amis',
+          src: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
+          alt: 'Quiz musical et blind test animé devant le public lors d’une soirée privée',
         },
         helpKey: 'quiz',
       },

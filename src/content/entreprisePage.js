@@ -172,8 +172,8 @@ export const entrepriseLandingContent = {
         title: 'Blind test & quiz',
         description: 'Team building musical adapté à votre public.',
         image: {
-          src: '/elements/gallery/inauguration-entreprise-frejus-buffet-annees-80.webp',
-          alt: 'Buffet thème années 80 lors d\'un événement d\'entreprise',
+          src: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
+          alt: 'Quiz musical et blind test pour un team building d’entreprise',
         },
         helpKey: 'quiz',
       },
