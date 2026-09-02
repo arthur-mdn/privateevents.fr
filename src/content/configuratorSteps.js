@@ -72,6 +72,8 @@ export const prestationGroups = [
       { id: 'etincelles', label: 'Étincelles' },
       { id: 'decoration', label: 'Décoration' },
       { id: 'eclairage', label: 'Éclairage spécifique' },
+      { id: 'machine-fumee', label: 'Machine à fumée' },
+      { id: 'machine-bulles', label: 'Machine à bulles' },
       { id: 'feu-artifice', label: 'Feu d\'artifice' },
     ],
   },

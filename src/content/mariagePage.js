@@ -119,6 +119,14 @@ export const mariagePopularOptions = [
     description: 'Mise en scène des temps forts avec effets visuels adaptés au lieu.',
   },
   {
+    title: 'Machine à fumée',
+    description: 'Effet de volume et d\'ambiance pour sublimer lumières et ouvertures de bal.',
+  },
+  {
+    title: 'Machine à bulles',
+    description: 'Effet léger et festif pour cocktail, piste ou photos.',
+  },
+  {
     title: 'Sonorisation cérémonie',
     description: 'Diffusion sonore pour la cérémonie en extérieur ou dans un lieu non équipé.',
   },

@@ -139,12 +139,28 @@ export const routeMeta = {
   },
 };
 
-export const placeholderRoutes = [
-  { path: '/anniversaire', heading: 'DJ anniversaire' },
-  { path: '/soiree-privee', heading: 'Soirée privée' },
-  { path: '/entreprise', heading: 'Événement entreprise' },
-  { path: '/prestations', heading: 'Prestations' },
-  { path: '/a-propos', heading: 'À propos' },
-  { path: '/mentions-legales', heading: 'Mentions légales' },
-  { path: '/politique-de-confidentialite', heading: 'Politique de confidentialité' },
-];
+export function buildLandingJsonLd(path, name, faq) {
+  const graph = [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name, item: `${SITE_URL}${path}` },
+      ],
+    },
+  ];
+
+  if (faq?.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
+    });
+  }
+
+  return { '@context': 'https://schema.org', '@graph': graph };
+}
+

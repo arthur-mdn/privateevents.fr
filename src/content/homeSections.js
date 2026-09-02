@@ -82,7 +82,14 @@ export const servicePillars = [
   {
     title: 'Mise en scène',
     summary: 'Décoration, lumières et effets pour sublimer le lieu et les temps forts.',
-    examples: ['Décoration', 'Éclairage d\'ambiance', 'Étincelles', 'Feu d\'artifice extérieur*'],
+    examples: [
+      'Décoration',
+      'Éclairage d\'ambiance',
+      'Étincelles',
+      'Machine à fumée',
+      'Machine à bulles',
+      'Feu d\'artifice extérieur*',
+    ],
     href: '/prestations',
     image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
     imageAlt: 'Ambiance lumineuse lors d\'une soirée',

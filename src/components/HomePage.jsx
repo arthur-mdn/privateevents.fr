@@ -12,6 +12,7 @@ import { BeyondDjSection } from './home/BeyondDjSection.jsx';
 import { PrestationsHighlightSection } from './home/PrestationsHighlightSection.jsx';
 import { YourRulesSection } from './home/YourRulesSection.jsx';
 import { ProcessSection } from './home/ProcessSection.jsx';
+import { ClientCaseSection } from './home/ClientCaseSection.jsx';
 import { AudioShowcase } from './AudioShowcase.jsx';
 import TestimonialsCarousel from './TestimonialsCarousel.jsx';
 import GallerySection from './GallerySection.jsx';
@@ -32,6 +33,8 @@ function HomePage() {
         <PrestationsHighlightSection />
         <YourRulesSection />
         <ProcessSection />
+
+        <ClientCaseSection />
 
         <TestimonialsCarousel />
 

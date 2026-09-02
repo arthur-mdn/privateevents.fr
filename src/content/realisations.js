@@ -61,3 +61,25 @@ export function getTestimonialById(id) {
 export function getMariageGalleryItems() {
   return galleryItems.filter((item) => item.caption?.toLowerCase().includes('mariage'));
 }
+
+export function getAnniversaireGalleryItems() {
+  return galleryItems.filter((item) => item.caption?.toLowerCase().includes('anniversaire'));
+}
+
+export function getEntrepriseGalleryItems() {
+  return galleryItems.filter((item) => {
+    const caption = item.caption?.toLowerCase() ?? '';
+    return caption.includes('corporate') || caption.includes('sephora');
+  });
+}
+
+export function getSoireePriveeGalleryItems() {
+  return galleryItems.filter((item) => {
+    const caption = item.caption?.toLowerCase() ?? '';
+    return (
+      caption.includes('anniversaire') ||
+      caption.includes('nouvel an') ||
+      caption.includes('zanzibar')
+    );
+  });
+}
