@@ -51,11 +51,34 @@ export const prestationsSections = [
       'Diffusion sonore professionnelle dimensionnée selon le lieu, le nombre d\'invités et le déroulement de l\'événement.',
     forEvents: 'Cérémonies, cocktails, discours, repas et soirées dansantes, intérieur ou extérieur.',
     brings:
-      'Un son clair et adapté à chaque moment : musique de fond discrète, volume festif ou micro pour les interventions.',
+      'Un son clair et adapté à chaque moment : musique de fond discrète, volume festif ou micro pour les discours et interventions.',
     integration:
       'Inclus dans la prestation DJ ou en option pour les temps forts (discours, cérémonie). Anticipé lors de la préparation.',
     image: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
     imageAlt: 'Setup DJ en extérieur avec écran au logo Mika Private Events',
+    images: [
+      {
+        id: 'setup-dj-ecran-logo-mika-private-events',
+        src: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
+        alt: 'Setup DJ en extérieur avec écran au logo Mika Private Events',
+        width: 1400,
+        height: 933,
+      },
+      {
+        id: 'mariage-table-discours',
+        src: '/elements/gallery/mariage-table-discours.webp',
+        alt: 'Invité au micro lors d’un discours pendant le repas de mariage',
+        width: 1200,
+        height: 742,
+      },
+      {
+        id: 'microphone-sans-fil-regie-dj',
+        src: '/elements/photos/microphone-sans-fil-regie-dj.webp',
+        alt: 'Microphone sans fil professionnel posé sur la régie DJ',
+        width: 1400,
+        height: 2100,
+      },
+    ],
   },
   {
     id: 'eclairage',
@@ -83,8 +106,8 @@ export const prestationsSections = [
     id: 'animations',
     title: 'Animations',
     what:
-      'Karaoké, quiz, blind test et animations participatives animées par micro pour varier la soirée.',
-    forEvents: 'Anniversaires, soirées privées, team building et soirées d\'entreprise.',
+      'Karaoké, quiz, blind test, entrée des mariés (hola) et animations participatives animées par micro pour varier la soirée.',
+    forEvents: 'Mariages, anniversaires, soirées privées, team building et soirées d\'entreprise.',
     brings:
       'Des moments interactifs qui impliquent vos invités sans casser l\'ambiance générale.',
     integration:
@@ -105,6 +128,20 @@ export const prestationsSections = [
         alt: 'Microphone sans fil professionnel posé sur la régie DJ lors d’une soirée',
         width: 1400,
         height: 2100,
+      },
+      {
+        id: 'mariage-hola-entree-des-maries',
+        src: '/elements/gallery/mariage-hola-entree-des-maries.webp',
+        alt: 'Mariée passant sous une haie d’honneur formée par les invités à l’entrée en salle',
+        width: 1200,
+        height: 800,
+      },
+      {
+        id: 'mariage-table-discours',
+        src: '/elements/gallery/mariage-table-discours.webp',
+        alt: 'Invité au micro lors d’un discours pendant le repas de mariage',
+        width: 1200,
+        height: 742,
       },
     ],
   },

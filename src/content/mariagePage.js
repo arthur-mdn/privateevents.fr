@@ -5,7 +5,7 @@ export const mariageFaq = [
   {
     question: 'Intervenez-vous pour toute la journée de mariage ?',
     answer:
-      'Oui, selon votre projet : cérémonie, cocktail, repas et soirée dansante peuvent être couverts. La prestation est adaptée à vos besoins et au lieu.',
+      'Oui, selon votre projet : cérémonie, cocktail, repas, discours, entrée des mariés et soirée dansante peuvent être couverts. La prestation est adaptée à vos besoins et au lieu.',
   },
   {
     question: 'Comment se déroule la préparation musicale ?',
@@ -90,26 +90,42 @@ export const mariageLandingContent = {
   },
   moments: {
     title: 'Chaque moment de votre journée',
-    lead: 'Cérémonie, cocktail, repas ou soirée dansante : une prestation adaptée à chaque phase.',
+    lead:
+      'Cérémonie, cocktail, repas, discours, entrée des mariés ou soirée dansante : une prestation adaptée à chaque phase.',
     items: [
       {
         title: 'Cérémonie',
         description:
           'Sonorisation discrète pour la cérémonie laïque ou religieuse, musique d\'entrée et de sortie.',
-        image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
-        imageAlt: 'DJ en prestation de mariage avec éclairages',
+        image: '/elements/gallery/mariage-laura-maxime-ceremonie-piscine.webp',
+        imageAlt: 'Sonorisation de cérémonie laïque au bord de la piscine',
       },
       {
         title: 'Cocktail',
         description: 'Ambiance légère et chaleureuse, volume adapté aux échanges entre invités.',
-        image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
-        imageAlt: 'Ouverture de bal avec fumée lourde et lumières',
+        image: '/elements/gallery/mariage-laura-maxime-exterieur.webp',
+        imageAlt: 'Ambiance musicale en extérieur pendant le cocktail d’un mariage',
       },
       {
         title: 'Repas',
-        description: 'Musique de fond discrète, micro pour les discours et interventions si nécessaire.',
-        image: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
-        imageAlt: 'Moment d\'ouverture de bal avec effets visuels',
+        description:
+          'Musique de fond discrète pendant le dîner, pour laisser place aux conversations et aux moments à table.',
+        image: '/elements/gallery/mariage-table-repas.webp',
+        imageAlt: 'Table de mariage dressée pour le repas dans une salle en pierres apparentes',
+      },
+      {
+        title: 'Discours',
+        description:
+          'Micro prêt pour les toasts et interventions : les invités prennent la parole sans couper l\'ambiance.',
+        image: '/elements/gallery/mariage-table-discours.webp',
+        imageAlt: 'Invité au micro lors d’un discours pendant le repas de mariage',
+      },
+      {
+        title: 'Entrée des mariés',
+        description:
+          'Animation « hola » et mise en musique de votre entrée en salle, pour un moment fort avant la soirée.',
+        image: '/elements/gallery/mariage-hola-entree-des-maries.webp',
+        imageAlt: 'Mariée passant sous une haie d’honneur formée par les invités à l’entrée en salle',
       },
       {
         title: 'Soirée dansante',
@@ -145,6 +161,15 @@ export const mariageLandingContent = {
       {
         title: 'Ouverture de bal',
         description: 'Musique personnalisée, effets visuels et coordination du moment.',
+      },
+      {
+        title: 'Entrée des mariés (hola)',
+        description:
+          'Mise en musique et animation de votre entrée en salle, avec haie d\'honneur si vous le souhaitez.',
+      },
+      {
+        title: 'Micro pour les discours',
+        description: 'Sonorisation dédiée aux toasts et interventions pendant le repas.',
       },
       {
         title: 'Karaoké',

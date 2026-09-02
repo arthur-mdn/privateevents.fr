@@ -1,5 +1,9 @@
 export const eventTypeOptions = [
-  { id: 'mariage', label: 'Mariage', description: 'Cérémonie, cocktail, repas et soirée dansante.' },
+  {
+    id: 'mariage',
+    label: 'Mariage',
+    description: 'Cérémonie, cocktail, repas, discours, entrée des mariés et soirée dansante.',
+  },
   { id: 'anniversaire', label: 'Anniversaire', description: 'Fête privée adaptée à vos invités.' },
   { id: 'soiree-privee', label: 'Soirée privée', description: 'Ambiance sur mesure pour votre événement.' },
   { id: 'entreprise', label: 'Entreprise', description: 'Soirée corporate, séminaire ou inauguration.' },
@@ -40,6 +44,8 @@ export const prestationGroups = [
       { id: 'dj', label: 'DJ' },
       { id: 'sono-cocktail', label: 'Sonorisation cocktail' },
       { id: 'sono-ceremonie', label: 'Sonorisation cérémonie' },
+      { id: 'micro-discours', label: 'Micro pour les discours' },
+      { id: 'hola-entree', label: 'Entrée des mariés (hola)' },
       { id: 'karaoke', label: 'Karaoké' },
       { id: 'quiz', label: 'Quiz / blind test' },
     ],
@@ -209,6 +215,22 @@ export const prestationHelp = {
       'Karaoké animé au micro, avec matériel dédié, pour un créneau participatif dans la soirée.',
     image: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
     imageAlt: 'Poste DJ avec microphone pour animation karaoké',
+    href: '/prestations#animations',
+    linkLabel: 'Voir Animations',
+  },
+  'micro-discours': {
+    description:
+      'Micro dédié pour les toasts et interventions pendant le repas, sans interrompre l\'ambiance musicale de fond.',
+    image: '/elements/gallery/mariage-table-discours.webp',
+    imageAlt: 'Invité au micro lors d’un discours pendant le repas de mariage',
+    href: '/prestations#sonorisation',
+    linkLabel: 'Voir Sonorisation',
+  },
+  'hola-entree': {
+    description:
+      'Animation de l\'entrée des mariés en salle (hola / haie d\'honneur), avec mise en musique du moment.',
+    image: '/elements/gallery/mariage-hola-entree-des-maries.webp',
+    imageAlt: 'Mariée passant sous une haie d’honneur formée par les invités à l’entrée en salle',
     href: '/prestations#animations',
     linkLabel: 'Voir Animations',
   },
