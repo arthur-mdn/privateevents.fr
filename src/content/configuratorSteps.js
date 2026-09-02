@@ -222,14 +222,13 @@ export const prestationHelp = {
   },
 };
 
-export const welcomeStep = {
-  heading: 'Construire mon événement',
-  intro:
-    'Quelques questions pour comprendre votre projet et vous répondre de façon personnalisée.',
-};
-
 export const configuratorSteps = [
-  { id: 1, title: 'Type d\'événement', heading: 'Quel événement préparez-vous ?' },
+  {
+    id: 1,
+    title: 'Type d\'événement',
+    heading: 'Quel événement préparez-vous ?',
+    intro: 'Quelques questions pour comprendre votre projet.',
+  },
   { id: 2, title: 'Votre événement', heading: 'Parlez-nous de votre événement' },
   { id: 3, title: 'Ambiance', heading: 'Quelle ambiance imaginez-vous ?' },
   { id: 4, title: 'Prestations', heading: 'Que souhaitez-vous prévoir ?' },

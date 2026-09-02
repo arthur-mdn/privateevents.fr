@@ -2519,6 +2519,16 @@ main:not(:has(.hero)):not(.section--configurator) {
   margin-bottom: 1.5rem;
 }
 
+.configurator__heading--with-intro {
+  margin-bottom: 0.5rem;
+}
+
+.configurator__intro {
+  margin: 0 0 1.5rem;
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
 .configurator-hint {
   margin: 0 0 1rem;
   font-size: 0.925rem;
@@ -2811,23 +2821,6 @@ main:not(:has(.hero)):not(.section--configurator) {
 
 .field--rgpd {
   gap: 0.35rem;
-}
-
-.configurator-welcome {
-  margin-top: 0.5rem;
-}
-
-.configurator-welcome .heading-section {
-  margin-bottom: 1rem;
-}
-
-.configurator-welcome .lead {
-  margin-bottom: 2rem;
-}
-
-.configurator-welcome__cta {
-  display: flex;
-  justify-content: flex-end;
 }
 
 .fieldset {

@@ -11,7 +11,6 @@ import {
   getGuestCountLabel,
   getPrestationLabels,
   initialFormData,
-  welcomeStep,
 } from '../../content/configuratorSteps.js';
 import {
   StepAmbiance,
@@ -83,7 +82,7 @@ export function EventConfigurator() {
   const preselectedType = searchParams.get('type');
   const initialEventType =
     preselectedType && eventTypeUrlMap[preselectedType] ? preselectedType : '';
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
   const [data, setData] = useState(() => ({
     ...initialFormData,
     eventType: initialEventType,
@@ -109,8 +108,8 @@ export function EventConfigurator() {
     [step, contactSubmitted],
   );
 
-  const currentStepMeta = step > 0 ? configuratorSteps[step - 1] : null;
-  const progress = step === 0 ? 0 : (step / FORM_STEPS) * 100;
+  const currentStepMeta = configuratorSteps[step - 1];
+  const progress = (step / FORM_STEPS) * 100;
 
   const validateStep = useCallback(() => {
     const nextErrors = {};
@@ -154,11 +153,7 @@ export function EventConfigurator() {
     if (step === FORM_STEPS) {
       setContactSubmitted(false);
     }
-    setStep((s) => Math.max(s - 1, 0));
-  };
-
-  const startConfigurator = () => {
-    setStep(1);
+    setStep((s) => Math.max(s - 1, 1));
   };
 
   const formMessage = useMemo(() => buildFormMessage(data), [data]);
@@ -185,23 +180,6 @@ export function EventConfigurator() {
     return <ConfirmationScreen data={data} />;
   }
 
-  if (step === 0) {
-    return (
-      <div className="configurator">
-        <div className="configurator-welcome">
-          <h1 className="heading-section">{welcomeStep.heading}</h1>
-          <p className="lead">{welcomeStep.intro}</p>
-          <div className="configurator-welcome__cta">
-            <button type="button" className="btn btn--primary" onClick={startConfigurator}>
-              Commencer
-              <FaArrowRight aria-hidden />
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className="configurator">
       <div className="configurator__progress" aria-hidden="true">
@@ -210,7 +188,14 @@ export function EventConfigurator() {
       <p className="configurator__step-label">
         Étape {step} sur {FORM_STEPS} : {currentStepMeta.title}
       </p>
-      <h2 className="heading-section configurator__heading">{currentStepMeta.heading}</h2>
+      <h2
+        className={`heading-section configurator__heading${currentStepMeta.intro ? ' configurator__heading--with-intro' : ''}`}
+      >
+        {currentStepMeta.heading}
+      </h2>
+      {currentStepMeta.intro ? (
+        <p className="configurator__intro">{currentStepMeta.intro}</p>
+      ) : null}
 
       <form className="configurator-form" onSubmit={onFormSubmit} noValidate>
         <input type="hidden" name="subject" value="demande configurateur" />
@@ -258,7 +243,7 @@ export function EventConfigurator() {
         ) : null}
 
         <div className="configurator-nav">
-          {step > 0 ? (
+          {step > 1 ? (
             <button type="button" className="btn btn--ghost" onClick={goBack}>
               <FaArrowLeft aria-hidden />
               Retour
