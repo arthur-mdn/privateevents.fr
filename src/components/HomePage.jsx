@@ -1,5 +1,7 @@
 import { FaEnvelope, FaMessage, FaPhone } from 'react-icons/fa6';
 import { useState } from 'react';
+import { PageMeta } from './PageMeta.jsx';
+import { routeMeta } from '../seo/siteMeta.js';
 import { SiteHeader } from './SiteHeader.jsx';
 import { SiteFooter } from './SiteFooter.jsx';
 import { FeatureSplit } from './FeatureSplit.jsx';
@@ -17,6 +19,7 @@ function HomePage() {
 
   return (
     <>
+      <PageMeta path="/" {...routeMeta['/']} />
       <SiteHeader />
       <main id="contenu-principal">
         <div className="hero">

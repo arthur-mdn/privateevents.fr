@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 export function SiteHeader() {
   return (
     <header className="site-header">
       <div className="site-header__inner">
-        <a className="site-header__brand" href="https://privateevents.fr/">
+        <Link className="site-header__brand" to="/">
           <img
             src="/elements/logo.png"
             alt="Private Events - DJ Mika"
