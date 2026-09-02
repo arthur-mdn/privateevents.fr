@@ -18,7 +18,7 @@ export const homeCaseStudy = {
     quote:
       'Professionnalisme, écoute et une playlist qui a fait danser tous les âges. Nos invités nous en reparlent encore.',
     author: 'Sophie & Marc',
-    context: 'Mariage — Luberon',
+    context: 'Mariage - Luberon',
   },
   cta: {
     href: '/mon-evenement?type=mariage',

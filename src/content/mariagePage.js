@@ -182,7 +182,7 @@ export const mariageLandingContent = {
   },
   caseStudy: {
     title: 'Exemple de prestation',
-    meta: ['Mariage — Avignon', 'Été 2025', 'Environ 120 invités'],
+    meta: ['Mariage - Avignon', 'Été 2025', 'Environ 120 invités'],
     brief:
       'Couple souhaitant une soirée élégante puis très festive, avec ouverture de bal mise en scène et programmation mêlant classiques et titres actuels.',
     prestations: [
@@ -210,7 +210,7 @@ export const mariageLandingContent = {
     getItems: () => testimonials.filter((t) => t.context?.toLowerCase().includes('mariage')),
   },
   faq: {
-    title: 'Questions fréquentes — Mariage',
+    title: 'Questions fréquentes - Mariage',
     items: mariageFaq,
   },
   cta: {

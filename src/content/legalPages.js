@@ -5,8 +5,8 @@ export const mentionsLegalesContent = {
     {
       title: 'Éditeur du site',
       paragraphs: [
-        'Le site privateevents.fr est édité par Private Events — DJ Mika.',
-        'Contact : contact@privateevents.fr — Téléphone : 07 82 73 76 61',
+        'Le site privateevents.fr est édité par Private Events - DJ Mika.',
+        'Contact : contact@privateevents.fr - Téléphone : 07 82 73 76 61',
         'Directeur de la publication : Mika.',
       ],
     },
@@ -19,7 +19,7 @@ export const mentionsLegalesContent = {
     {
       title: 'Propriété intellectuelle',
       paragraphs: [
-        'L\'ensemble du contenu du site (textes, images, logos, éléments graphiques) est protégé par le droit d\'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable de Private Events — DJ Mika.',
+        'L\'ensemble du contenu du site (textes, images, logos, éléments graphiques) est protégé par le droit d\'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable de Private Events - DJ Mika.',
       ],
     },
     {
@@ -38,7 +38,7 @@ export const mentionsLegalesContent = {
     {
       title: 'Limitation de responsabilité',
       paragraphs: [
-        'Private Events — DJ Mika s\'efforce d\'assurer l\'exactitude des informations publiées sur ce site. Toutefois, l\'éditeur ne saurait être tenu responsable des omissions ou inexactitudes.',
+        'Private Events - DJ Mika s\'efforce d\'assurer l\'exactitude des informations publiées sur ce site. Toutefois, l\'éditeur ne saurait être tenu responsable des omissions ou inexactitudes.',
       ],
     },
   ],
@@ -51,7 +51,7 @@ export const politiqueConfidentialiteContent = {
     {
       title: 'Responsable du traitement',
       paragraphs: [
-        'Private Events — DJ Mika, contact@privateevents.fr, est responsable du traitement des données personnelles collectées via le site privateevents.fr.',
+        'Private Events - DJ Mika, contact@privateevents.fr, est responsable du traitement des données personnelles collectées via le site privateevents.fr.',
       ],
     },
     {

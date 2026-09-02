@@ -166,7 +166,7 @@ export const soireePriveeLandingContent = {
   },
   caseStudy: {
     title: 'Exemple de prestation',
-    meta: ['Anniversaire de famille — Sorgues', '2025', 'Prestation en extérieur'],
+    meta: ['Anniversaire de famille - Sorgues', '2025', 'Prestation en extérieur'],
     brief:
       'Anniversaire de famille en jardin avec sonorisation et éclairage adaptés au lieu, programmation sur mesure pour tous les âges.',
     prestations: ['DJ', 'Sonorisation extérieure', 'Éclairage', 'Programmation sur mesure'],
@@ -189,7 +189,7 @@ export const soireePriveeLandingContent = {
       testimonials.filter((t) => t.context?.toLowerCase().includes('soirée privée')),
   },
   faq: {
-    title: 'Questions fréquentes — Soirée privée',
+    title: 'Questions fréquentes - Soirée privée',
     items: soireePriveeFaq,
   },
   cta: {

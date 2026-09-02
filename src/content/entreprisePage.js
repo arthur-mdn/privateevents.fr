@@ -178,7 +178,7 @@ export const entrepriseLandingContent = {
   },
   caseStudy: {
     title: 'Exemple de prestation',
-    meta: ['Inauguration — Sephora Marseille', '2025', 'Terrasses du Port'],
+    meta: ['Inauguration - Sephora Marseille', '2025', 'Terrasses du Port'],
     brief:
       'Animation musicale pour l\'ouverture d\'un magasin, ambiance corporate et accueil des invités dans un cadre professionnel.',
     prestations: ['DJ', 'Sonorisation', 'Coordination sur site'],
@@ -201,7 +201,7 @@ export const entrepriseLandingContent = {
       testimonials.filter((t) => t.context?.toLowerCase().includes('entreprise')),
   },
   faq: {
-    title: 'Questions fréquentes — Entreprise',
+    title: 'Questions fréquentes - Entreprise',
     items: entrepriseFaq,
   },
   cta: {

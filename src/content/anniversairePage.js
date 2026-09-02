@@ -166,7 +166,7 @@ export const anniversaireLandingContent = {
   },
   caseStudy: {
     title: 'Exemple de prestation',
-    meta: ['Anniversaire 50 ans — Loriol-du-Comtat', 'Printemps 2026', 'Grande fête familiale'],
+    meta: ['Anniversaire 50 ans - Loriol-du-Comtat', 'Printemps 2026', 'Grande fête familiale'],
     brief:
       'Célébration des 50 ans avec programmation adaptée à tous les âges, ambiance très participative et soirée dansante jusqu\'au bout de la nuit.',
     prestations: ['DJ & éclairage', 'Sonorisation', 'Karaoké', 'Programmation sur mesure'],
@@ -189,7 +189,7 @@ export const anniversaireLandingContent = {
       testimonials.filter((t) => t.context?.toLowerCase().includes('anniversaire')),
   },
   faq: {
-    title: 'Questions fréquentes — Anniversaire',
+    title: 'Questions fréquentes - Anniversaire',
     items: anniversaireFaq,
   },
   cta: {

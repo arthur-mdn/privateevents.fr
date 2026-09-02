@@ -57,7 +57,7 @@ export function ClientCaseSection() {
             <footer>
               <cite>
                 {testimonial.author}
-                {testimonial.context ? ` — ${testimonial.context}` : ''}
+                {testimonial.context ? `, ${testimonial.context}` : ''}
               </cite>
             </footer>
           </blockquote>

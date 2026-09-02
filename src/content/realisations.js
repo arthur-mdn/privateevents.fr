@@ -135,7 +135,7 @@ const realisationProjectsUnsorted = [
   },
   {
     id: 'mariage-avignon-2025',
-    title: 'Mariage — Avignon',
+    title: 'Mariage - Avignon',
     type: 'Mariage',
     location: 'Avignon, Vaucluse',
     date: '2025-04-26',
@@ -152,7 +152,7 @@ const realisationProjectsUnsorted = [
   },
   {
     id: 'anniversaire-50-loriol',
-    title: 'Anniversaire 50 ans — Loriol-du-Comtat',
+    title: 'Anniversaire 50 ans - Loriol-du-Comtat',
     type: 'Anniversaire',
     location: 'Loriol-du-Comtat, Vaucluse',
     date: '2026-04-18',
@@ -163,7 +163,7 @@ const realisationProjectsUnsorted = [
   },
   {
     id: 'sephora-marseille',
-    title: 'Inauguration — Sephora Marseille',
+    title: 'Inauguration - Sephora Marseille',
     type: 'Entreprise',
     location: 'Marseille, Terrasses du Port',
     date: '2025-07-05',

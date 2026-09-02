@@ -13,7 +13,9 @@ import {
   guestCountOptions,
   MAX_AMBIANCE_SELECTIONS,
   prestationGroups,
+  prestationHelp,
 } from '../../content/configuratorSteps.js';
+import { PrestationHelpPopover } from './PrestationHelpPopover.jsx';
 
 const eventTypeIcons = {
   mariage: FaHeart,
@@ -50,12 +52,15 @@ function SelectCard({ id, label, description, selected, onSelect, type = 'radio'
   );
 }
 
-function CheckboxCard({ id, label, checked, onChange }) {
+function CheckboxCard({ id, label, checked, onChange, help }) {
   return (
-    <label className={`checkbox-card${checked ? ' is-selected' : ''}`} htmlFor={id}>
-      <input id={id} type="checkbox" checked={checked} onChange={onChange} />
-      <span className="checkbox-card__label">{label}</span>
-    </label>
+    <div className={`checkbox-card${checked ? ' is-selected' : ''}`}>
+      <label className="checkbox-card__main" htmlFor={id}>
+        <input id={id} type="checkbox" checked={checked} onChange={onChange} />
+        <span className="checkbox-card__label">{label}</span>
+      </label>
+      {help ? <PrestationHelpPopover label={label} help={help} /> : null}
+    </div>
   );
 }
 
@@ -201,6 +206,7 @@ export function StepPrestations({ data, onChange }) {
                   label={option.label}
                   checked={data.prestations.includes(option.id)}
                   onChange={() => togglePrestation(option.id)}
+                  help={prestationHelp[option.id]}
                 />
               </li>
             ))}

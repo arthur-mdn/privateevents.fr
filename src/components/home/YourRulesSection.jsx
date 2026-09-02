@@ -1,4 +1,5 @@
 import { yourRulesBlocks } from '../../content/homeSections.js';
+import { getRulesIcon } from '../shared/rulesIcons.js';
 
 export function YourRulesSection() {
   return (
@@ -11,12 +12,20 @@ export function YourRulesSection() {
         puis évolue avec vos invités.
       </p>
       <ul className="rules-grid">
-        {yourRulesBlocks.map((block) => (
-          <li key={block.title} className="rules-card">
-            <h3 className="rules-card__title">{block.title}</h3>
-            <p className="rules-card__desc">{block.description}</p>
-          </li>
-        ))}
+        {yourRulesBlocks.map((block) => {
+          const Icon = getRulesIcon(block.title);
+          return (
+            <li key={block.title} className="rules-card">
+              {Icon ? (
+                <span className="rules-card__icon" aria-hidden="true">
+                  <Icon />
+                </span>
+              ) : null}
+              <h3 className="rules-card__title">{block.title}</h3>
+              <p className="rules-card__desc">{block.description}</p>
+            </li>
+          );
+        })}
       </ul>
     </section>
   );

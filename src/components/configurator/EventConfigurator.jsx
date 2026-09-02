@@ -208,7 +208,7 @@ export function EventConfigurator() {
         <div className="configurator__progress-bar" style={{ width: `${progress}%` }} />
       </div>
       <p className="configurator__step-label">
-        Étape {step} sur {FORM_STEPS} — {currentStepMeta.title}
+        Étape {step} sur {FORM_STEPS} : {currentStepMeta.title}
       </p>
       <h2 className="heading-section configurator__heading">{currentStepMeta.heading}</h2>
 

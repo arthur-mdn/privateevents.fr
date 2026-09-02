@@ -1,14 +1,116 @@
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
-import { FaBars, FaXmark } from 'react-icons/fa6';
-import { Link, NavLink } from 'react-router-dom';
+import { FaBars, FaChevronDown, FaXmark } from 'react-icons/fa6';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 
-const navItems = [
+const eventLinks = [
   { to: '/mariage', label: 'Mariage' },
+  { to: '/anniversaire', label: 'Anniversaire' },
+  { to: '/soiree-privee', label: 'Soirée privée' },
+  { to: '/entreprise', label: 'Entreprise' },
+];
+
+const primaryLinks = [
   { to: '/prestations', label: 'Prestations' },
   { to: '/realisations', label: 'Réalisations' },
   { to: '/avis', label: 'Avis' },
   { to: '/a-propos', label: 'À propos' },
 ];
+
+function EventsDropdown({ onNavigate }) {
+  const [open, setOpen] = useState(false);
+  const rootRef = useRef(null);
+  const buttonRef = useRef(null);
+  const menuId = useId();
+  const location = useLocation();
+  const isEventActive = eventLinks.some((link) => location.pathname === link.to);
+
+  const close = useCallback(() => setOpen(false), []);
+
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        close();
+        buttonRef.current?.focus();
+      }
+    };
+
+    const onPointerDown = (e) => {
+      if (!rootRef.current?.contains(e.target)) {
+        close();
+      }
+    };
+
+    document.addEventListener('keydown', onKeyDown);
+    document.addEventListener('pointerdown', onPointerDown);
+    return () => {
+      document.removeEventListener('keydown', onKeyDown);
+      document.removeEventListener('pointerdown', onPointerDown);
+    };
+  }, [open, close]);
+
+  return (
+    <li
+      className={`site-nav__item site-nav__item--dropdown site-nav__item--desktop${open ? ' is-open' : ''}`}
+      ref={rootRef}
+    >
+      <button
+        ref={buttonRef}
+        type="button"
+        className={`site-nav__link site-nav__trigger${isEventActive ? ' is-active' : ''}`}
+        aria-expanded={open}
+        aria-controls={menuId}
+        aria-haspopup="true"
+        onClick={() => setOpen((v) => !v)}
+      >
+        Événements
+        <FaChevronDown className="site-nav__chevron" aria-hidden />
+      </button>
+      <ul id={menuId} className="site-nav__submenu" hidden={!open}>
+        {eventLinks.map(({ to, label }) => (
+          <li key={to}>
+            <NavLink
+              className={({ isActive }) =>
+                `site-nav__sublink${isActive ? ' is-active' : ''}`
+              }
+              to={to}
+              onClick={() => {
+                close();
+                onNavigate?.();
+              }}
+            >
+              {label}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
+
+function EventsMobileGroup({ onNavigate }) {
+  return (
+    <li className="site-nav__item site-nav__item--mobile-group">
+      <p className="site-nav__group-label">Événements</p>
+      <ul className="site-nav__group-list">
+        {eventLinks.map(({ to, label }) => (
+          <li key={to}>
+            <NavLink
+              className={({ isActive }) =>
+                `site-nav__link${isActive ? ' is-active' : ''}`
+              }
+              to={to}
+              onClick={onNavigate}
+            >
+              {label}
+            </NavLink>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+}
 
 export function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -97,7 +199,9 @@ export function SiteHeader() {
             <FaXmark aria-hidden />
           </button>
           <ul className="site-nav__list">
-            {navItems.map(({ to, label }) => (
+            <EventsDropdown onNavigate={closeMenu} />
+            <EventsMobileGroup onNavigate={closeMenu} />
+            {primaryLinks.map(({ to, label }) => (
               <li key={to}>
                 <NavLink
                   className={({ isActive }) =>

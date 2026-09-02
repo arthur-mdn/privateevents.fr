@@ -84,7 +84,7 @@ export function RealisationsPage() {
                           {testimonial.quote.length > 180 ? '…' : ''}&nbsp;»
                         </p>
                         <footer>
-                          — {testimonial.author}, {testimonial.context}
+                          - {testimonial.author}, {testimonial.context}
                           {' · '}
                           <Link to={`/avis#avis-${testimonial.id}`}>Voir l&apos;avis</Link>
                         </footer>

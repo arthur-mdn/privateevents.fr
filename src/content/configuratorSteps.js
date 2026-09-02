@@ -91,13 +91,143 @@ export const prestationGroups = [
 
 export const CONSEIL_OPTION_ID = 'conseil';
 
+export const prestationHelp = {
+  photobooth: {
+    description:
+      'Cabine ou borne photo pour des souvenirs imprimés ou numériques, avec accessoires et fonds personnalisables.',
+    image: null,
+    imageAlt: '',
+    href: '/prestations#photos-video',
+    linkLabel: 'Voir Photos & vidéo',
+  },
+  videobooth: {
+    description:
+      'Borne vidéo pour enregistrer des messages courts ou des clips fun. Idéal pour un livre d\'or numérique.',
+    image: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
+    imageAlt: 'Vidéobooth lors d’une soirée',
+    href: '/prestations#photos-video',
+    linkLabel: 'Voir Photos & vidéo',
+  },
+  diaporama: {
+    description:
+      'Vidéo personnalisée ou diaporama photo monté pour un temps fort (cérémonie, anniversaire, discours).',
+    image: '/elements/photos/prestations/video-personnalisee-mariage-laura-maxime.gif',
+    imageAlt: 'Extrait de vidéo personnalisée',
+    href: '/prestations#photos-video',
+    linkLabel: 'Voir Photos & vidéo',
+  },
+  'drag-queen': {
+    description:
+      'Performance drag pour un moment fort, souvent en cocktail ou en soirée. Sélection de partenaires selon votre projet.',
+    image: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
+    imageAlt: 'Spectacle drag queen Aquarii',
+    href: '/prestations#artistes',
+    linkLabel: 'Voir Artistes & performances',
+  },
+  'musicien-live': {
+    description:
+      'Musicien ou groupe live pour cocktail, cérémonie ou ouverture de bal, coordonné avec la prestation DJ.',
+    image: null,
+    imageAlt: '',
+    href: '/prestations#artistes',
+    linkLabel: 'Voir Artistes & performances',
+  },
+  magicien: {
+    description:
+      'Magie de proximité ou spectacle court pour animer le cocktail ou un temps calme du repas.',
+    image: null,
+    imageAlt: '',
+    href: '/prestations#artistes',
+    linkLabel: 'Voir Artistes & performances',
+  },
+  mentaliste: {
+    description:
+      'Numéro de mentalisme pour surprendre vos invités lors d\'un cocktail ou d\'un événement premium.',
+    image: null,
+    imageAlt: '',
+    href: '/prestations#artistes',
+    linkLabel: 'Voir Artistes & performances',
+  },
+  hypnose: {
+    description:
+      'Spectacle d\'hypnose de divertissement, adapté selon le format et le public de votre soirée.',
+    image: null,
+    imageAlt: '',
+    href: '/prestations#artistes',
+    linkLabel: 'Voir Artistes & performances',
+  },
+  'autre-artiste': {
+    description:
+      'Humoriste, danseurs ou autre performance : on sélectionne un partenaire selon votre thème et budget.',
+    image: null,
+    imageAlt: '',
+    href: '/prestations#artistes',
+    linkLabel: 'Voir Artistes & performances',
+  },
+  etincelles: {
+    description:
+      'Étincelles froides pour ouverture de bal ou temps fort photo, en intérieur ou extérieur selon le lieu.',
+    image: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
+    imageAlt: 'Machine à étincelles froides',
+    href: '/prestations#mise-en-scene',
+    linkLabel: 'Voir Mise en scène',
+  },
+  'machine-fumee': {
+    description:
+      'Fumée lourde ou machine à fumée pour sublimer les lumières et les ouvertures de bal.',
+    image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
+    imageAlt: 'Ouverture de bal avec fumée',
+    href: '/prestations#mise-en-scene',
+    linkLabel: 'Voir Mise en scène',
+  },
+  'machine-bulles': {
+    description:
+      'Machine à bulles pour une ambiance légère, souvent appréciée en cocktail ou pour un temps photo.',
+    image: null,
+    imageAlt: '',
+    href: '/prestations#mise-en-scene',
+    linkLabel: 'Voir Mise en scène',
+  },
+  eclairage: {
+    description:
+      'Éclairage d\'ambiance, projecteurs et lasers pour transformer le lieu et marquer les temps forts.',
+    image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
+    imageAlt: 'Éclairages dynamiques et lasers',
+    href: '/prestations#eclairage',
+    linkLabel: 'Voir Éclairage',
+  },
+  'feu-artifice': {
+    description:
+      'Feu d\'artifice extérieur possible sous réserve des autorisations et contraintes du lieu.',
+    image: null,
+    imageAlt: '',
+    href: '/prestations#mise-en-scene',
+    linkLabel: 'Voir Mise en scène',
+  },
+  karaoke: {
+    description:
+      'Karaoké animé au micro, avec matériel dédié, pour un créneau participatif dans la soirée.',
+    image: '/elements/photos/dj-karaoke.jpeg',
+    imageAlt: 'Animation karaoké',
+    href: '/prestations#animations',
+    linkLabel: 'Voir Animations',
+  },
+  quiz: {
+    description:
+      'Quiz ou blind test animé pour impliquer vos invités sans casser le rythme de la soirée.',
+    image: null,
+    imageAlt: '',
+    href: '/prestations#animations',
+    linkLabel: 'Voir Animations',
+  },
+};
+
 export const welcomeStep = {
   heading: 'Construire mon événement',
   intro:
     'Quelques questions pour comprendre votre projet et vous répondre de façon personnalisée.',
 };
 
-// TODO: popover d'aide (?) sur les options de prestation
 export const configuratorSteps = [
   { id: 1, title: 'Type d\'événement', heading: 'Quel événement préparez-vous ?' },
   { id: 2, title: 'Votre événement', heading: 'Parlez-nous de votre événement' },

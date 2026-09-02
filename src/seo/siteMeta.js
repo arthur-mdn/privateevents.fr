@@ -1,5 +1,5 @@
 export const SITE_URL = 'https://privateevents.fr';
-export const SITE_NAME = 'Private Events — DJ Mika';
+export const SITE_NAME = 'Private Events - DJ Mika';
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/elements/photos/dj.png`;
 
 export const homeJsonLd = {
@@ -8,7 +8,7 @@ export const homeJsonLd = {
     {
       '@type': 'ProfessionalService',
       '@id': `${SITE_URL}/#organisation`,
-      name: 'Private Events — DJ Mika',
+      name: 'Private Events - DJ Mika',
       alternateName: 'DJ Mika Private Events',
       image: `${SITE_URL}/elements/logo.png`,
       url: `${SITE_URL}/`,
@@ -77,9 +77,9 @@ const defaultDescription =
 
 export const routeMeta = {
   '/': {
-    title: 'DJ Mika — Private Events | DJ, karaoké & animation en Provence',
+    title: 'DJ Mika - Private Events | DJ, karaoké & animation en Provence',
     description: defaultDescription,
-    ogTitle: 'DJ Mika — Private Events | Animation musicale & karaoké en Provence',
+    ogTitle: 'DJ Mika - Private Events | Animation musicale & karaoké en Provence',
     jsonLd: homeJsonLd,
   },
   '/mariage': {
@@ -129,7 +129,7 @@ export const routeMeta = {
   },
   '/mentions-legales': {
     title: 'Mentions légales | Private Events',
-    description: 'Mentions légales du site Private Events — DJ Mika.',
+    description: 'Mentions légales du site Private Events - DJ Mika.',
     noindex: true,
   },
   '/politique-de-confidentialite': {
