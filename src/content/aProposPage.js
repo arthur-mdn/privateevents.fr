@@ -4,14 +4,15 @@ export const aProposHero = {
   intro:
     'Depuis plus de 10 ans, Mika accompagne des événements privés et professionnels dans le Sud de la France. Chaque prestation est préparée en amont, puis adaptée en direct le jour de l\'événement.',
   titleId: 'apropos-hero-title',
-  image: '/elements/photos/dj-experience.jpeg',
+  image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
+  imageAlt: 'Mains de DJ Mika sur une console Pioneer lors d’un événement en extérieur',
 };
 
 export const aProposProfile = {
   name: 'Mika',
   role: 'DJ événementiel & coordinateur',
-  image: '/elements/photos/dj-experience.jpeg',
-  imageAlt: 'Mika, DJ événementiel Private Events en Provence',
+  image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
+  imageAlt: 'Mains de DJ Mika sur une console Pioneer lors d’un événement en extérieur',
   bio:
     'Passionné de musique et de mise en ambiance, Mika a développé une approche centrée sur l\'écoute : comprendre vos goûts, votre lieu, vos invités et le déroulement prévu pour construire une prestation qui vous ressemble.',
 };

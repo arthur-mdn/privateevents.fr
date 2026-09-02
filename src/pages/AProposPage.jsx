@@ -28,7 +28,7 @@ const aProposJsonLd = {
       name: 'Mika',
       jobTitle: 'DJ événementiel',
       worksFor: { '@id': `${SITE_URL}/#organisation` },
-      image: `${SITE_URL}/elements/photos/dj-experience.jpeg`,
+      image: `${SITE_URL}/elements/photos/dj-mains-console-pioneer-exterieur.webp`,
       description:
         'DJ événementiel en Provence depuis plus de 10 ans. Animation musicale et coordination de prestations complémentaires.',
     },

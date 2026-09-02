@@ -52,16 +52,16 @@ export const servicePillars = [
     summary: 'Programmation personnalisée, sonorisation et éclairage pour vos temps forts.',
     examples: ['DJ set', 'Sonorisation', 'Éclairage', 'Micro et temps forts'],
     href: '/prestations',
-    image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
-    imageAlt: 'DJ en prestation avec éclairages dynamiques',
+    image: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
+    imageAlt: 'DJ Mika en plein mixage sous éclairage bleu lors d’une soirée',
   },
   {
     title: 'Animations',
     summary: 'Des moments participatifs pour varier la soirée sans casser l\'ambiance.',
     examples: ['Karaoké', 'Quiz et blind test', 'Animations participatives', 'Animation micro'],
     href: '/prestations',
-    image: '/elements/photos/dj-karaoke.jpeg',
-    imageAlt: 'Animation karaoké avec micro et public',
+    image: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+    imageAlt: 'Poste DJ avec ordinateur et microphone sans fil pour animation micro',
   },
   {
     title: 'Photos & souvenirs',
@@ -99,8 +99,8 @@ export const servicePillars = [
     summary: 'Pour que vous puissiez profiter sereinement de votre événement.',
     examples: ['Garde d\'enfants', 'Animations enfants', 'Personnel de restauration', 'Sécurité'],
     href: '/prestations',
-    image: '/elements/photos/dj-soiree.png',
-    imageAlt: 'Ambiance de soirée événementielle',
+    image: '/elements/photos/platine-dj-serato-eclairage-bleu.webp',
+    imageAlt: 'Platine DJ professionnelle Serato sous éclairage bleu d’événement',
   },
 ];
 

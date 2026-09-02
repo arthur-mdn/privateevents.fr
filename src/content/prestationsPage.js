@@ -18,8 +18,31 @@ export const prestationsSections = [
       'Une ambiance sur mesure qui s\'adapte à vos goûts, à vos invités et au rythme réel de la soirée.',
     integration:
       'Cœur de la prestation Private Events. Coordonné avec sonorisation, éclairage et animations complémentaires.',
-    image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
-    imageAlt: 'DJ en prestation avec éclairages dynamiques',
+    image: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
+    imageAlt: 'DJ Mika en plein mixage sous éclairage bleu lors d’une soirée',
+    images: [
+      {
+        id: 'dj-mixage-live-eclairage-bleu',
+        src: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
+        alt: 'DJ Mika en plein mixage sous éclairage bleu lors d’une soirée',
+        width: 1200,
+        height: 1800,
+      },
+      {
+        id: 'pads-performance-console-dj',
+        src: '/elements/photos/pads-performance-console-dj.webp',
+        alt: 'Gros plan sur les pads de performance d’une console DJ professionnelle',
+        width: 1400,
+        height: 2100,
+      },
+      {
+        id: 'platine-dj-serato-eclairage-bleu',
+        src: '/elements/photos/platine-dj-serato-eclairage-bleu.webp',
+        alt: 'Platine DJ Serato sous éclairage bleu lors d’un événement privé',
+        width: 1400,
+        height: 2100,
+      },
+    ],
   },
   {
     id: 'sonorisation',
@@ -31,8 +54,8 @@ export const prestationsSections = [
       'Un son clair et adapté à chaque moment : musique de fond discrète, volume festif ou micro pour les interventions.',
     integration:
       'Inclus dans la prestation DJ ou en option pour les temps forts (discours, cérémonie). Anticipé lors de la préparation.',
-    image: '/elements/photos/dj-setup.png',
-    imageAlt: 'Installation de sonorisation professionnelle',
+    image: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
+    imageAlt: 'Setup DJ en extérieur avec écran au logo Mika Private Events',
   },
   {
     id: 'eclairage',
@@ -66,8 +89,24 @@ export const prestationsSections = [
       'Des moments interactifs qui impliquent vos invités sans casser l\'ambiance générale.',
     integration:
       'Créneaux dédiés intégrés dans la programmation DJ. Matériel karaoké et micro inclus.',
-    image: '/elements/photos/dj-karaoke.jpeg',
-    imageAlt: 'Animation karaoké avec micro et public',
+    image: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+    imageAlt: 'Poste DJ avec ordinateur et microphone sans fil pour animation micro',
+    images: [
+      {
+        id: 'poste-dj-ordinateur-micro-exterieur',
+        src: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+        alt: 'Poste DJ avec ordinateur et microphone sans fil pour animation micro en extérieur',
+        width: 1400,
+        height: 933,
+      },
+      {
+        id: 'microphone-sans-fil-regie-dj',
+        src: '/elements/photos/microphone-sans-fil-regie-dj.webp',
+        alt: 'Microphone sans fil professionnel posé sur la régie DJ lors d’une soirée',
+        width: 1400,
+        height: 2100,
+      },
+    ],
   },
   {
     id: 'photos-video',
@@ -187,8 +226,8 @@ export const prestationsSections = [
       'Une organisation plus complète pour que vous puissiez profiter sereinement de votre événement.',
     integration:
       'Mobilisés via le réseau de partenaires. Coordonnés avec le déroulement global de la soirée.',
-    image: '/elements/photos/dj-soiree.png',
-    imageAlt: 'Ambiance de soirée événementielle',
+    image: '/elements/photos/platine-dj-serato-eclairage-bleu.webp',
+    imageAlt: 'Platine DJ professionnelle prête pour une soirée événementielle',
   },
 ];
 

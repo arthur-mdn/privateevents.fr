@@ -207,8 +207,8 @@ export const prestationHelp = {
   karaoke: {
     description:
       'Karaoké animé au micro, avec matériel dédié, pour un créneau participatif dans la soirée.',
-    image: '/elements/photos/dj-karaoke.jpeg',
-    imageAlt: 'Animation karaoké',
+    image: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+    imageAlt: 'Poste DJ avec microphone pour animation karaoké',
     href: '/prestations#animations',
     linkLabel: 'Voir Animations',
   },

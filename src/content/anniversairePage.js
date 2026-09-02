@@ -111,8 +111,8 @@ export const anniversaireLandingContent = {
       {
         title: 'Animations',
         description: 'Karaoké, blind test ou moments participatifs pour varier la soirée.',
-        image: '/elements/photos/dj-karaoke.jpeg',
-        imageAlt: 'Animation karaoké avec micro et public',
+        image: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+        imageAlt: 'Microphone et poste DJ pour animation karaoké ou micro lors d’un anniversaire',
       },
     ],
   },

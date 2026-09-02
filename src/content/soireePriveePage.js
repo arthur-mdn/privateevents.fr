@@ -111,8 +111,8 @@ export const soireePriveeLandingContent = {
       {
         title: 'Soirée entre amis',
         description: 'Format intimiste ou grand groupe, programmation adaptée à votre cercle.',
-        image: '/elements/photos/dj-soiree.png',
-        imageAlt: 'Ambiance de soirée privée événementielle',
+        image: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
+        imageAlt: 'DJ Mika en plein mixage lors d’une soirée privée',
       },
     ],
   },

@@ -1,6 +1,6 @@
 export const SITE_URL = 'https://privateevents.fr';
 export const SITE_NAME = 'Private Events - DJ Mika';
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/elements/photos/dj.png`;
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/elements/photos/dj-mixage-live-eclairage-bleu.webp`;
 
 export const homeJsonLd = {
   '@context': 'https://schema.org',

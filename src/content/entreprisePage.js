@@ -135,14 +135,14 @@ export const entrepriseLandingContent = {
       {
         title: 'Séminaire & team building',
         description: 'Sonorisation pour interventions et animation musicale en fin de journée.',
-        image: '/elements/photos/dj-setup.png',
-        imageAlt: 'Installation professionnelle pour événement corporate',
+        image: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
+        imageAlt: 'Setup DJ professionnel avec écran Mika Private Events pour événement corporate',
       },
       {
         title: 'Événement interne',
         description: 'Pot de départ, fête de fin d\'année ou célébration d\'équipe.',
-        image: '/elements/photos/dj-experience.jpeg',
-        imageAlt: 'DJ Mika en prestation événementielle',
+        image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
+        imageAlt: 'DJ Mika aux platines lors d’un événement en extérieur',
       },
     ],
   },
