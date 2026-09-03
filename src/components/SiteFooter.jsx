@@ -67,8 +67,10 @@ export function SiteFooter() {
       </div>
       <div className="site-footer__legal">
         <p className="site-footer__credit">
-          Site réalisé par{' '}
-          <a href="https://mondon.pro">Arthur Mondon</a>
+          Réalisé avec ❤️ par{' '}
+          <a href="https://mondon.pro" target="_blank" rel="noopener noreferrer">
+            Arthur Mondon
+          </a>
         </p>
         <ul className="site-footer__legal-links">
           <li>

@@ -21,6 +21,13 @@ export const mentionsLegalesContent = {
       ],
     },
     {
+      title: 'Conception et développement',
+      paragraphs: [
+        'Site web conçu et développé par Arthur Mondon.',
+        'Site web : https://mondon.pro',
+      ],
+    },
+    {
       title: 'Propriété intellectuelle',
       paragraphs: [
         'L\'ensemble du contenu du site (textes, images, logos, éléments graphiques) est protégé par le droit d\'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable de Private Events - DJ Mika.',
