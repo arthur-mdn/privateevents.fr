@@ -1,4 +1,5 @@
 import { PageMeta } from '../components/PageMeta.jsx';
+import { LegalParagraph } from '../components/shared/LegalParagraph.jsx';
 import { SiteFooter } from '../components/SiteFooter.jsx';
 import { SiteHeader } from '../components/SiteHeader.jsx';
 import { politiqueConfidentialiteContent } from '../content/legalPages.js';
@@ -22,7 +23,7 @@ export function PolitiqueConfidentialitePage() {
                 {section.title}
               </h2>
               {section.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
+                <LegalParagraph key={paragraph}>{paragraph}</LegalParagraph>
               ))}
             </section>
           ))}

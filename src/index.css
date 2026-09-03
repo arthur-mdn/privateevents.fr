@@ -3589,6 +3589,16 @@ main:not(:has(.hero)):not(.section--configurator) {
   margin-top: 2rem;
 }
 
+.section--legal .prose a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.section--legal .prose a:hover {
+  color: var(--color-accent-deep);
+}
+
 .legal-updated {
   margin: -0.5rem 0 1.5rem;
   font-size: 0.875rem;
