@@ -129,7 +129,7 @@ export const routeMeta = {
   '/a-propos': {
     title: 'DJ Mika | À propos de Mika Private Events',
     description:
-      'Actif dans l’événementiel depuis 2013/2014, Mika propose DJ, animation et coordination de partenaires en Provence / PACA.',
+      'Amateur dès 2010/2011, Mika propose DJ, animation et coordination de partenaires en Provence / PACA.',
   },
   '/mon-evenement': {
     title: 'Construire mon événement | Mika Private Events',

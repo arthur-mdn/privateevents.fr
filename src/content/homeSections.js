@@ -3,16 +3,16 @@ export const heroContent = {
   title: 'Des soirées construites autour de votre événement.',
   intro:
     'Mariages, anniversaires, soirées privées et événements d\'entreprise en Provence. DJ, sonorisation et éclairage en formule complète ou plug and play, avec des options partenaires selon le projet.',
-  reassurance: ['Depuis 2013/2014', 'Formule complète ou plug and play', 'Devis personnalisé'],
+  reassurance: ['Depuis 2010/2011', 'Formule complète ou plug and play', 'Devis personnalisé'],
   image: '/elements/gallery/mariage-dansant-lumieres.webp',
   imageAlt: 'Invités dansent sous les jeux de lumières lors d\'une soirée de mariage',
 };
 
 export const stats = [
-  { value: '2013', label: 'début', detail: 'dans l\'événementiel' },
+  { value: '2011', label: 'début', detail: 'en événementiel' },
   { value: '~50', label: 'événements', detail: 'réalisés' },
   { value: 'Provence', label: 'PACA', detail: 'zone d\'intervention' },
-  { value: 'Avis', label: 'clients', detail: 'témoignages disponibles', href: '/avis' },
+  { value: 'Excellents avis', label: 'clients', detail: 'témoignages disponibles', href: '/avis' },
 ];
 
 export const eventTypes = [

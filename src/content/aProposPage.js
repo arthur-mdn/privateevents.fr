@@ -2,7 +2,7 @@ export const aProposHero = {
   eyebrow: 'À propos',
   title: 'Derrière les platines',
   intro:
-    'Actif dans l\'événementiel depuis 2013/2014, Mika a progressé des premières soirées et karaoké vers le mix live et un équipement professionnel. Aujourd\'hui : DJ, animation et coordination de partenaires en Provence / PACA.',
+    'Amateur dès 2010/2011, Mika a progressé des premières soirées et karaoké vers le mix live et un équipement professionnel. Aujourd\'hui : DJ, animation et coordination de partenaires en Provence / PACA.',
   titleId: 'apropos-hero-title',
   image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
   imageAlt: 'Mains de DJ Mika sur une console Pioneer lors d’un événement en extérieur',
@@ -14,13 +14,13 @@ export const aProposProfile = {
   image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
   imageAlt: 'Mains de DJ Mika sur une console Pioneer lors d’un événement en extérieur',
   bio:
-    'Les débuts remontent à 2013/2014 avec des soirées amateur et du karaoké, puis une évolution progressive vers le mix live. Environ huit ans de prestations avec une configuration professionnelle, et une cinquantaine d\'événements réalisés. Les avis publiés correspondent à des retours de clients après prestation.',
+    'Les débuts remontent à 2010/2011 avec des soirées amateur et du karaoké, puis une évolution progressive vers le mix live. Environ huit ans de prestations avec une configuration professionnelle, et une cinquantaine d\'événements réalisés. Les avis publiés correspondent à des retours de clients après prestation.',
 };
 
 export const aProposProofs = [
   {
-    title: 'Depuis 2013 / 2014',
-    description: 'Premières soirées et karaoké, puis professionnalisation progressive du matériel et des prestations.',
+    title: 'Depuis 2010 / 2011',
+    description: 'Premières soirées amateur et karaoké, puis professionnalisation progressive du matériel et des prestations.',
   },
   {
     title: 'Environ huit ans en configuration pro',

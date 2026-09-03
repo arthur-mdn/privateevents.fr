@@ -1,11 +1,12 @@
 export const mentionsLegalesContent = {
   title: 'Mentions légales',
-  lastUpdated: '2026',
+  lastUpdated: 'septembre 2026',
   sections: [
     {
       title: 'Éditeur du site',
       paragraphs: [
         'Le site privateevents.fr est édité par Private Events - DJ Mika.',
+        'SIRET : 982 765 182 00018',
         'Contact : contact@privateevents.fr - Téléphone : 07 82 73 76 61',
         'Directeur de la publication : Mika.',
       ],
@@ -13,7 +14,10 @@ export const mentionsLegalesContent = {
     {
       title: 'Hébergement',
       paragraphs: [
-        'Le site est hébergé par un prestataire d\'hébergement web. Pour toute question relative à l\'hébergement, contactez l\'éditeur du site.',
+        'Le site est hébergé par LWS (Ligne Web Services), SAS au capital de 500 000 €.',
+        'Siège social : 2 rue Jules Ferry, 88190 Golbey, France.',
+        'SIRET : 851 993 683 00016 - RCS Épinal 851 993 683',
+        'Site web : https://www.lws.fr - Téléphone : 01 77 62 30 03',
       ],
     },
     {
@@ -46,12 +50,12 @@ export const mentionsLegalesContent = {
 
 export const politiqueConfidentialiteContent = {
   title: 'Politique de confidentialité',
-  lastUpdated: '2026',
+  lastUpdated: 'septembre 2026',
   sections: [
     {
       title: 'Responsable du traitement',
       paragraphs: [
-        'Private Events - DJ Mika, contact@privateevents.fr, est responsable du traitement des données personnelles collectées via le site privateevents.fr.',
+        'Private Events - DJ Mika (SIRET 982 765 182 00018), contact@privateevents.fr, est responsable du traitement des données personnelles collectées via le site privateevents.fr.',
       ],
     },
     {
@@ -92,6 +96,7 @@ export const politiqueConfidentialiteContent = {
       title: 'Sous-traitants',
       paragraphs: [
         'Les données du formulaire sont transmises via Formspree (service de traitement de formulaires) pour la réception des messages. Formspree est conforme au RGPD.',
+        'L\'hébergement du site est assuré par LWS (Ligne Web Services), 2 rue Jules Ferry, 88190 Golbey.',
       ],
     },
     {
