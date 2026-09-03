@@ -90,6 +90,13 @@ export const prestationHighlights = [
   },
 ];
 
+export const yourRulesEditorial = {
+  quote:
+    'Vos incontournables sont préparés en amont. Les morceaux que vous préférez éviter aussi. Le reste se construit en direct, selon l’ambiance et les réactions sur la piste.',
+  image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
+  imageAlt: 'Mains de DJ Mika sur console Pioneer lors d’une prestation en extérieur',
+};
+
 export const yourRulesBlocks = [
   {
     title: 'Incontournables',

@@ -1308,8 +1308,24 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 /* --- Your rules --- */
-.section--rules {
+.section--rules.feature-split {
   border-top: 1px solid var(--color-border);
+}
+
+.rules-editorial__quote {
+  margin: 1.25rem 0 0;
+  padding: 0;
+  border: none;
+}
+
+.rules-editorial__quote p {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--color-text);
+  letter-spacing: -0.01em;
 }
 
 .rules-grid {
