@@ -51,9 +51,9 @@ const realisationProjectsUnsorted = [
     date: '2026-08-15',
     dateLabel: '15 août 2026',
     brief:
-      'Fête annuelle d’un club de pétanque : sardinade barbecue en extérieur, puis ambiance musicale et soirée dansante.',
+      'Fête annuelle d’un club de pétanque près de Montpellier : sardinade barbecue en extérieur, puis passage progressif vers l’ambiance musicale et la soirée dansante.',
     highlight:
-      'Animation adaptée à une fête associative en plein air, du repas convivial jusqu’à la piste.',
+      'Installation pensée pour un terrain en plein air, avec un volume adapté au repas associatif puis une montée en puissance sur la piste.',
     prestations: ['DJ', 'Sonorisation extérieure', 'Ambiance musicale', 'Soirée dansante'],
     imageIds: ['fete-petanque-sardinade-barbecue-montpellier'],
   },
@@ -110,9 +110,9 @@ const realisationProjectsUnsorted = [
     date: '2026-07-09',
     dateLabel: '9 juillet 2026',
     brief:
-      'Inauguration de nouveaux locaux en extérieur : buffet dinatoire et ambiance musicale années 80 pour accueillir collaborateurs et invités.',
+      'Inauguration de nouveaux locaux à Fréjus, en extérieur : accueil des collaborateurs et invités pendant un buffet dinatoire, avec une programmation musicale années 80.',
     highlight:
-      'Cadre corporate en extérieur avec programmation thématique années 80 pendant le buffet.',
+      'Cadre corporate tenu pendant toute la réception, sans basculer en soirée club, pour coller à l’image de l’événement.',
     prestations: ['DJ', 'Sonorisation extérieure', 'Buffet dinatoire', 'Ambiance années 80'],
     imageIds: [
       'inauguration-entreprise-frejus-exterieur',
@@ -127,9 +127,9 @@ const realisationProjectsUnsorted = [
     date: '2026-07-04',
     dateLabel: '4 juillet 2026',
     brief:
-      'Ambiance musicale pendant le buffet dinatoire, puis animation et soirée dansante dans un domaine viticole.',
+      'Mariage dans un domaine viticole près de Lyon : ambiance musicale pendant le buffet dinatoire, puis animation et soirée dansante une fois la nuit tombée.',
     highlight:
-      'Passage progressif du buffet à la piste dans un lieu viticole, avec éclairage adapté à la nuit.',
+      'Passage progressif du buffet à la piste, avec un éclairage calé sur l’architecture du domaine et le rythme de la soirée.',
     prestations: ['DJ & éclairage', 'Buffet dinatoire', 'Soirée dansante'],
     imageIds: [
       'mariage-gaetan-audrey-domaine-viticole-lyon',
@@ -144,9 +144,9 @@ const realisationProjectsUnsorted = [
     date: '2026-06-20',
     dateLabel: '20 juin 2026',
     brief:
-      'Sonorisation d’ambiance pendant le repas, puis soirée dansante. Retours positifs des mariés et des invités, avec recommandation pour un prochain mariage.',
+      'Mariage entre région lyonnaise et Valence : sonorisation d’ambiance pendant le repas, puis soirée dansante. Les mariés et les invités ont salué l’animation, avec une recommandation pour un prochain mariage.',
     highlight:
-      'Ambiance tenue jusqu’en fin de soirée, saluée par les mariés et leur entourage.',
+      'Continuité musicale du repas à la fin de soirée, sans rupture d’ambiance ni playlist figée.',
     prestations: ['DJ', 'Sonorisation repas', 'Soirée dansante'],
     imageIds: [
       'mariage-oceane-anthony-valence-repas',
@@ -162,9 +162,9 @@ const realisationProjectsUnsorted = [
     date: '2026-08-14',
     dateLabel: '14 août 2026',
     brief:
-      'Soirée dans un restaurant en bord de lac : ambiance musicale pendant le service, puis soirée dansante sur place.',
+      'Soirée au restaurant Lac Alaiade, à Beaumont-de-Pertuis : ambiance musicale pendant le service en bord de lac, puis soirée dansante sur place une fois le repas terminé.',
     highlight:
-      'Intervention dans un établissement déjà en service, avec passage fluide vers la piste.',
+      'Intervention dans un établissement déjà en service, avec un volume maîtrisé au restaurant puis une vraie bascule vers la piste.',
     prestations: ['DJ', 'Ambiance musicale', 'Soirée dansante'],
     imageIds: [
       'soiree-restaurant-lac-alaiade-beaumont-de-pertuis',
@@ -179,9 +179,9 @@ const realisationProjectsUnsorted = [
     date: '2026-01-01',
     dateLabel: 'Nouvel An 2026',
     brief:
-      'Soirée du Nouvel An dans un établissement déjà équipé : mix live, ambiance club et karaoké, sans installation lourde inutile.',
+      'Réveillon du Nouvel An au Zanzibar, à Sète : mix live, ambiance club et créneau karaoké, en s’appuyant sur l’installation déjà en place dans l’établissement.',
     highlight:
-      'Régie plug and play adaptée au matériel du lieu pour tenir l’ambiance toute la nuit.',
+      'Régie plug and play pour tenir toute la nuit sans surcharger le lieu d’une sono inutile.',
     prestations: ['DJ', 'Plug and play / régie', 'Ambiance club', 'Karaoké'],
     imageIds: ['soiree-nouvel-an-2026-zanzibar-sete'],
   },
@@ -235,9 +235,9 @@ const realisationProjectsUnsorted = [
     date: '2025-07-05',
     dateLabel: '5 juillet 2025',
     brief:
-      'Animation musicale pour l’ouverture d’un magasin : accueil des invités, cadre corporate et sonorisation adaptée au lieu.',
+      'Ouverture du Sephora aux Terrasses du Port, à Marseille : accueil musical des invités, cadre corporate et sonorisation calée sur le magasin et ses flux.',
     highlight:
-      'Prestation discrète et cadrée pour une inauguration de marque, avec horaires et image de lieu respectés.',
+      'Prestation discrète et cadrée pour une inauguration de marque, avec horaires et image du lieu respectés.',
     prestations: ['DJ', 'Sonorisation', 'Accueil musical'],
     imageIds: ['inauguration-ouverture-sephora-marseille-vieux-port'],
     testimonialId: '2025-07',
@@ -250,9 +250,9 @@ const realisationProjectsUnsorted = [
     date: '2025-09-19',
     dateLabel: '19 septembre 2025',
     brief:
-      'Anniversaire de famille en extérieur : sonorisation et éclairage adaptés au jardin, du cocktail jusqu’à la fin de soirée.',
+      'Anniversaire de famille à Sorgues, en extérieur : sonorisation et éclairage adaptés au jardin, du cocktail jusqu’à la fin de soirée.',
     highlight:
-      'Installation pensée pour un jardin familial, avec une ambiance fluide du début à la fin.',
+      'Installation pensée pour un jardin familial, sans écraser la conversation au début, puis assez présente pour accompagner la piste.',
     prestations: ['DJ', 'Sonorisation extérieure', 'Éclairage'],
     imageIds: ['anniversaire-jeunes-sorgues-2026'],
     testimonialId: '2025-09',
@@ -263,8 +263,9 @@ const realisationProjectsUnsorted = [
     type: 'Anniversaire',
     location: 'Provence',
     brief:
-      'Anniversaire des 18 ans pour un public jeune : éclairage dynamique et animation DJ orientée dancefloor.',
-    highlight: 'Ambiance lumineuse et festive pensée pour une fête entre amis.',
+      'Anniversaire des 18 ans de Yogan, en Provence : public jeune, éclairage dynamique et animation DJ clairement orientée dancefloor.',
+    highlight:
+      'Soirée construite autour de la piste, avec une lumière et une programmation calées sur une fête entre amis.',
     prestations: ['DJ', 'Éclairage', 'Ambiance festive'],
     imageIds: ['anniversaire-18ans-jeunes-ambiances-lumiere'],
   },

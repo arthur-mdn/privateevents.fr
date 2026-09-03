@@ -8,7 +8,8 @@ export function EventTypesSection() {
         Quel événement préparez-vous ?
       </h2>
       <p className="lead">
-        Choisissez votre contexte pour découvrir une prestation pensée autour de votre projet.
+        Quatre formats, quatre pages. Choisissez le vôtre pour voir le déroulé, les options et
+        des exemples proches.
       </p>
       <ul className="event-cards">
         {eventTypes.map((event) => (

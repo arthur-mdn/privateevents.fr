@@ -192,11 +192,11 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 .site-nav__submenu--rich {
-  min-width: 18rem;
+  min-width: 19.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.15rem;
-  padding: 0.5rem;
+  gap: 0.25rem;
+  padding: 0.55rem;
 }
 
 .site-nav__sublink {
@@ -207,25 +207,53 @@ main:not(:has(.hero)):not(.section--configurator) {
   font-weight: 500;
   font-size: 0.9rem;
   border-radius: var(--radius-sm);
+  transition: background 0.15s ease, color 0.15s ease;
 }
 
 .site-nav__sublink--rich {
   display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.65rem;
+  padding: 0.7rem 0.8rem;
+  height: 100%;
+}
+
+.site-nav__sublink-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  margin-top: 0.12rem;
+  color: var(--color-accent-deep);
+  line-height: 1;
+}
+
+.site-nav__sublink-icon svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.site-nav__sublink-text {
+  display: flex;
   flex-direction: column;
-  gap: 0.15rem;
-  padding: 0.65rem 0.75rem;
+  gap: 0.2rem;
+  min-width: 0;
 }
 
 .site-nav__sublink-label {
   font-weight: 600;
   font-size: 0.9rem;
+  color: inherit;
 }
 
 .site-nav__sublink-desc {
-  font-size: 0.8125rem;
+  font-size: 0.78rem;
   font-weight: 400;
   color: var(--color-text-muted);
-  line-height: 1.35;
+  line-height: 1.4;
 }
 
 .site-nav__submenu[hidden] {
@@ -233,9 +261,25 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 .site-nav__sublink:hover,
+.site-nav__sublink:focus-visible,
 .site-nav__sublink.is-active {
   color: var(--color-accent);
   background: var(--color-surface);
+}
+
+.site-nav__sublink:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 0;
+}
+
+.site-nav__trigger:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.site-nav__item--dropdown.is-open .site-nav__trigger {
+  color: var(--color-accent);
 }
 
 .site-nav__link {
@@ -430,7 +474,26 @@ main:not(:has(.hero)):not(.section--configurator) {
   .site-nav__group-list {
     list-style: none;
     margin: 0;
-    padding: 0;
+    padding: 0 0 0.35rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-nav__group-list .site-nav__sublink--rich {
+    padding: 0.7rem 0.5rem;
+    border-radius: 0;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .site-nav__group-list li:last-child .site-nav__sublink--rich {
+    border-bottom: none;
+  }
+
+  .site-nav__group-list .site-nav__sublink-label {
+    font-size: 1rem;
+  }
+
+  .site-nav__group-list .site-nav__sublink-desc {
+    font-size: 0.8125rem;
   }
 
   .site-nav__link {
@@ -1065,6 +1128,7 @@ main:not(:has(.hero)):not(.section--configurator) {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  display: block;
 }
 
 .pillar-card__body {
@@ -1134,6 +1198,7 @@ main:not(:has(.hero)):not(.section--configurator) {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  display: block;
 }
 
 .highlight-card__body {
@@ -1559,7 +1624,7 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 .moment-grid--dense .moment-card__body {
-  padding: 1rem 1.1rem 1.15rem;
+  padding: 0.75rem 1rem 1rem;
 }
 
 @media (min-width: 720px) {
@@ -2335,6 +2400,7 @@ main:not(:has(.hero)):not(.section--configurator) {
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
+  display: block;
 }
 
 .moment-card__body {

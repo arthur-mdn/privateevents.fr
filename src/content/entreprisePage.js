@@ -44,37 +44,6 @@ export const entrepriseLandingContent = {
   },
   sections: [
     {
-      type: 'plainPoints',
-      id: 'entreprise-fiabilite',
-      soft: true,
-      columns: 2,
-      title: 'Fiabilité, planning et facturation',
-      lead:
-        'Un événement d’entreprise se juge sur la ponctualité, le respect du déroulé et un devis clair, adapté à votre comptabilité.',
-      points: [
-        {
-          title: 'Ponctualité',
-          description:
-            'Installation et tests avant l’arrivée des invités. Le déroulé annoncé est tenu.',
-        },
-        {
-          title: 'Interlocuteur unique',
-          description:
-            'Un contact pour le brief, le jour J et le suivi. Moins d’allers-retours entre prestataires.',
-        },
-        {
-          title: 'Facturation professionnelle',
-          description:
-            'Devis détaillé et facture adaptés au cadre entreprise, avec les éléments utiles à votre comptabilité.',
-        },
-        {
-          title: 'Plan B technique',
-          description:
-            'Matériel dimensionné, vérifications sur site et solutions de repli si le lieu impose une contrainte.',
-        },
-      ],
-    },
-    {
       type: 'usageList',
       id: 'entreprise-formats',
       title: 'Formats corporate couverts',

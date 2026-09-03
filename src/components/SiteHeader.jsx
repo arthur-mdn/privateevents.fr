@@ -1,5 +1,13 @@
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
-import { FaBars, FaChevronDown, FaXmark } from 'react-icons/fa6';
+import {
+  FaBars,
+  FaBuilding,
+  FaCakeCandles,
+  FaChevronDown,
+  FaHeart,
+  FaHouse,
+  FaXmark,
+} from 'react-icons/fa6';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const eventLinks = [
@@ -7,21 +15,25 @@ const eventLinks = [
     to: '/mariage',
     label: 'Mariage',
     description: 'Du cocktail au dancefloor',
+    Icon: FaHeart,
   },
   {
     to: '/anniversaire',
     label: 'Anniversaire',
     description: 'Une fête pensée autour des invités',
+    Icon: FaCakeCandles,
   },
   {
     to: '/soiree-privee',
     label: 'Soirée privée',
     description: 'Villa, réception, soirée à thème',
+    Icon: FaHouse,
   },
   {
     to: '/entreprise',
     label: 'Entreprise',
     description: 'Corporate, gala et team building',
+    Icon: FaBuilding,
   },
 ];
 
@@ -36,6 +48,7 @@ function EventsDropdown({ onNavigate }) {
   const [open, setOpen] = useState(false);
   const rootRef = useRef(null);
   const buttonRef = useRef(null);
+  const menuRef = useRef(null);
   const menuId = useId();
   const location = useLocation();
   const isEventActive = eventLinks.some((link) => location.pathname === link.to);
@@ -43,12 +56,43 @@ function EventsDropdown({ onNavigate }) {
   const close = useCallback(() => setOpen(false), []);
 
   useEffect(() => {
+    close();
+  }, [location.pathname, close]);
+
+  const focusItem = useCallback((index) => {
+    const items = menuRef.current?.querySelectorAll('a[href]');
+    if (!items?.length) return;
+    const safeIndex = ((index % items.length) + items.length) % items.length;
+    items[safeIndex]?.focus();
+  }, []);
+
+  useEffect(() => {
     if (!open) return;
 
     const onKeyDown = (e) => {
       if (e.key === 'Escape') {
+        e.preventDefault();
         close();
         buttonRef.current?.focus();
+        return;
+      }
+
+      const items = menuRef.current?.querySelectorAll('a[href]');
+      if (!items?.length) return;
+
+      const currentIndex = Array.from(items).indexOf(document.activeElement);
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        focusItem(currentIndex < 0 ? 0 : currentIndex + 1);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        focusItem(currentIndex <= 0 ? items.length - 1 : currentIndex - 1);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        focusItem(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        focusItem(items.length - 1);
       }
     };
 
@@ -58,13 +102,36 @@ function EventsDropdown({ onNavigate }) {
       }
     };
 
+    const onFocusIn = (e) => {
+      if (!rootRef.current?.contains(e.target)) {
+        close();
+      }
+    };
+
     document.addEventListener('keydown', onKeyDown);
     document.addEventListener('pointerdown', onPointerDown);
+    document.addEventListener('focusin', onFocusIn);
     return () => {
       document.removeEventListener('keydown', onKeyDown);
       document.removeEventListener('pointerdown', onPointerDown);
+      document.removeEventListener('focusin', onFocusIn);
     };
-  }, [open, close]);
+  }, [open, close, focusItem]);
+
+  const onTriggerKeyDown = (e) => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+      setOpen(true);
+      requestAnimationFrame(() => focusItem(0));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+      setOpen(true);
+      requestAnimationFrame(() => {
+        const items = menuRef.current?.querySelectorAll('a[href]');
+        if (items?.length) focusItem(items.length - 1);
+      });
+    }
+  };
 
   return (
     <li
@@ -79,12 +146,18 @@ function EventsDropdown({ onNavigate }) {
         aria-controls={menuId}
         aria-haspopup="true"
         onClick={() => setOpen((v) => !v)}
+        onKeyDown={onTriggerKeyDown}
       >
         Événements
         <FaChevronDown className="site-nav__chevron" aria-hidden />
       </button>
-      <ul id={menuId} className="site-nav__submenu site-nav__submenu--rich" hidden={!open}>
-        {eventLinks.map(({ to, label, description }) => (
+      <ul
+        id={menuId}
+        ref={menuRef}
+        className="site-nav__submenu site-nav__submenu--rich"
+        hidden={!open}
+      >
+        {eventLinks.map(({ to, label, description, Icon }) => (
           <li key={to}>
             <NavLink
               className={({ isActive }) =>
@@ -96,8 +169,13 @@ function EventsDropdown({ onNavigate }) {
                 onNavigate?.();
               }}
             >
-              <span className="site-nav__sublink-label">{label}</span>
-              <span className="site-nav__sublink-desc">{description}</span>
+              <span className="site-nav__sublink-icon" aria-hidden="true">
+                <Icon />
+              </span>
+              <span className="site-nav__sublink-text">
+                <span className="site-nav__sublink-label">{label}</span>
+                <span className="site-nav__sublink-desc">{description}</span>
+              </span>
             </NavLink>
           </li>
         ))}
@@ -111,16 +189,22 @@ function EventsMobileGroup({ onNavigate }) {
     <li className="site-nav__item site-nav__item--mobile-group">
       <p className="site-nav__group-label">Événements</p>
       <ul className="site-nav__group-list">
-        {eventLinks.map(({ to, label }) => (
+        {eventLinks.map(({ to, label, description, Icon }) => (
           <li key={to}>
             <NavLink
               className={({ isActive }) =>
-                `site-nav__link${isActive ? ' is-active' : ''}`
+                `site-nav__sublink site-nav__sublink--rich${isActive ? ' is-active' : ''}`
               }
               to={to}
               onClick={onNavigate}
             >
-              {label}
+              <span className="site-nav__sublink-icon" aria-hidden="true">
+                <Icon />
+              </span>
+              <span className="site-nav__sublink-text">
+                <span className="site-nav__sublink-label">{label}</span>
+                <span className="site-nav__sublink-desc">{description}</span>
+              </span>
             </NavLink>
           </li>
         ))}
@@ -134,6 +218,7 @@ export function SiteHeader() {
   const menuId = useId();
   const toggleRef = useRef(null);
   const panelRef = useRef(null);
+  const location = useLocation();
 
   const closeMenu = useCallback(() => {
     setMenuOpen(false);
@@ -142,6 +227,10 @@ export function SiteHeader() {
   const openMenu = useCallback(() => {
     setMenuOpen(true);
   }, []);
+
+  useEffect(() => {
+    closeMenu();
+  }, [location.pathname, closeMenu]);
 
   useEffect(() => {
     if (!menuOpen) return;

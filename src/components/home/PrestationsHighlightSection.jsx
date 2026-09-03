@@ -8,8 +8,8 @@ export function PrestationsHighlightSection() {
         Des prestations qui font rêver
       </h2>
       <p className="lead">
-        Photobooth, vidéobooth, musiciens, éclairage, effets visuels… Des options visibles dès la homepage pour
-        vous aider à vous projeter.
+        Photobooth, vidéobooth, musiciens, éclairage, effets visuels : quelques options
+        concrètes pour vous projeter avant d&apos;ouvrir le catalogue complet.
       </p>
       <ul className="highlight-grid">
         {prestationHighlights.map((item) => (
