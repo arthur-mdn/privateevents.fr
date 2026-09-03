@@ -1,6 +1,41 @@
 import { useCallback, useId, useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa6';
 
+function isVideoSrc(src = '') {
+  return /\.mp4($|\?)/i.test(src);
+}
+
+function CarouselMedia({ item, className }) {
+  if (isVideoSrc(item.src)) {
+    return (
+      <video
+        className={className}
+        src={item.src}
+        aria-label={item.alt}
+        width={item.width}
+        height={item.height}
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="metadata"
+      />
+    );
+  }
+
+  return (
+    <img
+      className={className}
+      src={item.src}
+      alt={item.alt}
+      width={item.width}
+      height={item.height}
+      loading="lazy"
+      decoding="async"
+    />
+  );
+}
+
 export function PhotoCarousel({
   images = [],
   className = '',
@@ -49,22 +84,14 @@ export function PhotoCarousel({
         {label}
       </p>
       <div className="photo-carousel__frame">
-        <img
-          className={imgClassName}
-          src={current.src}
-          alt={current.alt}
-          width={current.width}
-          height={current.height}
-          loading="lazy"
-          decoding="async"
-        />
+        <CarouselMedia key={current.src} item={current} className={imgClassName} />
         {showControls ? (
           <>
             <button
               type="button"
               className="photo-carousel__nav photo-carousel__nav--prev"
               onClick={() => go(-1)}
-              aria-label="Photo précédente"
+              aria-label="Média précédent"
             >
               <FaChevronLeft aria-hidden />
             </button>
@@ -72,7 +99,7 @@ export function PhotoCarousel({
               type="button"
               className="photo-carousel__nav photo-carousel__nav--next"
               onClick={() => go(1)}
-              aria-label="Photo suivante"
+              aria-label="Média suivant"
             >
               <FaChevronRight aria-hidden />
             </button>
@@ -84,14 +111,14 @@ export function PhotoCarousel({
           <p className="photo-carousel__counter" aria-live="polite">
             {safeIndex + 1} / {count}
           </p>
-          <div className="photo-carousel__dots" role="tablist" aria-label="Choisir une photo">
+          <div className="photo-carousel__dots" role="tablist" aria-label="Choisir un média">
             {images.map((img, i) => (
               <button
                 key={img.id ?? img.src}
                 type="button"
                 role="tab"
                 aria-selected={i === safeIndex}
-                aria-label={`Photo ${i + 1}`}
+                aria-label={`Média ${i + 1}`}
                 className={`photo-carousel__dot${i === safeIndex ? ' is-active' : ''}`}
                 onClick={() => setIndex(i)}
               />

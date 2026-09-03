@@ -59,15 +59,30 @@ export function PrestationHelpPopover({ label, help }) {
           <p className="prestation-help__title">{label}</p>
           <p className="prestation-help__desc">{help.description}</p>
           {help.image ? (
-            <img
-              className="prestation-help__img"
-              src={help.image}
-              alt={help.imageAlt || ''}
-              width={280}
-              height={180}
-              loading="lazy"
-              decoding="async"
-            />
+            /\.mp4($|\?)/i.test(help.image) ? (
+              <video
+                className="prestation-help__img"
+                src={help.image}
+                aria-label={help.imageAlt || ''}
+                width={280}
+                height={180}
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
+            ) : (
+              <img
+                className="prestation-help__img"
+                src={help.image}
+                alt={help.imageAlt || ''}
+                width={280}
+                height={180}
+                loading="lazy"
+                decoding="async"
+              />
+            )
           ) : null}
           {help.href ? (
             <a

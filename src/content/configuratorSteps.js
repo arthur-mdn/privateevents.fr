@@ -117,7 +117,7 @@ export const prestationHelp = {
   diaporama: {
     description:
       'Vidéo personnalisée ou diaporama photo monté pour un temps fort (cérémonie, anniversaire, discours).',
-    image: '/elements/photos/prestations/video-personnalisee-mariage-laura-maxime.gif',
+    image: '/elements/photos/prestations/video-boucle-mariage-laura-maxime.mp4',
     imageAlt: 'Extrait de vidéo personnalisée',
     href: '/prestations#photos-video',
     linkLabel: 'Voir Photos & vidéo',

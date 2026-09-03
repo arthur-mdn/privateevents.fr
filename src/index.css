@@ -2592,6 +2592,13 @@ main:not(:has(.hero)):not(.section--configurator) {
   border-radius: 0;
 }
 
+.photo-carousel__frame video.photo-carousel__img,
+.prestation-detail__carousel video.prestation-detail__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .photo-carousel__nav {
   position: absolute;
   top: 50%;
