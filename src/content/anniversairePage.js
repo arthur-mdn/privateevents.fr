@@ -39,7 +39,7 @@ export const anniversaireLandingContent = {
     reassurance: ['Tous les âges', 'Animations musicales', 'Intérieur ou extérieur'],
     image: '/elements/gallery/anniversaire-50-ans-loriol-2026.webp',
     imageAlt: 'Installation DJ pour un anniversaire de 50 ans à Loriol-du-Comtat',
-    primaryCta: { href: '/mon-evenement?type=anniversaire', label: 'Parler de mon anniversaire' },
+    primaryCta: { href: '/mon-evenement?type=anniversaire', label: 'Organiser mon anniversaire' },
     secondaryCta: { href: '#galerie-anniversaire', label: 'Voir des réalisations' },
   },
   sections: [
@@ -230,7 +230,7 @@ export const anniversaireLandingContent = {
       title: 'On prépare votre fête ?',
       lead: 'Précisez l’âge, le format et les animations souhaitées. Proposition personnalisée, sans grille tarifaire fixe.',
       href: '/mon-evenement?type=anniversaire',
-      label: 'Construire mon anniversaire',
+      label: 'Organiser mon anniversaire',
       secondaryLinks: [
         { to: '/realisations?type=anniversaire', label: 'Réalisations anniversaire' },
         { to: '/avis#anniversaires-soirees', label: 'Avis clients' },

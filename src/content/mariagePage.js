@@ -39,7 +39,7 @@ export const mariageLandingContent = {
     reassurance: ['Temps forts préparés', 'Coordination sur site', 'Options partenaires'],
     image: '/elements/gallery/mariage-couple-maries-hero.webp',
     imageAlt: 'Couple de mariés lors d’une soirée animée par DJ Mika Private Events',
-    primaryCta: { href: '/mon-evenement?type=mariage', label: 'Parler de mon mariage' },
+    primaryCta: { href: '/mon-evenement?type=mariage', label: 'Planifier mon mariage' },
     secondaryCta: { href: '#galerie-mariage', label: 'Voir des réalisations' },
   },
   sections: [
@@ -283,7 +283,7 @@ export const mariageLandingContent = {
       title: 'Prêt à imaginer le déroulé de votre mariage ?',
       lead: 'Indiquez la date, le lieu et les temps forts prévus. Nous revenons vers vous avec une proposition adaptée.',
       href: '/mon-evenement?type=mariage',
-      label: 'Construire mon mariage',
+      label: 'Planifier mon mariage',
       secondaryLinks: [
         { to: '/realisations?type=mariage', label: 'Réalisations mariage' },
         { to: '/avis#mariages', label: 'Avis de mariés' },

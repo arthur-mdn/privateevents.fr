@@ -1,10 +1,15 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
+  FaBoxOpen,
   FaBuilding,
   FaCakeCandles,
+  FaChevronDown,
+  FaCircleQuestion,
   FaEllipsis,
   FaHeart,
   FaHouse,
+  FaVolumeHigh,
 } from 'react-icons/fa6';
 import {
   ambianceOptions,
@@ -30,6 +35,21 @@ const eventTypeIcons = {
   'soiree-privee': FaHouse,
   entreprise: FaBuilding,
   autre: FaEllipsis,
+};
+
+const venueEquippedIcons = {
+  yes: FaVolumeHigh,
+  no: FaBoxOpen,
+  unknown: FaCircleQuestion,
+};
+
+const guestCountTickLabels = {
+  'moins-30': '<30',
+  '30-60': '30-60',
+  '60-100': '60-100',
+  '100-150': '100-150',
+  '150-250': '150-250',
+  '250-plus': '250+',
 };
 
 function SelectCard({ id, label, description, selected, onSelect, type = 'radio', icon: Icon, variant }) {
@@ -59,11 +79,80 @@ function SelectCard({ id, label, description, selected, onSelect, type = 'radio'
   );
 }
 
-function CheckboxCard({ id, label, checked, onChange, help }) {
+const guestCountRangeOptions = guestCountOptions.filter((option) => option.id !== 'unknown');
+const guestCountUnknownOption = guestCountOptions.find((option) => option.id === 'unknown');
+
+function GuestCountSlider({ value, onChange }) {
+  const isUnknown = value === 'unknown';
+  const rangeIndex = guestCountRangeOptions.findIndex((option) => option.id === value);
+  const sliderIndex = rangeIndex >= 0 ? rangeIndex : 0;
+  const currentLabel = isUnknown
+    ? guestCountUnknownOption.label
+    : guestCountRangeOptions[sliderIndex].label;
+
   return (
-    <div className={`checkbox-card${checked ? ' is-selected' : ''}`}>
+    <div className={`guest-count-slider${isUnknown ? ' is-unknown' : ''}`}>
+      <p className="guest-count-slider__value" aria-live="polite">
+        {currentLabel}
+      </p>
+      <div className="guest-count-slider__control">
+        <input
+          type="range"
+          min={0}
+          max={guestCountRangeOptions.length - 1}
+          step={1}
+          value={sliderIndex}
+          disabled={isUnknown}
+          aria-label="Nombre d'invités"
+          aria-valuetext={currentLabel}
+          onChange={(e) =>
+            onChange({ guestCount: guestCountRangeOptions[Number(e.target.value)].id })
+          }
+        />
+        <div className="guest-count-slider__ticks" aria-hidden="true">
+          {guestCountRangeOptions.map((option, index) => (
+            <span
+              key={option.id}
+              className={`guest-count-slider__tick${index === sliderIndex && !isUnknown ? ' is-active' : ''}`}
+              style={{ '--tick': index }}
+            >
+              {guestCountTickLabels[option.id]}
+            </span>
+          ))}
+        </div>
+      </div>
+      <label className="field-checkbox">
+        <input
+          type="checkbox"
+          checked={isUnknown}
+          onChange={(e) =>
+            onChange({
+              guestCount: e.target.checked
+                ? 'unknown'
+                : guestCountRangeOptions[sliderIndex].id,
+            })
+          }
+        />
+        {guestCountUnknownOption.label}
+      </label>
+    </div>
+  );
+}
+
+function CheckboxCard({ id, label, checked, onChange, help, icon: Icon, variant }) {
+  const className = ['checkbox-card', variant && `checkbox-card--${variant}`, checked && 'is-selected']
+    .filter(Boolean)
+    .join(' ');
+
+  return (
+    <div className={className}>
       <label className="checkbox-card__main" htmlFor={id}>
         <input id={id} type="checkbox" checked={checked} onChange={onChange} />
+        {Icon ? (
+          <span className="checkbox-card__icon" aria-hidden="true">
+            <Icon />
+          </span>
+        ) : null}
         <span className="checkbox-card__label">{label}</span>
       </label>
       {help ? <PrestationHelpPopover label={label} help={help} /> : null}
@@ -94,7 +183,7 @@ export function StepEventType({ data, onChange }) {
 export function StepDetails({ data, onChange }) {
   return (
     <div className="configurator-fields">
-      <div className="field">
+      <div className={`field${data.noDate ? ' field--dimmed' : ''}`}>
         <span className="field__label">Date</span>
         <input
           type="date"
@@ -126,18 +215,7 @@ export function StepDetails({ data, onChange }) {
       </label>
       <fieldset className="field fieldset">
         <legend className="field__label">Nombre d&apos;invités</legend>
-        <ul className="select-cards select-cards--compact">
-          {guestCountOptions.map((option) => (
-            <li key={option.id}>
-              <SelectCard
-                id={`guests-${option.id}`}
-                label={option.label}
-                selected={data.guestCount === option.id}
-                onSelect={() => onChange({ guestCount: option.id })}
-              />
-            </li>
-          ))}
-        </ul>
+        <GuestCountSlider value={data.guestCount} onChange={onChange} />
       </fieldset>
     </div>
   );
@@ -145,13 +223,14 @@ export function StepDetails({ data, onChange }) {
 
 export function StepVenueEquipped({ data, onChange }) {
   return (
-    <ul className="select-cards select-cards--compact">
+    <ul className="select-cards select-cards--compact select-cards--venue">
       {venueEquippedOptions.map((option) => (
-        <li key={option.id}>
+        <li key={option.id} className={option.id === 'unknown' ? 'select-cards__centered' : undefined}>
           <SelectCard
             id={`venue-${option.id}`}
             label={option.label}
             description={option.description}
+            icon={venueEquippedIcons[option.id]}
             selected={data.venueEquipped === option.id}
             onSelect={() => onChange({ venueEquipped: option.id })}
           />
@@ -173,7 +252,11 @@ export function ConfiguratorRecapSummary({ data }) {
       {dateLabel ? <p className="configurator-recap__line">{dateLabel}</p> : null}
       {data.location ? <p className="configurator-recap__line">{data.location}</p> : null}
       {data.guestCount ? (
-        <p className="configurator-recap__line">{getGuestCountLabel(data.guestCount)} invités</p>
+        <p className="configurator-recap__line">
+          {data.guestCount === 'unknown'
+            ? getGuestCountLabel(data.guestCount)
+            : `${getGuestCountLabel(data.guestCount)} invités`}
+        </p>
       ) : null}
       {data.venueEquipped ? (
         <p className="configurator-recap__line">
@@ -249,9 +332,16 @@ export function StepAmbiance({ data, onChange }) {
 }
 
 export function StepPrestations({ data, onChange }) {
+  const conseilSelected = data.prestations.includes(CONSEIL_OPTION_ID);
+  const [openGroups, setOpenGroups] = useState(() =>
+    conseilSelected ? [] : ['musique'],
+  );
+
   const togglePrestation = (id) => {
     if (id === CONSEIL_OPTION_ID) {
-      onChange({ prestations: data.prestations.includes(CONSEIL_OPTION_ID) ? [] : [CONSEIL_OPTION_ID] });
+      const enabling = !conseilSelected;
+      onChange({ prestations: enabling ? [CONSEIL_OPTION_ID] : [] });
+      setOpenGroups(enabling ? [] : ['musique']);
       return;
     }
     const withoutConseil = data.prestations.filter((p) => p !== CONSEIL_OPTION_ID);
@@ -262,33 +352,73 @@ export function StepPrestations({ data, onChange }) {
     onChange({ prestations: [...withoutConseil, id] });
   };
 
+  const toggleGroup = (groupId) => {
+    if (conseilSelected) {
+      onChange({ prestations: [] });
+      setOpenGroups([groupId]);
+      return;
+    }
+    setOpenGroups((current) =>
+      current.includes(groupId) ? current.filter((id) => id !== groupId) : [...current, groupId],
+    );
+  };
+
   return (
-    <div className="prestation-groups">
-      <button
-        type="button"
-        className={`select-card select-card--wide${data.prestations.includes(CONSEIL_OPTION_ID) ? ' is-selected' : ''}`}
-        onClick={() => togglePrestation(CONSEIL_OPTION_ID)}
-      >
-        <span className="select-card__label">Je ne sais pas encore, j&apos;aimerais être conseillé</span>
-      </button>
-      {prestationGroups.map((group) => (
-        <fieldset key={group.id} className="prestation-group">
-          <legend className="prestation-group__title">{group.title}</legend>
-          <ul className="checkbox-cards">
-            {group.options.map((option) => (
-              <li key={option.id}>
-                <CheckboxCard
-                  id={`prestation-${option.id}`}
-                  label={option.label}
-                  checked={data.prestations.includes(option.id)}
-                  onChange={() => togglePrestation(option.id)}
-                  help={prestationHelp[option.id]}
-                />
-              </li>
-            ))}
-          </ul>
-        </fieldset>
-      ))}
+    <div className={`prestation-groups${conseilSelected ? ' is-muted' : ''}`}>
+      <CheckboxCard
+        id="prestation-conseil"
+        variant="conseil"
+        icon={FaCircleQuestion}
+        label="Je ne sais pas encore, j'aimerais être conseillé"
+        checked={conseilSelected}
+        onChange={() => togglePrestation(CONSEIL_OPTION_ID)}
+      />
+      {prestationGroups.map((group) => {
+        const isOpen = openGroups.includes(group.id);
+        const panelId = `prestation-group-${group.id}`;
+        const headerId = `${panelId}-header`;
+
+        return (
+          <section key={group.id} className={`prestation-group${isOpen ? ' is-open' : ''}`}>
+            <h3 className="prestation-group__title">
+              <button
+                type="button"
+                id={headerId}
+                className="prestation-group__toggle"
+                aria-expanded={isOpen}
+                aria-controls={panelId}
+                onClick={() => toggleGroup(group.id)}
+              >
+                {group.title}
+                <span className="prestation-group__chevron" aria-hidden="true">
+                  <FaChevronDown />
+                </span>
+              </button>
+            </h3>
+            <div
+              id={panelId}
+              role="region"
+              aria-labelledby={headerId}
+              className="prestation-group__panel"
+              hidden={!isOpen}
+            >
+              <ul className="checkbox-cards">
+                {group.options.map((option) => (
+                  <li key={option.id}>
+                    <CheckboxCard
+                      id={`prestation-${option.id}`}
+                      label={option.label}
+                      checked={data.prestations.includes(option.id)}
+                      onChange={() => togglePrestation(option.id)}
+                      help={prestationHelp[option.id]}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        );
+      })}
     </div>
   );
 }

@@ -39,7 +39,7 @@ export const soireePriveeLandingContent = {
     reassurance: ['Formule complète ou plug and play', 'Formats libres', 'Intérieur ou extérieur'],
     image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.webp',
     imageAlt: 'DJ Mika mixe une soirée du Nouvel An au Zanzibar à Sète',
-    primaryCta: { href: '/mon-evenement?type=soiree-privee', label: 'Parler de ma soirée' },
+    primaryCta: { href: '/mon-evenement?type=soiree-privee', label: 'Créer ma soirée' },
     secondaryCta: { href: '#galerie-soiree-privee', label: 'Voir des réalisations' },
   },
   sections: [
@@ -239,7 +239,7 @@ export const soireePriveeLandingContent = {
       title: 'Parlez-nous de votre format',
       lead: 'Villa, lieu équipé, extérieur, thème… Décrivez le projet, on revient avec une proposition technique claire.',
       href: '/mon-evenement?type=soiree-privee',
-      label: 'Construire ma soirée privée',
+      label: 'Créer ma soirée',
       secondaryLinks: [
         { to: '/realisations?type=soiree-privee', label: 'Réalisations soirée privée' },
         { to: '/avis#anniversaires-soirees', label: 'Avis clients' },

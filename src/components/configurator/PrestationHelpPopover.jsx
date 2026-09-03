@@ -33,7 +33,7 @@ export function PrestationHelpPopover({ label, help }) {
   if (!help) return null;
 
   return (
-    <span className="prestation-help" ref={rootRef}>
+    <div className="prestation-help" ref={rootRef}>
       <button
         ref={buttonRef}
         type="button"
@@ -96,6 +96,6 @@ export function PrestationHelpPopover({ label, help }) {
           ) : null}
         </div>
       ) : null}
-    </span>
+    </div>
   );
 }

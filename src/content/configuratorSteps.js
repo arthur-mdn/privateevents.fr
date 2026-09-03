@@ -354,7 +354,7 @@ export const initialFormData = {
   date: '',
   noDate: false,
   location: '',
-  guestCount: '',
+  guestCount: 'moins-30',
   venueEquipped: '',
   ambiance: [],
   prestations: [],

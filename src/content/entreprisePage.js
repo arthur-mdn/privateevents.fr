@@ -39,7 +39,7 @@ export const entrepriseLandingContent = {
     reassurance: ['Horaires tenus', 'Sonorisation des interventions', 'Cadre professionnel'],
     image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.webp',
     imageAlt: 'DJ Mika anime l’ouverture Sephora Marseille Terrasses du Port',
-    primaryCta: { href: '/mon-evenement?type=entreprise', label: 'Parler de mon événement' },
+    primaryCta: { href: '/mon-evenement?type=entreprise', label: 'Organiser mon événement corporate' },
     secondaryCta: { href: '#galerie-entreprise', label: 'Voir des réalisations' },
   },
   sections: [
@@ -208,7 +208,7 @@ export const entrepriseLandingContent = {
       title: 'Briefez votre événement corporate',
       lead: 'Date, lieu, format, nombre d’invités et contraintes. Devis professionnel, réponse sous 48 h.',
       href: '/mon-evenement?type=entreprise',
-      label: 'Construire mon événement entreprise',
+      label: 'Organiser mon événement corporate',
       secondaryLinks: [
         { to: '/realisations?type=entreprise', label: 'Réalisations entreprise' },
         { to: '/avis#entreprises', label: 'Avis corporate' },
