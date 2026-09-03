@@ -1,4 +1,4 @@
-import { FaEnvelope, FaMessage, FaPhone } from 'react-icons/fa6';
+import { FaEnvelope, FaPhone, FaSliders } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { PageMeta } from './PageMeta.jsx';
@@ -129,7 +129,7 @@ function HomePage() {
             </li>
             <li>
               <Link className="btn btn--ghost" to="/mon-evenement">
-                <FaMessage aria-hidden="true" />
+                <FaSliders aria-hidden="true" />
                 Construire mon événement
               </Link>
             </li>
