@@ -112,25 +112,21 @@ export const yourRulesBlocks = [
   },
 ];
 
-export const processSteps = [
+export const homeProcessFlow = [
   {
-    step: '01',
-    title: 'On échange',
-    description: 'Type d\'événement, lieu, invités, goûts, contraintes et envies.',
+    label: 'Échange',
+    hint: 'Type d’événement, lieu, invités et envies.',
   },
   {
-    step: '02',
-    title: 'On construit la prestation',
-    description: 'Musique, technique, animations et options partenaires si besoin.',
+    label: 'Préparation',
+    hint: 'Musique, technique et options retenues.',
   },
   {
-    step: '03',
-    title: 'Tout est préparé',
-    description: 'Coordination, installation et vérifications avant l\'arrivée des invités.',
+    label: 'Vérifs',
+    hint: 'Installation et tests avant l’accueil.',
   },
   {
-    step: '04',
-    title: 'Vous profitez',
-    description: 'La prestation s\'adapte au déroulement réel de la soirée.',
+    label: 'Jour J',
+    hint: 'Adaptation en direct selon la salle.',
   },
 ];
