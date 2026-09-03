@@ -24,3 +24,5 @@ public/recordings/*
 *.njsproj
 *.sln
 *.sw?
+
+docs

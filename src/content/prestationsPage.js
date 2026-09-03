@@ -1,23 +1,30 @@
 export const prestationsHero = {
   eyebrow: 'Prestations',
-  title: 'Un écosystème complet pour votre événement',
+  title: 'DJ, technique, animations et partenaires',
   intro:
-    'DJ, sonorisation, éclairage, animations, photos, artistes et services complémentaires : chaque prestation s\'intègre dans une expérience cohérente, construite avec vous.',
+    'Certaines prestations sont réalisées directement par Mika. D\'autres sont coordonnées avec des partenaires habituels, ou proposées en mise en relation selon le projet.',
   titleId: 'prestations-hero-title',
   image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
+};
+
+export const deliveryLabels = {
+  mika: 'Par Mika',
+  coordinated: 'Coordonné par Private Events',
+  referral: 'Mise en relation',
 };
 
 export const prestationsSections = [
   {
     id: 'dj-musique',
-    title: 'DJ & musique',
+    title: 'DJ & ambiance',
+    delivery: 'mika',
     what:
-      'Animation musicale par DJ avec programmation personnalisée, mix en direct et gestion des temps forts de la soirée.',
+      'Animation musicale live : préparation, mix, programmation et adaptation au rythme réel de la soirée.',
     forEvents: 'Mariages, anniversaires, soirées privées, événements corporate et inaugurations.',
     brings:
-      'Une ambiance sur mesure qui s\'adapte à vos goûts, à vos invités et au rythme réel de la soirée.',
+      'Une régie tenue en direct, avec incontournables, interdits et temps forts préparés en amont.',
     integration:
-      'Cœur de la prestation Private Events. Coordonné avec sonorisation, éclairage et animations complémentaires.',
+      'Cœur de la prestation. Peut être proposée en formule complète ou en plug and play sur une installation existante.',
     image: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
     imageAlt: 'DJ Mika en plein mixage sous éclairage bleu lors d’une soirée',
     images: [
@@ -46,14 +53,15 @@ export const prestationsSections = [
   },
   {
     id: 'sonorisation',
-    title: 'Sonorisation',
+    title: 'Sonorisation & éclairage',
+    delivery: 'mika',
     what:
-      'Diffusion sonore professionnelle dimensionnée selon le lieu, le nombre d\'invités et le déroulement de l\'événement.',
-    forEvents: 'Cérémonies, cocktails, discours, repas et soirées dansantes, intérieur ou extérieur.',
+      'Diffusion sonore et mise en lumière dimensionnées selon le lieu, le nombre d\'invités et le déroulement.',
+    forEvents: 'Cérémonies, cocktails, discours, repas, soirées dansantes, intérieur ou extérieur.',
     brings:
-      'Un son clair et adapté à chaque moment : musique de fond discrète, volume festif ou micro pour les discours et interventions.',
+      'Formule complète : Mika fournit et installe le matériel nécessaire. Plug and play : intervention sur l\'installation du lieu ou du client, avec sa régie.',
     integration:
-      'Inclus dans la prestation DJ ou en option pour les temps forts (discours, cérémonie). Anticipé lors de la préparation.',
+      'Anticipé lors de la préparation. Micros pour discours, seconde zone de diffusion ou intégration à un lieu déjà équipé selon le projet.',
     image: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
     imageAlt: 'Setup DJ en extérieur avec écran au logo Mika Private Events',
     images: [
@@ -78,21 +86,6 @@ export const prestationsSections = [
         width: 1400,
         height: 2100,
       },
-    ],
-  },
-  {
-    id: 'eclairage',
-    title: 'Éclairage',
-    what:
-      'Mise en lumière du lieu avec jeux de lumières, lasers, éclairage d\'ambiance et effets visuels pour les temps forts.',
-    forEvents: 'Soirées dansantes, ouvertures de bal, inaugurations et événements en salle ou extérieur.',
-    brings:
-      'Une atmosphère visuelle qui transforme le lieu : projecteurs, lasers et ambiances colorées mettent en valeur les moments clés.',
-    integration:
-      'Combiné avec la prestation DJ. Dimensionné selon la surface et les contraintes du lieu.',
-    image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
-    imageAlt: 'Éclairages dynamiques et lasers lors d’un mariage en intérieur',
-    images: [
       {
         id: 'mariage-interieur-lumieres-dynamiques',
         src: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
@@ -103,15 +96,53 @@ export const prestationsSections = [
     ],
   },
   {
-    id: 'animations',
-    title: 'Animations',
+    id: 'mise-en-scene',
+    title: 'Effets visuels',
+    delivery: 'mika',
     what:
-      'Karaoké, quiz, blind test, entrée des mariés et animations participatives animées par micro pour varier la soirée.',
+      'Lasers, fumée, bulles, étincelles froides et éclairage spécifique pour marquer les temps forts.',
+    forEvents: 'Mariages, ouvertures de bal, inaugurations et soirées dansantes.',
+    brings:
+      'Une mise en scène visuelle des moments clés, adaptée aux contraintes du lieu.',
+    integration:
+      'Planifié en amont avec le DJ. Feu d\'artifice extérieur uniquement sous réserve des autorisations.',
+    image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
+    imageAlt: 'Ouverture de bal avec fumée lourde et lumières',
+    images: [
+      {
+        id: 'mariage-avignon-2025-machine-a-fumee',
+        src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
+        alt: 'Ouverture de bal d’un mariage à Avignon avec fumée lourde et éclairages',
+        width: 1024,
+        height: 1536,
+      },
+      {
+        id: 'machine-a-bulles-soiree-dansante',
+        src: '/elements/photos/prestations/machine-a-bulles-soiree-dansante.webp',
+        alt: 'Piste de danse remplie de bulles sous éclairages violets lors d’une soirée',
+        width: 1200,
+        height: 799,
+      },
+      {
+        id: 'mariage-avignon-2025-machine-etincelles-artifice',
+        src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
+        alt: 'Machine à étincelles froides pour l’ouverture de bal d’un mariage à Avignon',
+        width: 1024,
+        height: 1536,
+      },
+    ],
+  },
+  {
+    id: 'animations',
+    title: 'Animations musicales',
+    delivery: 'mika',
+    what:
+      'Quiz, blind test et karaoké pour impliquer les invités sans casser l\'ambiance générale.',
     forEvents: 'Mariages, anniversaires, soirées privées, team building et soirées d\'entreprise.',
     brings:
-      'Des moments interactifs qui impliquent vos invités sans casser l\'ambiance générale.',
+      'Des créneaux participatifs intégrés dans la programmation, avec matériel dédié.',
     integration:
-      'Créneaux dédiés intégrés dans la programmation DJ. Matériel karaoké et micro inclus.',
+      'Créneaux définis en amont. Matériel karaoké et micro inclus lorsque l\'option est retenue.',
     image: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
     imageAlt: 'Quiz musical et blind test animé devant le public lors d’une soirée Private Events',
     images: [
@@ -136,39 +167,19 @@ export const prestationsSections = [
         width: 1400,
         height: 933,
       },
-      {
-        id: 'microphone-sans-fil-regie-dj',
-        src: '/elements/photos/microphone-sans-fil-regie-dj.webp',
-        alt: 'Microphone sans fil professionnel posé sur la régie DJ lors d’une soirée',
-        width: 1400,
-        height: 2100,
-      },
-      {
-        id: 'mariage-hola-entree-des-maries',
-        src: '/elements/gallery/mariage-hola-entree-des-maries.webp',
-        alt: 'Mariée passant sous une haie d’honneur formée par les invités à l’entrée en salle',
-        width: 1200,
-        height: 800,
-      },
-      {
-        id: 'mariage-table-discours',
-        src: '/elements/gallery/mariage-table-discours.webp',
-        alt: 'Invité au micro lors d’un discours pendant le repas de mariage',
-        width: 1200,
-        height: 742,
-      },
     ],
   },
   {
     id: 'photos-video',
-    title: 'Photos & vidéo',
+    title: 'Souvenirs & contenu',
+    delivery: 'coordinated',
     what:
-      'Photobooth, vidéobooth, photographe professionnel et vidéo personnalisée (diaporama photo ou vidéo).',
+      'Vidéobooth, diaporama, vidéo personnalisée et photographie.',
     forEvents: 'Mariages, anniversaires, soirées privées et événements corporate.',
     brings:
-      'Des souvenirs instantanés, une vidéo personnalisée ou un reportage complet que vos invités et vous conserverez.',
+      'Des souvenirs capturés ou montés pour l\'événement, intégrés dans le déroulé.',
     integration:
-      'Coordonné avec le réseau de partenaires. Installation et timing adaptés au déroulement.',
+      'Prestations proposées et coordonnées avec des partenaires habituels de Private Events. Timing calé avec la soirée.',
     image: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
     imageAlt: 'Vidéobooth pour capturer des souvenirs vidéo lors d’une soirée',
     images: [
@@ -197,14 +208,15 @@ export const prestationsSections = [
   },
   {
     id: 'artistes',
-    title: 'Artistes & performances',
+    title: 'Artistes',
+    delivery: 'referral',
     what:
-      'Musiciens live, drag queen, magicien, mentaliste, humoriste et autres performances sur demande.',
-    forEvents: 'Mariages (cocktail, ouverture de bal), anniversaires, inaugurations et événements premium.',
+      'Musiciens live, drag queen, magicien, mentaliste, humoriste et autres performances.',
+    forEvents: 'Mariages, anniversaires, inaugurations et événements avec moment live.',
     brings:
-      'Des moments live marquants qui complètent la prestation DJ et créent des souvenirs forts.',
+      'Un moment live complémentaire à la prestation DJ.',
     integration:
-      'Coordonné avec le DJ pour les transitions. Sélection de partenaires selon votre projet et budget.',
+      'Mise en relation avec un prestataire externe selon le style recherché et les disponibilités.',
     image: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
     imageAlt: 'Spectacle drag queen Aquarii proposé parmi les animations Private Events',
     images: [
@@ -225,73 +237,24 @@ export const prestationsSections = [
     ],
   },
   {
-    id: 'mise-en-scene',
-    title: 'Mise en scène',
-    what:
-      'Décoration, éclairage d\'ambiance, étincelles froides, machine à fumée, machine à bulles et effets visuels pour sublimer le lieu.',
-    forEvents: 'Mariages, ouvertures de bal, inaugurations et événements avec temps forts.',
-    brings:
-      'Une mise en scène des moments clés qui amplifie l\'émotion et la photo.',
-    integration:
-      'Planifié en amont avec le DJ et les autres prestataires. Feu d\'artifice extérieur sous réserve des autorisations.',
-    image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
-    imageAlt: 'Ouverture de bal avec fumée lourde et lumières',
-    images: [
-      {
-        id: 'mariage-avignon-2025-machine-a-fumee',
-        src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
-        alt: 'Ouverture de bal d’un mariage à Avignon avec fumée lourde et éclairages',
-        width: 1024,
-        height: 1536,
-      },
-      {
-        id: 'machine-a-bulles-soiree-dansante',
-        src: '/elements/photos/prestations/machine-a-bulles-soiree-dansante.webp',
-        alt: 'Piste de danse remplie de bulles sous éclairages violets lors d’une soirée',
-        width: 1200,
-        height: 799,
-      },
-      {
-        id: 'mariage-avignon-2025-machine-etincelles-artifice',
-        src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
-        alt: 'Machine à étincelles froides pour l’ouverture de bal d’un mariage à Avignon',
-        width: 1024,
-        height: 1536,
-      },
-      {
-        id: 'anniversaire-18ans-jeunes-ambiances-lumiere',
-        src: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
-        alt: 'Ambiance lumineuse et mise en scène pour un anniversaire de 18 ans',
-        width: 1536,
-        height: 1152,
-      },
-      {
-        id: 'mariage-laura-maxime-soiree-nuit',
-        src: '/elements/gallery/mariage-laura-maxime-soiree-nuit.webp',
-        alt: 'Mise en scène nocturne et soirée dansante au mariage de Laura et Maxime',
-        width: 1400,
-        height: 1050,
-      },
-    ],
-  },
-  {
     id: 'services',
-    title: 'Services complémentaires',
+    title: 'Services',
+    delivery: 'referral',
     what:
-      'Garde d\'enfants, animations enfants, personnel de restauration, sécurité et gardiennage.',
+      'Sécurité, restauration, garde d\'enfants et animations enfants selon les besoins.',
     forEvents: 'Mariages, anniversaires familiaux et grands événements privés ou corporate.',
     brings:
-      'Une organisation plus complète pour que vous puissiez profiter sereinement de votre événement.',
+      'Une organisation plus complète autour de l\'événement.',
     integration:
-      'Mobilisés via le réseau de partenaires. Coordonnés avec le déroulement global de la soirée.',
+      'Mise en relation avec un prestataire externe selon votre projet. Certaines configurations peuvent être coordonnées avec Private Events.',
     image: '/elements/photos/platine-dj-serato-eclairage-bleu.webp',
     imageAlt: 'Platine DJ professionnelle prête pour une soirée événementielle',
   },
 ];
 
 export const prestationsCta = {
-  title: 'Construire votre prestation sur mesure',
-  lead: 'Décrivez votre projet et sélectionnez les prestations qui vous intéressent. Réponse personnalisée de Mika.',
+  title: 'Construire votre prestation',
+  lead: 'Indiquez le type d\'événement, le format technique et les options souhaitées. Réponse personnalisée, devis selon le projet.',
   href: '/mon-evenement',
   label: 'Construire mon événement',
 };

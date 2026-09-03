@@ -198,6 +198,16 @@ export function EventConfigurator() {
       ) : null}
 
       <form className="configurator-form" onSubmit={onFormSubmit} noValidate>
+        <div className="hp-field" aria-hidden="true">
+          <label htmlFor="configurator-company">Société</label>
+          <input
+            id="configurator-company"
+            type="text"
+            name="_gotcha"
+            tabIndex={-1}
+            autoComplete="off"
+          />
+        </div>
         <input type="hidden" name="subject" value="demande configurateur" />
         <input type="hidden" name="event_type" value={getEventTypeLabel(data.eventType)} />
         <input type="hidden" name="event_date" value={data.noDate ? 'Pas encore de date' : data.date} />

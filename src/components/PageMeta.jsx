@@ -1,8 +1,12 @@
 import { Helmet } from 'react-helmet-async';
-import { DEFAULT_OG_IMAGE, SITE_URL } from '../seo/siteMeta.js';
+import {
+  buildCanonicalUrl,
+  DEFAULT_OG_IMAGE,
+  DEFAULT_OG_IMAGE_ALT,
+} from '../seo/siteMeta.js';
 
 export function PageMeta({ path, title, description, ogTitle, noindex, jsonLd }) {
-  const canonical = `${SITE_URL}${path === '/' ? '/' : path}`;
+  const canonical = buildCanonicalUrl(path);
   const robots = noindex ? 'noindex, nofollow' : 'index, follow, max-image-preview:large';
   const ogTitleValue = ogTitle ?? title;
 
@@ -18,7 +22,7 @@ export function PageMeta({ path, title, description, ogTitle, noindex, jsonLd })
       <meta property="og:url" content={canonical} />
       <meta property="og:locale" content="fr_FR" />
       <meta property="og:image" content={DEFAULT_OG_IMAGE} />
-      <meta property="og:image:alt" content="DJ Mika en prestation - animation événement privé" />
+      <meta property="og:image:alt" content={DEFAULT_OG_IMAGE_ALT} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={ogTitleValue} />
       <meta name="twitter:description" content={description} />

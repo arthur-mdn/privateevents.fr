@@ -7,10 +7,10 @@ import { SiteHeader } from '../components/SiteHeader.jsx';
 import { GalleryGrid } from '../components/shared/PageSections.jsx';
 import {
   getGalleryItemById,
+  getRealisationsPageGalleryItems,
   getTestimonialById,
   realisationProjects,
 } from '../content/realisations.js';
-import { galleryItems } from '../content/gallery.js';
 import { routeMeta, SITE_URL } from '../seo/siteMeta.js';
 
 const realisationsJsonLd = {
@@ -31,7 +31,7 @@ export function RealisationsPage() {
         <PageHero
           eyebrow="Réalisations"
           title="Projets et galerie photo"
-          intro="Mariages, anniversaires et événements corporate animés en Provence. Quelques projets récents et l'ensemble de nos photos."
+          intro="Mariages, anniversaires et événements corporate animés en Provence. Quelques projets récents et une sélection photo."
           titleId="realisations-hero-title"
           image="/elements/gallery/mariage-laura-maxime-soiree-nuit.webp"
         />
@@ -99,12 +99,16 @@ export function RealisationsPage() {
 
         <section className="section section--gallery" aria-labelledby="gallery-full-title">
           <h2 id="gallery-full-title" className="heading-section">
-            Galerie complète
+            Sélection photo
           </h2>
           <p className="lead gallery__lead">
-            Toutes les photos disponibles de prestations récentes.
+            Une sélection d&apos;images issues de prestations récentes. Le reste des photos est
+            réparti sur les pages mariage, anniversaire, soirée privée et entreprise.
           </p>
-          <GalleryGrid items={galleryItems} ariaLabel="Galerie complète des réalisations" />
+          <GalleryGrid
+            items={getRealisationsPageGalleryItems()}
+            ariaLabel="Sélection photo des réalisations"
+          />
         </section>
 
         <section className="section section--cta-banner">

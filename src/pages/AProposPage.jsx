@@ -30,7 +30,7 @@ const aProposJsonLd = {
       worksFor: { '@id': `${SITE_URL}/#organisation` },
       image: `${SITE_URL}/elements/photos/dj-mains-console-pioneer-exterieur.webp`,
       description:
-        'DJ événementiel en Provence depuis plus de 10 ans. Animation musicale et coordination de prestations complémentaires.',
+        'Actif dans l’événementiel depuis 2013/2014. DJ, animation musicale et coordination de prestations partenaires en Provence / PACA.',
     },
   ],
 };

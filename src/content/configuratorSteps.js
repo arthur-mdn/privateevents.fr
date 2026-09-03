@@ -199,7 +199,7 @@ export const prestationHelp = {
       'Éclairage d\'ambiance, projecteurs et lasers pour transformer le lieu et marquer les temps forts.',
     image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
     imageAlt: 'Éclairages dynamiques et lasers',
-    href: '/prestations#eclairage',
+    href: '/prestations#sonorisation',
     linkLabel: 'Voir Éclairage',
   },
   'feu-artifice': {

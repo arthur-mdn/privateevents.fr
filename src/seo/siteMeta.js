@@ -1,6 +1,11 @@
 export const SITE_URL = 'https://privateevents.fr';
-export const SITE_NAME = 'Private Events - DJ Mika';
+export const SITE_NAME = 'DJ Mika Private Events';
+export const BRAND_SHORT = 'Mika Private Events';
 export const DEFAULT_OG_IMAGE = `${SITE_URL}/elements/photos/dj-mixage-live-eclairage-bleu.webp`;
+export const DEFAULT_OG_IMAGE_ALT = 'DJ Mika en prestation lors d’une soirée événementielle';
+
+export const homeDescription =
+  'DJ Mika Private Events : DJ, sonorisation, éclairage et animations pour mariages, anniversaires, soirées privées et entreprises en Provence / PACA.';
 
 export const homeJsonLd = {
   '@context': 'https://schema.org',
@@ -8,27 +13,34 @@ export const homeJsonLd = {
     {
       '@type': 'ProfessionalService',
       '@id': `${SITE_URL}/#organisation`,
-      name: 'Private Events - DJ Mika',
-      alternateName: 'DJ Mika Private Events',
+      name: 'DJ Mika Private Events',
+      alternateName: ['Mika Private Events', 'Private Events - DJ Mika'],
       image: `${SITE_URL}/elements/logo.png`,
       url: `${SITE_URL}/`,
       telephone: '+33782737661',
       email: 'contact@privateevents.fr',
       description:
-        'Prestations de DJ professionnel, animation musicale et karaoké pour événements privés, mariages et soirées corporate en Provence.',
+        'DJ, animation musicale, sonorisation et éclairage pour événements privés, mariages et soirées d’entreprise en Provence / PACA. Formule complète ou plug and play.',
       priceRange: '€€',
       areaServed: [
+        { '@type': 'AdministrativeArea', name: 'Provence-Alpes-Côte d\'Azur' },
         { '@type': 'AdministrativeArea', name: 'Vaucluse' },
+        { '@type': 'AdministrativeArea', name: 'Bouches-du-Rhône' },
         { '@type': 'AdministrativeArea', name: 'Var' },
-        { '@type': 'Place', name: "Provence-Alpes-Côte d'Azur" },
       ],
-      serviceType: ['Animation DJ', 'Karaoké', 'Sonorisation événementielle'],
+      serviceType: [
+        'Animation DJ',
+        'Sonorisation événementielle',
+        'Éclairage événementiel',
+        'Karaoké',
+        'Animations musicales',
+      ],
     },
     {
       '@type': 'WebSite',
       '@id': `${SITE_URL}/#website`,
       url: `${SITE_URL}/`,
-      name: 'Private Events DJ Mika',
+      name: 'DJ Mika Private Events',
       inLanguage: 'fr-FR',
       publisher: { '@id': `${SITE_URL}/#organisation` },
     },
@@ -37,10 +49,10 @@ export const homeJsonLd = {
       mainEntity: [
         {
           '@type': 'Question',
-          name: 'Dans quelles zones intervient DJ Mika ?',
+          name: 'Dans quelles zones intervient DJ Mika Private Events ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Les prestations couvrent principalement le Vaucluse et la région d'Avignon, Carpentras et Orange, ainsi que le Var et les déplacements en Provence-Alpes-Côte d'Azur sur demande.",
+            text: 'Les prestations couvrent principalement la Provence / PACA : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes, selon la date et le projet.',
           },
         },
         {
@@ -48,23 +60,23 @@ export const homeJsonLd = {
           name: 'Le matériel son et lumière est-il inclus ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "La prestation inclut l'équipement adapté à votre lieu et au nombre d'invités : diffusion sonore, micros pour discours ou karaoké, et mise en lumière selon la formule choisie, précisée lors du devis.",
+            text: 'Deux formules sont possibles : prestation complète avec DJ, sonorisation et éclairage fournis et installés, ou intervention plug and play sur une installation déjà présente. Le détail est précisé au devis.',
           },
         },
         {
           '@type': 'Question',
-          name: "Comment obtenir un devis pour un mariage ou une soirée d'entreprise ?",
+          name: 'Comment obtenir un devis pour un mariage ou une soirée d’entreprise ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Remplissez le formulaire de contact sur privateevents.fr ou appelez le 07 82 73 76 61 avec la date, le lieu et le type d\'événement ; une proposition personnalisée vous est rapidement adressée.',
+            text: 'Utilisez le configurateur sur privateevents.fr ou appelez le 07 82 73 76 61 avec la date, le lieu et le type d’événement. Chaque prestation fait l’objet d’un devis personnalisé.',
           },
         },
         {
           '@type': 'Question',
-          name: "Peut-on combiner DJ et karaoké lors d'une même soirée ?",
+          name: 'Peut-on combiner DJ et karaoké lors d’une même soirée ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: "Oui : des créneaux karaoké peuvent s'intégrer dans la programmation DJ pour varier les moments forts tout en conservant une ambiance cohérente.",
+            text: 'Oui : des créneaux karaoké, quiz ou blind test peuvent s’intégrer dans la programmation DJ pour varier les moments tout en gardant une ambiance cohérente.',
           },
         },
       ],
@@ -72,72 +84,82 @@ export const homeJsonLd = {
   ],
 };
 
-const defaultDescription =
-  'DJ professionnel pour mariages, soirées privées et événements corporate dans le Vaucluse, Avignon, Carpentras, le Var et la Provence. Musique sur mesure, karaoké, sonorisation.';
-
 export const routeMeta = {
   '/': {
-    title: 'DJ Mika - Private Events | DJ, karaoké & animation en Provence',
-    description: defaultDescription,
-    ogTitle: 'DJ Mika - Private Events | Animation musicale & karaoké en Provence',
+    title: 'DJ Mika Private Events | DJ & animation en Provence',
+    description: homeDescription,
+    ogTitle: 'DJ Mika Private Events | DJ & animation en Provence',
     jsonLd: homeJsonLd,
   },
   '/mariage': {
-    title: 'DJ mariage dans le Sud de la France | Private Events',
+    title: 'DJ mariage en Provence | Mika Private Events',
     description:
-      'Animation DJ et prestations complémentaires pour votre mariage en Provence. Programmation sur mesure, sonorisation, karaoké et réseau de partenaires.',
+      'DJ mariage en Provence : préparation musicale, sonorisation, éclairage, animations et options partenaires pour votre cérémonie, cocktail et soirée.',
   },
   '/anniversaire': {
-    title: 'DJ anniversaire en Provence | Private Events',
+    title: 'DJ anniversaire en Provence | Mika Private Events',
     description:
-      'DJ et animations pour anniversaires et fêtes privées dans le Vaucluse et le Var. Ambiance adaptée à vos invités et à votre génération.',
+      'DJ et animations pour fêtes d’anniversaire en Provence : ambiance intergénérationnelle, karaoké, quiz, diaporama et options selon l’âge et les invités.',
   },
   '/soiree-privee': {
-    title: 'DJ soirée privée en Provence | Private Events',
+    title: 'DJ soirée privée en Provence | Mika Private Events',
     description:
-      'Prestation DJ sur mesure pour soirées privées dans le Sud de la France. Sonorisation, éclairage et animations selon le format de votre événement.',
+      'DJ soirée privée en Provence : villa, cocktail, pool party ou lieu déjà équipé. Formule complète ou plug and play selon votre configuration.',
   },
   '/entreprise': {
-    title: 'DJ événement entreprise en Provence | Private Events',
+    title: 'DJ soirée d’entreprise en Provence | Mika Private Events',
     description:
-      'Animation musicale pour séminaires, soirées corporate et événements d\'entreprise. Fiabilité, coordination et prestations adaptées au cadre professionnel.',
+      'DJ et animation pour événements d’entreprise en Provence : sonorisation, prises de parole, ambiance, quiz, karaoké et prestations complémentaires.',
   },
   '/prestations': {
-    title: 'Prestations DJ & animations | Private Events',
+    title: 'DJ, sonorisation, animations & effets | Mika Private Events',
     description:
-      'DJ, sonorisation, éclairage, karaoké, photobooth, vidéobooth, artistes et prestations complémentaires pour vos événements en Provence.',
+      'DJ, sonorisation, éclairage, effets, karaoké, quiz et prestations partenaires coordonnées pour vos événements en Provence / PACA.',
   },
   '/realisations': {
-    title: 'Réalisations & galeries | Private Events',
+    title: 'Mariages, anniversaires & événements réalisés | Mika Private Events',
     description:
-      'Découvrez des mariages, anniversaires et soirées corporate animés par DJ Mika en Provence. Photos et retours d\'expérience.',
+      'Mariages, anniversaires, soirées privées et événements corporate réalisés par DJ Mika Private Events en Provence.',
   },
   '/avis': {
-    title: 'Avis clients | Private Events',
+    title: 'Avis clients | DJ Mika Private Events',
     description:
-      'Témoignages de mariés, particuliers et entreprises ayant confié leur soirée à Private Events en Provence.',
+      'Avis de mariages, anniversaires, soirées privées et entreprises ayant confié leur événement à DJ Mika Private Events.',
   },
   '/a-propos': {
-    title: 'À propos de DJ Mika | Private Events',
+    title: 'DJ Mika | À propos de Mika Private Events',
     description:
-      'Découvrez Mika, DJ événementiel en Provence depuis plus de 10 ans. Préparation personnalisée et réseau de partenaires.',
+      'Actif dans l’événementiel depuis 2013/2014, Mika propose DJ, animation et coordination de partenaires en Provence / PACA.',
   },
   '/mon-evenement': {
-    title: 'Construire mon événement | Private Events',
+    title: 'Construire mon événement | Mika Private Events',
     description:
-      'Décrivez votre projet : type d\'événement, date, lieu, ambiance et prestations souhaitées. Réponse personnalisée de DJ Mika.',
+      'Décrivez votre projet : type d’événement, date, lieu, ambiance et prestations. Demande structurée, devis personnalisé, sans simulateur tarifaire.',
   },
   '/mentions-legales': {
-    title: 'Mentions légales | Private Events',
-    description: 'Mentions légales du site Private Events - DJ Mika.',
+    title: 'Mentions légales | DJ Mika Private Events',
+    description: 'Mentions légales du site DJ Mika Private Events.',
     noindex: true,
   },
   '/politique-de-confidentialite': {
-    title: 'Politique de confidentialité | Private Events',
-    description: 'Politique de confidentialité et traitement des données du site Private Events.',
+    title: 'Politique de confidentialité | DJ Mika Private Events',
+    description: 'Politique de confidentialité et traitement des données du site DJ Mika Private Events.',
     noindex: true,
   },
 };
+
+export function canonicalPath(path) {
+  if (!path || path === '/') return '/';
+  const withoutQuery = path.split('?')[0].split('#')[0];
+  return withoutQuery.endsWith('/') && withoutQuery.length > 1
+    ? withoutQuery.slice(0, -1)
+    : withoutQuery;
+}
+
+export function buildCanonicalUrl(path) {
+  const clean = canonicalPath(path);
+  return clean === '/' ? `${SITE_URL}/` : `${SITE_URL}${clean}`;
+}
 
 export function buildLandingJsonLd(path, name, faq) {
   const graph = [
@@ -163,4 +185,3 @@ export function buildLandingJsonLd(path, name, faq) {
 
   return { '@context': 'https://schema.org', '@graph': graph };
 }
-

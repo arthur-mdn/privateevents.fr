@@ -10,7 +10,7 @@ function ContactForm({ subject, onSubjectChange }) {
   if (state.succeeded) {
     return (
       <p role="status" className="form-success" tabIndex={-1}>
-        Merci pour votre message ! Nous revenons vers vous rapidement.
+        Merci pour votre message. Une réponse vous est adressée rapidement.
       </p>
     );
   }
@@ -24,6 +24,16 @@ function ContactForm({ subject, onSubjectChange }) {
       <h3 id={titleId} className="contact-form__title">
         Formulaire de contact
       </h3>
+      <div className="hp-field" aria-hidden="true">
+        <label htmlFor={`${formId}-company`}>Société</label>
+        <input
+          id={`${formId}-company`}
+          type="text"
+          name="_gotcha"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       <label className="field" htmlFor={`${formId}-name`}>
         <span className="field__label">Nom</span>
         <input

@@ -7,6 +7,7 @@ const testimonialsUnsorted = [
     context: 'Soirée privée',
     dateISO: '2024-11-23',
     rating: 5,
+    source: 'Message reçu après l’événement',
   },
   {
     id: '2025-04',
@@ -16,6 +17,7 @@ const testimonialsUnsorted = [
     context: 'Mariage - Luberon',
     dateISO: '2025-04-26',
     rating: 5,
+    source: 'Bark',
     realisationId: 'mariage-avignon-2025',
   },
   {
@@ -26,6 +28,7 @@ const testimonialsUnsorted = [
     context: 'Entreprise - Vaucluse',
     dateISO: '2025-07-05',
     rating: 5,
+    source: 'Message reçu après l’événement',
     realisationId: 'sephora-marseille',
   },
   {
@@ -36,6 +39,7 @@ const testimonialsUnsorted = [
     context: 'Anniversaire de Louis - Sorgues',
     dateISO: '2025-09-19',
     rating: 5,
+    source: 'Bark',
     realisationId: 'anniversaire-sorgues',
   },
   {
@@ -46,6 +50,7 @@ const testimonialsUnsorted = [
     context: 'Anniversaire 50 ans - Loriol-du-Comtat',
     dateISO: '2026-04-18',
     rating: 5,
+    source: 'Témoignage par e-mail',
     realisationId: 'anniversaire-50-loriol',
   },
   {
@@ -56,6 +61,7 @@ const testimonialsUnsorted = [
     context: 'Mariage Océane & Anthony - région lyonnaise / Valence',
     dateISO: '2026-06-20',
     rating: 5,
+    source: 'Message reçu après l’événement',
     realisationId: 'mariage-oceane-anthony-2026',
   },
   {
@@ -66,6 +72,7 @@ const testimonialsUnsorted = [
     context: 'Anniversaire 30 ans - Marseille',
     dateISO: '2026-08-01',
     rating: 5,
+    source: 'Bark',
     realisationId: 'anniversaire-canelle-marseille-2026',
   },
   {
@@ -76,6 +83,7 @@ const testimonialsUnsorted = [
     context: 'Mariage - 29 août 2026',
     dateISO: '2026-08-29',
     rating: 5,
+    source: 'Témoignage par e-mail',
     realisationId: 'mariage-laura-maxime-2026',
   },
 ];

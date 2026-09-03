@@ -27,10 +27,12 @@ export function SiteFooter() {
       <div className="site-footer__inner">
         <div className="site-footer__brand">
           <Link to="/">
-            <img src="/elements/logo.png" alt="Private Events" width={120} height={48} loading="lazy" />
+            <img src="/elements/logo.png" alt="DJ Mika Private Events" width={120} height={48} loading="lazy" />
           </Link>
+          <p className="site-footer__brand-name">DJ Mika Private Events</p>
           <p className="site-footer__tagline">
-            DJ &amp; expériences événementielles sur mesure dans le Sud de la France.
+            DJ, sonorisation, éclairage et animations en Provence / PACA.
+            Formule complète ou plug and play selon le lieu.
           </p>
         </div>
         <nav className="site-footer__nav" aria-label="Liens du pied de page">
@@ -60,6 +62,7 @@ export function SiteFooter() {
               <Link to="/mon-evenement">Construire mon événement</Link>
             </li>
           </ul>
+          <p className="site-footer__zone">Zone d&apos;intervention : Provence / PACA</p>
         </div>
       </div>
       <div className="site-footer__legal">

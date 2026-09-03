@@ -4,6 +4,16 @@ import { heroContent } from '../../content/homeSections.js';
 export function HomeHero() {
   return (
     <div className="hero">
+      <img
+        className="hero__media"
+        src={heroContent.image}
+        alt=""
+        width={1536}
+        height={1152}
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
+      />
       <div className="hero__overlay" aria-hidden="true" />
       <section className="hero__inner section section--hero" aria-labelledby="hero-title">
         <div className="hero__copy">

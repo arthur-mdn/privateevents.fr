@@ -13,7 +13,6 @@ import { PrestationsHighlightSection } from './home/PrestationsHighlightSection.
 import { YourRulesSection } from './home/YourRulesSection.jsx';
 import { ProcessSection } from './home/ProcessSection.jsx';
 import { ClientCaseSection } from './home/ClientCaseSection.jsx';
-import { AudioShowcase } from './AudioShowcase.jsx';
 import TestimonialsCarousel from './TestimonialsCarousel.jsx';
 import GallerySection from './GallerySection.jsx';
 import ContactForm from './ContactForm.jsx';
@@ -40,62 +39,43 @@ function HomePage() {
 
         <GallerySection />
 
-        <section id="repertoire" className="section section--audio">
-          <h2 className="heading-section">Répertoire &amp; écoutes</h2>
-          <p className="lead">
-            Quelques extraits pour vous faire une idée de l&apos;ambiance. Proposez une liste de 10
-            à 15 titres pour recevoir une proposition de set personnalisé gratuitement.
-          </p>
-          <AudioShowcase />
-          <div className="section__cta">
-            <a
-              href="#contact"
-              className="btn btn--secondary"
-              onClick={() => setSelectedSubject('demander set sur mesure gratuit')}
-            >
-              Demander un set sur mesure gratuit
-            </a>
-          </div>
-        </section>
-
         <section id="faq" className="section section--faq">
           <h2 className="heading-section">Questions fréquentes</h2>
           <p className="lead">
-            Informations utiles avant de nous parler de votre projet.
+            Informations utiles avant de démarrer un projet.
           </p>
           <dl className="faq-list">
             <div className="faq-item">
               <dt>Dans quelles zones intervenez-vous ?</dt>
               <dd>
-                Principalement le <strong>Vaucluse</strong> et la région d&apos;<strong>Avignon</strong>,{' '}
-                <strong>Carpentras</strong>, <strong>Orange</strong>, ainsi que le <strong>Var</strong> et
-                d&apos;autres déplacements en <strong>Provence-Alpes-Côte d&apos;Azur</strong> sur accord
-                préalable selon la date.
+                Principalement en <strong>Provence / PACA</strong> : <strong>Vaucluse</strong>,{' '}
+                <strong>Bouches-du-Rhône</strong>, <strong>Var</strong> et départements limitrophes,
+                selon la date et le projet.
               </dd>
             </div>
             <div className="faq-item">
               <dt>Le matériel son et lumière est-il inclus ?</dt>
               <dd>
-                Oui : l&apos;offre inclut l&apos;équipement adapté au lieu et au nombre d&apos;invités
-                (sonorisation, micros pour discours ou karaoké, mise en lumière selon la formule). Le détail
-                figure dans le devis après qualification de votre projet.
+                Deux options : <strong>formule complète</strong> (DJ + sono + éclairage fournis et
+                installés) ou <strong>plug and play</strong> sur une installation déjà présente.
+                Le détail figure dans le devis.
+              </dd>
+            </div>
+            <div className="faq-item">
+              <dt>Comment sont calculés les tarifs ?</dt>
+              <dd>
+                Chaque prestation fait l&apos;objet d&apos;un <strong>devis personnalisé</strong> selon
+                le lieu, les horaires, le format technique et les options retenues. Aucun simulateur
+                tarifaire en ligne.
               </dd>
             </div>
             <div className="faq-item">
               <dt>Comment démarrer un projet ?</dt>
               <dd>
                 Utilisez le{' '}
-                <Link to="/mon-evenement">configurateur</Link> ou le{' '}
-                <a href="#contact">formulaire de contact</a>, ou appelez le{' '}
-                <a href="tel:+33782737661">07&nbsp;82&nbsp;73&nbsp;76&nbsp;61</a> en indiquant la date, le
-                lieu et le type d&apos;événement.
-              </dd>
-            </div>
-            <div className="faq-item">
-              <dt>Peut-on combiner DJ et prestations complémentaires ?</dt>
-              <dd>
-                Oui : karaoké, photobooth, vidéobooth, musiciens live ou autres options peuvent s&apos;intégrer dans une
-                prestation cohérente, construite avec vous en amont.
+                <Link to="/mon-evenement">configurateur</Link> pour une demande structurée, ou
+                le formulaire ci-dessous pour une question rapide. Vous pouvez aussi appeler le{' '}
+                <a href="tel:+33782737661">07&nbsp;82&nbsp;73&nbsp;76&nbsp;61</a>.
               </dd>
             </div>
           </dl>
@@ -117,10 +97,10 @@ function HomePage() {
         </section>
 
         <section id="contact" className="section section--contact">
-          <h2 className="heading-section">Contact</h2>
+          <h2 className="heading-section">Une question avant de construire votre projet&nbsp;?</h2>
           <p className="lead">
-            Disponibilités, idées de playlist ou questions rapides : écrivez-nous ou appelez-nous
-            directement.
+            Pour une demande structurée, préférez le configurateur. Ce formulaire reste utile pour
+            une question rapide, une disponibilité ou une idée de playlist.
           </p>
           <ContactForm subject={selectedSubject} onSubjectChange={setSelectedSubject} />
           <ul className="contact-chips" aria-label="Coordonnées">

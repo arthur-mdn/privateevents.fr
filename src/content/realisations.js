@@ -6,7 +6,7 @@ const realisationProjectsUnsorted = [
     id: 'mariage-laura-maxime-2026',
     title: 'Mariage Laura & Maxime',
     type: 'Mariage',
-    location: 'Sud de la France',
+    location: 'Provence',
     date: '2026-08-29',
     dateLabel: '29 août 2026',
     brief:
@@ -187,7 +187,7 @@ const realisationProjectsUnsorted = [
     id: 'yogan',
     title: 'Yogan',
     type: 'Soirée privée',
-    location: 'Sud de la France',
+    location: 'Provence',
     brief: 'Soirée privée avec ambiance lumineuse et animation DJ pour un public jeune.',
     prestations: ['DJ', 'Éclairage', 'Ambiance festive'],
     imageIds: ['anniversaire-18ans-jeunes-ambiances-lumiere'],
@@ -214,37 +214,50 @@ export function getRealisationById(id) {
 }
 
 export function getMariageGalleryItems() {
-  return galleryItems.filter((item) => item.caption?.toLowerCase().includes('mariage'));
+  return galleryItems
+    .filter((item) => item.caption?.toLowerCase().includes('mariage'))
+    .slice(0, 12);
 }
 
 export function getAnniversaireGalleryItems() {
-  return galleryItems.filter((item) => item.caption?.toLowerCase().includes('anniversaire'));
+  return galleryItems
+    .filter((item) => item.caption?.toLowerCase().includes('anniversaire'))
+    .slice(0, 10);
 }
 
 export function getEntrepriseGalleryItems() {
-  return galleryItems.filter((item) => {
-    const caption = item.caption?.toLowerCase() ?? '';
-    return (
-      caption.includes('corporate') ||
-      caption.includes('sephora') ||
-      caption.includes('inauguration') ||
-      caption.includes('entreprise')
-    );
-  });
+  return galleryItems
+    .filter((item) => {
+      const caption = item.caption?.toLowerCase() ?? '';
+      return (
+        caption.includes('corporate') ||
+        caption.includes('sephora') ||
+        caption.includes('inauguration') ||
+        caption.includes('entreprise')
+      );
+    })
+    .slice(0, 10);
 }
 
 export function getSoireePriveeGalleryItems() {
-  return galleryItems.filter((item) => {
-    const caption = item.caption?.toLowerCase() ?? '';
-    return (
-      caption.includes('anniversaire') ||
-      caption.includes('yogan') ||
-      caption.includes('nouvel an') ||
-      caption.includes('zanzibar') ||
-      caption.includes('pétanque') ||
-      caption.includes('petanque') ||
-      caption.includes('lac alaiade') ||
-      caption.includes('restaurant')
-    );
-  });
+  return galleryItems
+    .filter((item) => {
+      const caption = item.caption?.toLowerCase() ?? '';
+      return (
+        caption.includes('yogan') ||
+        caption.includes('nouvel an') ||
+        caption.includes('zanzibar') ||
+        caption.includes('pétanque') ||
+        caption.includes('petanque') ||
+        caption.includes('lac alaiade') ||
+        caption.includes('restaurant') ||
+        caption.includes('soirée') ||
+        caption.includes('soiree')
+      );
+    })
+    .slice(0, 10);
+}
+
+export function getRealisationsPageGalleryItems() {
+  return galleryItems.slice(0, 16);
 }

@@ -3,40 +3,40 @@ import { testimonials } from './testimonials.js';
 
 export const anniversaireFaq = [
   {
+    question: 'Comment adapter la fête à tous les âges ?',
+    answer:
+      'La programmation est construite selon les générations présentes : 18 ans, 30, 40, 50, 60 ans ou plus. Karaoké, quiz ou blind test peuvent ponctuer la soirée sans casser l\'ambiance.',
+  },
+  {
+    question: 'Proposez-vous diaporama ou surprises ?',
+    answer:
+      'Oui. Un diaporama peut être diffusé à un moment défini. Les surprises sont préparées avec vous en amont pour s\'intégrer proprement dans le déroulé.',
+  },
+  {
     question: 'Peut-on organiser un anniversaire en extérieur ?',
     answer:
-      'Oui, la sonorisation et l\'éclairage sont adaptés au lieu : jardin, terrasse ou salle. Un échange préalable permet d\'anticiper les contraintes du site.',
-  },
-  {
-    question: 'Comment adapter la musique à tous les âges ?',
-    answer:
-      'La programmation est construite avec vous en fonction de vos invités : enfants, parents, grands-parents. Les styles et les moments participatifs (karaoké, blind test) sont ajustés à votre public.',
-  },
-  {
-    question: 'Proposez-vous des animations pour les enfants ?',
-    answer:
-      'Oui, via le réseau de partenaires : garde d\'enfants, animations adaptées ou espace dédié pendant la soirée des adultes.',
+      'Oui : jardin, terrasse ou pool party. Sonorisation et éclairage sont dimensionnés selon le lieu et les contraintes éventuelles de voisinage.',
   },
   {
     question: 'Dans quelles zones intervenez-vous ?',
     answer:
-      'Principalement le Vaucluse, le Luberon, le Var et les départements limitrophes en Provence-Alpes-Côte d\'Azur. D\'autres déplacements sont possibles sur accord préalable.',
+      'Principalement en Provence / PACA. D\'autres déplacements sont possibles selon la date.',
   },
   {
     question: 'Comment obtenir une proposition pour mon anniversaire ?',
     answer:
-      'Utilisez le configurateur en précisant la date, le lieu et vos envies, ou contactez-nous directement. Une réponse personnalisée vous est adressée après étude de votre projet.',
+      'Utilisez le configurateur en précisant l\'âge, le format et les animations souhaitées. Devis personnalisé selon le projet.',
   },
 ];
 
 export const anniversaireLandingContent = {
   hero: {
     titleId: 'anniversaire-hero-title',
-    eyebrow: 'Anniversaire • Sud de la France',
-    title: 'Votre anniversaire, une fête à votre image.',
+    eyebrow: 'Anniversaire • Provence',
+    title: 'Une fête d’anniversaire intergénérationnelle et personnalisable.',
     intro:
-      'DJ, sonorisation, éclairage et animations pour célébrer avec vos proches. Une ambiance adaptée à vos invités, votre génération et le format de votre soirée.',
-    reassurance: ['Programmation sur mesure', 'Tous les formats', 'Animations modulables'],
+      '18, 30, 40, 50, 60 ans ou surprise : DJ, ambiance adaptée aux invités, karaoké, quiz, diaporama et options partenaires selon le format.',
+    reassurance: ['Tous les âges', 'Animations musicales', 'Formats intérieur / extérieur'],
     image: '/elements/gallery/anniversaire-50-ans-loriol-2026.jpg',
     primaryCta: { href: '/mon-evenement?type=anniversaire', label: 'Parler de mon anniversaire' },
     secondaryCta: { href: '#galerie-anniversaire', label: 'Voir des réalisations' },
@@ -117,20 +117,20 @@ export const anniversaireLandingContent = {
     ],
   },
   music: {
-    title: 'Votre musique, vos règles',
-    lead: 'La programmation est construite avec vous, pas imposée.',
+    title: 'Une playlist adaptée à tous les âges',
+    lead: 'Avant la fête, vous indiquez les styles et titres à prioriser, ceux à éviter, et les moments participatifs souhaités.',
     blocks: [
       {
-        title: 'Vos incontournables',
-        description: 'Les morceaux et styles que vous souhaitez absolument entendre.',
+        title: 'Incontournables',
+        description: 'Les morceaux et styles que la personne fêtée et ses invités doivent entendre.',
       },
       {
-        title: 'Vos interdits',
-        description: 'Les titres et styles que vous préférez éviter.',
+        title: 'À éviter',
+        description: 'Les titres ou genres à écarter selon l\'âge et le public présent.',
       },
       {
-        title: 'L\'ambiance en direct',
-        description: 'La piste s\'adapte aux réactions des invités et aux différents moments.',
+        title: 'Moments participatifs',
+        description: 'Karaoké, quiz ou blind test peuvent s\'insérer sans casser la soirée dansante.',
       },
     ],
   },

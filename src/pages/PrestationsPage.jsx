@@ -5,6 +5,7 @@ import { PhotoCarousel } from '../components/shared/PhotoCarousel.jsx';
 import { SiteFooter } from '../components/SiteFooter.jsx';
 import { SiteHeader } from '../components/SiteHeader.jsx';
 import {
+  deliveryLabels,
   prestationsCta,
   prestationsHero,
   prestationsSections,
@@ -28,6 +29,30 @@ export function PrestationsPage() {
       <main id="contenu-principal">
         <PageHero {...prestationsHero} />
 
+        <section className="section section--delivery-legend" aria-labelledby="delivery-legend-title">
+          <h2 id="delivery-legend-title" className="heading-section">
+            Trois niveaux de prestation
+          </h2>
+          <ul className="delivery-legend">
+            <li>
+              <span className="delivery-badge delivery-badge--mika">{deliveryLabels.mika}</span>
+              <span>DJ, sono, lumière, effets, quiz, blind test, karaoké.</span>
+            </li>
+            <li>
+              <span className="delivery-badge delivery-badge--coordinated">
+                {deliveryLabels.coordinated}
+              </span>
+              <span>Partenaires habituels intégrés au projet.</span>
+            </li>
+            <li>
+              <span className="delivery-badge delivery-badge--referral">
+                {deliveryLabels.referral}
+              </span>
+              <span>Prestataires externes selon le style et les disponibilités.</span>
+            </li>
+          </ul>
+        </section>
+
         {prestationsSections.map((section) => (
           <section
             key={section.id}
@@ -37,6 +62,9 @@ export function PrestationsPage() {
           >
             <div className="prestation-detail">
               <div className="prestation-detail__copy">
+                <p className={`delivery-badge delivery-badge--${section.delivery}`}>
+                  {deliveryLabels[section.delivery]}
+                </p>
                 <h2 id={`${section.id}-title`} className="heading-section">
                   {section.title}
                 </h2>

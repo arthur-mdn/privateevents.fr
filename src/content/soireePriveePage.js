@@ -3,60 +3,60 @@ import { testimonials } from './testimonials.js';
 
 export const soireePriveeFaq = [
   {
+    question: 'Le lieu est déjà équipé : pouvez-vous intervenir en plug and play ?',
+    answer:
+      'Oui. Mika peut intervenir uniquement avec sa régie ou s\'intégrer à l\'installation existante d\'un bar, d\'une salle ou d\'un lieu déjà équipé. Une formule complète (sono + éclairage) reste possible si le lieu n\'est pas équipé.',
+  },
+  {
     question: 'Quels formats de soirée privée couvrez-vous ?',
     answer:
-      'Soirées entre amis, fêtes de famille, pool party, réveillon, événements en club ou en extérieur : la prestation s\'adapte au lieu, au format et au nombre d\'invités.',
+      'Villa, pool party, garden party, cocktail, soirée à thème, réception privée, after ou soirée entre amis : la prestation s\'adapte au lieu et au format.',
   },
   {
-    question: 'Peut-on mixer plusieurs styles musicaux ?',
+    question: 'Comment gérer le voisinage ou un extérieur ?',
     answer:
-      'Oui, la programmation mélange vos styles préférés et s\'adapte en direct au rythme de la soirée et aux réactions des invités.',
-  },
-  {
-    question: 'Le matériel est-il adapté à un lieu non équipé ?',
-    answer:
-      'Oui, sonorisation et éclairage sont dimensionnés selon la configuration du lieu et le nombre d\'invités. Un échange préalable permet d\'anticiper les contraintes.',
+      'Le volume et le placement du matériel sont anticipés selon le lieu. Les contraintes de voisinage ou d\'autorisation sont prises en compte lors de la préparation.',
   },
   {
     question: 'Dans quelles zones intervenez-vous ?',
     answer:
-      'Principalement le Vaucluse, le Luberon, le Var et les départements limitrophes en Provence-Alpes-Côte d\'Azur. D\'autres déplacements sont possibles sur accord préalable.',
+      'Principalement en Provence / PACA. D\'autres déplacements sont possibles selon la date et le projet.',
   },
   {
     question: 'Comment obtenir une proposition pour ma soirée ?',
     answer:
-      'Utilisez le configurateur en précisant la date, le lieu et vos envies, ou contactez-nous directement. Une réponse personnalisée vous est adressée après étude de votre projet.',
+      'Utilisez le configurateur en précisant le format (villa, lieu équipé, extérieur…) et les options. Devis personnalisé selon le projet.',
   },
 ];
 
 export const soireePriveeLandingContent = {
   hero: {
     titleId: 'soiree-privee-hero-title',
-    eyebrow: 'Soirée privée • Sud de la France',
-    title: 'Votre soirée privée, pensée autour de vous.',
+    eyebrow: 'Soirée privée • Provence',
+    title: 'Une soirée privée flexible, même sur un lieu déjà équipé.',
     intro:
-      'DJ, sonorisation, éclairage et animations pour une soirée sur mesure. Le lieu, le format et vos envies guident chaque détail de la prestation.',
-    reassurance: ['Format flexible', 'Lieu intérieur ou extérieur', 'Ambiance personnalisée'],
+      'Villa, cocktail, pool party ou établissement : DJ en formule complète, ou plug and play si le lieu dispose déjà de sonorisation et d\'éclairage.',
+    reassurance: ['Formule complète ou plug and play', 'Formats libres', 'Lieu intérieur ou extérieur'],
     image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
     primaryCta: { href: '/mon-evenement?type=soiree-privee', label: 'Parler de ma soirée' },
     secondaryCta: { href: '#galerie-soiree-privee', label: 'Voir des réalisations' },
   },
   promesse: {
-    title: 'Une prestation adaptée à votre format',
+    title: 'Flexibilité du format',
     lead:
-      'Soirée entre amis, fête de famille, réveillon ou événement en club : Private Events construit une prestation cohérente autour de votre lieu et de vos envies.',
+      'Le lieu est déjà équipé ? Mika peut intervenir uniquement avec sa régie ou s\'intégrer à l\'installation existante. Besoin d\'un dispositif complet ? Sonorisation et éclairage peuvent être prévus selon la configuration.',
     points: [
       {
         title: 'Lieu et configuration',
-        description: 'Salle, jardin, terrasse ou établissement : sonorisation et éclairage dimensionnés en conséquence.',
+        description: 'Salle, jardin, terrasse, villa ou établissement : le format technique suit le lieu.',
       },
       {
-        title: 'Ambiance sur mesure',
-        description: 'Styles musicaux, volume et rythme adaptés à votre public et au déroulement prévu.',
+        title: 'Formule complète ou plug and play',
+        description: 'Matériel fourni et installé, ou intervention sur une installation déjà présente.',
       },
       {
         title: 'Options complémentaires',
-        description: 'Karaoké, photobooth, vidéobooth ou effets visuels pour enrichir la soirée.',
+        description: 'Karaoké, effets, vidéobooth ou mise en relation artistes selon le projet.',
       },
     ],
   },
@@ -117,20 +117,20 @@ export const soireePriveeLandingContent = {
     ],
   },
   music: {
-    title: 'Votre musique, vos règles',
-    lead: 'La programmation est construite avec vous, pas imposée.',
+    title: 'Ambiance libre, cadre technique clair',
+    lead: 'Vous précisez les styles souhaités et le format technique : formule complète ou plug and play sur lieu équipé.',
     blocks: [
       {
-        title: 'Vos incontournables',
-        description: 'Les morceaux et styles que vous souhaitez absolument entendre.',
+        title: 'Styles et titres',
+        description: 'Les ambiances à prioriser et celles à éviter selon vos invités.',
       },
       {
-        title: 'Vos interdits',
-        description: 'Les titres et styles que vous préférez éviter.',
+        title: 'Lieu équipé ou non',
+        description: 'Intervention avec matériel complet, ou intégration à une installation déjà présente.',
       },
       {
-        title: 'L\'ambiance en direct',
-        description: 'La piste s\'adapte aux réactions des invités et au rythme de la soirée.',
+        title: 'Adaptation en direct',
+        description: 'La piste suit le rythme réel de la soirée, villa, cocktail ou after.',
       },
     ],
   },

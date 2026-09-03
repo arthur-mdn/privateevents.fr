@@ -5,38 +5,38 @@ export const entrepriseFaq = [
   {
     question: 'Proposez-vous une facturation adaptée aux entreprises ?',
     answer:
-      'Oui, la prestation est facturée dans un cadre professionnel avec les informations nécessaires pour votre comptabilité (SIRET, mentions légales, etc.).',
+      'Oui, la prestation est facturée dans un cadre professionnel. Les mentions légales et informations nécessaires à votre comptabilité sont fournies au devis.',
   },
   {
     question: 'Comment garantissez-vous la fiabilité le jour J ?',
     answer:
-      'Installation en amont, tests avant l\'arrivée des invités, matériel professionnel et solutions de secours. Les horaires convenus sont respectés.',
+      'Installation en amont, tests avant l\'arrivée des invités, respect des horaires et plan B technique. Un interlocuteur unique pour la coordination.',
   },
   {
     question: 'Gérez-vous la sonorisation pour prises de parole ?',
     answer:
-      'Oui, micros et sonorisation sont adaptés aux discours, interventions et animations selon le format de votre événement.',
+      'Oui. Micros et diffusion sont adaptés aux discours, interventions et animations, avec un volume calé sur le cadre professionnel.',
   },
   {
     question: 'Quels types d\'événements corporate couvrez-vous ?',
     answer:
-      'Soirées d\'entreprise, séminaires, inaugurations, lancements produit, team building et événements internes. Chaque format est adapté à vos contraintes.',
+      'Gala, cocktail, séminaire, inauguration, team building et événements internes. Branding, horaires et contraintes du lieu sont pris en compte.',
   },
   {
     question: 'Comment obtenir une proposition pour notre événement ?',
     answer:
-      'Utilisez le configurateur en précisant la date, le lieu, le nombre d\'invités et le format souhaité, ou contactez-nous directement. Une réponse personnalisée vous est adressée.',
+      'Utilisez le configurateur avec la date, le lieu, le volume d\'invités et le format. Devis personnalisé, sans simulateur tarifaire.',
   },
 ];
 
 export const entrepriseLandingContent = {
   hero: {
     titleId: 'entreprise-hero-title',
-    eyebrow: 'Entreprise • Sud de la France',
-    title: 'Votre événement corporate, fiable et sur mesure.',
+    eyebrow: 'Entreprise • Provence',
+    title: 'Événements d’entreprise : ponctualité, technique et coordination.',
     intro:
-      'Animation musicale, sonorisation et coordination pour soirées d\'entreprise, séminaires et inaugurations. Fiabilité, horaires respectés et cadre professionnel.',
-    reassurance: ['Facturation entreprise', 'Horaires garantis', 'Coordination sur site'],
+      'Prises de parole, cocktail, gala ou team building : un interlocuteur unique, une installation anticipée et un déroulé respecté.',
+    reassurance: ['Horaires tenus', 'Sonorisation des interventions', 'Cadre professionnel'],
     image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
     primaryCta: { href: '/mon-evenement?type=entreprise', label: 'Parler de mon événement' },
     secondaryCta: { href: '#galerie-entreprise', label: 'Voir des réalisations' },

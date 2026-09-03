@@ -191,8 +191,12 @@ main:not(:has(.hero)):not(.section--configurator) {
   z-index: 120;
 }
 
-.site-nav__submenu[hidden] {
-  display: none;
+.site-nav__submenu--rich {
+  min-width: 18rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.15rem;
+  padding: 0.5rem;
 }
 
 .site-nav__sublink {
@@ -203,6 +207,29 @@ main:not(:has(.hero)):not(.section--configurator) {
   font-weight: 500;
   font-size: 0.9rem;
   border-radius: var(--radius-sm);
+}
+
+.site-nav__sublink--rich {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.65rem 0.75rem;
+}
+
+.site-nav__sublink-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.site-nav__sublink-desc {
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+.site-nav__submenu[hidden] {
+  display: none;
 }
 
 .site-nav__sublink:hover,
@@ -816,9 +843,17 @@ main:not(:has(.hero)):not(.section--configurator) {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: url('/elements/gallery/mariage-dansant-lumieres.jpg');
-  background-size: cover;
-  background-position: center;
+  overflow: hidden;
+}
+
+.hero__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
 }
 
 .hero__overlay {
@@ -1836,12 +1871,101 @@ main:not(:has(.hero)):not(.section--configurator) {
   margin-bottom: 0.75rem;
 }
 
+.site-footer__brand-name {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
 .site-footer__tagline {
   margin: 0;
   max-width: 22rem;
   font-size: 0.9375rem;
   color: var(--color-text-muted);
   line-height: 1.55;
+}
+
+.site-footer__zone {
+  margin: 1rem 0 0;
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.hp-field {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.delivery-legend {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 800px) {
+  .delivery-legend {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.delivery-legend li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.delivery-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  margin: 0 0 0.75rem;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--color-champagne, var(--color-accent));
+  background: rgba(232, 205, 166, 0.08);
+}
+
+.delivery-badge--coordinated {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.delivery-badge--referral {
+  color: var(--color-text-muted);
+}
+
+.testimonial-card__source {
+  color: var(--color-text-muted);
+}
+
+.testimonial-card__full {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.testimonial-card__full summary {
+  cursor: pointer;
+  color: var(--color-accent);
+  font-weight: 500;
+}
+
+.testimonial-card__full p {
+  margin: 0.75rem 0 0;
 }
 
 .site-footer__nav {
@@ -1852,9 +1976,9 @@ main:not(:has(.hero)):not(.section--configurator) {
 
 .site-footer__group-title {
   margin: 0 0 0.65rem;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--color-accent-deep);
 }

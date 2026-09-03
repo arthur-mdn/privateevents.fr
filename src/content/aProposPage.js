@@ -2,7 +2,7 @@ export const aProposHero = {
   eyebrow: 'À propos',
   title: 'Derrière les platines',
   intro:
-    'Depuis plus de 10 ans, Mika accompagne des événements privés et professionnels dans le Sud de la France. Chaque prestation est préparée en amont, puis adaptée en direct le jour de l\'événement.',
+    'Actif dans l\'événementiel depuis 2013/2014, Mika a progressé des premières soirées et karaoké vers le mix live et un équipement professionnel. Aujourd\'hui : DJ, animation et coordination de partenaires en Provence / PACA.',
   titleId: 'apropos-hero-title',
   image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
   imageAlt: 'Mains de DJ Mika sur une console Pioneer lors d’un événement en extérieur',
@@ -14,36 +14,36 @@ export const aProposProfile = {
   image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
   imageAlt: 'Mains de DJ Mika sur une console Pioneer lors d’un événement en extérieur',
   bio:
-    'Passionné de musique et de mise en ambiance, Mika a développé une approche centrée sur l\'écoute : comprendre vos goûts, votre lieu, vos invités et le déroulement prévu pour construire une prestation qui vous ressemble.',
+    'Les débuts remontent à 2013/2014 avec des soirées amateur et du karaoké, puis une évolution progressive vers le mix live. Environ huit ans de prestations avec une configuration professionnelle, et une cinquantaine d\'événements réalisés. La collecte d\'avis a commencé plus tardivement, volontairement sans volume artificiel.',
 };
 
 export const aProposProofs = [
   {
-    title: 'Plus de 10 ans d\'activité',
-    description: 'Une expérience accumulée sur des mariages, anniversaires, soirées privées et événements corporate.',
+    title: 'Depuis 2013 / 2014',
+    description: 'Premières soirées et karaoké, puis professionnalisation progressive du matériel et des prestations.',
   },
   {
-    title: 'Préparation personnalisée',
-    description: 'Échanges en amont, playlist de référence et coordination des temps forts avec les autres prestataires.',
+    title: 'Environ huit ans en configuration pro',
+    description: 'DJ, sonorisation, éclairage et animations musicales sur des formats variés.',
   },
   {
-    title: 'Différents formats',
-    description: 'De l\'intimiste au grand événement, intérieur ou extérieur, avec adaptation au lieu et au public.',
+    title: 'Une cinquantaine d\'événements',
+    description: 'Mariages, anniversaires, soirées privées et événements corporate en Provence.',
   },
   {
     title: 'Réseau de partenaires',
-    description: 'Photographes, musiciens, magiciens, décorateurs et autres prestataires sélectionnés selon votre projet.',
+    description: 'Certaines options sont coordonnées ou proposées en mise en relation selon le projet.',
   },
 ];
 
 export const aProposMethod = {
   title: 'Une méthode de travail',
-  lead: 'Quatre étapes pour garantir une prestation fluide et une soirée réussie.',
+  lead: 'Quatre étapes pour une prestation fluide le jour J.',
   steps: [
     {
       step: '01',
       title: 'Écoute',
-      description: 'Comprendre votre projet, vos goûts, le lieu, les invités et les contraintes.',
+      description: 'Comprendre le projet, le lieu, les invités et les contraintes.',
     },
     {
       step: '02',
@@ -58,7 +58,7 @@ export const aProposMethod = {
     {
       step: '04',
       title: 'Adaptation',
-      description: 'Ajuster en direct au rythme réel de la soirée et aux réactions des invités.',
+      description: 'Ajuster en direct au rythme réel de la soirée.',
     },
   ],
 };
@@ -66,7 +66,7 @@ export const aProposMethod = {
 export const aProposPartners = {
   title: 'Un réseau de partenaires',
   lead:
-    'Private Events ne se limite pas à l\'animation DJ. Selon votre projet, Mika peut mobiliser des partenaires de confiance pour enrichir votre événement.',
+    'Certaines prestations sont réalisées par Mika. D\'autres sont coordonnées avec des partenaires habituels, ou proposées en simple mise en relation.',
   categories: [
     'Photographes & vidéastes',
     'Musiciens live',

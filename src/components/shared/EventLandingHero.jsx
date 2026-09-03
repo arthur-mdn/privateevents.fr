@@ -2,7 +2,17 @@ import { Link } from 'react-router-dom';
 
 export function EventLandingHero({ hero }) {
   return (
-    <div className="hero hero--page" style={{ backgroundImage: `url('${hero.image}')` }}>
+    <div className="hero hero--page">
+      <img
+        className="hero__media"
+        src={hero.image}
+        alt=""
+        width={1600}
+        height={1067}
+        fetchPriority="high"
+        loading="eager"
+        decoding="async"
+      />
       <div className="hero__overlay" aria-hidden="true" />
       <section className="hero__inner section section--hero" aria-labelledby={hero.titleId}>
         <div className="hero__copy">

@@ -1,45 +1,45 @@
 export const heroContent = {
-  eyebrow: 'Private Events • Sud de la France',
-  title: 'Des soirées qui vous ressemblent vraiment.',
+  eyebrow: 'DJ Mika Private Events • Provence',
+  title: 'Des soirées construites autour de votre événement.',
   intro:
-    'Mariages, anniversaires, soirées privées et événements d\'entreprise. Une ambiance musicale sur mesure, enrichie si vous le souhaitez par des animations, artistes et prestations complémentaires.',
-  reassurance: ['10+ ans d\'expérience', 'Préparation personnalisée', 'Prestations sur mesure'],
+    'Mariages, anniversaires, soirées privées et événements d\'entreprise en Provence. DJ, sonorisation et éclairage en formule complète ou plug and play, avec des options partenaires selon le projet.',
+  reassurance: ['Depuis 2013/2014', 'Formule complète ou plug and play', 'Devis personnalisé'],
   image: '/elements/gallery/mariage-dansant-lumieres.jpg',
   imageAlt: 'Invités dansent sous les jeux de lumières lors d\'une soirée de mariage',
 };
 
 export const stats = [
-  { value: '10+', label: 'ans', detail: 'd\'expérience' },
-  { value: 'Sud', label: 'de la France', detail: 'déplacements selon projet' },
-  { value: 'Sur mesure', label: 'prestations', detail: 'DJ et options complémentaires' },
+  { value: '2013', label: 'début', detail: 'dans l\'événementiel' },
+  { value: '~50', label: 'événements', detail: 'réalisés' },
+  { value: 'Provence', label: 'PACA', detail: 'zone d\'intervention' },
   { value: 'Avis', label: 'clients', detail: 'témoignages disponibles', href: '/avis' },
 ];
 
 export const eventTypes = [
   {
     title: 'Mariage',
-    description: 'De la cérémonie ou du cocktail jusqu\'à la dernière danse.',
+    description: 'Coordination musicale de la cérémonie au dancefloor.',
     href: '/mariage',
     image: '/elements/gallery/mariage-dansant-lumieres.jpg',
     imageAlt: 'Piste de danse animée lors d\'un mariage',
   },
   {
     title: 'Anniversaire',
-    description: 'Une ambiance adaptée à vos invités et à votre génération.',
+    description: 'Une fête adaptée à l\'âge, aux invités et au format.',
     href: '/anniversaire',
     image: '/elements/gallery/anniversaire-50-ans-loriol-2026.jpg',
     imageAlt: 'Installation DJ pour un anniversaire de 50 ans',
   },
   {
     title: 'Soirée privée',
-    description: 'Une prestation pensée autour du lieu, du format et de vos envies.',
+    description: 'Villa, cocktail, pool party ou lieu déjà équipé.',
     href: '/soiree-privee',
     image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
     imageAlt: 'Sonorisation pour l’anniversaire de Louis en extérieur',
   },
   {
     title: 'Entreprise',
-    description: 'Soirées corporate, séminaires, inaugurations et événements internes.',
+    description: 'Ponctualité, prises de parole, gala et team building.',
     href: '/entreprise',
     image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
     imageAlt: 'Animation DJ lors d\'une inauguration en magasin',
@@ -49,7 +49,7 @@ export const eventTypes = [
 export const servicePillars = [
   {
     title: 'DJ & ambiance musicale',
-    summary: 'Programmation personnalisée, sonorisation et éclairage pour vos temps forts.',
+    summary: 'Programmation, mix live, sonorisation et éclairage pour vos temps forts.',
     examples: ['DJ set', 'Sonorisation', 'Éclairage', 'Micro et temps forts'],
     href: '/prestations',
     image: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
@@ -65,7 +65,7 @@ export const servicePillars = [
   },
   {
     title: 'Photos & souvenirs',
-    summary: 'Immortalisez la soirée avec des solutions adaptées à votre budget.',
+    summary: 'Prestations proposées et coordonnées avec des partenaires habituels.',
     examples: ['Photobooth', 'Vidéobooth', 'Photographe', 'Diaporama photo / vidéo'],
     href: '/prestations#photos-video',
     image: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
@@ -73,7 +73,7 @@ export const servicePillars = [
   },
   {
     title: 'Artistes & performances',
-    summary: 'Musiciens live, drag queen et animations sur demande pour des moments marquants.',
+    summary: 'Mise en relation selon le style recherché et les disponibilités.',
     examples: ['Musiciens live', 'Drag queen', 'Magicien / mentaliste', 'Humour'],
     href: '/prestations#artistes',
     image: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
@@ -81,14 +81,13 @@ export const servicePillars = [
   },
   {
     title: 'Mise en scène',
-    summary: 'Décoration, lumières et effets pour sublimer le lieu et les temps forts.',
+    summary: 'Lasers, fumée, bulles, étincelles et éclairage pour les temps forts.',
     examples: [
-      'Décoration',
       'Éclairage d\'ambiance',
       'Étincelles',
       'Machine à fumée',
       'Machine à bulles',
-      'Feu d\'artifice extérieur*',
+      'Lasers',
     ],
     href: '/prestations',
     image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
@@ -96,7 +95,7 @@ export const servicePillars = [
   },
   {
     title: 'Services complémentaires',
-    summary: 'Pour que vous puissiez profiter sereinement de votre événement.',
+    summary: 'Sécurité, restauration ou garde d\'enfants via partenaires ou mise en relation.',
     examples: ['Garde d\'enfants', 'Animations enfants', 'Personnel de restauration', 'Sécurité'],
     href: '/prestations',
     image: '/elements/photos/platine-dj-serato-eclairage-bleu.webp',
@@ -107,19 +106,19 @@ export const servicePillars = [
 export const prestationHighlights = [
   {
     title: 'Photobooth & vidéobooth',
-    description: 'Des souvenirs instantanés que vos invités repartent avec.',
+    description: 'Souvenirs capturés pendant la soirée, coordonnés avec des partenaires habituels.',
     image: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
     imageAlt: 'Vidéobooth pour capturer des souvenirs vidéo lors d’une soirée',
   },
   {
     title: 'Drag queen & performances',
-    description: 'Un moment live marquant, comme le spectacle drag queen Aquarii.',
+    description: 'Mise en relation avec un prestataire selon le style et les disponibilités.',
     image: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
     imageAlt: 'Spectacle drag queen Aquarii proposé parmi les animations',
   },
   {
     title: 'Éclairage & effets',
-    description: 'Mise en lumière du lieu et effets visuels pour les temps forts.',
+    description: 'Mise en lumière, lasers, fumée, bulles ou étincelles selon le lieu.',
     image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
     imageAlt: 'Éclairages dynamiques en salle',
   },
@@ -127,16 +126,16 @@ export const prestationHighlights = [
 
 export const yourRulesBlocks = [
   {
-    title: 'Vos incontournables',
-    description: 'Les morceaux, artistes et styles que vous souhaitez absolument entendre.',
+    title: 'Incontournables',
+    description: 'Avant l\'événement, vous pouvez transmettre les titres et styles à entendre absolument.',
   },
   {
-    title: 'Vos interdits',
-    description: 'Les titres et styles que vous préférez éviter.',
+    title: 'À éviter',
+    description: 'Vous indiquez aussi les morceaux ou genres à écarter.',
   },
   {
-    title: 'L\'ambiance en direct',
-    description: 'La programmation s\'adapte à la piste, aux réactions des invités et aux différents moments de la soirée.',
+    title: 'Adaptation en direct',
+    description: 'La playlist évolue avec la piste, les réactions des invités et les temps prévus.',
   },
 ];
 
@@ -149,7 +148,7 @@ export const processSteps = [
   {
     step: '02',
     title: 'On construit la prestation',
-    description: 'Musique, sonorisation, éclairage, animations et éventuelles options.',
+    description: 'Musique, technique, animations et options partenaires si besoin.',
   },
   {
     step: '03',

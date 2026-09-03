@@ -3,10 +3,26 @@ import { FaBars, FaChevronDown, FaXmark } from 'react-icons/fa6';
 import { Link, NavLink, useLocation } from 'react-router-dom';
 
 const eventLinks = [
-  { to: '/mariage', label: 'Mariage' },
-  { to: '/anniversaire', label: 'Anniversaire' },
-  { to: '/soiree-privee', label: 'Soirée privée' },
-  { to: '/entreprise', label: 'Entreprise' },
+  {
+    to: '/mariage',
+    label: 'Mariage',
+    description: 'Du cocktail au dancefloor',
+  },
+  {
+    to: '/anniversaire',
+    label: 'Anniversaire',
+    description: 'Une fête pensée autour des invités',
+  },
+  {
+    to: '/soiree-privee',
+    label: 'Soirée privée',
+    description: 'Villa, réception, soirée à thème',
+  },
+  {
+    to: '/entreprise',
+    label: 'Entreprise',
+    description: 'Corporate, gala et team building',
+  },
 ];
 
 const primaryLinks = [
@@ -67,12 +83,12 @@ function EventsDropdown({ onNavigate }) {
         Événements
         <FaChevronDown className="site-nav__chevron" aria-hidden />
       </button>
-      <ul id={menuId} className="site-nav__submenu" hidden={!open}>
-        {eventLinks.map(({ to, label }) => (
+      <ul id={menuId} className="site-nav__submenu site-nav__submenu--rich" hidden={!open}>
+        {eventLinks.map(({ to, label, description }) => (
           <li key={to}>
             <NavLink
               className={({ isActive }) =>
-                `site-nav__sublink${isActive ? ' is-active' : ''}`
+                `site-nav__sublink site-nav__sublink--rich${isActive ? ' is-active' : ''}`
               }
               to={to}
               onClick={() => {
@@ -80,7 +96,8 @@ function EventsDropdown({ onNavigate }) {
                 onNavigate?.();
               }}
             >
-              {label}
+              <span className="site-nav__sublink-label">{label}</span>
+              <span className="site-nav__sublink-desc">{description}</span>
             </NavLink>
           </li>
         ))}
@@ -156,7 +173,7 @@ export function SiteHeader() {
         <Link className="site-header__brand" to="/" onClick={closeMenu}>
           <img
             src="/elements/logo.png"
-            alt="Private Events - DJ Mika"
+            alt="DJ Mika Private Events"
             width={140}
             height={56}
             decoding="async"

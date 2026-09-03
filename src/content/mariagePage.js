@@ -5,38 +5,38 @@ export const mariageFaq = [
   {
     question: 'Intervenez-vous pour toute la journée de mariage ?',
     answer:
-      'Oui, selon votre projet : cérémonie, cocktail, repas, discours, entrée des mariés et soirée dansante peuvent être couverts. La prestation est adaptée à vos besoins et au lieu.',
+      'Oui, selon votre projet : cérémonie, cocktail, repas, discours, entrée des mariés, ouverture de bal et soirée dansante peuvent être couverts. Plusieurs espaces ou une installation avant l\'arrivée des invités sont anticipés si besoin.',
   },
   {
-    question: 'Comment se déroule la préparation musicale ?',
+    question: 'Comment préparer les temps forts sans figer la soirée ?',
     answer:
-      'Un échange en amont permet de définir vos goûts, vos invités et vos temps forts. Une playlist de référence est construite ensemble, puis ajustée en direct le jour J.',
+      'Vous transmettez incontournables, interdits et moments clés (entrée des mariés, ouverture de bal, surprises avec les témoins). Une base est préparée, puis la piste s\'adapte en direct.',
   },
   {
-    question: 'Peut-on combiner DJ et musicien live ?',
+    question: 'Pouvez-vous coordonner avec le traiteur ou le photographe ?',
     answer:
-      'Oui, un musicien live peut intervenir au cocktail ou pour l\'ouverture de bal, en complément de la prestation DJ.',
+      'Oui. Les horaires de discours, d\'entrée des mariés et de diffusion d\'un diaporama peuvent être calés avec les autres prestataires pour éviter les chevauchements.',
   },
   {
     question: 'Dans quelles zones intervenez-vous pour un mariage ?',
     answer:
-      'Principalement le Vaucluse, le Luberon, le Var et les départements limitrophes en Provence-Alpes-Côte d\'Azur. D\'autres déplacements sont possibles sur accord préalable.',
+      'Principalement en Provence / PACA : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes. D\'autres déplacements sont possibles selon la date.',
   },
   {
     question: 'Comment obtenir une proposition pour notre mariage ?',
     answer:
-      'Utilisez le configurateur en précisant la date, le lieu et vos envies, ou contactez-nous directement. Une réponse personnalisée vous est adressée après étude de votre projet.',
+      'Utilisez le configurateur avec la date, le lieu et le déroulé prévu. Chaque prestation fait l\'objet d\'un devis personnalisé.',
   },
 ];
 
 export const mariageLandingContent = {
   hero: {
     titleId: 'mariage-hero-title',
-    eyebrow: 'Mariage • Sud de la France',
-    title: 'Votre mariage, une soirée pensée autour de vous.',
+    eyebrow: 'Mariage • Provence',
+    title: 'La coordination musicale d’une journée de mariage.',
     intro:
-      'De la cérémonie au dernier morceau : animation DJ, sonorisation, éclairage et prestations complémentaires pour un déroulement fluide et une ambiance qui vous ressemble.',
-    reassurance: ['Programmation sur mesure', 'Coordination des temps forts', 'Prestations complémentaires'],
+      'Cérémonie, cocktail, repas, discours, entrée des mariés et soirée dansante : une régie préparée avec vous, puis adaptée en direct. Formule complète ou plug and play selon le lieu.',
+    reassurance: ['Temps forts préparés', 'Coordination sur site', 'Options partenaires'],
     image: '/elements/gallery/mariage-dansant-lumieres.jpg',
     primaryCta: { href: '/mon-evenement?type=mariage', label: 'Parler de mon mariage' },
     secondaryCta: { href: '#galerie-mariage', label: 'Voir des réalisations' },
@@ -137,20 +137,22 @@ export const mariageLandingContent = {
     ],
   },
   music: {
-    title: 'Votre musique, vos règles',
-    lead: 'La programmation est construite avec vous, pas imposée.',
+    title: 'Préparer les temps forts sans figer la soirée',
+    lead:
+      'Avant le jour J, vous pouvez transmettre vos incontournables, les styles à éviter et les morceaux prévus pour l\'entrée des mariés ou l\'ouverture de bal.',
     blocks: [
       {
-        title: 'Vos incontournables',
-        description: 'Les morceaux, artistes et styles que vous souhaitez absolument entendre.',
+        title: 'Incontournables',
+        description: 'Les titres et styles à entendre absolument, y compris pour les temps forts.',
       },
       {
-        title: 'Vos interdits',
-        description: 'Les titres et styles que vous préférez éviter.',
+        title: 'À éviter',
+        description: 'Les morceaux ou genres à écarter, pour éviter les mauvaises surprises.',
       },
       {
-        title: 'L\'ambiance en direct',
-        description: 'La piste s\'adapte aux réactions des invités et aux différents moments de la soirée.',
+        title: 'Adaptation en direct',
+        description:
+          'La piste évolue avec les invités, sans perdre les moments préparés avec vous ou les témoins.',
       },
     ],
   },
