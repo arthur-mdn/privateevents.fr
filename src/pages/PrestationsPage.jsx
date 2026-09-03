@@ -272,6 +272,17 @@ export function PrestationsPage() {
             <Link className="btn btn--primary" to={prestationsCta.href}>
               {prestationsCta.label}
             </Link>
+            <ul className="cta-banner__links">
+              <li>
+                <Link to="/realisations">Voir les réalisations</Link>
+              </li>
+              <li>
+                <Link to="/avis">Lire les avis clients</Link>
+              </li>
+              <li>
+                <Link to="/mariage">Page mariage</Link>
+              </li>
+            </ul>
           </div>
         </section>
       </main>

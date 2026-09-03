@@ -236,6 +236,11 @@ export const soireePriveeLandingContent = {
       lead: 'Villa, lieu équipé, extérieur, thème… Décrivez le projet, on revient avec une proposition technique claire.',
       href: '/mon-evenement?type=soiree-privee',
       label: 'Construire ma soirée privée',
+      secondaryLinks: [
+        { to: '/realisations?type=soiree-privee', label: 'Réalisations soirée privée' },
+        { to: '/avis#anniversaires-soirees', label: 'Avis clients' },
+        { to: '/prestations', label: 'Prestations' },
+      ],
     },
   ],
 };

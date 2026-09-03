@@ -13,9 +13,9 @@ const realisationProjectsUnsorted = [
       'Sonorisation de cérémonie laïque près de la piscine, puis ambiance musicale cocktail, repas et soirée dansante.',
     prestations: ['DJ & éclairage', 'Sonorisation cérémonie', 'Cocktail', 'Soirée dansante'],
     imageIds: [
+      'mariage-laura-maxime-exterieur-animation',
       'mariage-laura-maxime-ceremonie-piscine',
       'mariage-laura-maxime-exterieur',
-      'mariage-laura-maxime-exterieur-animation',
       'mariage-laura-maxime-soiree-nuit',
     ],
     testimonialId: '2026-08-laura-maxime',
@@ -200,6 +200,30 @@ export const realisationProjects = [...realisationProjectsUnsorted].sort((a, b) 
   if (!b.date) return -1;
   return b.date.localeCompare(a.date);
 });
+
+/** Filtres page /realisations (?type=…) et liens depuis les landings. */
+export const realisationTypeFilters = [
+  { id: 'all', label: 'Tous', type: null, href: null },
+  { id: 'mariage', label: 'Mariages', type: 'Mariage', href: '/mariage' },
+  { id: 'anniversaire', label: 'Anniversaires', type: 'Anniversaire', href: '/anniversaire' },
+  {
+    id: 'soiree-privee',
+    label: 'Soirées privées',
+    type: 'Soirée privée',
+    href: '/soiree-privee',
+  },
+  { id: 'entreprise', label: 'Entreprises', type: 'Entreprise', href: '/entreprise' },
+];
+
+export function getRealisationTypeFilter(typeOrSlug) {
+  if (!typeOrSlug) return realisationTypeFilters[0];
+  const value = String(typeOrSlug).toLowerCase();
+  return (
+    realisationTypeFilters.find(
+      (f) => f.id === value || f.type?.toLowerCase() === value,
+    ) ?? realisationTypeFilters[0]
+  );
+}
 
 export function getGalleryItemById(id) {
   return galleryItems.find((item) => item.id === id);

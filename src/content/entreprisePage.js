@@ -241,6 +241,11 @@ export const entrepriseLandingContent = {
       lead: 'Date, lieu, format, nombre d’invités et contraintes. Devis professionnel, réponse sous 48 h.',
       href: '/mon-evenement?type=entreprise',
       label: 'Construire mon événement entreprise',
+      secondaryLinks: [
+        { to: '/realisations?type=entreprise', label: 'Réalisations entreprise' },
+        { to: '/avis#entreprises', label: 'Avis corporate' },
+        { to: '/prestations', label: 'Prestations' },
+      ],
     },
   ],
 };

@@ -227,6 +227,11 @@ export const anniversaireLandingContent = {
       lead: 'Précisez l’âge, le format et les animations souhaitées. Proposition personnalisée, sans grille tarifaire fixe.',
       href: '/mon-evenement?type=anniversaire',
       label: 'Construire mon anniversaire',
+      secondaryLinks: [
+        { to: '/realisations?type=anniversaire', label: 'Réalisations anniversaire' },
+        { to: '/avis#anniversaires-soirees', label: 'Avis clients' },
+        { to: '/prestations', label: 'Prestations' },
+      ],
     },
   ],
 };

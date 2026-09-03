@@ -113,7 +113,7 @@ export function GalleryGrid({ items, ariaLabel = 'Galerie photos' }) {
               ) : null}
               <img
                 src={activeItem.src}
-                alt=""
+                alt={activeItem.alt || activeItem.caption || ''}
                 className="gallery-lightbox__img"
                 {...(activeItem.width && activeItem.height
                   ? { width: activeItem.width, height: activeItem.height }

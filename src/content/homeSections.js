@@ -120,7 +120,7 @@ export const prestationHighlights = [
     title: 'Éclairage & effets',
     description: 'Mise en lumière, lasers, fumée, bulles ou étincelles selon le lieu.',
     image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.webp',
-    imageAlt: 'Éclairages dynamiques en salle',
+    imageAlt: 'Éclairages dynamiques et lasers en salle lors d’une soirée',
   },
 ];
 

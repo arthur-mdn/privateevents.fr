@@ -6,7 +6,11 @@ export function AudioShowcase() {
       {playlist.map((record) => (
         <article key={record.id} className="audio-card" role="listitem">
           <div className="audio-card__header">
-            <img src={record.img} alt="" className="audio-card__cover" />
+            <img
+              src={record.img}
+              alt={`Pochette : ${record.name}`}
+              className="audio-card__cover"
+            />
             <div className="audio-card__meta">
               <h3 className="audio-card__title">{record.name}</h3>
               <p className="audio-card__writer">{record.writer}</p>

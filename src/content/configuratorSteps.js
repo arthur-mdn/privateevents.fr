@@ -110,7 +110,7 @@ export const prestationHelp = {
     description:
       'Borne vidéo pour enregistrer des messages courts ou des clips fun. Idéal pour un livre d\'or numérique.',
     image: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
-    imageAlt: 'Vidéobooth lors d’une soirée',
+    imageAlt: 'Vidéobooth pour capturer des souvenirs vidéo lors d’une soirée',
     href: '/prestations#photos-video',
     linkLabel: 'Voir Photos & vidéo',
   },
@@ -118,7 +118,7 @@ export const prestationHelp = {
     description:
       'Vidéo personnalisée ou diaporama photo monté pour un temps fort (cérémonie, anniversaire, discours).',
     image: '/elements/photos/prestations/video-boucle-mariage-laura-maxime.mp4',
-    imageAlt: 'Extrait de vidéo personnalisée',
+    imageAlt: 'Extrait de vidéo personnalisée pour un mariage',
     href: '/prestations#photos-video',
     linkLabel: 'Voir Photos & vidéo',
   },
@@ -126,7 +126,7 @@ export const prestationHelp = {
     description:
       'Performance drag pour un moment fort, souvent en cocktail ou en soirée. Sélection de partenaires selon votre projet.',
     image: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
-    imageAlt: 'Spectacle drag queen Aquarii',
+    imageAlt: 'Spectacle drag queen Aquarii lors d’une animation Private Events',
     href: '/prestations#artistes',
     linkLabel: 'Voir Artistes & performances',
   },

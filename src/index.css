@@ -2474,6 +2474,27 @@ main:not(:has(.hero)):not(.section--configurator) {
   margin-right: auto;
 }
 
+.cta-banner__links {
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 1.25rem;
+}
+
+.cta-banner__links a {
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.cta-banner__links a:hover {
+  color: var(--color-accent);
+}
+
 .testimonial-list {
   list-style: none;
   margin: 0;
@@ -2707,6 +2728,54 @@ main:not(:has(.hero)):not(.section--configurator) {
   text-underline-offset: 0.15em;
 }
 
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0 0 1.75rem;
+}
+
+.project-filters__btn {
+  margin: 0;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.project-filters__btn:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-accent);
+}
+
+.project-filters__btn.is-active {
+  border-color: var(--color-accent);
+  background: rgba(199, 178, 143, 0.16);
+  color: var(--color-accent-deep);
+}
+
+.project-filters__btn:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
+}
+
+.project-card__type a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.project-card__type a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .project-list {
   list-style: none;
   margin: 0;
@@ -2717,7 +2786,10 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 .project-card,
-[id^='avis-'] {
+[id^='avis-'],
+#mariages,
+#anniversaires-soirees,
+#entreprises {
   scroll-margin-top: calc(var(--header-height) + 1rem);
 }
 

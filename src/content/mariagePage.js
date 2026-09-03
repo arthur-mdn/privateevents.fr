@@ -280,6 +280,11 @@ export const mariageLandingContent = {
       lead: 'Indiquez la date, le lieu et les temps forts prévus. Nous revenons vers vous avec une proposition adaptée.',
       href: '/mon-evenement?type=mariage',
       label: 'Construire mon mariage',
+      secondaryLinks: [
+        { to: '/realisations?type=mariage', label: 'Réalisations mariage' },
+        { to: '/avis#mariages', label: 'Avis de mariés' },
+        { to: '/prestations', label: 'Prestations' },
+      ],
     },
   ],
 };

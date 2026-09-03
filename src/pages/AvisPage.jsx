@@ -148,6 +148,7 @@ export function AvisPage() {
           group.items.length > 0 ? (
             <section
               key={group.id}
+              id={group.id}
               className="section"
               aria-labelledby={`avis-${group.id}-title`}
             >
@@ -176,11 +177,25 @@ export function AvisPage() {
           </section>
         ) : null}
 
-        <section className="section">
-          <div className="section__cta">
+        <section className="section section--cta-banner" aria-labelledby="avis-cta-title">
+          <div className="cta-banner">
+            <h2 id="avis-cta-title" className="heading-section">
+              Envie d&apos;un projet similaire ?
+            </h2>
+            <p className="lead">
+              Parcourez les réalisations ou décrivez votre événement pour recevoir une proposition.
+            </p>
             <Link className="btn btn--primary" to="/mon-evenement">
               Construire mon événement
             </Link>
+            <ul className="cta-banner__links">
+              <li>
+                <Link to="/realisations">Voir les réalisations</Link>
+              </li>
+              <li>
+                <Link to="/prestations">Découvrir les prestations</Link>
+              </li>
+            </ul>
           </div>
         </section>
       </main>

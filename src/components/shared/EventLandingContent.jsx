@@ -338,6 +338,7 @@ function FaqBlockSection({ section, heroTitleId }) {
 
 function CtaSection({ section, heroTitleId }) {
   const id = sectionId(heroTitleId, section);
+  const links = section.secondaryLinks ?? [];
 
   return (
     <section className="section section--cta-banner" aria-labelledby={id}>
@@ -349,6 +350,15 @@ function CtaSection({ section, heroTitleId }) {
         <Link className="btn btn--primary" to={section.href}>
           {section.label}
         </Link>
+        {links.length > 0 ? (
+          <ul className="cta-banner__links">
+            {links.map((link) => (
+              <li key={link.to}>
+                <Link to={link.to}>{link.label}</Link>
+              </li>
+            ))}
+          </ul>
+        ) : null}
       </div>
     </section>
   );

@@ -93,6 +93,17 @@ function HomePage() {
             <Link className="btn btn--primary" to="/mon-evenement">
               Construire mon événement
             </Link>
+            <ul className="cta-banner__links">
+              <li>
+                <Link to="/realisations">Réalisations</Link>
+              </li>
+              <li>
+                <Link to="/avis">Avis clients</Link>
+              </li>
+              <li>
+                <Link to="/prestations">Prestations</Link>
+              </li>
+            </ul>
           </div>
         </section>
 
