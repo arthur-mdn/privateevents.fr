@@ -27,6 +27,7 @@
   --header-height: 4.5rem;
   --max-text: 60rem;
   --max-content: 72rem;
+  --icon-check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23100c08' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round' d='M3.2 8.15 6.55 11.45 12.8 4.55'/%3E%3C/svg%3E");
 }
 
 *,
@@ -2314,6 +2315,18 @@ main:not(:has(.hero)):not(.section--configurator) {
   box-shadow: 0 0 0 3px rgba(199, 178, 143, 0.25);
 }
 
+.field select {
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  padding-right: 2.5rem;
+  background-color: var(--color-bg-elevated);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23c7b28f' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' d='M4 6.2 8 10.2 12 6.2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.85rem center;
+  background-size: 0.85rem;
+}
+
 .field textarea {
   resize: vertical;
   min-height: 7rem;
@@ -3642,15 +3655,15 @@ main:not(:has(.hero)):not(.section--configurator) {
   gap: 0.25rem;
   width: 100%;
   padding: 1rem 1.15rem;
-  border: 1px solid var(--color-border);
+  border: 1.5px solid var(--color-border);
   border-radius: var(--radius-md);
-  background: var(--color-surface);
+  background: var(--color-bg);
   color: var(--color-text);
   font-family: inherit;
   font-size: 1rem;
   text-align: left;
   cursor: pointer;
-  transition: border-color 0.15s ease, background 0.15s ease;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
 }
 
 .select-card:hover {
@@ -3659,7 +3672,34 @@ main:not(:has(.hero)):not(.section--configurator) {
 
 .select-card.is-selected {
   border-color: var(--color-accent);
-  background: var(--color-surface-hover);
+  background: color-mix(in srgb, var(--color-accent) 16%, var(--color-surface));
+  box-shadow: 0 0 0 1px var(--color-accent);
+}
+
+.select-card--check {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.select-card__check {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 1.2em;
+  height: 1.2em;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 0.22em;
+  background: var(--color-bg-deep);
+}
+
+.select-card.is-selected .select-card__check {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+  background-image: var(--icon-check);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 92%;
 }
 
 .select-card--wide {
@@ -3725,25 +3765,28 @@ main:not(:has(.hero)):not(.section--configurator) {
   align-items: center;
   gap: 0.35rem;
   padding: 0.55rem 0.55rem 0.55rem 0.85rem;
-  border: 1px solid var(--color-border);
+  border: 1.5px solid var(--color-border);
   border-radius: var(--radius-sm);
-  background: var(--color-bg-elevated);
-  transition: border-color 0.15s ease;
+  background: var(--color-bg);
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
   position: relative;
   overflow: visible;
 }
 
 .checkbox-card.is-selected {
   border-color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 16%, var(--color-surface));
+  box-shadow: 0 0 0 1px var(--color-accent);
 }
 
+.checkbox-card--standalone,
 .checkbox-card--conseil {
   padding: 0.95rem 1.15rem;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.75rem;
   border-width: 1.5px;
-  background: var(--color-surface);
 }
 
+.checkbox-card--standalone .checkbox-card__icon,
 .checkbox-card--conseil .checkbox-card__icon {
   display: flex;
   align-items: center;
@@ -3753,16 +3796,13 @@ main:not(:has(.hero)):not(.section--configurator) {
   color: var(--color-accent);
 }
 
+.checkbox-card--standalone .checkbox-card__label,
 .checkbox-card--conseil .checkbox-card__label {
   font-size: 1rem;
   font-weight: 600;
 }
 
-.checkbox-card--conseil.is-selected {
-  background: var(--color-surface-hover);
-  box-shadow: 0 0 0 1px var(--color-accent);
-}
-
+.checkbox-card--standalone.is-selected .checkbox-card__icon,
 .checkbox-card--conseil.is-selected .checkbox-card__icon {
   color: var(--color-text);
 }
@@ -3779,8 +3819,37 @@ main:not(:has(.hero)):not(.section--configurator) {
 .checkbox-card input {
   flex-shrink: 0;
   margin: 0;
-  width: 1.05em;
-  height: 1.05em;
+}
+
+.configurator input[type='checkbox'] {
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-grid;
+  place-items: center;
+  width: 1.2em;
+  height: 1.2em;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+  border: 2px solid var(--color-border-strong);
+  border-radius: 0.22em;
+  background: var(--color-bg-deep);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.configurator input[type='checkbox']:checked {
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+  background-image: var(--icon-check);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 92%;
+}
+
+.configurator input[type='checkbox']:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 2px;
 }
 
 .checkbox-card__label {
@@ -3952,8 +4021,6 @@ main:not(:has(.hero)):not(.section--configurator) {
 .field-checkbox input {
   flex-shrink: 0;
   margin: 0;
-  width: 1.05em;
-  height: 1.05em;
 }
 
 .field-checkbox--rgpd {

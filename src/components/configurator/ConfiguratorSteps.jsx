@@ -54,7 +54,12 @@ const guestCountTickLabels = {
 
 function SelectCard({ id, label, description, selected, onSelect, type = 'radio', icon: Icon, variant }) {
   const isCheckbox = type === 'checkbox';
-  const className = ['select-card', variant && `select-card--${variant}`, selected && 'is-selected']
+  const className = [
+    'select-card',
+    variant && `select-card--${variant}`,
+    isCheckbox && 'select-card--check',
+    selected && 'is-selected',
+  ]
     .filter(Boolean)
     .join(' ');
 
@@ -68,6 +73,7 @@ function SelectCard({ id, label, description, selected, onSelect, type = 'radio'
       onClick={onSelect}
       id={id}
     >
+      {isCheckbox ? <span className="select-card__check" aria-hidden="true" /> : null}
       {Icon ? (
         <span className="select-card__icon" aria-hidden="true">
           <Icon />
@@ -295,6 +301,9 @@ export function StepRecap({ data }) {
   );
 }
 
+const discuterOption = ambianceOptions.find((option) => option.id === 'discuter');
+const ambianceGridOptions = ambianceOptions.filter((option) => option.id !== 'discuter');
+
 export function StepAmbiance({ data, onChange }) {
   const toggleAmbiance = (id) => {
     const current = data.ambiance;
@@ -314,8 +323,16 @@ export function StepAmbiance({ data, onChange }) {
   return (
     <>
       <p className="configurator-hint">Sélectionnez jusqu&apos;à {MAX_AMBIANCE_SELECTIONS} ambiances.</p>
+      <CheckboxCard
+        id="ambiance-discuter"
+        variant="standalone"
+        icon={FaCircleQuestion}
+        label={discuterOption.label}
+        checked={data.ambiance.includes('discuter')}
+        onChange={() => toggleAmbiance('discuter')}
+      />
       <ul className="select-cards select-cards--ambiance">
-        {ambianceOptions.map((option) => (
+        {ambianceGridOptions.map((option) => (
           <li key={option.id}>
             <SelectCard
               id={`ambiance-${option.id}`}
