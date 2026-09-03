@@ -172,9 +172,9 @@ export function SiteHeader() {
       <div className="site-header__inner">
         <Link className="site-header__brand" to="/" onClick={closeMenu}>
           <img
-            src="/elements/logo.png"
+            src="/elements/logo.svg"
             alt="DJ Mika Private Events"
-            width={140}
+            width={114}
             height={56}
             decoding="async"
           />

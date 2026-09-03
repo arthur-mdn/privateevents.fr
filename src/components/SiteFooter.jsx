@@ -27,7 +27,7 @@ export function SiteFooter() {
       <div className="site-footer__inner">
         <div className="site-footer__brand">
           <Link to="/">
-            <img src="/elements/logo.png" alt="DJ Mika Private Events" width={120} height={48} loading="lazy" />
+            <img src="/elements/logo.svg" alt="DJ Mika Private Events" width={98} height={48} loading="lazy" />
           </Link>
           <p className="site-footer__brand-name">DJ Mika Private Events</p>
           <p className="site-footer__tagline">

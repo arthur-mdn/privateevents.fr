@@ -15,7 +15,7 @@ export const homeJsonLd = {
       '@id': `${SITE_URL}/#organisation`,
       name: 'DJ Mika Private Events',
       alternateName: ['Mika Private Events', 'Private Events - DJ Mika'],
-      image: `${SITE_URL}/elements/logo.png`,
+      image: `${SITE_URL}/elements/logo.svg`,
       url: `${SITE_URL}/`,
       telephone: '+33782737661',
       email: 'contact@privateevents.fr',
