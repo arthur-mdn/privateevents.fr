@@ -3440,6 +3440,10 @@ main:not(:has(.hero)):not(.section--configurator) {
   color: var(--color-text);
 }
 
+.configurator-recap__line--notes {
+  white-space: pre-wrap;
+}
+
 .configurator-recap__label {
   margin: 1rem 0 0.35rem;
   font-size: 0.8125rem;

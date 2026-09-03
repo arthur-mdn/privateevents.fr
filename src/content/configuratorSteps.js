@@ -10,6 +10,24 @@ export const eventTypeOptions = [
   { id: 'autre', label: 'Autre', description: 'Un projet différent ? Décrivez-le nous.' },
 ];
 
+export const venueEquippedOptions = [
+  {
+    id: 'yes',
+    label: 'Oui',
+    description: 'Sonorisation ou éclairage déjà installés sur le lieu.',
+  },
+  {
+    id: 'no',
+    label: 'Non',
+    description: 'Prestation complète avec matériel fourni et installé.',
+  },
+  {
+    id: 'unknown',
+    label: 'Je ne sais pas',
+    description: 'On verra ensemble selon le lieu et la configuration.',
+  },
+];
+
 export const guestCountOptions = [
   { id: 'moins-30', label: 'Moins de 30' },
   { id: '30-60', label: '30 à 60' },
@@ -260,10 +278,17 @@ export const configuratorSteps = [
     intro: 'Quelques questions pour comprendre votre projet.',
   },
   { id: 2, title: 'Votre événement', heading: 'Parlez-nous de votre événement' },
-  { id: 3, title: 'Ambiance', heading: 'Quelle ambiance imaginez-vous ?' },
-  { id: 4, title: 'Prestations', heading: 'Que souhaitez-vous prévoir ?' },
-  { id: 5, title: 'Détails', heading: 'Y a-t-il quelque chose d\'important à savoir ?' },
-  { id: 6, title: 'Contact', heading: 'Où pouvons-nous vous répondre ?' },
+  {
+    id: 3,
+    title: 'Technique sur place',
+    heading: 'Le lieu possède-t-il déjà sonorisation ou éclairage ?',
+    intro: 'Utile pour distinguer formule complète et intervention plug and play.',
+  },
+  { id: 4, title: 'Ambiance', heading: 'Quelle ambiance imaginez-vous ?' },
+  { id: 5, title: 'Prestations', heading: 'Que souhaitez-vous prévoir ?' },
+  { id: 6, title: 'Détails', heading: 'Y a-t-il quelque chose d\'important à savoir ?' },
+  { id: 7, title: 'Récapitulatif', heading: 'Vérifiez votre demande' },
+  { id: 8, title: 'Contact', heading: 'Où pouvons-nous vous répondre ?' },
 ];
 
 export const eventTypeUrlMap = {
@@ -280,6 +305,17 @@ export function getEventTypeLabel(id) {
 
 export function getGuestCountLabel(id) {
   return guestCountOptions.find((o) => o.id === id)?.label ?? id;
+}
+
+export function getVenueEquippedLabel(id) {
+  return venueEquippedOptions.find((o) => o.id === id)?.label ?? id;
+}
+
+export function formatConfiguratorDate(isoDate, noDate) {
+  if (noDate) return 'Pas encore de date précise';
+  if (!isoDate) return null;
+  const date = new Date(`${isoDate}T12:00:00`);
+  return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 }
 
 export function getAmbianceLabels(ids) {
@@ -302,6 +338,7 @@ export function buildFormMessage(data) {
     `Date : ${data.noDate ? 'Pas encore de date précise' : data.date || 'Non renseignée'}`,
     `Lieu : ${data.location || 'Non renseigné'}`,
     `Nombre d'invités : ${getGuestCountLabel(data.guestCount)}`,
+    `Matériel sur place : ${getVenueEquippedLabel(data.venueEquipped) || 'Non renseigné'}`,
     '',
     `Ambiance : ${getAmbianceLabels(data.ambiance).join(', ') || 'Non renseignée'}`,
     '',
@@ -318,6 +355,7 @@ export const initialFormData = {
   noDate: false,
   location: '',
   guestCount: '',
+  venueEquipped: '',
   ambiance: [],
   prestations: [],
   notes: '',

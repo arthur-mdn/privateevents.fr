@@ -12,8 +12,15 @@ import {
   eventTypeOptions,
   guestCountOptions,
   MAX_AMBIANCE_SELECTIONS,
+  formatConfiguratorDate,
+  getAmbianceLabels,
+  getEventTypeLabel,
+  getGuestCountLabel,
+  getPrestationLabels,
+  getVenueEquippedLabel,
   prestationGroups,
   prestationHelp,
+  venueEquippedOptions,
 } from '../../content/configuratorSteps.js';
 import { PrestationHelpPopover } from './PrestationHelpPopover.jsx';
 
@@ -133,6 +140,75 @@ export function StepDetails({ data, onChange }) {
         </ul>
       </fieldset>
     </div>
+  );
+}
+
+export function StepVenueEquipped({ data, onChange }) {
+  return (
+    <ul className="select-cards select-cards--compact">
+      {venueEquippedOptions.map((option) => (
+        <li key={option.id}>
+          <SelectCard
+            id={`venue-${option.id}`}
+            label={option.label}
+            description={option.description}
+            selected={data.venueEquipped === option.id}
+            onSelect={() => onChange({ venueEquipped: option.id })}
+          />
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export function ConfiguratorRecapSummary({ data }) {
+  const dateLabel = formatConfiguratorDate(data.date, data.noDate);
+  const prestations = getPrestationLabels(data.prestations);
+
+  return (
+    <div className="configurator-recap">
+      <p className="configurator-recap__line">
+        <strong>{getEventTypeLabel(data.eventType) || 'Non renseigné'}</strong>
+      </p>
+      {dateLabel ? <p className="configurator-recap__line">{dateLabel}</p> : null}
+      {data.location ? <p className="configurator-recap__line">{data.location}</p> : null}
+      {data.guestCount ? (
+        <p className="configurator-recap__line">{getGuestCountLabel(data.guestCount)} invités</p>
+      ) : null}
+      {data.venueEquipped ? (
+        <p className="configurator-recap__line">
+          Matériel sur place : {getVenueEquippedLabel(data.venueEquipped)}
+        </p>
+      ) : null}
+      {data.ambiance.length > 0 ? (
+        <p className="configurator-recap__line">
+          Ambiance : {getAmbianceLabels(data.ambiance).join(', ')}
+        </p>
+      ) : null}
+      {prestations.length > 0 ? (
+        <>
+          <p className="configurator-recap__label">Prestations sélectionnées</p>
+          <p className="configurator-recap__line">{prestations.join(' • ')}</p>
+        </>
+      ) : null}
+      {data.notes ? (
+        <>
+          <p className="configurator-recap__label">Informations complémentaires</p>
+          <p className="configurator-recap__line configurator-recap__line--notes">{data.notes}</p>
+        </>
+      ) : null}
+    </div>
+  );
+}
+
+export function StepRecap({ data }) {
+  return (
+    <>
+      <p className="configurator-hint">
+        Vérifiez les informations ci-dessous. Utilisez Retour pour modifier une étape.
+      </p>
+      <ConfiguratorRecapSummary data={data} />
+    </>
   );
 }
 

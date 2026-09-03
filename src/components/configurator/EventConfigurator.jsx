@@ -6,22 +6,24 @@ import {
   buildFormMessage,
   configuratorSteps,
   eventTypeUrlMap,
-  getAmbianceLabels,
   getEventTypeLabel,
-  getGuestCountLabel,
-  getPrestationLabels,
+  getVenueEquippedLabel,
   initialFormData,
 } from '../../content/configuratorSteps.js';
 import {
+  ConfiguratorRecapSummary,
   StepAmbiance,
   StepContact,
   StepDetails,
   StepEventType,
   StepNotes,
   StepPrestations,
+  StepRecap,
+  StepVenueEquipped,
 } from './ConfiguratorSteps.jsx';
 
 const FORM_STEPS = configuratorSteps.length;
+const CONTACT_STEP = FORM_STEPS;
 const FORMSPREE_ID = 'mwkgrnyr';
 
 function getContactErrors(formData) {
@@ -32,43 +34,16 @@ function getContactErrors(formData) {
   return nextErrors;
 }
 
-function formatDateFr(isoDate) {
-  if (!isoDate) return null;
-  const date = new Date(`${isoDate}T12:00:00`);
-  return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
-}
-
 function ConfirmationScreen({ data }) {
-  const dateLabel = data.noDate ? 'Pas encore de date précise' : formatDateFr(data.date);
-  const prestations = getPrestationLabels(data.prestations);
-
   return (
     <div className="configurator-confirmation" role="status" tabIndex={-1}>
       <h2 className="heading-section">Merci, votre projet est bien parti.</h2>
       <p className="lead">
         Mika va pouvoir étudier votre demande avec les informations que vous venez de transmettre.
       </p>
-      <div className="configurator-recap">
-        <p className="configurator-recap__line">
-          <strong>{getEventTypeLabel(data.eventType)}</strong>
-        </p>
-        {dateLabel ? <p className="configurator-recap__line">{dateLabel}</p> : null}
-        {data.location ? <p className="configurator-recap__line">{data.location}</p> : null}
-        {data.guestCount ? (
-          <p className="configurator-recap__line">{getGuestCountLabel(data.guestCount)} invités</p>
-        ) : null}
-        {data.ambiance.length > 0 ? (
-          <p className="configurator-recap__line">Ambiance : {getAmbianceLabels(data.ambiance).join(', ')}</p>
-        ) : null}
-        {prestations.length > 0 ? (
-          <>
-            <p className="configurator-recap__label">Prestations sélectionnées</p>
-            <p className="configurator-recap__line">{prestations.join(' • ')}</p>
-          </>
-        ) : null}
-      </div>
+      <ConfiguratorRecapSummary data={data} />
       <p className="configurator-next">
-        Vous recevrez une réponse personnalisée par e-mail ou téléphone sous quelques jours ouvrés.
+        Vous recevrez une réponse personnalisée par e-mail ou téléphone sous 2 jours ouvrés.
       </p>
       <Link className="btn btn--secondary" to="/">
         Retour à l&apos;accueil
@@ -96,12 +71,12 @@ export function EventConfigurator() {
     (patch) => {
       setData((prev) => {
         const next = { ...prev, ...patch };
-        if (step === FORM_STEPS && contactSubmitted) {
+        if (step === CONTACT_STEP && contactSubmitted) {
           setErrors(getContactErrors(next));
         }
         return next;
       });
-      if (step !== FORM_STEPS) {
+      if (step !== CONTACT_STEP) {
         setErrors({});
       }
     },
@@ -127,10 +102,13 @@ export function EventConfigurator() {
         nextErrors.guestCount = 'Sélectionnez une fourchette d\'invités.';
       }
     }
-    if (step === 3 && data.ambiance.length === 0) {
+    if (step === 3 && !data.venueEquipped) {
+      nextErrors.venueEquipped = 'Indiquez si le lieu est déjà équipé.';
+    }
+    if (step === 4 && data.ambiance.length === 0) {
       nextErrors.ambiance = 'Sélectionnez au moins une ambiance.';
     }
-    if (step === FORM_STEPS) {
+    if (step === CONTACT_STEP) {
       Object.assign(nextErrors, getContactErrors(data));
     }
     setErrors(nextErrors);
@@ -140,7 +118,7 @@ export function EventConfigurator() {
   const goNext = () => {
     if (!validateStep()) return;
     const nextStep = Math.min(step + 1, FORM_STEPS);
-    if (nextStep === FORM_STEPS) {
+    if (nextStep === CONTACT_STEP) {
       setContactSubmitted(false);
       setErrors({});
       ignoreNextSubmitRef.current = true;
@@ -150,7 +128,7 @@ export function EventConfigurator() {
 
   const goBack = () => {
     setErrors({});
-    if (step === FORM_STEPS) {
+    if (step === CONTACT_STEP) {
       setContactSubmitted(false);
     }
     setStep((s) => Math.max(s - 1, 1));
@@ -164,7 +142,7 @@ export function EventConfigurator() {
       e.preventDefault();
       return;
     }
-    if (step !== FORM_STEPS) {
+    if (step !== CONTACT_STEP) {
       e.preventDefault();
       return;
     }
@@ -225,9 +203,10 @@ export function EventConfigurator() {
         <input type="hidden" name="event_type" value={getEventTypeLabel(data.eventType)} />
         <input type="hidden" name="event_date" value={data.noDate ? 'Pas encore de date' : data.date} />
         <input type="hidden" name="location" value={data.location} />
-        <input type="hidden" name="guest_count" value={getGuestCountLabel(data.guestCount)} />
-        <input type="hidden" name="ambiance" value={getAmbianceLabels(data.ambiance).join(', ')} />
-        <input type="hidden" name="prestations" value={getPrestationLabels(data.prestations).join(', ')} />
+        <input type="hidden" name="guest_count" value={data.guestCount} />
+        <input type="hidden" name="venue_equipped" value={getVenueEquippedLabel(data.venueEquipped)} />
+        <input type="hidden" name="ambiance" value={data.ambiance.join(', ')} />
+        <input type="hidden" name="prestations" value={data.prestations.join(', ')} />
         <input type="hidden" name="message" value={formMessage} />
 
         {step === 1 ? (
@@ -246,13 +225,20 @@ export function EventConfigurator() {
         ) : null}
         {step === 3 ? (
           <>
+            <StepVenueEquipped data={data} onChange={updateData} />
+            {errors.venueEquipped ? <p className="field__error">{errors.venueEquipped}</p> : null}
+          </>
+        ) : null}
+        {step === 4 ? (
+          <>
             <StepAmbiance data={data} onChange={updateData} />
             {errors.ambiance ? <p className="field__error">{errors.ambiance}</p> : null}
           </>
         ) : null}
-        {step === 4 ? <StepPrestations data={data} onChange={updateData} /> : null}
-        {step === 5 ? <StepNotes data={data} onChange={updateData} /> : null}
-        {step === FORM_STEPS ? (
+        {step === 5 ? <StepPrestations data={data} onChange={updateData} /> : null}
+        {step === 6 ? <StepNotes data={data} onChange={updateData} /> : null}
+        {step === 7 ? <StepRecap data={data} /> : null}
+        {step === CONTACT_STEP ? (
           <>
             <StepContact
               data={data}
@@ -274,7 +260,7 @@ export function EventConfigurator() {
           ) : (
             <span />
           )}
-          {step < FORM_STEPS ? (
+          {step < CONTACT_STEP ? (
             <button type="button" className="btn btn--primary" onClick={goNext}>
               Suivant
               <FaArrowRight aria-hidden />
@@ -287,7 +273,7 @@ export function EventConfigurator() {
               aria-busy={state.submitting}
             >
               <FaPaperPlane aria-hidden />
-              {state.submitting ? 'Envoi…' : 'Envoyer mon projet'}
+              {state.submitting ? 'Envoi…' : 'Envoyer ma demande'}
             </button>
           )}
         </div>
