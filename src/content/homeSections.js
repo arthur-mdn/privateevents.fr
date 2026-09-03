@@ -46,7 +46,7 @@ export const eventTypes = [
   },
 ];
 
-export const servicePillars = [
+export const featuredPillars = [
   {
     title: 'DJ & ambiance musicale',
     summary: 'Programmation, mix live, sonorisation et éclairage pour vos temps forts.',
@@ -63,62 +63,28 @@ export const servicePillars = [
     image: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
     imageAlt: 'Quiz musical et blind test animé devant le public lors d’une soirée',
   },
-  {
-    title: 'Photos & souvenirs',
-    summary: 'Prestations proposées et coordonnées avec des partenaires habituels.',
-    examples: ['Photobooth', 'Vidéobooth', 'Photographe', 'Diaporama photo / vidéo'],
-    href: '/prestations#photos-video',
-    image: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
-    imageAlt: 'Vidéobooth pour capturer des souvenirs vidéo lors d’une soirée',
-  },
-  {
-    title: 'Artistes & performances',
-    summary: 'Mise en relation selon le style recherché et les disponibilités.',
-    examples: ['Musiciens live', 'Drag queen', 'Magicien / mentaliste', 'Humour'],
-    href: '/prestations#artistes',
-    image: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
-    imageAlt: 'Spectacle drag queen Aquarii proposé parmi les animations',
-  },
-  {
-    title: 'Mise en scène',
-    summary: 'Lasers, fumée, bulles, étincelles et éclairage pour les temps forts.',
-    examples: [
-      'Éclairage d\'ambiance',
-      'Étincelles',
-      'Machine à fumée',
-      'Machine à bulles',
-      'Lasers',
-    ],
-    href: '/prestations',
-    image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.webp',
-    imageAlt: 'Ambiance lumineuse bleue lors de l’anniversaire 18 ans de Yogan',
-  },
-  {
-    title: 'Services complémentaires',
-    summary: 'Sécurité, restauration ou garde d\'enfants via partenaires ou mise en relation.',
-    examples: ['Garde d\'enfants', 'Animations enfants', 'Personnel de restauration', 'Sécurité'],
-    href: '/prestations',
-    image: '/elements/photos/platine-dj-serato-eclairage-bleu.webp',
-    imageAlt: 'Platine DJ professionnelle Serato sous éclairage bleu d’événement',
-  },
 ];
 
 export const prestationHighlights = [
   {
     title: 'Photobooth & vidéobooth',
     description: 'Souvenirs capturés pendant la soirée, coordonnés avec des partenaires habituels.',
+    href: '/prestations#photos-video',
     image: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
     imageAlt: 'Vidéobooth pour capturer des souvenirs vidéo lors d’une soirée',
   },
   {
-    title: 'Drag queen & performances',
-    description: 'Mise en relation avec un prestataire selon le style et les disponibilités.',
+    title: 'Artistes & performances',
+    description:
+      'Drag queen, musiciens live, magicien ou mentaliste : mise en relation selon le style et les disponibilités.',
+    href: '/prestations#artistes',
     image: '/elements/photos/prestations/drag-queen-aquarii-animation.webp',
     imageAlt: 'Spectacle drag queen Aquarii proposé parmi les animations',
   },
   {
     title: 'Éclairage & effets',
     description: 'Mise en lumière, lasers, fumée, bulles ou étincelles selon le lieu.',
+    href: '/prestations',
     image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.webp',
     imageAlt: 'Éclairages dynamiques et lasers en salle lors d’une soirée',
   },

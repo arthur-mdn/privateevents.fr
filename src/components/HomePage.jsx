@@ -9,7 +9,6 @@ import { HomeHero } from './home/HomeHero.jsx';
 import { StatsBar } from './home/StatsBar.jsx';
 import { EventTypesSection } from './home/EventTypesSection.jsx';
 import { BeyondDjSection } from './home/BeyondDjSection.jsx';
-import { PrestationsHighlightSection } from './home/PrestationsHighlightSection.jsx';
 import { YourRulesSection } from './home/YourRulesSection.jsx';
 import { ProcessSection } from './home/ProcessSection.jsx';
 import { ClientCaseSection } from './home/ClientCaseSection.jsx';
@@ -29,7 +28,6 @@ function HomePage() {
         <StatsBar />
         <EventTypesSection />
         <BeyondDjSection />
-        <PrestationsHighlightSection />
         <YourRulesSection />
         <ProcessSection />
 

@@ -254,45 +254,48 @@ function CaseStudySection({ section, heroTitleId }) {
   const id = sectionId(heroTitleId, section);
 
   return (
-    <section className="section section--case" aria-labelledby={id}>
-      <div className="case-study">
-        <div className="case-study__copy">
-          <h2 id={id} className="heading-section">
-            {section.title}
-          </h2>
-          <ul className="case-study__meta">
-            {section.meta.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-          <p className="case-study__brief">{section.brief}</p>
-          <h3 className="heading-sub">Prestations</h3>
-          <ul className="case-study__tags">
-            {section.prestations.map((p) => (
-              <li key={p}>{p}</li>
-            ))}
-          </ul>
-          <p className="case-study__outcome">{section.outcome}</p>
-          {section.links?.length ? (
-            <p className="case-study__links">
-              {section.links.map((link, index) => (
-                <span key={link.href}>
-                  {index > 0 ? ' · ' : null}
-                  <Link to={link.href}>{link.label}</Link>
-                </span>
+    <section className="section--spotlight" aria-labelledby={id}>
+      <div className="section__inner">
+        <div className="case-study case-study--spotlight">
+          <div className="case-study__copy">
+            <p className="case-study__eyebrow">Cas client</p>
+            <h2 id={id} className="heading-section">
+              {section.title}
+            </h2>
+            <ul className="case-study__meta">
+              {section.meta.map((item) => (
+                <li key={item}>{item}</li>
               ))}
-            </p>
-          ) : null}
+            </ul>
+            <p className="case-study__brief">{section.brief}</p>
+            <h3 className="heading-sub">Prestations</h3>
+            <ul className="case-study__tags">
+              {section.prestations.map((p) => (
+                <li key={p}>{p}</li>
+              ))}
+            </ul>
+            <p className="case-study__outcome">{section.outcome}</p>
+            {section.links?.length ? (
+              <p className="case-study__links">
+                {section.links.map((link, index) => (
+                  <span key={link.href}>
+                    {index > 0 ? ' · ' : null}
+                    <Link to={link.href}>{link.label}</Link>
+                  </span>
+                ))}
+              </p>
+            ) : null}
+          </div>
+          <img
+            className="case-study__img"
+            src={section.image}
+            alt={section.imageAlt}
+            width={640}
+            height={480}
+            loading="lazy"
+            decoding="async"
+          />
         </div>
-        <img
-          className="case-study__img"
-          src={section.image}
-          alt={section.imageAlt}
-          width={640}
-          height={480}
-          loading="lazy"
-          decoding="async"
-        />
       </div>
     </section>
   );
