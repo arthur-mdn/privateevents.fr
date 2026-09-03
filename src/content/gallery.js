@@ -2,7 +2,7 @@
 export const galleryItems = [
   {
     id: 'mariage-avignon-2025-machine-a-fumee',
-    src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
+    src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.webp',
     alt: 'DJ Mika accompagne l’ouverture de bal d’un mariage à Avignon avec fumée lourde et lumières',
     caption: 'Mariage - ouverture de bal',
     orientation: 'portrait',
@@ -29,7 +29,7 @@ export const galleryItems = [
   },
   {
     id: 'anniversaire-jeunes-sorgues-2026',
-    src: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
+    src: '/elements/gallery/anniversaire-jeunes-sorgues-2026.webp',
     alt: 'Sonorisation et éclairage DJ Mika en extérieur pour l’anniversaire de Louis à Sorgues',
     caption: 'Anniversaire Louis - Sorgues',
     orientation: 'landscape',
@@ -38,7 +38,7 @@ export const galleryItems = [
   },
   {
     id: 'inauguration-ouverture-sephora-marseille-vieux-port',
-    src: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
+    src: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.webp',
     alt: 'DJ Mika anime l’ouverture Sephora Marseille Terrasses du Port avec un set musical en magasin',
     caption: 'Corporate - Sephora Marseille Terrasses du Port',
     orientation: 'landscape',
@@ -47,7 +47,7 @@ export const galleryItems = [
   },
   {
     id: 'anniversaire-18ans-jeunes-ambiances-lumiere',
-    src: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
+    src: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.webp',
     alt: 'Ambiance lumineuse bleue et installation DJ Mika pour la soirée Yogan',
     caption: 'Yogan - ambiance lumineuse',
     orientation: 'landscape',
@@ -56,7 +56,7 @@ export const galleryItems = [
   },
   {
     id: 'mariage-avignon-2025-machine-etincelles-artifice',
-    src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
+    src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.webp',
     alt: 'Ouverture de bal avec DJ Mika, machine à étincelles et ambiance chaleureuse de mariage',
     caption: 'Mariage - étincelles froides',
     orientation: 'portrait',
@@ -65,7 +65,7 @@ export const galleryItems = [
   },
   {
     id: 'soiree-nouvel-an-2026-zanzibar-sete',
-    src: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.jpg',
+    src: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.webp',
     alt: 'DJ Mika mixe une soirée du Nouvel An au Zanzibar à Sète avec ambiance club et karaoké',
     caption: 'Nouvel An - Zanzibar Sète',
     orientation: 'landscape',
@@ -74,7 +74,7 @@ export const galleryItems = [
   },
   {
     id: 'mariage-dansant-lumieres',
-    src: '/elements/gallery/mariage-dansant-lumieres.jpg',
+    src: '/elements/gallery/mariage-dansant-lumieres.webp',
     alt: 'Invités dansent sous les jeux de lumières de DJ Mika lors d’une soirée de mariage',
     caption: 'Mariage - piste de danse',
     orientation: 'portrait',
@@ -83,7 +83,7 @@ export const galleryItems = [
   },
   {
     id: 'mariage-interieur-lumieres-dynamiques',
-    src: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
+    src: '/elements/gallery/mariage-interieur-lumieres-dynamiques.webp',
     alt: 'DJ Mika en prestation de mariage avec éclairages dynamiques et sonorisation professionnelle',
     caption: 'Mariage - DJ en action',
     orientation: 'portrait',

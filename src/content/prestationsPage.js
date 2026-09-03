@@ -4,7 +4,7 @@ export const prestationsHero = {
   intro:
     'Certaines prestations sont réalisées directement par Mika. D\'autres sont coordonnées avec des partenaires habituels, ou proposées en mise en relation selon le projet.',
   titleId: 'prestations-hero-title',
-  image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
+  image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.webp',
 };
 
 export const deliveryLabels = {
@@ -88,7 +88,7 @@ export const prestationsSections = [
       },
       {
         id: 'mariage-interieur-lumieres-dynamiques',
-        src: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
+        src: '/elements/gallery/mariage-interieur-lumieres-dynamiques.webp',
         alt: 'Éclairages dynamiques et lasers lors d’un mariage en intérieur avec DJ Mika',
         width: 1024,
         height: 1536,
@@ -106,12 +106,12 @@ export const prestationsSections = [
       'Une mise en scène visuelle des moments clés, adaptée aux contraintes du lieu.',
     integration:
       'Planifié en amont avec le DJ. Feu d\'artifice extérieur uniquement sous réserve des autorisations.',
-    image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
+    image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.webp',
     imageAlt: 'Ouverture de bal avec fumée lourde et lumières',
     images: [
       {
         id: 'mariage-avignon-2025-machine-a-fumee',
-        src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
+        src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.webp',
         alt: 'Ouverture de bal d’un mariage à Avignon avec fumée lourde et éclairages',
         width: 1024,
         height: 1536,
@@ -125,7 +125,7 @@ export const prestationsSections = [
       },
       {
         id: 'mariage-avignon-2025-machine-etincelles-artifice',
-        src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
+        src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.webp',
         alt: 'Machine à étincelles froides pour l’ouverture de bal d’un mariage à Avignon',
         width: 1024,
         height: 1536,

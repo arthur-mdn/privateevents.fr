@@ -37,7 +37,8 @@ export const mariageLandingContent = {
     intro:
       'Cérémonie, cocktail, repas, discours, entrée des mariés et soirée dansante : une régie préparée avec vous, puis adaptée en direct. Formule complète ou plug and play selon le lieu.',
     reassurance: ['Temps forts préparés', 'Coordination sur site', 'Options partenaires'],
-    image: '/elements/gallery/mariage-dansant-lumieres.jpg',
+    image: '/elements/gallery/mariage-soiree-dansante-hero.png',
+    imageAlt: 'Soirée dansante de mariage animée par DJ Mika Private Events',
     primaryCta: { href: '/mon-evenement?type=mariage', label: 'Parler de mon mariage' },
     secondaryCta: { href: '#galerie-mariage', label: 'Voir des réalisations' },
   },
@@ -113,7 +114,7 @@ export const mariageLandingContent = {
           title: 'Soirée dansante',
           description:
             'Programmation sur mesure, lumières et gestion des temps forts jusqu’au bout de la nuit.',
-          image: '/elements/gallery/mariage-dansant-lumieres.jpg',
+          image: '/elements/gallery/mariage-dansant-lumieres.webp',
           imageAlt: 'Piste de danse animée lors d’un mariage',
         },
       ],
@@ -178,9 +179,10 @@ export const mariageLandingContent = {
           title: 'Ouverture de bal',
           description: 'Musique personnalisée, effets visuels et coordination du moment.',
           image: {
-            src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
-            alt: 'Ouverture de bal avec effets visuels lors d’un mariage',
+            src: '/elements/photos/prestations/ouverture-de-bal.png',
+            alt: 'Illustration d’une ouverture de bal : musique personnalisée, effets visuels et coordination',
           },
+          helpKey: 'ouverture-de-bal',
         },
         {
           title: 'Entrée des mariés',
@@ -205,7 +207,7 @@ export const mariageLandingContent = {
           title: 'Étincelles froides',
           description: 'Mise en scène des temps forts avec effets adaptés au lieu.',
           image: {
-            src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
+            src: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.webp',
             alt: 'Machine à étincelles froides lors d’une ouverture de bal',
           },
           helpKey: 'etincelles',
@@ -246,7 +248,7 @@ export const mariageLandingContent = {
       ],
       outcome:
         'Ambiance progressive du cocktail à la piste pleine, temps forts coordonnés avec le traiteur et le lieu. Les mariés ont pu profiter de leur soirée sans gérer la technique.',
-      image: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
+      image: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.webp',
       imageAlt: 'Ouverture de bal avec effets visuels lors d’un mariage à Avignon',
     },
     {

@@ -37,7 +37,8 @@ export const entrepriseLandingContent = {
     intro:
       'Prises de parole, cocktail, gala ou team building : un interlocuteur unique, une installation anticipée et un déroulé respecté.',
     reassurance: ['Horaires tenus', 'Sonorisation des interventions', 'Cadre professionnel'],
-    image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
+    image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.webp',
+    imageAlt: 'DJ Mika anime l’ouverture Sephora Marseille Terrasses du Port',
     primaryCta: { href: '/mon-evenement?type=entreprise', label: 'Parler de mon événement' },
     secondaryCta: { href: '#galerie-entreprise', label: 'Voir des réalisations' },
   },
@@ -207,7 +208,7 @@ export const entrepriseLandingContent = {
       prestations: ['DJ', 'Sonorisation', 'Coordination sur site'],
       outcome:
         'Prestation fluide, horaires respectés, ambiance adaptée au cadre professionnel et à l’image de marque.',
-      image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
+      image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.webp',
       imageAlt: 'DJ Mika anime l’ouverture Sephora Marseille Terrasses du Port',
     },
     {

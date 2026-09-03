@@ -37,7 +37,8 @@ export const soireePriveeLandingContent = {
     intro:
       'Villa, cocktail, pool party ou établissement : DJ en formule complète, ou plug and play si le lieu dispose déjà de sonorisation et d’éclairage.',
     reassurance: ['Formule complète ou plug and play', 'Formats libres', 'Intérieur ou extérieur'],
-    image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.jpg',
+    image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.webp',
+    imageAlt: 'DJ Mika mixe une soirée du Nouvel An au Zanzibar à Sète',
     primaryCta: { href: '/mon-evenement?type=soiree-privee', label: 'Parler de ma soirée' },
     secondaryCta: { href: '#galerie-soiree-privee', label: 'Voir des réalisations' },
   },
@@ -102,7 +103,7 @@ export const soireePriveeLandingContent = {
       body: [
         'Volume, placement du matériel, voisinage et éventuellement une installation déjà en place : on part de ça pour caler une ambiance cohérente du début à la fin, sans alourdir le projet.',
       ],
-      image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
+      image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.webp',
       imageAlt: 'Sonorisation et éclairage pour une fête en extérieur',
       points: [
         {
@@ -125,19 +126,19 @@ export const soireePriveeLandingContent = {
         {
           title: 'Nouvel An en établissement',
           description: 'Set live, ambiance club et karaoké dans un lieu déjà équipé.',
-          image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.jpg',
+          image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.webp',
           imageAlt: 'DJ mixe une soirée du Nouvel An au Zanzibar à Sète',
         },
         {
           title: 'Soirée en salle',
           description: 'Jeux de lumières et programmation sur mesure pour une nuit festive.',
-          image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
+          image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.webp',
           imageAlt: 'Ambiance lumineuse lors d’une soirée en salle',
         },
         {
           title: 'Fête en extérieur',
           description: 'Sonorisation et éclairage pour jardin ou terrasse.',
-          image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
+          image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.webp',
           imageAlt: 'Sonorisation et éclairage pour une fête en extérieur',
         },
         {
@@ -202,7 +203,7 @@ export const soireePriveeLandingContent = {
       prestations: ['DJ', 'Plug and play / régie', 'Karaoké', 'Programmation festive'],
       outcome:
         'Ambiance tenue toute la nuit, intégration au matériel du lieu, sans installation lourde inutile.',
-      image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.jpg',
+      image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.webp',
       imageAlt: 'DJ Mika mixe une soirée du Nouvel An au Zanzibar à Sète',
     },
     {

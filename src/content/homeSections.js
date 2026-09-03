@@ -4,7 +4,7 @@ export const heroContent = {
   intro:
     'Mariages, anniversaires, soirées privées et événements d\'entreprise en Provence. DJ, sonorisation et éclairage en formule complète ou plug and play, avec des options partenaires selon le projet.',
   reassurance: ['Depuis 2013/2014', 'Formule complète ou plug and play', 'Devis personnalisé'],
-  image: '/elements/gallery/mariage-dansant-lumieres.jpg',
+  image: '/elements/gallery/mariage-dansant-lumieres.webp',
   imageAlt: 'Invités dansent sous les jeux de lumières lors d\'une soirée de mariage',
 };
 
@@ -20,7 +20,7 @@ export const eventTypes = [
     title: 'Mariage',
     description: 'Coordination musicale de la cérémonie au dancefloor.',
     href: '/mariage',
-    image: '/elements/gallery/mariage-dansant-lumieres.jpg',
+    image: '/elements/gallery/mariage-dansant-lumieres.webp',
     imageAlt: 'Piste de danse animée lors d\'un mariage',
   },
   {
@@ -34,14 +34,14 @@ export const eventTypes = [
     title: 'Soirée privée',
     description: 'Villa, cocktail, pool party ou lieu déjà équipé.',
     href: '/soiree-privee',
-    image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
+    image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.webp',
     imageAlt: 'Sonorisation pour l’anniversaire de Louis en extérieur',
   },
   {
     title: 'Entreprise',
     description: 'Ponctualité, prises de parole, gala et team building.',
     href: '/entreprise',
-    image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
+    image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.webp',
     imageAlt: 'Animation DJ lors d\'une inauguration en magasin',
   },
 ];
@@ -90,7 +90,7 @@ export const servicePillars = [
       'Lasers',
     ],
     href: '/prestations',
-    image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
+    image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.webp',
     imageAlt: 'Ambiance lumineuse bleue lors de la soirée Yogan',
   },
   {
@@ -119,7 +119,7 @@ export const prestationHighlights = [
   {
     title: 'Éclairage & effets',
     description: 'Mise en lumière, lasers, fumée, bulles ou étincelles selon le lieu.',
-    image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
+    image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.webp',
     imageAlt: 'Éclairages dynamiques en salle',
   },
 ];

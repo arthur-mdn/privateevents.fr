@@ -170,19 +170,27 @@ export const prestationHelp = {
     href: '/prestations#artistes',
     linkLabel: 'Voir Artistes & performances',
   },
+  'ouverture-de-bal': {
+    description:
+      'Musique personnalisée, effets visuels et coordination du moment pour l’ouverture de bal.',
+    image: '/elements/photos/prestations/ouverture-de-bal.png',
+    imageAlt: 'Illustration d’une ouverture de bal : musique personnalisée, effets visuels et coordination',
+    href: '/prestations#mise-en-scene',
+    linkLabel: 'Voir Mise en scène',
+  },
   etincelles: {
     description:
       'Étincelles froides pour ouverture de bal ou temps fort photo, en intérieur ou extérieur selon le lieu.',
-    image: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.jpg',
-    imageAlt: 'Machine à étincelles froides',
+    image: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.webp',
+    imageAlt: 'Machine à étincelles froides pour un temps fort de mariage',
     href: '/prestations#mise-en-scene',
     linkLabel: 'Voir Mise en scène',
   },
   'machine-fumee': {
     description:
       'Fumée lourde ou machine à fumée pour sublimer les lumières et les ouvertures de bal.',
-    image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.jpg',
-    imageAlt: 'Ouverture de bal avec fumée',
+    image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.webp',
+    imageAlt: 'Ouverture de bal avec fumée lourde et lumières',
     href: '/prestations#mise-en-scene',
     linkLabel: 'Voir Mise en scène',
   },
@@ -197,8 +205,8 @@ export const prestationHelp = {
   eclairage: {
     description:
       'Éclairage d\'ambiance, projecteurs et lasers pour transformer le lieu et marquer les temps forts.',
-    image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.jpg',
-    imageAlt: 'Éclairages dynamiques et lasers',
+    image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.webp',
+    imageAlt: 'Éclairages dynamiques et lasers lors d’un mariage',
     href: '/prestations#sonorisation',
     linkLabel: 'Voir Éclairage',
   },

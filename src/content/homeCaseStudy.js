@@ -2,7 +2,7 @@ export const homeCaseStudy = {
   title: 'Un mariage avec Private Events',
   couple: 'Laura & Thomas',
   meta: ['120 invités', 'Domaine près d\'Avignon'],
-  image: '/elements/gallery/mariage-dansant-lumieres.jpg',
+  image: '/elements/gallery/mariage-dansant-lumieres.webp',
   imageAlt: 'Invités dansent sous les jeux de lumières lors d\'un mariage',
   timeline: [
     { time: '17h30', label: 'Sonorisation du cocktail' },

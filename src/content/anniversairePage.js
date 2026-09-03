@@ -38,6 +38,7 @@ export const anniversaireLandingContent = {
       '18, 30, 40, 50, 60 ans ou surprise : programmation intergénérationnelle, animations (karaoké, quiz, blind test) et options selon le format.',
     reassurance: ['Tous les âges', 'Animations musicales', 'Intérieur ou extérieur'],
     image: '/elements/gallery/anniversaire-50-ans-loriol-2026.webp',
+    imageAlt: 'Installation DJ pour un anniversaire de 50 ans à Loriol-du-Comtat',
     primaryCta: { href: '/mon-evenement?type=anniversaire', label: 'Parler de mon anniversaire' },
     secondaryCta: { href: '#galerie-anniversaire', label: 'Voir des réalisations' },
   },
@@ -92,7 +93,7 @@ export const anniversaireLandingContent = {
       body: [
         'Avant la date, on fixe les styles prioritaires, les titres à éviter et les moments participatifs (karaoké, quiz, blind test). Le jour J, la piste s’ajuste aux réactions sans perdre le fil prévu.',
       ],
-      image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
+      image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.webp',
       imageAlt: 'Ambiance lumineuse et jeux de lumières pour une soirée dansante',
     },
     {
@@ -190,7 +191,7 @@ export const anniversaireLandingContent = {
           title: 'Sonorisation extérieure',
           description: 'Installation adaptée pour jardin, terrasse ou pool party.',
           image: {
-            src: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
+            src: '/elements/gallery/anniversaire-jeunes-sorgues-2026.webp',
             alt: 'Sonorisation et éclairage pour un anniversaire en extérieur',
           },
         },
