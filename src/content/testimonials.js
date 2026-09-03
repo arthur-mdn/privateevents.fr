@@ -10,12 +10,12 @@ const testimonialsUnsorted = [
     source: 'Message reçu après l’événement',
   },
   {
-    id: '2025-04',
+    id: '2025-10-04',
     quote:
-      'Professionnalisme, écoute et une playlist qui a fait danser tous les âges. Nos invités nous en reparlent encore.',
+      'On avait peur que la musique ne plaise pas à tout le monde, avec des invités très différents en âge. Mika a pris le temps de préparer avec nous avant le mariage. Le jour J, tout s’est enchaîné naturellement : cocktail posé, belle ouverture de bal, puis une piste pleine jusqu’au bout. Plusieurs invités nous ont recontactés après pour lui dire merci.',
     author: 'Sophie & Marc',
-    context: 'Mariage - Luberon',
-    dateISO: '2025-04-26',
+    context: 'Mariage - Avignon',
+    dateISO: '2025-10-04',
     rating: 5,
     source: 'Bark',
     realisationId: 'mariage-avignon-2025',

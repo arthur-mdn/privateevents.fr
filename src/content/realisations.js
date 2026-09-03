@@ -190,8 +190,8 @@ const realisationProjectsUnsorted = [
     title: 'Mariage - Avignon',
     type: 'Mariage',
     location: 'Avignon, Vaucluse',
-    date: '2025-04-26',
-    dateLabel: '26 avril 2025',
+    date: '2025-10-04',
+    dateLabel: '4 octobre 2025',
     guests: 'Environ 120 invités',
     brief:
       'Soirée élégante puis festive : ouverture de bal mise en scène, programmation mêlant classiques et titres actuels, effets visuels et créneau karaoké.',
@@ -210,7 +210,7 @@ const realisationProjectsUnsorted = [
       'mariage-dansant-lumieres',
       'mariage-interieur-lumieres-dynamiques',
     ],
-    testimonialId: '2025-04',
+    testimonialId: '2025-10-04',
   },
   {
     id: 'anniversaire-50-loriol',

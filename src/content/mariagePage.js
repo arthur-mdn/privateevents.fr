@@ -236,7 +236,7 @@ export const mariageLandingContent = {
       type: 'caseStudy',
       id: 'mariage-case',
       title: 'Exemple : mariage à Avignon',
-      meta: ['Mariage - Avignon', 'Avril 2025', 'Environ 120 invités'],
+      meta: ['Mariage - Avignon', 'Octobre 2025', 'Environ 120 invités'],
       brief:
         'Couple souhaitant une soirée élégante puis très festive, avec ouverture de bal mise en scène et une playlist qui fasse danser tous les âges.',
       prestations: [
@@ -252,7 +252,7 @@ export const mariageLandingContent = {
       imageAlt: 'Ouverture de bal avec effets visuels lors d’un mariage à Avignon',
       links: [
         { href: '/realisations#mariage-avignon-2025', label: 'Voir la réalisation' },
-        { href: '/avis#avis-2025-04', label: 'Lire l’avis' },
+        { href: '/avis#avis-2025-10-04', label: 'Lire l’avis' },
       ],
     },
     {
