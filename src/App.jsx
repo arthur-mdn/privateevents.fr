@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import HomePage from './components/HomePage.jsx';
+import { ScrollToTop } from './components/ScrollToTop.jsx';
 
 const AnniversairePage = lazy(() =>
   import('./pages/AnniversairePage.jsx').then((m) => ({ default: m.AnniversairePage })),
@@ -51,23 +52,26 @@ function RouteFallback() {
 
 function App() {
   return (
-    <Suspense fallback={<RouteFallback />}>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/mariage" element={<MariagePage />} />
-        <Route path="/anniversaire" element={<AnniversairePage />} />
-        <Route path="/soiree-privee" element={<SoireePriveePage />} />
-        <Route path="/entreprise" element={<EntreprisePage />} />
-        <Route path="/prestations" element={<PrestationsPage />} />
-        <Route path="/realisations" element={<RealisationsPage />} />
-        <Route path="/avis" element={<AvisPage />} />
-        <Route path="/a-propos" element={<AProposPage />} />
-        <Route path="/mon-evenement" element={<MonEvenementPage />} />
-        <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
-        <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialitePage />} />
-        <Route path="*" element={<NotFoundPage />} />
-      </Routes>
-    </Suspense>
+    <>
+      <ScrollToTop />
+      <Suspense fallback={<RouteFallback />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/mariage" element={<MariagePage />} />
+          <Route path="/anniversaire" element={<AnniversairePage />} />
+          <Route path="/soiree-privee" element={<SoireePriveePage />} />
+          <Route path="/entreprise" element={<EntreprisePage />} />
+          <Route path="/prestations" element={<PrestationsPage />} />
+          <Route path="/realisations" element={<RealisationsPage />} />
+          <Route path="/avis" element={<AvisPage />} />
+          <Route path="/a-propos" element={<AProposPage />} />
+          <Route path="/mon-evenement" element={<MonEvenementPage />} />
+          <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
+          <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialitePage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
+    </>
   );
 }
 
