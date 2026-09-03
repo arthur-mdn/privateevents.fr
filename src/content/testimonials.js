@@ -23,9 +23,9 @@ const testimonialsUnsorted = [
   {
     id: '2025-07',
     quote:
-      'Soirée d’entreprise réussie : sonorisation impeccable, karaoké très populaire. Parfait pour souder les équipes.',
-    author: 'Comité d’animation',
-    context: 'Entreprise - Vaucluse',
+      "Mika est venu mixer pour l’inauguration de notre boutique. L’ambiance était pile ce qu’il fallait : accueillante pour les clientes, dynamique sans prendre le dessus. On a pu profiter de l'après-midi sans se soucier de la technique.",
+    author: 'Équipe boutique',
+    context: 'Entreprise - Inauguration Sephora, Marseille',
     dateISO: '2025-07-05',
     rating: 5,
     source: 'Message reçu après l’événement',
