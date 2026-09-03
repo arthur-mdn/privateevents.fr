@@ -95,30 +95,25 @@ export const entrepriseLandingContent = {
     },
     {
       type: 'timeline',
+      layout: 'light',
       id: 'entreprise-logistique',
       title: 'Logistique d’un événement pro',
-      lead: 'Brief, devis, coordination puis jour J : les étapes restent courtes et concrètes.',
+      lead: 'Brief, proposition, coordination puis jour J.',
       steps: [
         {
-          step: '01',
-          title: 'Brief & contraintes',
-          description:
-            'Format, lieu, horaires, volume d’invités, branding, accès technique et contraintes du site.',
+          label: 'Brief',
+          description: 'Format, lieu, horaires, invités, branding et contraintes techniques.',
         },
         {
-          step: '02',
-          title: 'Proposition & devis',
-          description: 'Prestation détaillée, facturation entreprise, validation avec vos interlocuteurs.',
+          label: 'Proposition',
+          description: 'Devis détaillé, facturation entreprise, validation avec vos interlocuteurs.',
         },
         {
-          step: '03',
-          title: 'Coordination',
-          description:
-            'Planning des prises de parole, calage avec le lieu, le traiteur et les autres prestataires.',
+          label: 'Coordination',
+          description: 'Planning des prises de parole, calage avec le lieu et les autres prestataires.',
         },
         {
-          step: '04',
-          title: 'Jour J',
+          label: 'Jour J',
           description: 'Installation anticipée, tests, animation et respect du déroulé convenu.',
         },
       ],

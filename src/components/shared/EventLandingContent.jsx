@@ -140,6 +140,25 @@ function UsageListSection({ section, heroTitleId }) {
 function TimelineSection({ section, heroTitleId }) {
   const id = sectionId(heroTitleId, section);
 
+  if (section.layout === 'light') {
+    return (
+      <section className="section section--timeline-light" aria-labelledby={id}>
+        <h2 id={id} className="heading-section">
+          {section.title}
+        </h2>
+        {section.lead ? <p className="lead">{section.lead}</p> : null}
+        <ol className="timeline-light">
+          {section.steps.map((step) => (
+            <li key={step.label} className="timeline-light__item">
+              <span className="timeline-light__label">{step.label}</span>
+              <p className="timeline-light__desc">{step.description}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+    );
+  }
+
   return (
     <section className="section section--process" aria-labelledby={id}>
       <h2 id={id} className="heading-section">
