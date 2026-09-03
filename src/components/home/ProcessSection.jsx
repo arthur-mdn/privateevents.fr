@@ -30,10 +30,6 @@ export function ProcessSection() {
         ))}
       </ol>
 
-      <p className="process-flow-track__more">
-        <Link to="/a-propos">Voir la méthode en détail</Link>
-      </p>
-
       <div className="section__cta">
         <Link className="btn btn--primary" to="/mon-evenement">
           Construire mon événement
