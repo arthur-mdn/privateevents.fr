@@ -35,196 +35,206 @@ export const soireePriveeLandingContent = {
     eyebrow: 'Soirée privée • Provence',
     title: 'Une soirée privée flexible, même sur un lieu déjà équipé.',
     intro:
-      'Villa, cocktail, pool party ou établissement : DJ en formule complète, ou plug and play si le lieu dispose déjà de sonorisation et d\'éclairage.',
-    reassurance: ['Formule complète ou plug and play', 'Formats libres', 'Lieu intérieur ou extérieur'],
-    image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
+      'Villa, cocktail, pool party ou établissement : DJ en formule complète, ou plug and play si le lieu dispose déjà de sonorisation et d’éclairage.',
+    reassurance: ['Formule complète ou plug and play', 'Formats libres', 'Intérieur ou extérieur'],
+    image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.jpg',
     primaryCta: { href: '/mon-evenement?type=soiree-privee', label: 'Parler de ma soirée' },
     secondaryCta: { href: '#galerie-soiree-privee', label: 'Voir des réalisations' },
   },
-  promesse: {
-    title: 'Flexibilité du format',
-    lead:
-      'Le lieu est déjà équipé ? Mika peut intervenir uniquement avec sa régie ou s\'intégrer à l\'installation existante. Besoin d\'un dispositif complet ? Sonorisation et éclairage peuvent être prévus selon la configuration.',
-    points: [
-      {
-        title: 'Lieu et configuration',
-        description: 'Salle, jardin, terrasse, villa ou établissement : le format technique suit le lieu.',
-      },
-      {
-        title: 'Formule complète ou plug and play',
-        description: 'Matériel fourni et installé, ou intervention sur une installation déjà présente.',
-      },
-      {
-        title: 'Options complémentaires',
-        description: 'Karaoké, effets, vidéobooth ou mise en relation artistes selon le projet.',
-      },
-    ],
-  },
-  timeline: {
-    title: 'Déroulement d\'une soirée privée avec Private Events',
-    lead: 'De la préparation au jour J, un accompagnement pour que vous puissiez profiter de votre événement.',
-    steps: [
-      {
-        step: '01',
-        title: 'Premiers échanges',
-        description: 'Date, lieu, nombre d\'invités, format, styles musicaux et contraintes.',
-      },
-      {
-        step: '02',
-        title: 'Construction de la prestation',
-        description: 'DJ, sonorisation, éclairage, animations et options complémentaires.',
-      },
-      {
-        step: '03',
-        title: 'Préparation détaillée',
-        description: 'Playlist, coordination avec le lieu et vérifications techniques.',
-      },
-      {
-        step: '04',
-        title: 'Le jour J',
-        description: 'Installation, tests et animation musicale adaptée au déroulement réel.',
-      },
-    ],
-  },
-  formats: {
-    title: 'Des formats variés',
-    lead: 'Chaque soirée privée a ses spécificités. Voici quelques exemples de prestations.',
-    items: [
-      {
-        title: 'Soirée en extérieur',
-        description: 'Jardin, terrasse ou pool party avec sonorisation et éclairage adaptés.',
-        image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-        imageAlt: 'Sonorisation et éclairage pour l’anniversaire de Louis en extérieur',
-      },
-      {
-        title: 'Soirée en salle',
-        description: 'Ambiance club ou lounge, jeux de lumières et programmation sur mesure.',
-        image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
-        imageAlt: 'Ambiance lumineuse lors de la soirée Yogan',
-      },
-      {
-        title: 'Réveillon & fêtes',
-        description: 'Nouvel An, fête de fin d\'année ou célébration avec ambiance festive.',
-        image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.jpg',
-        imageAlt: 'DJ mixe une soirée du Nouvel An au Zanzibar à Sète',
-      },
-      {
-        title: 'Soirée entre amis',
-        description: 'Format intimiste ou grand groupe, programmation adaptée à votre cercle.',
-        image: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
-        imageAlt: 'DJ Mika en plein mixage lors d’une soirée privée',
-      },
-    ],
-  },
-  music: {
-    title: 'Ambiance libre, cadre technique clair',
-    lead: 'Vous précisez les styles souhaités et le format technique : formule complète ou plug and play sur lieu équipé.',
-    blocks: [
-      {
-        title: 'Styles et titres',
-        description: 'Les ambiances à prioriser et celles à éviter selon vos invités.',
-      },
-      {
-        title: 'Lieu équipé ou non',
-        description: 'Intervention avec matériel complet, ou intégration à une installation déjà présente.',
-      },
-      {
-        title: 'Adaptation en direct',
-        description: 'La piste suit le rythme réel de la soirée, villa, cocktail ou after.',
-      },
-    ],
-  },
-  options: {
-    title: 'Options populaires pour une soirée privée',
-    lead: 'Quelques prestations souvent demandées, à combiner selon votre projet.',
-    items: [
-      {
-        title: 'Karaoké',
-        description: 'Un créneau participatif pour varier la soirée.',
-        image: {
-          src: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
-          alt: 'Poste DJ avec microphone pour animation karaoké',
+  sections: [
+    {
+      type: 'callout',
+      id: 'soiree-plug',
+      title: 'Formule complète ou plug and play',
+      lead:
+        'Le lieu est déjà équipé ? Mika peut intervenir uniquement avec sa régie ou s’intégrer à l’installation existante. Besoin d’un dispositif complet ? Sonorisation et éclairage peuvent être prévus selon la configuration.',
+      points: [
+        {
+          title: 'Formule complète',
+          description: 'DJ + sono + éclairage fournis et installés pour le lieu.',
         },
-        helpKey: 'karaoke',
-      },
-      {
-        title: 'Photobooth & vidéobooth',
-        description: 'Des souvenirs instantanés pour vos invités.',
-        image: {
-          src: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
-          alt: 'Vidéobooth lors d\'une soirée privée',
+        {
+          title: 'Plug and play',
+          description: 'Intervention sur une installation déjà présente (bar, salle, villa équipée).',
         },
-        helpKey: 'videobooth',
-      },
-      {
-        title: 'Éclairage & effets',
-        description: 'Mise en lumière du lieu et effets visuels.',
-        image: {
-          src: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
-          alt: 'DJ en mixage avec éclairage bleu lors d\'une soirée privée',
+      ],
+    },
+    {
+      type: 'usageList',
+      id: 'soiree-formats',
+      title: 'Villa, cocktail, pool party ou lieu déjà équipé',
+      lead:
+        'Pas de cérémonie obligatoire ni de planning figé : le format suit le lieu et vos envies.',
+      items: [
+        {
+          title: 'Villa / réception privée',
+          description: 'Installation discrète, volume adapté au voisinage, ambiance lounge puis piste.',
         },
-        helpKey: 'eclairage',
-      },
-      {
-        title: 'Blind test & quiz',
-        description: 'Animations ludiques pour impliquer vos invités.',
-        image: {
-          src: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
-          alt: 'Quiz musical et blind test animé devant le public lors d’une soirée privée',
+        {
+          title: 'Pool party / garden party',
+          description: 'Matériel dimensionné pour l’extérieur, autonomie et contraintes du terrain anticipées.',
         },
-        helpKey: 'quiz',
-      },
-      {
-        title: 'Sonorisation extérieure',
-        description: 'Installation adaptée pour jardin ou terrasse.',
-        image: {
-          src: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-          alt: 'Sonorisation et éclairage pour une fête en extérieur',
+        {
+          title: 'Cocktail & after',
+          description: 'Fond musical puis montée progressive, durée souvent plus courte qu’une soirée complète.',
         },
-      },
-      {
-        title: 'Musicien live',
-        description: 'Un moment live pour marquer le début de la soirée dansante.',
-        image: {
-          src: '/elements/gallery/mariage-laura-maxime-exterieur-animation.webp',
-          alt: 'Animation musicale en extérieur lors d\'une soirée privée',
+        {
+          title: 'Soirée à thème',
+          description: 'Playlist et animations calées sur le thème (années, dress code, univers musical).',
         },
-        helpKey: 'musicien-live',
-      },
-    ],
-  },
-  caseStudy: {
-    title: 'Exemple de prestation',
-    meta: ['Anniversaire de famille - Sorgues', '2025', 'Prestation en extérieur'],
-    brief:
-      'Anniversaire de famille en jardin avec sonorisation et éclairage adaptés au lieu, programmation sur mesure pour tous les âges.',
-    prestations: ['DJ', 'Sonorisation extérieure', 'Éclairage', 'Programmation sur mesure'],
-    outcome:
-      'Ambiance fluide du cocktail à la piste pleine, installation discrète et adaptée au jardin.',
-    image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
-    imageAlt: 'Sonorisation et éclairage pour l’anniversaire de Louis à Sorgues',
-  },
-  gallery: {
-    anchorId: 'galerie-soiree-privee',
-    title: 'Galerie soirées privées',
-    lead: 'Quelques instants capturés lors de soirées privées animées en Provence.',
-    ariaLabel: 'Galerie photos de soirées privées',
-    getItems: getSoireePriveeGalleryItems,
-  },
-  testimonialsSection: {
-    title: 'Avis après soirées privées',
-    lead: 'Retours d\'expérience après des prestations en soirée privée.',
-    getItems: () =>
-      testimonials.filter((t) => t.context?.toLowerCase().includes('soirée privée')),
-  },
-  faq: {
-    title: 'Questions fréquentes - Soirée privée',
-    items: soireePriveeFaq,
-  },
-  cta: {
-    title: 'Prêt à imaginer votre soirée ?',
-    lead: 'Décrivez votre projet en quelques minutes : date, lieu, ambiance et prestations souhaitées.',
-    href: '/mon-evenement?type=soiree-privee',
-    label: 'Construire ma soirée privée',
-  },
+        {
+          title: 'Lieu déjà équipé',
+          description: 'Bar, salle de spectacle ou établissement : intégration à la sono et aux lumières du lieu.',
+        },
+        {
+          title: 'Soirée entre amis',
+          description: 'Format intimiste ou grand groupe, sans protocole : la régie suit le rythme des invités.',
+        },
+      ],
+    },
+    {
+      type: 'editorialSplit',
+      id: 'soiree-lieu',
+      soft: true,
+      title: 'Le lieu dicte la technique',
+      lead:
+        'Avant de parler playlist, on regarde la configuration : intérieur, extérieur, voisinage, prise de courant, matériel déjà en place.',
+      body: [
+        'Volume, placement du matériel, voisinage et éventuellement une installation déjà en place : on part de ça pour caler une ambiance cohérente du début à la fin, sans alourdir le projet.',
+      ],
+      image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
+      imageAlt: 'Sonorisation et éclairage pour une fête en extérieur',
+      points: [
+        {
+          title: 'Extérieur',
+          description: 'Placement des enceintes, niveau sonore et contraintes de voisinage.',
+        },
+        {
+          title: 'Intérieur',
+          description: 'Éclairage, diffusion et circulation des invités dans la pièce.',
+        },
+      ],
+    },
+    {
+      type: 'formats',
+      id: 'soiree-exemples',
+      layout: 'dense',
+      title: 'Quelques ambiances déjà animées',
+      lead: 'Nouvel An, salle, extérieur ou mix live : quelques soirées déjà animées.',
+      items: [
+        {
+          title: 'Nouvel An en établissement',
+          description: 'Set live, ambiance club et karaoké dans un lieu déjà équipé.',
+          image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.jpg',
+          imageAlt: 'DJ mixe une soirée du Nouvel An au Zanzibar à Sète',
+        },
+        {
+          title: 'Soirée en salle',
+          description: 'Jeux de lumières et programmation sur mesure pour une nuit festive.',
+          image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.jpg',
+          imageAlt: 'Ambiance lumineuse lors d’une soirée en salle',
+        },
+        {
+          title: 'Fête en extérieur',
+          description: 'Sonorisation et éclairage pour jardin ou terrasse.',
+          image: '/elements/gallery/anniversaire-jeunes-sorgues-2026.jpg',
+          imageAlt: 'Sonorisation et éclairage pour une fête en extérieur',
+        },
+        {
+          title: 'Mix live',
+          description: 'Régie DJ adaptée au format libre de la soirée.',
+          image: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
+          imageAlt: 'DJ Mika en plein mixage lors d’une soirée privée',
+        },
+      ],
+    },
+    {
+      type: 'options',
+      id: 'soiree-options',
+      title: 'Options selon le format',
+      lead: 'Karaoké, éclairage, quiz ou photobooth selon le format de la soirée.',
+      items: [
+        {
+          title: 'Karaoké',
+          description: 'Créneau participatif pour varier sans imposer un déroulé long.',
+          image: {
+            src: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+            alt: 'Poste DJ avec microphone pour animation karaoké',
+          },
+          helpKey: 'karaoke',
+        },
+        {
+          title: 'Éclairage & effets',
+          description: 'Mise en lumière du lieu et effets visuels si le format le demande.',
+          image: {
+            src: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
+            alt: 'DJ en mixage avec éclairage bleu lors d’une soirée privée',
+          },
+          helpKey: 'eclairage',
+        },
+        {
+          title: 'Blind test & quiz',
+          description: 'Animations courtes pour impliquer les invités.',
+          image: {
+            src: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
+            alt: 'Quiz musical et blind test animé devant le public lors d’une soirée privée',
+          },
+          helpKey: 'quiz',
+        },
+        {
+          title: 'Photobooth & vidéobooth',
+          description: 'Souvenirs instantanés, coordonnés avec des partenaires habituels.',
+          image: {
+            src: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
+            alt: 'Vidéobooth lors d’une soirée privée',
+          },
+          helpKey: 'videobooth',
+        },
+      ],
+    },
+    {
+      type: 'caseStudy',
+      id: 'soiree-case',
+      title: 'Exemple : Nouvel An au Zanzibar, Sète',
+      meta: ['Soirée privée - Sète', 'Nouvel An 2026', 'Établissement'],
+      brief:
+        'Soirée du Nouvel An dans un établissement déjà équipé : mix live, ambiance club et karaoké, intervention adaptée à la configuration du lieu.',
+      prestations: ['DJ', 'Plug and play / régie', 'Karaoké', 'Programmation festive'],
+      outcome:
+        'Ambiance tenue toute la nuit, intégration au matériel du lieu, sans installation lourde inutile.',
+      image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.jpg',
+      imageAlt: 'DJ Mika mixe une soirée du Nouvel An au Zanzibar à Sète',
+    },
+    {
+      type: 'gallery',
+      id: 'soiree-gallery',
+      anchorId: 'galerie-soiree-privee',
+      title: 'Galerie soirées privées',
+      lead: 'Quelques instants capturés lors de soirées privées animées en Provence.',
+      ariaLabel: 'Galerie photos de soirées privées',
+      getItems: getSoireePriveeGalleryItems,
+    },
+    {
+      type: 'testimonials',
+      id: 'soiree-avis',
+      title: 'Avis après soirées privées',
+      lead: 'Retours d’expérience après des prestations en soirée privée.',
+      getItems: () =>
+        testimonials.filter((t) => t.context?.toLowerCase().includes('soirée privée')),
+    },
+    {
+      type: 'faq',
+      id: 'soiree-faq',
+      title: 'Questions fréquentes - Soirée privée',
+      items: soireePriveeFaq,
+    },
+    {
+      type: 'cta',
+      id: 'soiree-cta',
+      title: 'Parlez-nous de votre format',
+      lead: 'Villa, lieu équipé, extérieur, thème… Décrivez le projet, on revient avec une proposition technique claire.',
+      href: '/mon-evenement?type=soiree-privee',
+      label: 'Construire ma soirée privée',
+    },
+  ],
 };

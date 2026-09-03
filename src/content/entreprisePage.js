@@ -41,202 +41,205 @@ export const entrepriseLandingContent = {
     primaryCta: { href: '/mon-evenement?type=entreprise', label: 'Parler de mon événement' },
     secondaryCta: { href: '#galerie-entreprise', label: 'Voir des réalisations' },
   },
-  promesse: {
-    title: 'Un partenaire fiable pour vos événements',
-    lead:
-      'Private Events comprend les exigences du corporate : respect des horaires, discrétion, coordination avec vos équipes et prestation adaptée à l\'identité de votre entreprise.',
-    points: [
-      {
-        title: 'Fiabilité & ponctualité',
-        description: 'Installation en amont, tests avant l\'arrivée des invités, respect strict des horaires convenus.',
-      },
-      {
-        title: 'Cadre professionnel',
-        description: 'Facturation entreprise, devis détaillé et communication claire avec vos interlocuteurs.',
-      },
-      {
-        title: 'Coordination sur site',
-        description: 'Prise en compte des contraintes du lieu, coordination avec le traiteur et les autres prestataires.',
-      },
-    ],
-  },
-  highlights: {
-    title: 'Ce qui compte pour un événement d\'entreprise',
-    lead: 'Des points clés que nous intégrons systématiquement dans chaque prestation corporate.',
-    blocks: [
-      {
-        title: 'Horaires & planning',
-        description: 'Respect du déroulement : accueil, discours, cocktail, animation et fin de soirée.',
-      },
-      {
-        title: 'Sonorisation & micros',
-        description: 'Diffusion sonore adaptée aux prises de parole, interventions et animations.',
-      },
-      {
-        title: 'Identité de l\'entreprise',
-        description: 'Ambiance musicale et volume adaptés au cadre professionnel et à votre image de marque.',
-      },
-      {
-        title: 'Volume d\'invités',
-        description: 'Équipement dimensionné selon le nombre de participants et la configuration du lieu.',
-      },
-      {
-        title: 'Contraintes du lieu',
-        description: 'Anticipation des accès, horaires imposés, niveau sonore et contraintes techniques.',
-      },
-      {
-        title: 'Facturation & suivi',
-        description: 'Devis détaillé, facture professionnelle et interlocuteur unique pour votre projet.',
-      },
-    ],
-  },
-  timeline: {
-    title: 'Déroulement d\'un événement corporate',
-    lead: 'Un processus structuré pour garantir une prestation sans imprévu.',
-    steps: [
-      {
-        step: '01',
-        title: 'Brief & contraintes',
-        description: 'Type d\'événement, lieu, horaires, nombre d\'invités, contraintes techniques et identité entreprise.',
-      },
-      {
-        step: '02',
-        title: 'Proposition & devis',
-        description: 'Prestation détaillée, facturation entreprise et validation avec vos interlocuteurs.',
-      },
-      {
-        step: '03',
-        title: 'Préparation & coordination',
-        description: 'Planning, sonorisation des temps forts, coordination avec le lieu et les prestataires.',
-      },
-      {
-        step: '04',
-        title: 'Jour J',
-        description: 'Installation anticipée, tests, animation et respect du déroulement convenu.',
-      },
-    ],
-  },
-  formats: {
-    title: 'Formats d\'événements corporate',
-    lead: 'Chaque type d\'événement a ses spécificités. Voici les formats les plus courants.',
-    items: [
-      {
-        title: 'Soirée d\'entreprise',
-        description: 'Cocktail, dîner ou soirée dansante pour fédérer vos équipes.',
-        image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
-        imageAlt: 'Animation DJ lors d\'un événement corporate',
-      },
-      {
-        title: 'Inauguration & lancement',
-        description: 'Accueil des invités, ambiance musicale et coordination des temps forts.',
-        image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
-        imageAlt: 'DJ anime une inauguration en magasin',
-      },
-      {
-        title: 'Séminaire & team building',
-        description: 'Sonorisation pour interventions et animation musicale en fin de journée.',
-        image: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
-        imageAlt: 'Setup DJ professionnel avec écran Mika Private Events pour événement corporate',
-      },
-      {
-        title: 'Événement interne',
-        description: 'Pot de départ, fête de fin d\'année ou célébration d\'équipe.',
-        image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
-        imageAlt: 'DJ Mika aux platines lors d’un événement en extérieur',
-      },
-    ],
-  },
-  options: {
-    title: 'Prestations souvent demandées',
-    lead: 'Options complémentaires pour enrichir votre événement corporate.',
-    items: [
-      {
-        title: 'Sonorisation & micros',
-        description: 'Diffusion sonore pour discours, interventions et animations.',
-        image: {
-          src: '/elements/photos/microphone-sans-fil-regie-dj.webp',
-          alt: 'Microphone sans fil et régie DJ pour prises de parole',
+  sections: [
+    {
+      type: 'plainPoints',
+      id: 'entreprise-fiabilite',
+      soft: true,
+      columns: 2,
+      title: 'Fiabilité, planning et facturation',
+      lead:
+        'Un événement d’entreprise se juge sur la ponctualité, le respect du déroulé et un devis clair, adapté à votre comptabilité.',
+      points: [
+        {
+          title: 'Ponctualité',
+          description:
+            'Installation et tests avant l’arrivée des invités. Le déroulé annoncé est tenu.',
         },
-        helpKey: 'micro-discours',
-      },
-      {
-        title: 'Karaoké d\'entreprise',
-        description: 'Animation participative pour fédérer les équipes.',
-        image: {
-          src: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
-          alt: 'Poste DJ avec microphone pour animation karaoké corporate',
+        {
+          title: 'Interlocuteur unique',
+          description:
+            'Un contact pour le brief, le jour J et le suivi. Moins d’allers-retours entre prestataires.',
         },
-        helpKey: 'karaoke',
-      },
-      {
-        title: 'Blind test & quiz',
-        description: 'Team building musical adapté à votre public.',
-        image: {
-          src: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
-          alt: 'Quiz musical et blind test pour un team building d’entreprise',
+        {
+          title: 'Facturation professionnelle',
+          description:
+            'Devis détaillé et facture adaptés au cadre entreprise, avec les éléments utiles à votre comptabilité.',
         },
-        helpKey: 'quiz',
-      },
-      {
-        title: 'Photobooth corporate',
-        description: 'Souvenirs personnalisés avec branding entreprise.',
-        image: {
-          src: '/elements/photos/prestations/videobooth-souvenirs-soiree.webp',
-          alt: 'Vidéobooth pour souvenirs lors d\'un événement corporate',
+        {
+          title: 'Plan B technique',
+          description:
+            'Matériel dimensionné, vérifications sur site et solutions de repli si le lieu impose une contrainte.',
         },
-        helpKey: 'photobooth',
-      },
-      {
-        title: 'Éclairage d\'ambiance',
-        description: 'Mise en lumière du lieu et de votre identité visuelle.',
-        image: {
-          src: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
-          alt: 'Setup DJ professionnel avec éclairage pour événement corporate',
+      ],
+    },
+    {
+      type: 'usageList',
+      id: 'entreprise-formats',
+      title: 'Formats corporate couverts',
+      lead: 'Chaque format a ses contraintes d’horaire, de volume et de prise de parole.',
+      items: [
+        {
+          title: 'Cocktail & soirée d’entreprise',
+          description: 'Accueil, fond musical, montée progressive, fin de soirée cadrée dans le créneau du lieu.',
         },
-        helpKey: 'eclairage',
-      },
-      {
-        title: 'Coordination multi-prestataires',
-        description: 'Interlocuteur unique pour synchroniser les temps forts.',
-        image: {
-          src: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
-          alt: 'DJ Mika anime une inauguration corporate à Marseille',
+        {
+          title: 'Inauguration & lancement',
+          description: 'Accueil des invités, interventions micro, ambiance adaptée à l’image de marque.',
         },
-      },
-    ],
-  },
-  caseStudy: {
-    title: 'Exemple de prestation',
-    meta: ['Inauguration - Sephora Marseille', '2025', 'Terrasses du Port'],
-    brief:
-      'Animation musicale pour l\'ouverture d\'un magasin, ambiance corporate et accueil des invités dans un cadre professionnel.',
-    prestations: ['DJ', 'Sonorisation', 'Coordination sur site'],
-    outcome:
-      'Prestation fluide et professionnelle, respect des horaires et ambiance adaptée au cadre corporate.',
-    image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
-    imageAlt: 'DJ Mika anime l\'ouverture Sephora Marseille Terrasses du Port',
-  },
-  gallery: {
-    anchorId: 'galerie-entreprise',
-    title: 'Galerie événements corporate',
-    lead: 'Quelques instants capturés lors d\'événements d\'entreprise animés en Provence.',
-    ariaLabel: 'Galerie photos d\'événements corporate',
-    getItems: getEntrepriseGalleryItems,
-  },
-  testimonialsSection: {
-    title: 'Avis d\'entreprises',
-    lead: 'Retours d\'expérience après des prestations corporate.',
-    getItems: () =>
-      testimonials.filter((t) => t.context?.toLowerCase().includes('entreprise')),
-  },
-  faq: {
-    title: 'Questions fréquentes - Entreprise',
-    items: entrepriseFaq,
-  },
-  cta: {
-    title: 'Prêt à organiser votre événement corporate ?',
-    lead: 'Décrivez votre projet : date, lieu, format, nombre d\'invités et contraintes spécifiques.',
-    href: '/mon-evenement?type=entreprise',
-    label: 'Construire mon événement entreprise',
-  },
+        {
+          title: 'Séminaire & team building',
+          description: 'Sonorisation des prises de parole le jour, animation musicale en fin de journée si prévu.',
+        },
+        {
+          title: 'Gala',
+          description: 'Déroulé serré : discours, dîner, ouverture de piste, respect strict des horaires.',
+        },
+        {
+          title: 'Événement interne',
+          description: 'Pot de départ, fin d’année ou célébration d’équipe, avec volume calé sur le cadre pro.',
+        },
+      ],
+    },
+    {
+      type: 'editorialSplit',
+      id: 'entreprise-parole',
+      title: 'Prises de parole et sonorisation',
+      lead:
+        'Dans un événement corporate, le micro compte autant que la playlist. Discours, interventions et animations doivent être audibles sans saturer la salle.',
+      body: [
+        'Micros, diffusion et niveaux sont préparés avec le planning des interventions. L’ambiance musicale reprend ensuite sans rupture, au volume adapté au cadre professionnel.',
+      ],
+      image: '/elements/photos/microphone-sans-fil-regie-dj.webp',
+      imageAlt: 'Microphone sans fil et régie DJ pour prises de parole',
+      points: [
+        {
+          title: 'Avant les invités',
+          description: 'Tests micro et équilibrage selon la salle.',
+        },
+        {
+          title: 'Pendant les interventions',
+          description: 'Priorité à la parole, musique en retrait ou coupée.',
+        },
+      ],
+    },
+    {
+      type: 'timeline',
+      id: 'entreprise-logistique',
+      title: 'Logistique d’un événement pro',
+      lead: 'Brief, devis, coordination puis jour J : les étapes restent courtes et concrètes.',
+      steps: [
+        {
+          step: '01',
+          title: 'Brief & contraintes',
+          description:
+            'Format, lieu, horaires, volume d’invités, branding, accès technique et contraintes du site.',
+        },
+        {
+          step: '02',
+          title: 'Proposition & devis',
+          description: 'Prestation détaillée, facturation entreprise, validation avec vos interlocuteurs.',
+        },
+        {
+          step: '03',
+          title: 'Coordination',
+          description:
+            'Planning des prises de parole, calage avec le lieu, le traiteur et les autres prestataires.',
+        },
+        {
+          step: '04',
+          title: 'Jour J',
+          description: 'Installation anticipée, tests, animation et respect du déroulé convenu.',
+        },
+      ],
+    },
+    {
+      type: 'options',
+      id: 'entreprise-options',
+      title: 'Prestations souvent demandées en corporate',
+      lead: 'Micros, quiz, karaoké ou éclairage : selon le format et l’image de marque.',
+      items: [
+        {
+          title: 'Sonorisation & micros',
+          description: 'Diffusion pour discours, interventions et animations.',
+          image: {
+            src: '/elements/photos/microphone-sans-fil-regie-dj.webp',
+            alt: 'Microphone sans fil et régie DJ pour prises de parole',
+          },
+          helpKey: 'micro-discours',
+        },
+        {
+          title: 'Blind test & quiz',
+          description: 'Team building musical adapté à votre public.',
+          image: {
+            src: '/elements/photos/prestations/quiz-musical-large-avec-public.webp',
+            alt: 'Quiz musical et blind test pour un team building d’entreprise',
+          },
+          helpKey: 'quiz',
+        },
+        {
+          title: 'Karaoké d’entreprise',
+          description: 'Animation participative pour fédérer les équipes, sur un créneau défini.',
+          image: {
+            src: '/elements/photos/poste-dj-ordinateur-micro-exterieur.webp',
+            alt: 'Poste DJ avec microphone pour animation karaoké corporate',
+          },
+          helpKey: 'karaoke',
+        },
+        {
+          title: 'Éclairage d’ambiance',
+          description: 'Mise en lumière du lieu, compatible avec votre identité visuelle.',
+          image: {
+            src: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
+            alt: 'Setup DJ professionnel avec éclairage pour événement corporate',
+          },
+          helpKey: 'eclairage',
+        },
+      ],
+    },
+    {
+      type: 'caseStudy',
+      id: 'entreprise-case',
+      title: 'Exemple : inauguration Sephora, Marseille',
+      meta: ['Inauguration - Sephora Marseille', '2025', 'Terrasses du Port'],
+      brief:
+        'Animation musicale pour l’ouverture d’un magasin : accueil des invités, cadre corporate et coordination sur site.',
+      prestations: ['DJ', 'Sonorisation', 'Coordination sur site'],
+      outcome:
+        'Prestation fluide, horaires respectés, ambiance adaptée au cadre professionnel et à l’image de marque.',
+      image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.jpg',
+      imageAlt: 'DJ Mika anime l’ouverture Sephora Marseille Terrasses du Port',
+    },
+    {
+      type: 'gallery',
+      id: 'entreprise-gallery',
+      anchorId: 'galerie-entreprise',
+      title: 'Galerie événements corporate',
+      lead: 'Quelques instants capturés lors d’événements d’entreprise animés en Provence.',
+      ariaLabel: 'Galerie photos d’événements corporate',
+      getItems: getEntrepriseGalleryItems,
+    },
+    {
+      type: 'testimonials',
+      id: 'entreprise-avis',
+      title: 'Avis d’entreprises',
+      lead: 'Retours d’expérience après des prestations corporate.',
+      getItems: () =>
+        testimonials.filter((t) => t.context?.toLowerCase().includes('entreprise')),
+    },
+    {
+      type: 'faq',
+      id: 'entreprise-faq',
+      title: 'Questions fréquentes - Entreprise',
+      items: entrepriseFaq,
+    },
+    {
+      type: 'cta',
+      id: 'entreprise-cta',
+      title: 'Briefez votre événement corporate',
+      lead: 'Date, lieu, format, nombre d’invités et contraintes. Devis professionnel, réponse sous 48 h.',
+      href: '/mon-evenement?type=entreprise',
+      label: 'Construire mon événement entreprise',
+    },
+  ],
 };

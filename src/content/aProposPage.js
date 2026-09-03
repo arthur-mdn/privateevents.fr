@@ -14,7 +14,7 @@ export const aProposProfile = {
   image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
   imageAlt: 'Mains de DJ Mika sur une console Pioneer lors d’un événement en extérieur',
   bio:
-    'Les débuts remontent à 2013/2014 avec des soirées amateur et du karaoké, puis une évolution progressive vers le mix live. Environ huit ans de prestations avec une configuration professionnelle, et une cinquantaine d\'événements réalisés. La collecte d\'avis a commencé plus tardivement, volontairement sans volume artificiel.',
+    'Les débuts remontent à 2013/2014 avec des soirées amateur et du karaoké, puis une évolution progressive vers le mix live. Environ huit ans de prestations avec une configuration professionnelle, et une cinquantaine d\'événements réalisés. Les avis publiés correspondent à des retours de clients après prestation.',
 };
 
 export const aProposProofs = [

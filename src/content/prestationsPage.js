@@ -229,7 +229,7 @@ export const prestationsSections = [
       },
       {
         id: 'anniversaire-18-ans-mathys-saint-cyr-sur-mer-drag-queen',
-        src: '/elements/gallery/anniversaire-18-ans-mathys-saint-cyr-sur-mer-drag-queen.jpeg',
+        src: '/elements/gallery/anniversaire-18-ans-mathys-saint-cyr-sur-mer-drag-queen.webp',
         alt: 'Spectacle drag queen Aquarii lors d’un anniversaire à Saint-Cyr-sur-Mer',
         width: 5712,
         height: 4284,

@@ -27,7 +27,7 @@ export const eventTypes = [
     title: 'Anniversaire',
     description: 'Une fête adaptée à l\'âge, aux invités et au format.',
     href: '/anniversaire',
-    image: '/elements/gallery/anniversaire-50-ans-loriol-2026.jpg',
+    image: '/elements/gallery/anniversaire-50-ans-loriol-2026.webp',
     imageAlt: 'Installation DJ pour un anniversaire de 50 ans',
   },
   {

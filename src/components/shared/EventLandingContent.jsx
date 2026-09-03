@@ -4,267 +4,427 @@ import { EventLandingHero } from './EventLandingHero.jsx';
 import { PopularOptionCard } from './PopularOptionCard.jsx';
 import { getRulesIcon } from './rulesIcons.js';
 
-export function EventLandingContent({ content }) {
-  const {
-    hero,
-    promesse,
-    timeline,
-    moments,
-    formats,
-    highlights,
-    music,
-    options,
-    caseStudy,
-    gallery,
-    testimonialsSection,
-    faq,
-    cta,
-  } = content;
+function sectionId(heroTitleId, section) {
+  return section.id ?? `${heroTitleId}-${section.type}`;
+}
 
-  const galleryItems = gallery?.getItems?.() ?? gallery?.items ?? [];
-  const testimonials = testimonialsSection?.getItems?.() ?? testimonialsSection?.items ?? [];
+function EditorialSplitSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+  const reverse = section.layout === 'reverse';
 
   return (
-    <>
-      <EventLandingHero hero={hero} />
-
-      {promesse ? (
-        <section className="section" aria-labelledby={`${hero.titleId}-promesse`}>
-          <h2 id={`${hero.titleId}-promesse`} className="heading-section">
-            {promesse.title}
-          </h2>
-          <p className="lead">{promesse.lead}</p>
-          <ul className="info-cards">
-            {promesse.points.map((point) => (
-              <li key={point.title} className="info-card">
-                <h3 className="info-card__title">{point.title}</h3>
-                <p className="info-card__desc">{point.description}</p>
+    <section
+      className={`feature-split${reverse ? ' feature-split--reverse' : ''}${section.soft ? ' feature-split--soft' : ''}`}
+      aria-labelledby={id}
+    >
+      <div className="feature-split__body">
+        <h2 id={id} className="heading-section">
+          {section.title}
+        </h2>
+        {section.lead ? <p className="lead">{section.lead}</p> : null}
+        {section.body?.map((paragraph) => (
+          <p key={paragraph} className="feature-split__prose-p">
+            {paragraph}
+          </p>
+        ))}
+        {section.points?.length ? (
+          <ul className="plain-points plain-points--compact">
+            {section.points.map((point) => (
+              <li key={point.title ?? point}>
+                {point.title ? (
+                  <>
+                    <strong className="plain-points__label">{point.title}</strong>
+                    <span className="plain-points__text">{point.description ?? point.text}</span>
+                  </>
+                ) : (
+                  <span className="plain-points__text">{point}</span>
+                )}
               </li>
             ))}
           </ul>
-        </section>
+        ) : null}
+      </div>
+      {section.image ? (
+        <div className="feature-split__media">
+          <img
+            src={section.image}
+            alt={section.imageAlt ?? ''}
+            width={640}
+            height={480}
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
       ) : null}
+    </section>
+  );
+}
 
-      {timeline ? (
-        <section className="section section--process" aria-labelledby={`${hero.titleId}-timeline`}>
-          <h2 id={`${hero.titleId}-timeline`} className="heading-section">
-            {timeline.title}
-          </h2>
-          {timeline.lead ? <p className="lead">{timeline.lead}</p> : null}
-          <ol className="process-steps">
-            {timeline.steps.map((step) => (
-              <li key={step.step} className="process-step">
-                <span className="process-step__num" aria-hidden="true">
-                  {step.step}
-                </span>
-                <div className="process-step__body">
-                  <h3 className="process-step__title">{step.title}</h3>
-                  <p className="process-step__desc">{step.description}</p>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </section>
-      ) : null}
+function PlainPointsSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+  const soft = section.soft ? ' section--soft' : '';
 
-      {highlights ? (
-        <section className="section" aria-labelledby={`${hero.titleId}-highlights`}>
-          <h2 id={`${hero.titleId}-highlights`} className="heading-section">
-            {highlights.title}
-          </h2>
-          {highlights.lead ? <p className="lead">{highlights.lead}</p> : null}
-          <ul className="info-cards info-cards--three">
-            {highlights.blocks.map((block) => (
-              <li key={block.title} className="info-card">
-                <h3 className="info-card__title">{block.title}</h3>
-                <p className="info-card__desc">{block.description}</p>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
+  return (
+    <section className={`section${soft}`} aria-labelledby={id}>
+      <h2 id={id} className="heading-section">
+        {section.title}
+      </h2>
+      {section.lead ? <p className="lead">{section.lead}</p> : null}
+      <ul className={`plain-points${section.columns === 2 ? ' plain-points--two' : ''}`}>
+        {section.points.map((point) => (
+          <li key={point.title} className="plain-points__item">
+            <h3 className="plain-points__title">{point.title}</h3>
+            <p className="plain-points__desc">{point.description}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
 
-      {moments ? (
-        <section className="section" aria-labelledby={`${hero.titleId}-moments`}>
-          <h2 id={`${hero.titleId}-moments`} className="heading-section">
-            {moments.title}
-          </h2>
-          {moments.lead ? <p className="lead">{moments.lead}</p> : null}
-          <ul className="moment-grid">
-            {moments.items.map((moment) => (
-              <li key={moment.title} className="moment-card">
-                <img
-                  className="moment-card__img"
-                  src={moment.image}
-                  alt={moment.imageAlt}
-                  width={480}
-                  height={360}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="moment-card__body">
-                  <h3 className="moment-card__title">{moment.title}</h3>
-                  <p className="moment-card__desc">{moment.description}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
-        </section>
-      ) : null}
+function CalloutSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
 
-      {formats ? (
-        <section className="section" aria-labelledby={`${hero.titleId}-formats`}>
-          <h2 id={`${hero.titleId}-formats`} className="heading-section">
-            {formats.title}
-          </h2>
-          {formats.lead ? <p className="lead">{formats.lead}</p> : null}
-          <ul className="moment-grid">
-            {formats.items.map((item) => (
-              <li key={item.title} className="moment-card">
-                <img
-                  className="moment-card__img"
-                  src={item.image}
-                  alt={item.imageAlt}
-                  width={480}
-                  height={360}
-                  loading="lazy"
-                  decoding="async"
-                />
-                <div className="moment-card__body">
-                  <h3 className="moment-card__title">{item.title}</h3>
-                  <p className="moment-card__desc">{item.description}</p>
-                </div>
+  return (
+    <section className="section section--tight" aria-labelledby={id}>
+      <div className="landing-callout">
+        <h2 id={id} className="heading-section">
+          {section.title}
+        </h2>
+        {section.lead ? <p className="lead">{section.lead}</p> : null}
+        {section.body?.map((paragraph) => (
+          <p key={paragraph}>{paragraph}</p>
+        ))}
+        {section.points?.length ? (
+          <ul className="landing-callout__list">
+            {section.points.map((point) => (
+              <li key={point.title ?? point}>
+                {point.title ? (
+                  <>
+                    <strong>{point.title}</strong>
+                    {point.description ? ` : ${point.description}` : null}
+                  </>
+                ) : (
+                  point
+                )}
               </li>
             ))}
           </ul>
-        </section>
-      ) : null}
+        ) : null}
+      </div>
+    </section>
+  );
+}
 
-      {music ? (
-        <section className="section section--rules" aria-labelledby={`${hero.titleId}-music`}>
-          <h2 id={`${hero.titleId}-music`} className="heading-section">
-            {music.title}
-          </h2>
-          <p className="lead">{music.lead}</p>
-          <ul className="rules-grid">
-            {music.blocks.map((block) => {
-              const Icon = getRulesIcon(block.title);
-              return (
-                <li key={block.title} className="rules-card">
-                  {Icon ? (
-                    <span className="rules-card__icon" aria-hidden="true">
-                      <Icon />
-                    </span>
-                  ) : null}
-                  <h3 className="rules-card__title">{block.title}</h3>
-                  <p className="rules-card__desc">{block.description}</p>
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      ) : null}
+function UsageListSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
 
-      {options ? (
-        <section className="section" aria-labelledby={`${hero.titleId}-options`}>
-          <h2 id={`${hero.titleId}-options`} className="heading-section">
-            {options.title}
-          </h2>
-          {options.lead ? <p className="lead">{options.lead}</p> : null}
-          <ul className="popular-option-grid">
-            {options.items.map((option) => (
-              <PopularOptionCard
-                key={option.title}
-                title={option.title}
-                description={option.description}
-                image={option.image}
-                helpKey={option.helpKey}
-              />
-            ))}
-          </ul>
-        </section>
-      ) : null}
+  return (
+    <section className={`section${section.soft ? ' section--soft' : ''}`} aria-labelledby={id}>
+      <h2 id={id} className="heading-section">
+        {section.title}
+      </h2>
+      {section.lead ? <p className="lead">{section.lead}</p> : null}
+      <ul className="usage-list">
+        {section.items.map((item) => (
+          <li key={item.title} className="usage-list__item">
+            <h3 className="usage-list__title">{item.title}</h3>
+            <p className="usage-list__desc">{item.description}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
 
-      {caseStudy ? (
-        <section className="section section--case" aria-labelledby={`${hero.titleId}-case`}>
-          <div className="case-study">
-            <div className="case-study__copy">
-              <h2 id={`${hero.titleId}-case`} className="heading-section">
-                {caseStudy.title}
-              </h2>
-              <ul className="case-study__meta">
-                {caseStudy.meta.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-              <p className="case-study__brief">{caseStudy.brief}</p>
-              <h3 className="heading-sub">Prestations</h3>
-              <ul className="case-study__tags">
-                {caseStudy.prestations.map((p) => (
-                  <li key={p}>{p}</li>
-                ))}
-              </ul>
-              <p className="case-study__outcome">{caseStudy.outcome}</p>
+function TimelineSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+
+  return (
+    <section className="section section--process" aria-labelledby={id}>
+      <h2 id={id} className="heading-section">
+        {section.title}
+      </h2>
+      {section.lead ? <p className="lead">{section.lead}</p> : null}
+      <ol className="process-steps">
+        {section.steps.map((step) => (
+          <li key={step.step} className="process-step">
+            <span className="process-step__num" aria-hidden="true">
+              {step.step}
+            </span>
+            <div className="process-step__body">
+              <h3 className="process-step__title">{step.title}</h3>
+              <p className="process-step__desc">{step.description}</p>
             </div>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+function PhotoGridSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+  const items = section.items ?? [];
+  const dense = section.layout === 'dense';
+
+  return (
+    <section className={`section${section.soft ? ' section--soft' : ''}`} aria-labelledby={id}>
+      <h2 id={id} className="heading-section">
+        {section.title}
+      </h2>
+      {section.lead ? <p className="lead">{section.lead}</p> : null}
+      <ul className={`moment-grid${dense ? ' moment-grid--dense' : ''}`}>
+        {items.map((item) => (
+          <li key={item.title} className="moment-card">
             <img
-              className="case-study__img"
-              src={caseStudy.image}
-              alt={caseStudy.imageAlt}
-              width={640}
-              height={480}
+              className="moment-card__img"
+              src={item.image}
+              alt={item.imageAlt}
+              width={480}
+              height={360}
               loading="lazy"
               decoding="async"
             />
-          </div>
-        </section>
-      ) : null}
+            <div className="moment-card__body">
+              <h3 className="moment-card__title">{item.title}</h3>
+              <p className="moment-card__desc">{item.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
 
-      {gallery ? (
-        <section
-          id={gallery.anchorId}
-          className="section section--gallery"
-          aria-labelledby={`${hero.titleId}-gallery`}
-        >
-          <h2 id={`${hero.titleId}-gallery`} className="heading-section">
-            {gallery.title}
+function MusicSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+
+  return (
+    <section className="section section--rules" aria-labelledby={id}>
+      <h2 id={id} className="heading-section">
+        {section.title}
+      </h2>
+      <p className="lead">{section.lead}</p>
+      <ul className="rules-grid">
+        {section.blocks.map((block) => {
+          const Icon = getRulesIcon(block.title);
+          return (
+            <li key={block.title} className="rules-card">
+              {Icon ? (
+                <span className="rules-card__icon" aria-hidden="true">
+                  <Icon />
+                </span>
+              ) : null}
+              <h3 className="rules-card__title">{block.title}</h3>
+              <p className="rules-card__desc">{block.description}</p>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
+function OptionsSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+
+  return (
+    <section className="section" aria-labelledby={id}>
+      <h2 id={id} className="heading-section">
+        {section.title}
+      </h2>
+      {section.lead ? <p className="lead">{section.lead}</p> : null}
+      <ul className="popular-option-grid">
+        {section.items.map((option) => (
+          <PopularOptionCard
+            key={option.title}
+            title={option.title}
+            description={option.description}
+            image={option.image}
+            helpKey={option.helpKey}
+          />
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+function CaseStudySection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+
+  return (
+    <section className="section section--case" aria-labelledby={id}>
+      <div className="case-study">
+        <div className="case-study__copy">
+          <h2 id={id} className="heading-section">
+            {section.title}
           </h2>
-          {gallery.lead ? <p className="lead gallery__lead">{gallery.lead}</p> : null}
-          <GalleryGrid items={galleryItems} ariaLabel={gallery.ariaLabel} />
-        </section>
-      ) : null}
+          <ul className="case-study__meta">
+            {section.meta.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <p className="case-study__brief">{section.brief}</p>
+          <h3 className="heading-sub">Prestations</h3>
+          <ul className="case-study__tags">
+            {section.prestations.map((p) => (
+              <li key={p}>{p}</li>
+            ))}
+          </ul>
+          <p className="case-study__outcome">{section.outcome}</p>
+        </div>
+        <img
+          className="case-study__img"
+          src={section.image}
+          alt={section.imageAlt}
+          width={640}
+          height={480}
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+    </section>
+  );
+}
 
-      {testimonialsSection && testimonials.length > 0 ? (
-        <section className="section" aria-labelledby={`${hero.titleId}-testimonials`}>
-          <h2 id={`${hero.titleId}-testimonials`} className="heading-section">
-            {testimonialsSection.title}
-          </h2>
-          {testimonialsSection.lead ? <p className="lead">{testimonialsSection.lead}</p> : null}
-          <WeddingTestimonials testimonials={testimonials} />
-        </section>
-      ) : null}
+function GallerySection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+  const items = section.getItems?.() ?? section.items ?? [];
 
-      {faq ? (
-        <section className="section section--faq" aria-labelledby={`${hero.titleId}-faq`}>
-          <h2 id={`${hero.titleId}-faq`} className="heading-section">
-            {faq.title}
-          </h2>
-          <FaqSection items={faq.items} titleId={`${hero.titleId}-faq`} />
-        </section>
-      ) : null}
+  return (
+    <section
+      id={section.anchorId}
+      className="section section--gallery"
+      aria-labelledby={id}
+    >
+      <h2 id={id} className="heading-section">
+        {section.title}
+      </h2>
+      {section.lead ? <p className="lead gallery__lead">{section.lead}</p> : null}
+      <GalleryGrid items={items} ariaLabel={section.ariaLabel} />
+    </section>
+  );
+}
 
-      {cta ? (
-        <section className="section section--cta-banner" aria-labelledby={`${hero.titleId}-cta`}>
-          <div className="cta-banner">
-            <h2 id={`${hero.titleId}-cta`} className="heading-section">
-              {cta.title}
-            </h2>
-            <p className="lead">{cta.lead}</p>
-            <Link className="btn btn--primary" to={cta.href}>
-              {cta.label}
-            </Link>
-          </div>
-        </section>
-      ) : null}
+function TestimonialsSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+  const testimonials = section.getItems?.() ?? section.items ?? [];
+  if (!testimonials.length) return null;
+
+  return (
+    <section className="section" aria-labelledby={id}>
+      <h2 id={id} className="heading-section">
+        {section.title}
+      </h2>
+      {section.lead ? <p className="lead">{section.lead}</p> : null}
+      <WeddingTestimonials testimonials={testimonials} />
+    </section>
+  );
+}
+
+function FaqBlockSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+
+  return (
+    <section className="section section--faq" aria-labelledby={id}>
+      <h2 id={id} className="heading-section">
+        {section.title}
+      </h2>
+      <FaqSection items={section.items} titleId={id} />
+    </section>
+  );
+}
+
+function CtaSection({ section, heroTitleId }) {
+  const id = sectionId(heroTitleId, section);
+
+  return (
+    <section className="section section--cta-banner" aria-labelledby={id}>
+      <div className="cta-banner">
+        <h2 id={id} className="heading-section">
+          {section.title}
+        </h2>
+        <p className="lead">{section.lead}</p>
+        <Link className="btn btn--primary" to={section.href}>
+          {section.label}
+        </Link>
+      </div>
+    </section>
+  );
+}
+
+const SECTION_RENDERERS = {
+  editorialSplit: EditorialSplitSection,
+  plainPoints: PlainPointsSection,
+  callout: CalloutSection,
+  usageList: UsageListSection,
+  timeline: TimelineSection,
+  moments: PhotoGridSection,
+  formats: PhotoGridSection,
+  music: MusicSection,
+  options: OptionsSection,
+  caseStudy: CaseStudySection,
+  gallery: GallerySection,
+  testimonials: TestimonialsSection,
+  faq: FaqBlockSection,
+  cta: CtaSection,
+};
+
+function legacySectionsFrom(content) {
+  const sections = [];
+  if (content.promesse) {
+    sections.push({
+      type: 'plainPoints',
+      id: 'promesse',
+      title: content.promesse.title,
+      lead: content.promesse.lead,
+      points: content.promesse.points,
+    });
+  }
+  if (content.timeline) sections.push({ type: 'timeline', ...content.timeline });
+  if (content.highlights) {
+    sections.push({
+      type: 'plainPoints',
+      id: 'highlights',
+      title: content.highlights.title,
+      lead: content.highlights.lead,
+      points: content.highlights.blocks,
+      columns: 2,
+    });
+  }
+  if (content.moments) sections.push({ type: 'moments', ...content.moments });
+  if (content.formats) sections.push({ type: 'formats', ...content.formats });
+  if (content.music) sections.push({ type: 'music', ...content.music });
+  if (content.options) sections.push({ type: 'options', ...content.options });
+  if (content.caseStudy) sections.push({ type: 'caseStudy', ...content.caseStudy });
+  if (content.gallery) sections.push({ type: 'gallery', ...content.gallery });
+  if (content.testimonialsSection) {
+    sections.push({ type: 'testimonials', ...content.testimonialsSection });
+  }
+  if (content.faq) sections.push({ type: 'faq', ...content.faq });
+  if (content.cta) sections.push({ type: 'cta', ...content.cta });
+  return sections;
+}
+
+export function EventLandingContent({ content }) {
+  const heroTitleId = content.hero?.titleId ?? 'event';
+  const sections = content.sections ?? legacySectionsFrom(content);
+
+  return (
+    <>
+      {content.hero ? <EventLandingHero hero={content.hero} /> : null}
+      {sections.map((section, index) => {
+        const Renderer = SECTION_RENDERERS[section.type];
+        if (!Renderer) return null;
+        return (
+          <Renderer
+            key={section.id ?? `${section.type}-${index}`}
+            section={section}
+            heroTitleId={heroTitleId}
+          />
+        );
+      })}
     </>
   );
 }
