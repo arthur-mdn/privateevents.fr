@@ -13,6 +13,12 @@ export const deliveryLabels = {
   referral: 'Mise en relation',
 };
 
+export const deliveryHints = {
+  mika: 'DJ, sonorisation, lumière, effets, quiz, blind test, karaoké : réalisé par Mika.',
+  coordinated: 'Partenaire habituel intégré au projet et coordonné par Private Events.',
+  referral: 'Prestataire externe selon le style recherché et les disponibilités.',
+};
+
 export const prestationsSections = [
   {
     id: 'dj-musique',

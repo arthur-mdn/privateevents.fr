@@ -2407,29 +2407,6 @@ main:not(:has(.hero)):not(.section--configurator) {
   overflow: hidden;
 }
 
-.delivery-legend {
-  list-style: none;
-  margin: 1.5rem 0 0;
-  padding: 0;
-  display: grid;
-  gap: 1rem;
-}
-
-@media (min-width: 800px) {
-  .delivery-legend {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-.delivery-legend li {
-  display: flex;
-  flex-direction: column;
-  gap: 0.65rem;
-  font-size: 0.95rem;
-  line-height: 1.55;
-  color: var(--color-text-muted);
-}
-
 .delivery-badge {
   display: inline-flex;
   align-self: flex-start;
@@ -2442,6 +2419,7 @@ main:not(:has(.hero)):not(.section--configurator) {
   letter-spacing: 0.01em;
   color: var(--color-champagne, var(--color-accent));
   background: rgba(232, 205, 166, 0.08);
+  cursor: help;
 }
 
 .delivery-badge--coordinated {
