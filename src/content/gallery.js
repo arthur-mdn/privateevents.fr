@@ -48,8 +48,8 @@ export const galleryItems = [
   {
     id: 'anniversaire-18ans-jeunes-ambiances-lumiere',
     src: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.webp',
-    alt: 'Ambiance lumineuse bleue et installation DJ Mika pour la soirée Yogan',
-    caption: 'Yogan - ambiance lumineuse',
+    alt: 'Ambiance lumineuse bleue et installation DJ Mika pour l’anniversaire 18 ans de Yogan',
+    caption: 'Anniversaire Yogan 18 ans - ambiance lumineuse',
     orientation: 'landscape',
     width: 1536,
     height: 1152,

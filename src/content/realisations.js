@@ -258,13 +258,13 @@ const realisationProjectsUnsorted = [
     testimonialId: '2025-09',
   },
   {
-    id: 'yogan',
-    title: 'Yogan',
-    type: 'Soirée privée',
+    id: 'anniversaire-yogan',
+    title: 'Anniversaire 18 ans Yogan',
+    type: 'Anniversaire',
     location: 'Provence',
     brief:
-      'Soirée privée pour un public jeune : éclairage dynamique et animation DJ orientée dancefloor.',
-    highlight: 'Ambiance lumineuse et festive pensée pour une soirée entre amis.',
+      'Anniversaire des 18 ans pour un public jeune : éclairage dynamique et animation DJ orientée dancefloor.',
+    highlight: 'Ambiance lumineuse et festive pensée pour une fête entre amis.',
     prestations: ['DJ', 'Éclairage', 'Ambiance festive'],
     imageIds: ['anniversaire-18ans-jeunes-ambiances-lumiere'],
   },
@@ -344,7 +344,6 @@ export function getSoireePriveeGalleryItems() {
     .filter((item) => {
       const caption = item.caption?.toLowerCase() ?? '';
       return (
-        caption.includes('yogan') ||
         caption.includes('nouvel an') ||
         caption.includes('zanzibar') ||
         caption.includes('pétanque') ||

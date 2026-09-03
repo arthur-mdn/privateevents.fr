@@ -132,8 +132,8 @@ export const soireePriveeLandingContent = {
         {
           title: 'Soirée en salle',
           description: 'Jeux de lumières et programmation sur mesure pour une nuit festive.',
-          image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.webp',
-          imageAlt: 'Ambiance lumineuse lors d’une soirée en salle',
+          image: '/elements/gallery/soiree-restaurant-lac-alaiade-piste-danse.webp',
+          imageAlt: 'Piste de danse lors d’une soirée en salle',
         },
         {
           title: 'Fête en extérieur',

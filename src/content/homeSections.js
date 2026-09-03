@@ -91,7 +91,7 @@ export const servicePillars = [
     ],
     href: '/prestations',
     image: '/elements/gallery/anniversaire-18ans-jeunes-ambiances-lumiere.webp',
-    imageAlt: 'Ambiance lumineuse bleue lors de la soirée Yogan',
+    imageAlt: 'Ambiance lumineuse bleue lors de l’anniversaire 18 ans de Yogan',
   },
   {
     title: 'Services complémentaires',
