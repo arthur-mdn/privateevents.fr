@@ -70,6 +70,12 @@ function TestimonialCard({ t }) {
           <blockquote className="testimonial-card__quote">
             <p>«&nbsp;{excerpt}&nbsp;»</p>
           </blockquote>
+          {t.quote.length > 280 ? (
+            <details className="testimonial-card__full">
+              <summary>Lire le témoignage complet</summary>
+              <p>«&nbsp;{t.quote}&nbsp;»</p>
+            </details>
+          ) : null}
           <footer className="testimonial-card__footer">
             <p className="testimonial-card__meta">
               <span className="testimonial-card__author">{t.author}</span>
@@ -99,12 +105,6 @@ function TestimonialCard({ t }) {
                 </>
               ) : null}
             </p>
-            {t.quote.length > 280 ? (
-              <details className="testimonial-card__full">
-                <summary>Lire le témoignage complet</summary>
-                <p>«&nbsp;{t.quote}&nbsp;»</p>
-              </details>
-            ) : null}
             {realisation ? (
               <p className="testimonial-card__link">
                 <Link to={`/realisations#${realisation.id}`}>Voir la réalisation associée</Link>

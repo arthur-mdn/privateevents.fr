@@ -2132,7 +2132,7 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 .testimonial-card__full {
-  margin-top: 0.85rem;
+  margin: 0.65rem 0 0;
   font-size: 0.95rem;
   line-height: 1.6;
 }
@@ -2145,6 +2145,10 @@ main:not(:has(.hero)):not(.section--configurator) {
 
 .testimonial-card__full p {
   margin: 0.75rem 0 0;
+}
+
+.testimonial-card__content > .testimonial-card__full + .testimonial-card__footer {
+  margin-top: 1rem;
 }
 
 .site-footer__nav {

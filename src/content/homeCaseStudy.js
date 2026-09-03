@@ -2,8 +2,8 @@ export const homeCaseStudy = {
   title: 'Un mariage repris en urgence',
   couple: 'Laura & Maxime',
   meta: ['Provence', '29 août 2026'],
-  image: '/elements/gallery/mariage-laura-maxime-soiree-nuit.webp',
-  imageAlt: 'Soirée dansante de nuit au mariage de Laura et Maxime',
+  image: '/elements/gallery/mariage-laura-maxime-exterieur-animation.webp',
+  imageAlt: 'Animation en extérieur lors du mariage de Laura et Maxime',
   brief:
     'Le couple a dû changer de DJ à un mois de la date. Reprise complète de l’animation : cérémonie laïque près de la piscine, cocktail, repas et soirée dansante.',
   timeline: [
