@@ -19,15 +19,9 @@ export function MonEvenementPage() {
       <PageMeta path="/mon-evenement" {...routeMeta['/mon-evenement']} jsonLd={configuratorJsonLd} />
       <SiteHeader />
       <main id="contenu-principal" className="section section--configurator">
-        <p className="eyebrow">Mika Private Events</p>
-        <h1 id="configurator-title" className="heading-section">
+        <h1 id="configurator-title" className="visually-hidden">
           Construire mon événement
         </h1>
-        <p className="lead">
-          Décrivez le type d&apos;événement, le lieu, les horaires et les options souhaitées.
-          Chaque prestation fait l&apos;objet d&apos;un devis personnalisé selon le lieu, les
-          horaires, le format technique et les options retenues.
-        </p>
         <EventConfigurator />
       </main>
       <SiteFooter />

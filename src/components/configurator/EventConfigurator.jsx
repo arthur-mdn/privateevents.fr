@@ -182,6 +182,19 @@ export function EventConfigurator() {
 
   return (
     <div className="configurator">
+      {step === 1 ? (
+        <aside className="configurator-banner" aria-labelledby="configurator-banner-title">
+          <p className="configurator-banner__eyebrow">Mika Private Events</p>
+          <p id="configurator-banner-title" className="configurator-banner__title">
+            Construire mon événement
+          </p>
+          <p className="configurator-banner__text">
+            Décrivez le type d&apos;événement, le lieu, les horaires et les options souhaitées.
+            Chaque prestation fait l&apos;objet d&apos;un devis personnalisé selon le lieu, les
+            horaires, le format technique et les options retenues.
+          </p>
+        </aside>
+      ) : null}
       <div className="configurator__progress" aria-hidden="true">
         <div className="configurator__progress-bar" style={{ width: `${progress}%` }} />
       </div>
