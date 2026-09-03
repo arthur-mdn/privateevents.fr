@@ -273,6 +273,16 @@ function CaseStudySection({ section, heroTitleId }) {
             ))}
           </ul>
           <p className="case-study__outcome">{section.outcome}</p>
+          {section.links?.length ? (
+            <p className="case-study__links">
+              {section.links.map((link, index) => (
+                <span key={link.href}>
+                  {index > 0 ? ' · ' : null}
+                  <Link to={link.href}>{link.label}</Link>
+                </span>
+              ))}
+            </p>
+          ) : null}
         </div>
         <img
           className="case-study__img"

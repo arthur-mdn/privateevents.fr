@@ -145,14 +145,18 @@ export const anniversaireLandingContent = {
       type: 'caseStudy',
       id: 'anniversaire-case',
       title: 'Exemple : 50 ans à Loriol-du-Comtat',
-      meta: ['Anniversaire 50 ans - Loriol-du-Comtat', 'Printemps 2026', 'Grande fête familiale'],
+      meta: ['Anniversaire 50 ans - Loriol-du-Comtat', 'Avril 2026', 'Fête familiale'],
       brief:
-        'Célébration des 50 ans avec programmation adaptée à tous les âges, ambiance participative et soirée dansante jusqu’au bout de la nuit.',
+        'Célébration des 50 ans avec une programmation calée sur les goûts de l’hôte, karaoké et ambiance participative pour tous les âges.',
       prestations: ['DJ & éclairage', 'Sonorisation', 'Karaoké', 'Programmation sur mesure'],
       outcome:
-        'Ambiance fluide du cocktail à la piste pleine. L’hôte a pu profiter de sa soirée sans gérer la technique.',
+        'Du premier au dernier titre, toute la salle a chanté et dansé. Matériel et timing tenus, sans que l’hôte ait à gérer la technique.',
       image: '/elements/gallery/anniversaire-50-ans-loriol-2026.webp',
       imageAlt: 'Installation DJ pour un anniversaire de 50 ans à Loriol-du-Comtat',
+      links: [
+        { href: '/realisations#anniversaire-50-loriol', label: 'Voir la réalisation' },
+        { href: '/avis#avis-2026-04', label: 'Lire l’avis' },
+      ],
     },
     {
       type: 'options',

@@ -1,25 +1,37 @@
 export const homeCaseStudy = {
-  title: 'Un mariage avec Private Events',
-  couple: 'Laura & Thomas',
-  meta: ['120 invités', 'Domaine près d\'Avignon'],
-  image: '/elements/gallery/mariage-dansant-lumieres.webp',
-  imageAlt: 'Invités dansent sous les jeux de lumières lors d\'un mariage',
+  title: 'Un mariage repris en urgence',
+  couple: 'Laura & Maxime',
+  meta: ['Provence', '29 août 2026'],
+  image: '/elements/gallery/mariage-laura-maxime-soiree-nuit.webp',
+  imageAlt: 'Soirée dansante de nuit au mariage de Laura et Maxime',
+  brief:
+    'Le couple a dû changer de DJ à un mois de la date. Reprise complète de l’animation : cérémonie laïque près de la piscine, cocktail, repas et soirée dansante.',
   timeline: [
-    { time: '17h30', label: 'Sonorisation du cocktail' },
-    { time: '19h00', label: 'Musicien live' },
-    { time: '21h00', label: 'Animations' },
-    { time: '22h30', label: 'Ouverture de bal' },
-    { time: '23h00', label: 'Dancefloor' },
-    { time: '00h30', label: 'Étincelles' },
-    { time: '03h30', label: 'Fin de soirée' },
+    { time: 'Cérémonie', label: 'Sonorisation près de la piscine' },
+    { time: 'Cocktail', label: 'Ambiance musicale en extérieur' },
+    { time: 'Repas', label: 'Fond sonore pendant le dîner' },
+    { time: 'Soirée', label: 'Piste dansante jusqu’à la fin' },
   ],
-  prestations: ['DJ', 'Sonorisation', 'Éclairage', 'Photobooth', 'Musicien', 'Étincelles'],
+  prestations: [
+    'DJ & éclairage',
+    'Sonorisation cérémonie',
+    'Cocktail',
+    'Repas',
+    'Soirée dansante',
+  ],
+  outcome:
+    'Les mariés et leurs invités ont pu profiter de la soirée sans gérer la technique, après une reprise organisée en urgence.',
   testimonial: {
     quote:
-      'Professionnalisme, écoute et une playlist qui a fait danser tous les âges. Nos invités nous en reparlent encore.',
-    author: 'Sophie & Marc',
-    context: 'Mariage - Luberon',
+      'Vous avez accepté de reprendre notre mariage à seulement un mois de la date, en catastrophe après que notre premier DJ nous ait plantés… Vous avez fait danser tout le monde plus que de raison, l’ambiance était géniale.',
+    author: 'Laura & Maxime',
+    context: 'Mariage - 29 août 2026',
+    avisHref: '/avis#avis-2026-08-laura-maxime',
   },
+  links: [
+    { href: '/realisations#mariage-laura-maxime-2026', label: 'Voir la réalisation' },
+    { href: '/avis#avis-2026-08-laura-maxime', label: 'Lire l’avis' },
+  ],
   cta: {
     href: '/mon-evenement?type=mariage',
     label: 'Imaginer mon événement',

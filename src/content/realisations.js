@@ -10,8 +10,16 @@ const realisationProjectsUnsorted = [
     date: '2026-08-29',
     dateLabel: '29 août 2026',
     brief:
-      'Sonorisation de cérémonie laïque près de la piscine, puis ambiance musicale cocktail, repas et soirée dansante.',
-    prestations: ['DJ & éclairage', 'Sonorisation cérémonie', 'Cocktail', 'Soirée dansante'],
+      'Mariage repris à un mois de la date après le désistement du premier DJ. Sonorisation de la cérémonie laïque près de la piscine, puis ambiance cocktail, repas et soirée dansante.',
+    highlight:
+      'Intervention en urgence avec reprise complète de l’animation musicale, du premier contact jusqu’à la fin de soirée.',
+    prestations: [
+      'DJ & éclairage',
+      'Sonorisation cérémonie',
+      'Cocktail',
+      'Repas',
+      'Soirée dansante',
+    ],
     imageIds: [
       'mariage-laura-maxime-exterieur-animation',
       'mariage-laura-maxime-ceremonie-piscine',
@@ -28,8 +36,10 @@ const realisationProjectsUnsorted = [
     date: '2026-08-01',
     dateLabel: '1er août 2026',
     brief:
-      'Anniversaire en plein air avec ambiance réunionnaise et animation vidéo personnalisée.',
-    prestations: ['DJ', 'Ambiance réunionnaise', 'Animation vidéo'],
+      'Anniversaire en plein air avec plusieurs thèmes musicaux à respecter, dont une ambiance réunionnaise, et une animation vidéo personnalisée.',
+    highlight:
+      'Playlist multi-thèmes tenue toute la soirée, avec adaptation au public au fil de la fête.',
+    prestations: ['DJ', 'Ambiance réunionnaise', 'Playlist multi-thèmes', 'Animation vidéo'],
     imageIds: ['anniversaire-30-ans-canelle-marseille-plein-air'],
     testimonialId: '2026-08-canelle',
   },
@@ -40,8 +50,11 @@ const realisationProjectsUnsorted = [
     location: 'Autour de Montpellier',
     date: '2026-08-15',
     dateLabel: '15 août 2026',
-    brief: 'Soirée sardinade barbecue avec ambiance musicale et soirée dansante pour un club de pétanque.',
-    prestations: ['DJ', 'Ambiance musicale', 'Soirée dansante'],
+    brief:
+      'Fête annuelle d’un club de pétanque : sardinade barbecue en extérieur, puis ambiance musicale et soirée dansante.',
+    highlight:
+      'Animation adaptée à une fête associative en plein air, du repas convivial jusqu’à la piste.',
+    prestations: ['DJ', 'Sonorisation extérieure', 'Ambiance musicale', 'Soirée dansante'],
     imageIds: ['fete-petanque-sardinade-barbecue-montpellier'],
   },
   {
@@ -52,8 +65,15 @@ const realisationProjectsUnsorted = [
     date: '2026-07-25',
     dateLabel: '25 juillet 2026',
     brief:
-      'Ambiance bleue, montage et diffusion vidéo diaporama, soirée dansante shatta/latino et spectacle drag queen Aquarii.',
-    prestations: ['DJ', 'Diaporama vidéo', 'Drag queen', 'Ambiance shatta/latino'],
+      'Anniversaire 18 ans avec décoration bleue, montage et diffusion d’un diaporama vidéo, soirée dansante shatta / latino et spectacle drag queen Aquarii.',
+    highlight:
+      'Combinaison DJ, vidéo d’accueil et animation partenaire pour une soirée jeune très visuelle.',
+    prestations: [
+      'DJ & éclairage',
+      'Diaporama vidéo',
+      'Ambiance shatta / latino',
+      'Drag queen Aquarii',
+    ],
     imageIds: [
       'anniversaire-18-ans-mathys-saint-cyr-sur-mer-ambiance',
       'anniversaire-18-ans-mathys-saint-cyr-sur-mer-drag-queen',
@@ -67,8 +87,16 @@ const realisationProjectsUnsorted = [
     date: '2026-07-11',
     dateLabel: '11 juillet 2026',
     brief:
-      'Sonorisation apéritif et repas en extérieur, animation soirée dansante en intérieur, vidéoprojecteur et écran d’accueil personnalisé.',
-    prestations: ['DJ', 'Sonorisation extérieure', 'Vidéo projection', 'Écran d’accueil'],
+      'Sonorisation de l’apéritif et du repas en extérieur, puis animation de la soirée dansante en intérieur, avec vidéoprojecteur et écran d’accueil personnalisé.',
+    highlight:
+      'Continuité sonore extérieur / intérieur et accueil vidéo pour marquer l’entrée des invités.',
+    prestations: [
+      'DJ',
+      'Sonorisation extérieure',
+      'Soirée dansante',
+      'Vidéo projection',
+      'Écran d’accueil',
+    ],
     imageIds: [
       'anniversaire-18-ans-fiona-montpellier-exterieur',
       'anniversaire-18-ans-fiona-montpellier-piste',
@@ -82,8 +110,10 @@ const realisationProjectsUnsorted = [
     date: '2026-07-09',
     dateLabel: '9 juillet 2026',
     brief:
-      'Inauguration de nouveaux locaux en extérieur, buffet dinatoire et ambiance musicale années 80.',
-    prestations: ['DJ', 'Buffet dinatoire', 'Ambiance années 80'],
+      'Inauguration de nouveaux locaux en extérieur : buffet dinatoire et ambiance musicale années 80 pour accueillir collaborateurs et invités.',
+    highlight:
+      'Cadre corporate en extérieur avec programmation thématique années 80 pendant le buffet.',
+    prestations: ['DJ', 'Sonorisation extérieure', 'Buffet dinatoire', 'Ambiance années 80'],
     imageIds: [
       'inauguration-entreprise-frejus-exterieur',
       'inauguration-entreprise-frejus-buffet-annees-80',
@@ -98,7 +128,9 @@ const realisationProjectsUnsorted = [
     dateLabel: '4 juillet 2026',
     brief:
       'Ambiance musicale pendant le buffet dinatoire, puis animation et soirée dansante dans un domaine viticole.',
-    prestations: ['DJ', 'Buffet dinatoire', 'Soirée dansante'],
+    highlight:
+      'Passage progressif du buffet à la piste dans un lieu viticole, avec éclairage adapté à la nuit.',
+    prestations: ['DJ & éclairage', 'Buffet dinatoire', 'Soirée dansante'],
     imageIds: [
       'mariage-gaetan-audrey-domaine-viticole-lyon',
       'mariage-gaetan-audrey-soiree-dansante',
@@ -111,7 +143,10 @@ const realisationProjectsUnsorted = [
     location: 'Région lyonnaise / Valence',
     date: '2026-06-20',
     dateLabel: '20 juin 2026',
-    brief: 'Sonorisation d’ambiance pendant le repas et soirée dansante.',
+    brief:
+      'Sonorisation d’ambiance pendant le repas, puis soirée dansante. Retours positifs des mariés et des invités, avec recommandation pour un prochain mariage.',
+    highlight:
+      'Ambiance tenue jusqu’en fin de soirée, saluée par les mariés et leur entourage.',
     prestations: ['DJ', 'Sonorisation repas', 'Soirée dansante'],
     imageIds: [
       'mariage-oceane-anthony-valence-repas',
@@ -126,7 +161,10 @@ const realisationProjectsUnsorted = [
     location: 'Beaumont-de-Pertuis',
     date: '2026-08-14',
     dateLabel: '14 août 2026',
-    brief: 'Ambiance musicale et soirée dansante au restaurant Lac Alaiade.',
+    brief:
+      'Soirée dans un restaurant en bord de lac : ambiance musicale pendant le service, puis soirée dansante sur place.',
+    highlight:
+      'Intervention dans un établissement déjà en service, avec passage fluide vers la piste.',
     prestations: ['DJ', 'Ambiance musicale', 'Soirée dansante'],
     imageIds: [
       'soiree-restaurant-lac-alaiade-beaumont-de-pertuis',
@@ -134,14 +172,38 @@ const realisationProjectsUnsorted = [
     ],
   },
   {
+    id: 'soiree-nouvel-an-zanzibar-2026',
+    title: 'Nouvel An au Zanzibar',
+    type: 'Soirée privée',
+    location: 'Sète',
+    date: '2026-01-01',
+    dateLabel: 'Nouvel An 2026',
+    brief:
+      'Soirée du Nouvel An dans un établissement déjà équipé : mix live, ambiance club et karaoké, sans installation lourde inutile.',
+    highlight:
+      'Régie plug and play adaptée au matériel du lieu pour tenir l’ambiance toute la nuit.',
+    prestations: ['DJ', 'Plug and play / régie', 'Ambiance club', 'Karaoké'],
+    imageIds: ['soiree-nouvel-an-2026-zanzibar-sete'],
+  },
+  {
     id: 'mariage-avignon-2025',
     title: 'Mariage - Avignon',
     type: 'Mariage',
     location: 'Avignon, Vaucluse',
     date: '2025-04-26',
+    dateLabel: '26 avril 2025',
     guests: 'Environ 120 invités',
-    brief: 'Soirée élégante puis festive, avec ouverture de bal mise en scène et programmation sur mesure.',
-    prestations: ['DJ & éclairage', 'Ouverture de bal', 'Étincelles froides', 'Karaoké'],
+    brief:
+      'Soirée élégante puis festive : ouverture de bal mise en scène, programmation mêlant classiques et titres actuels, effets visuels et créneau karaoké.',
+    highlight:
+      'Montée en puissance du cocktail à la piste pleine, avec temps forts coordonnés (ouverture de bal, étincelles froides).',
+    prestations: [
+      'DJ & éclairage',
+      'Sonorisation cocktail',
+      'Ouverture de bal',
+      'Étincelles froides',
+      'Karaoké',
+    ],
     imageIds: [
       'mariage-avignon-2025-machine-a-fumee',
       'mariage-avignon-2025-machine-etincelles-artifice',
@@ -156,8 +218,12 @@ const realisationProjectsUnsorted = [
     type: 'Anniversaire',
     location: 'Loriol-du-Comtat, Vaucluse',
     date: '2026-04-18',
-    brief: 'Grande fête familiale avec programmation adaptée à tous les âges et ambiance très participative.',
-    prestations: ['DJ', 'Sonorisation', 'Éclairage', 'Karaoké'],
+    dateLabel: '18 avril 2026',
+    brief:
+      'Grande fête familiale pour les 50 ans : programmation adaptée à tous les âges, karaoké et soirée dansante très participative.',
+    highlight:
+      'Ambiance tenue du premier au dernier titre, avec une playlist calée sur les goûts de l’hôte.',
+    prestations: ['DJ', 'Sonorisation', 'Éclairage', 'Karaoké', 'Programmation sur mesure'],
     imageIds: ['anniversaire-50-ans-loriol-2026'],
     testimonialId: '2026-04',
   },
@@ -167,8 +233,12 @@ const realisationProjectsUnsorted = [
     type: 'Entreprise',
     location: 'Marseille, Terrasses du Port',
     date: '2025-07-05',
-    brief: 'Animation musicale pour l\'ouverture d\'un magasin, ambiance corporate et accueil des invités.',
-    prestations: ['DJ', 'Sonorisation'],
+    dateLabel: '5 juillet 2025',
+    brief:
+      'Animation musicale pour l’ouverture d’un magasin : accueil des invités, cadre corporate et sonorisation adaptée au lieu.',
+    highlight:
+      'Prestation discrète et cadrée pour une inauguration de marque, avec horaires et image de lieu respectés.',
+    prestations: ['DJ', 'Sonorisation', 'Accueil musical'],
     imageIds: ['inauguration-ouverture-sephora-marseille-vieux-port'],
     testimonialId: '2025-07',
   },
@@ -178,7 +248,11 @@ const realisationProjectsUnsorted = [
     type: 'Anniversaire',
     location: 'Sorgues, Vaucluse',
     date: '2025-09-19',
-    brief: 'Anniversaire de famille en extérieur avec sonorisation et éclairage adaptés au jardin.',
+    dateLabel: '19 septembre 2025',
+    brief:
+      'Anniversaire de famille en extérieur : sonorisation et éclairage adaptés au jardin, du cocktail jusqu’à la fin de soirée.',
+    highlight:
+      'Installation pensée pour un jardin familial, avec une ambiance fluide du début à la fin.',
     prestations: ['DJ', 'Sonorisation extérieure', 'Éclairage'],
     imageIds: ['anniversaire-jeunes-sorgues-2026'],
     testimonialId: '2025-09',
@@ -188,7 +262,9 @@ const realisationProjectsUnsorted = [
     title: 'Yogan',
     type: 'Soirée privée',
     location: 'Provence',
-    brief: 'Soirée privée avec ambiance lumineuse et animation DJ pour un public jeune.',
+    brief:
+      'Soirée privée pour un public jeune : éclairage dynamique et animation DJ orientée dancefloor.',
+    highlight: 'Ambiance lumineuse et festive pensée pour une soirée entre amis.',
     prestations: ['DJ', 'Éclairage', 'Ambiance festive'],
     imageIds: ['anniversaire-18ans-jeunes-ambiances-lumiere'],
   },

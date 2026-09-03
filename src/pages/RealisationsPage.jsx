@@ -117,6 +117,9 @@ export function RealisationsPage() {
                         <p className="project-card__guests">{project.guests}</p>
                       ) : null}
                       <p className="project-card__brief">{project.brief}</p>
+                      {project.highlight ? (
+                        <p className="project-card__highlight">{project.highlight}</p>
+                      ) : null}
                       <ul className="case-study__tags">
                         {project.prestations.map((p) => (
                           <li key={p}>{p}</li>

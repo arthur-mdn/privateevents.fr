@@ -2436,6 +2436,17 @@ main:not(:has(.hero)):not(.section--configurator) {
   color: var(--color-text-muted);
 }
 
+.case-study__links {
+  margin: 1rem 0 0;
+  font-size: 0.9375rem;
+}
+
+.case-study__links a {
+  color: var(--color-accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .case-study__tags {
   list-style: none;
   margin: 0 0 1rem;
@@ -2735,6 +2746,20 @@ main:not(:has(.hero)):not(.section--configurator) {
   margin: 0 0 1.75rem;
 }
 
+@media (max-width: 520px) {
+  .project-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 0.25rem;
+    scrollbar-width: thin;
+  }
+
+  .project-filters__btn {
+    flex: 0 0 auto;
+  }
+}
+
 .project-filters__btn {
   margin: 0;
   padding: 0.45rem 0.9rem;
@@ -2839,6 +2864,16 @@ main:not(:has(.hero)):not(.section--configurator) {
 .project-card__brief {
   margin: 0.75rem 0 1rem;
   color: var(--color-text-muted);
+}
+
+.project-card__highlight {
+  margin: -0.35rem 0 1rem;
+  padding: 0.75rem 0.9rem;
+  border-left: 3px solid var(--color-accent);
+  background: var(--color-bg-elevated);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  color: var(--color-text);
+  font-size: 0.95rem;
 }
 
 .project-card__quote {
@@ -3676,6 +3711,12 @@ main:not(:has(.hero)):not(.section--configurator) {
   opacity: 0.9;
 }
 
+.client-case__brief {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-muted);
+  max-width: 42rem;
+}
+
 .client-case__timeline {
   list-style: none;
   margin: 0 0 2rem;
@@ -3690,7 +3731,7 @@ main:not(:has(.hero)):not(.section--configurator) {
 
 .client-case__timeline-item {
   display: grid;
-  grid-template-columns: 5.5rem 1fr;
+  grid-template-columns: minmax(6.5rem, auto) 1fr;
   gap: 1rem;
   padding: 0.85rem 1.15rem;
   border-bottom: 1px solid var(--color-border);
@@ -3737,6 +3778,36 @@ main:not(:has(.hero)):not(.section--configurator) {
   font-style: normal;
   font-size: 0.875rem;
   color: var(--color-text-muted);
+}
+
+.client-case__quote a {
+  color: var(--color-accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.client-case__outcome {
+  margin: 1rem 0 0;
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.client-case__cta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1.25rem;
+}
+
+.client-case__links {
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.client-case__links a {
+  color: var(--color-accent-deep);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
 }
 
 @media (min-width: 720px) {

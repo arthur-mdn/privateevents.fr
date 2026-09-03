@@ -236,9 +236,9 @@ export const mariageLandingContent = {
       type: 'caseStudy',
       id: 'mariage-case',
       title: 'Exemple : mariage à Avignon',
-      meta: ['Mariage - Avignon', 'Été 2025', 'Environ 120 invités'],
+      meta: ['Mariage - Avignon', 'Avril 2025', 'Environ 120 invités'],
       brief:
-        'Couple souhaitant une soirée élégante puis très festive, avec ouverture de bal mise en scène et programmation mêlant classiques et titres actuels.',
+        'Couple souhaitant une soirée élégante puis très festive, avec ouverture de bal mise en scène et une playlist qui fasse danser tous les âges.',
       prestations: [
         'DJ & éclairage',
         'Sonorisation cocktail',
@@ -247,9 +247,13 @@ export const mariageLandingContent = {
         'Karaoké en fin de soirée',
       ],
       outcome:
-        'Ambiance progressive du cocktail à la piste pleine, temps forts coordonnés avec le traiteur et le lieu. Les mariés ont pu profiter de leur soirée sans gérer la technique.',
+        'Ambiance progressive du cocktail à la piste pleine, temps forts coordonnés avec le lieu. Les mariés ont pu profiter de leur soirée sans gérer la technique.',
       image: '/elements/gallery/mariage-avignon-2025-machine-etincelles-artifice.webp',
       imageAlt: 'Ouverture de bal avec effets visuels lors d’un mariage à Avignon',
+      links: [
+        { href: '/realisations#mariage-avignon-2025', label: 'Voir la réalisation' },
+        { href: '/avis#avis-2025-04', label: 'Lire l’avis' },
+      ],
     },
     {
       type: 'gallery',

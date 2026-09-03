@@ -2,8 +2,20 @@ import { Link } from 'react-router-dom';
 import { homeCaseStudy } from '../../content/homeCaseStudy.js';
 
 export function ClientCaseSection() {
-  const { title, couple, meta, image, imageAlt, timeline, prestations, testimonial, cta } =
-    homeCaseStudy;
+  const {
+    title,
+    couple,
+    meta,
+    image,
+    imageAlt,
+    brief,
+    timeline,
+    prestations,
+    outcome,
+    testimonial,
+    links,
+    cta,
+  } = homeCaseStudy;
 
   return (
     <section className="section section--client-case" aria-labelledby="client-case-title">
@@ -31,12 +43,12 @@ export function ClientCaseSection() {
           </div>
         </div>
 
+        {brief ? <p className="client-case__brief">{brief}</p> : null}
+
         <ol className="client-case__timeline" aria-label="Déroulement de la soirée">
           {timeline.map((entry) => (
             <li key={entry.time} className="client-case__timeline-item">
-              <time className="client-case__time" dateTime={entry.time.replace('h', ':')}>
-                {entry.time}
-              </time>
+              <span className="client-case__time">{entry.time}</span>
               <span className="client-case__label">{entry.label}</span>
             </li>
           ))}
@@ -50,6 +62,7 @@ export function ClientCaseSection() {
                 <li key={p}>{p}</li>
               ))}
             </ul>
+            {outcome ? <p className="client-case__outcome">{outcome}</p> : null}
           </div>
 
           <blockquote className="client-case__quote">
@@ -59,14 +72,30 @@ export function ClientCaseSection() {
                 {testimonial.author}
                 {testimonial.context ? `, ${testimonial.context}` : ''}
               </cite>
+              {testimonial.avisHref ? (
+                <>
+                  {' · '}
+                  <Link to={testimonial.avisHref}>Lire l&apos;avis</Link>
+                </>
+              ) : null}
             </footer>
           </blockquote>
         </div>
 
-        <div className="section__cta">
+        <div className="section__cta client-case__cta">
           <Link className="btn btn--primary" to={cta.href}>
             {cta.label}
           </Link>
+          {links?.length ? (
+            <p className="client-case__links">
+              {links.map((link, index) => (
+                <span key={link.href}>
+                  {index > 0 ? ' · ' : null}
+                  <Link to={link.href}>{link.label}</Link>
+                </span>
+              ))}
+            </p>
+          ) : null}
         </div>
       </div>
     </section>

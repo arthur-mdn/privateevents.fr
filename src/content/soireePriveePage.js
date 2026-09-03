@@ -197,14 +197,18 @@ export const soireePriveeLandingContent = {
       type: 'caseStudy',
       id: 'soiree-case',
       title: 'Exemple : Nouvel An au Zanzibar, Sète',
-      meta: ['Soirée privée - Sète', 'Nouvel An 2026', 'Établissement'],
+      meta: ['Soirée privée - Sète', 'Nouvel An 2026', 'Établissement équipé'],
       brief:
-        'Soirée du Nouvel An dans un établissement déjà équipé : mix live, ambiance club et karaoké, intervention adaptée à la configuration du lieu.',
+        'Soirée du Nouvel An dans un établissement déjà équipé : mix live, ambiance club et karaoké, intervention branchée sur la configuration du lieu.',
       prestations: ['DJ', 'Plug and play / régie', 'Karaoké', 'Programmation festive'],
       outcome:
         'Ambiance tenue toute la nuit, intégration au matériel du lieu, sans installation lourde inutile.',
       image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.webp',
       imageAlt: 'DJ Mika mixe une soirée du Nouvel An au Zanzibar à Sète',
+      links: [
+        { href: '/realisations#soiree-nouvel-an-zanzibar-2026', label: 'Voir la réalisation' },
+        { href: '/realisations?type=soiree-privee', label: 'Autres soirées privées' },
+      ],
     },
     {
       type: 'gallery',
