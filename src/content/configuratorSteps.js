@@ -173,8 +173,8 @@ export const prestationHelp = {
   'ouverture-de-bal': {
     description:
       'Musique personnalisée, effets visuels et coordination du moment pour l’ouverture de bal.',
-    image: '/elements/photos/prestations/ouverture-de-bal.png',
-    imageAlt: 'Illustration d’une ouverture de bal : musique personnalisée, effets visuels et coordination',
+    image: '/elements/photos/prestations/ouverture-de-bal.webp',
+    imageAlt: 'Ouverture de bal : musique personnalisée, effets visuels et coordination',
     href: '/prestations#mise-en-scene',
     linkLabel: 'Voir Mise en scène',
   },

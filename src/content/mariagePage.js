@@ -37,8 +37,8 @@ export const mariageLandingContent = {
     intro:
       'Cérémonie, cocktail, repas, discours, entrée des mariés et soirée dansante : une régie préparée avec vous, puis adaptée en direct. Formule complète ou plug and play selon le lieu.',
     reassurance: ['Temps forts préparés', 'Coordination sur site', 'Options partenaires'],
-    image: '/elements/gallery/mariage-soiree-dansante-hero.png',
-    imageAlt: 'Soirée dansante de mariage animée par DJ Mika Private Events',
+    image: '/elements/gallery/mariage-couple-maries-hero.webp',
+    imageAlt: 'Couple de mariés lors d’une soirée animée par DJ Mika Private Events',
     primaryCta: { href: '/mon-evenement?type=mariage', label: 'Parler de mon mariage' },
     secondaryCta: { href: '#galerie-mariage', label: 'Voir des réalisations' },
   },
@@ -179,7 +179,7 @@ export const mariageLandingContent = {
           title: 'Ouverture de bal',
           description: 'Musique personnalisée, effets visuels et coordination du moment.',
           image: {
-            src: '/elements/photos/prestations/ouverture-de-bal.png',
+            src: '/elements/photos/prestations/ouverture-de-bal.webp',
             alt: 'Illustration d’une ouverture de bal : musique personnalisée, effets visuels et coordination',
           },
           helpKey: 'ouverture-de-bal',
