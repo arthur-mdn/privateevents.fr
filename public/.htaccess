@@ -1,5 +1,9 @@
 RewriteEngine On
 
+# Prerendered routes live as folders (e.g. mariage/index.html).
+# Existing files/directories are served as-is; unknown paths fall back to the SPA.
+DirectoryIndex index.html
+
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} !on
 RewriteCond %{HTTP_HOST} ^(?:www\.)?privateevents\.fr(?:.*)$ [nc]

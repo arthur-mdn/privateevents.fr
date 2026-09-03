@@ -8,10 +8,13 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs",
+    "build:only": "vite build",
+    "prerender": "node scripts/prerender.mjs",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview"
   },
+
   "dependencies": {
     "@formspree/react": "^3.0.0",
     "react": "^19.2.5",
@@ -30,6 +33,8 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
+    "playwright": "^1.58.2",
+    "serve-handler": "^6.1.6",
     "vite": "^8.0.10"
   }
 }
