@@ -20,7 +20,7 @@ export const anniversaireFaq = [
   {
     question: 'Dans quelles zones intervenez-vous ?',
     answer:
-      'Principalement en Provence / PACA. D\'autres déplacements sont possibles selon la date.',
+      'Zone couvrant Montpellier, Lyon, Nice et alentours. D\'autres déplacements sont possibles selon la date.',
   },
   {
     question: 'Comment obtenir une proposition pour mon anniversaire ?',

@@ -31,8 +31,8 @@ export function SiteFooter() {
           </Link>
           <p className="site-footer__brand-name">DJ Mika Private Events</p>
           <p className="site-footer__tagline">
-            DJ, sonorisation, éclairage et animations au cœur du triangle
-            Montpellier – Lyon – Nice. Formule complète ou plug and play selon le lieu.
+            DJ, sonorisation, éclairage et animations. Formule complète ou plug and play
+            selon le lieu.
           </p>
         </div>
         <nav className="site-footer__nav" aria-label="Liens du pied de page">
@@ -63,8 +63,7 @@ export function SiteFooter() {
             </li>
           </ul>
           <p className="site-footer__zone">
-            Zone d&apos;intervention : cœur du triangle Montpellier – Lyon – Nice. Autres
-            destinations sur demande.
+            Montpellier – Lyon – Nice · Autres destinations sur demande
           </p>
         </div>
       </div>

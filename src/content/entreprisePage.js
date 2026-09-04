@@ -23,6 +23,11 @@ export const entrepriseFaq = [
       'Entreprises, associations, CE : gala, cocktail, séminaire, inauguration, team building et événements internes. Branding, horaires et contraintes du lieu sont pris en compte.',
   },
   {
+    question: 'Dans quelles zones intervenez-vous ?',
+    answer:
+      'Provence / PACA et Rhône-Alpes (axe Montpellier – Lyon – Nice). D\'autres destinations sont possibles selon la date et le projet.',
+  },
+  {
     question: 'Comment obtenir une proposition pour notre événement ?',
     answer:
       'Utilisez le configurateur avec la date, le lieu, le volume d\'invités et le format. Devis personnalisé, sans simulateur tarifaire.',

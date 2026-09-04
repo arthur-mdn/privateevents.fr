@@ -2,7 +2,7 @@ export const heroContent = {
   eyebrow: 'DJ Mika Private Events • Provence',
   title: 'Des soirées construites autour de votre événement.',
     intro:
-      'Mariages, anniversaires, soirées privées et événements d\'entreprise au cœur du triangle Montpellier – Lyon – Nice. DJ, sonorisation et éclairage en formule complète ou plug and play, avec des options partenaires selon le projet.',
+      'Mariages, anniversaires, soirées privées et événements d\'entreprise, principalement entre Montpellier, Lyon et Nice. DJ, sonorisation et éclairage en formule complète ou plug and play, avec des options partenaires selon le projet.',
   reassurance: ['Depuis 2010/2011', 'Formule complète ou plug and play', 'Devis personnalisé'],
   image: '/elements/gallery/mariage-dansant-lumieres.webp',
   imageAlt: 'Invités dansent sous les jeux de lumières lors d\'une soirée de mariage',
@@ -11,7 +11,7 @@ export const heroContent = {
 export const stats = [
   { value: '2011', label: 'début', detail: 'en événementiel' },
   { value: '50', label: 'événements', detail: 'réalisés' },
-  { value: 'Triangle', label: 'd\'intervention', detail: 'Montpellier – Lyon – Nice' },
+  { value: 'Zone', label: 'd\'intervention', detail: 'Montpellier – Lyon – Nice' },
   { value: 'Excellents avis', label: 'clients', detail: 'témoignages disponibles', href: '/avis' },
 ];
 

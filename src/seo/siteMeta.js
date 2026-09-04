@@ -53,7 +53,7 @@ export const homeJsonLd = {
           name: 'Dans quelles zones intervient DJ Mika Private Events ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Les prestations couvrent principalement le cœur du triangle Montpellier – Lyon – Nice (Provence / PACA et Rhône-Alpes) : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes, selon la date et le projet. Autres destinations sur demande.',
+            text: 'Les prestations se déroulent principalement entre Montpellier, Lyon et Nice (Provence / PACA et Rhône-Alpes) : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes, selon la date et le projet. Autres destinations sur demande.',
           },
         },
         {

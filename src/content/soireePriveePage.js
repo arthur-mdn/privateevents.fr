@@ -20,7 +20,7 @@ export const soireePriveeFaq = [
   {
     question: 'Dans quelles zones intervenez-vous ?',
     answer:
-      'Principalement au cœur du triangle Montpellier – Lyon – Nice (Provence / PACA et Rhône-Alpes). D\'autres déplacements sont possibles selon la date et le projet.',
+      'Depuis la Provence, jusqu\'à Lyon et Nice. D\'autres déplacements sont possibles selon la date et le projet.',
   },
   {
     question: 'Comment obtenir une proposition pour ma soirée ?',
