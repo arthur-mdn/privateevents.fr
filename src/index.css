@@ -546,8 +546,13 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 .section--hero {
-  padding-top: 1rem;
-  padding-bottom: clamp(2.5rem, 6vw, 4rem);
+  padding-top: clamp(1.5rem, 4vw, 2.5rem);
+  padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .section--tight {
@@ -917,7 +922,7 @@ main:not(:has(.hero)):not(.section--configurator) {
   min-height: min(85vh, 820px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -934,12 +939,19 @@ main:not(:has(.hero)):not(.section--configurator) {
 .hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(16, 12, 8, 0.45) 0%,
-    rgba(16, 12, 8, 0.75) 45%,
-    var(--color-bg) 100%
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(16, 12, 8, 0.55) 0%,
+      rgba(16, 12, 8, 0.72) 42%,
+      rgba(16, 12, 8, 0.78) 68%,
+      var(--color-bg) 100%
+    ),
+    radial-gradient(
+      ellipse 70% 55% at 50% 48%,
+      rgba(16, 12, 8, 0.45) 0%,
+      transparent 70%
+    );
   pointer-events: none;
 }
 
@@ -950,13 +962,18 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 .hero__copy {
-  max-width: 38rem;
+  max-width: 40rem;
+}
+
+.hero .lead {
+  margin-inline: 0;
 }
 
 .hero__actions {
   margin-top: 1.75rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 1rem;
 }
 
@@ -2560,7 +2577,7 @@ main:not(:has(.hero)):not(.section--configurator) {
 
 .hero--mini {
   min-height: 0;
-  justify-content: flex-end;
+  justify-content: center;
   background-position: center 40%;
 }
 
@@ -2571,12 +2588,18 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 .hero--mini .hero__overlay {
-  background: linear-gradient(
-    to bottom,
-    rgba(16, 12, 8, 0.5) 0%,
-    rgba(16, 12, 8, 0.82) 55%,
-    var(--color-bg) 100%
-  );
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(16, 12, 8, 0.58) 0%,
+      rgba(16, 12, 8, 0.78) 55%,
+      var(--color-bg) 100%
+    ),
+    radial-gradient(
+      ellipse 75% 60% at 50% 45%,
+      rgba(16, 12, 8, 0.4) 0%,
+      transparent 72%
+    );
 }
 
 .hero--mini-solid .hero__overlay {
@@ -2590,6 +2613,11 @@ main:not(:has(.hero)):not(.section--configurator) {
 .section--hero-mini {
   padding-top: clamp(1.75rem, 4vw, 2.5rem);
   padding-bottom: clamp(2rem, 4vw, 2.75rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .hero--mini .heading-hero {
