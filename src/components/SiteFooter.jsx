@@ -63,7 +63,7 @@ export function SiteFooter() {
             </li>
           </ul>
           <p className="site-footer__zone">
-            Montpellier – Lyon – Nice · Autres destinations sur demande
+            Montpellier - Lyon - Nice · Autres destinations sur demande
           </p>
         </div>
       </div>

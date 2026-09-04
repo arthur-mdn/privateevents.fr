@@ -25,7 +25,7 @@ export const entrepriseFaq = [
   {
     question: 'Dans quelles zones intervenez-vous ?',
     answer:
-      'Provence / PACA et Rhône-Alpes (axe Montpellier – Lyon – Nice). D\'autres destinations sont possibles selon la date et le projet.',
+      'Provence / PACA et Rhône-Alpes (axe Montpellier - Lyon - Nice). D\'autres destinations sont possibles selon la date et le projet.',
   },
   {
     question: 'Comment obtenir une proposition pour notre événement ?',

@@ -43,7 +43,7 @@ function HomePage() {
             <div className="faq-item">
               <dt>Dans quelles zones intervenez-vous ?</dt>
               <dd>
-                Au cœur du triangle <strong>Montpellier – Lyon – Nice</strong>, principalement en{' '}
+                Au cœur du triangle <strong>Montpellier - Lyon - Nice</strong>, principalement en{' '}
                 <strong>Provence / PACA</strong> et <strong>Rhône-Alpes</strong> :{' '}
                 <strong>Vaucluse</strong>, <strong>Bouches-du-Rhône</strong>, <strong>Var</strong> et
                 départements limitrophes, selon la date et le projet. Autres destinations sur demande.

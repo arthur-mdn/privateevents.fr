@@ -20,7 +20,7 @@ export const mariageFaq = [
   {
     question: 'Dans quelles zones intervenez-vous pour un mariage ?',
     answer:
-      'Intervention sur un axe Montpellier – Lyon – Nice (Provence / PACA et Rhône-Alpes) : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes. D\'autres déplacements sont possibles selon la date.',
+      'Intervention sur un axe Montpellier - Lyon - Nice (Provence / PACA et Rhône-Alpes) : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes. D\'autres déplacements sont possibles selon la date.',
   },
   {
     question: 'Comment obtenir une proposition pour notre mariage ?',
