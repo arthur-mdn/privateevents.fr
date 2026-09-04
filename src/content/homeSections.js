@@ -1,8 +1,8 @@
 export const heroContent = {
   eyebrow: 'DJ Mika Private Events • Provence',
   title: 'Des soirées construites autour de votre événement.',
-  intro:
-    'Mariages, anniversaires, soirées privées et événements d\'entreprise en Provence. DJ, sonorisation et éclairage en formule complète ou plug and play, avec des options partenaires selon le projet.',
+    intro:
+      'Mariages, anniversaires, soirées privées et événements d\'entreprise au cœur du triangle Montpellier – Lyon – Nice. DJ, sonorisation et éclairage en formule complète ou plug and play, avec des options partenaires selon le projet.',
   reassurance: ['Depuis 2010/2011', 'Formule complète ou plug and play', 'Devis personnalisé'],
   image: '/elements/gallery/mariage-dansant-lumieres.webp',
   imageAlt: 'Invités dansent sous les jeux de lumières lors d\'une soirée de mariage',
@@ -10,8 +10,8 @@ export const heroContent = {
 
 export const stats = [
   { value: '2011', label: 'début', detail: 'en événementiel' },
-  { value: '~50', label: 'événements', detail: 'réalisés' },
-  { value: 'Provence', label: 'PACA', detail: 'zone d\'intervention' },
+  { value: '50', label: 'événements', detail: 'réalisés' },
+  { value: 'Triangle', label: 'd\'intervention', detail: 'Montpellier – Lyon – Nice' },
   { value: 'Excellents avis', label: 'clients', detail: 'témoignages disponibles', href: '/avis' },
 ];
 
@@ -39,7 +39,7 @@ export const eventTypes = [
   },
   {
     title: 'Entreprise',
-    description: 'Ponctualité, prises de parole, gala et team building.',
+    description: 'Entreprises, associations, gala et team building.',
     href: '/entreprise',
     image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.webp',
     imageAlt: 'Animation DJ lors d\'une inauguration en magasin',
@@ -83,7 +83,7 @@ export const prestationHighlights = [
   },
   {
     title: 'Éclairage & effets',
-    description: 'Mise en lumière, lasers, fumée, bulles ou étincelles selon le lieu.',
+    description: 'Mise en lumière, lasers, fumée légère ou lourde, bulles, mousse ou étincelles selon le lieu.',
     href: '/prestations',
     image: '/elements/gallery/mariage-interieur-lumieres-dynamiques.webp',
     imageAlt: 'Éclairages dynamiques et lasers en salle lors d’une soirée',

@@ -3,14 +3,14 @@ import { testimonials } from './testimonials.js';
 
 export const entrepriseFaq = [
   {
-    question: 'Proposez-vous une facturation adaptée aux entreprises ?',
+    question: 'Proposez-vous une facturation adaptée aux entreprises et associations ?',
     answer:
       'Oui, la prestation est facturée dans un cadre professionnel. Les mentions légales et informations nécessaires à votre comptabilité sont fournies au devis.',
   },
   {
     question: 'Comment garantissez-vous la fiabilité le jour J ?',
     answer:
-      'Installation en amont, tests avant l\'arrivée des invités, respect des horaires et plan B technique. Un interlocuteur unique pour la coordination.',
+      'Installation en amont, tests avant l\'arrivée des invités, respect des horaires et matériel de secours sur place. Un interlocuteur unique pour la coordination.',
   },
   {
     question: 'Gérez-vous la sonorisation pour prises de parole ?',
@@ -18,9 +18,9 @@ export const entrepriseFaq = [
       'Oui. Micros et diffusion sont adaptés aux discours, interventions et animations, avec un volume calé sur le cadre professionnel.',
   },
   {
-    question: 'Quels types d\'événements corporate couvrez-vous ?',
+    question: 'Quels types d\'événements couvrez-vous ?',
     answer:
-      'Gala, cocktail, séminaire, inauguration, team building et événements internes. Branding, horaires et contraintes du lieu sont pris en compte.',
+      'Entreprises, associations, CE : gala, cocktail, séminaire, inauguration, team building et événements internes. Branding, horaires et contraintes du lieu sont pris en compte.',
   },
   {
     question: 'Comment obtenir une proposition pour notre événement ?',
@@ -32,26 +32,30 @@ export const entrepriseFaq = [
 export const entrepriseLandingContent = {
   hero: {
     titleId: 'entreprise-hero-title',
-    eyebrow: 'Entreprise • Provence',
-    title: 'Événements d’entreprise : ponctualité, technique et coordination.',
+    eyebrow: 'Entreprise & associations • Provence',
+    title: 'Événements d’entreprise et d’association : timing tenu, technique et coordination.',
     intro:
-      'Prises de parole, cocktail, gala ou team building : un interlocuteur unique, une installation anticipée et un déroulé respecté.',
+      'Prises de parole, cocktail, gala, team building ou soirée associative : un interlocuteur unique, une installation anticipée et un déroulé respecté.',
     reassurance: ['Horaires tenus', 'Sonorisation des interventions', 'Cadre professionnel'],
     image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.webp',
     imageAlt: 'DJ Mika anime l’ouverture Sephora Marseille Terrasses du Port',
-    primaryCta: { href: '/mon-evenement?type=entreprise', label: 'Organiser mon événement corporate' },
+    primaryCta: { href: '/mon-evenement?type=entreprise', label: 'Organiser mon événement' },
     secondaryCta: { href: '#galerie-entreprise', label: 'Voir des réalisations' },
   },
   sections: [
     {
       type: 'usageList',
       id: 'entreprise-formats',
-      title: 'Formats corporate couverts',
-      lead: 'Chaque format a ses contraintes d’horaire, de volume et de prise de parole.',
+      title: 'Formats couverts',
+      lead: 'Entreprises, associations et CE : chaque format a ses contraintes d’horaire, de volume et de prise de parole.',
       items: [
         {
           title: 'Cocktail & soirée d’entreprise',
           description: 'Accueil, fond musical, montée progressive, fin de soirée cadrée dans le créneau du lieu.',
+        },
+        {
+          title: 'Association & CE',
+          description: 'Soirée annuelle, assemblée festive ou événement adhérents, avec un déroulé clair et un volume adapté.',
         },
         {
           title: 'Inauguration & lancement',
@@ -68,6 +72,29 @@ export const entrepriseLandingContent = {
         {
           title: 'Événement interne',
           description: 'Pot de départ, fin d’année ou célébration d’équipe, avec volume calé sur le cadre pro.',
+        },
+      ],
+    },
+    {
+      type: 'editorialSplit',
+      id: 'entreprise-timing',
+      soft: true,
+      title: 'Des horaires tenus, sans improvisation',
+      lead:
+        'Sur un événement corporate ou associatif, le créneau du lieu, les prises de parole et l’image de marque laissent peu de place au flottement.',
+      body: [
+        'Installation anticipée, tests avant l’accueil et respect du planning convenu : la ponctualité fait partie de la prestation, autant que la musique. Le matériel de secours est présent pour couvrir l’installation principale si besoin.',
+      ],
+      image: '/elements/photos/setup-dj-ecran-logo-mika-private-events.webp',
+      imageAlt: 'Setup DJ professionnel pour un événement corporate',
+      points: [
+        {
+          title: 'Avant l’accueil',
+          description: 'Installation et tests calés sur le planning du lieu.',
+        },
+        {
+          title: 'Pendant l’événement',
+          description: 'Discours, animations et montée musicale au bon moment.',
         },
       ],
     },
@@ -106,7 +133,7 @@ export const entrepriseLandingContent = {
         },
         {
           label: 'Proposition',
-          description: 'Devis détaillé, facturation entreprise, validation avec vos interlocuteurs.',
+          description: 'Devis détaillé, facturation entreprise ou association, validation avec vos interlocuteurs.',
         },
         {
           label: 'Coordination',
@@ -184,7 +211,7 @@ export const entrepriseLandingContent = {
       id: 'entreprise-gallery',
       anchorId: 'galerie-entreprise',
       title: 'Galerie événements corporate',
-      lead: 'Quelques instants capturés lors d’événements d’entreprise animés en Provence.',
+      lead: 'Quelques instants capturés lors d’événements d’entreprise ou d’association animés en Provence.',
       ariaLabel: 'Galerie photos d’événements corporate',
       getItems: getEntrepriseGalleryItems,
     },
@@ -205,10 +232,10 @@ export const entrepriseLandingContent = {
     {
       type: 'cta',
       id: 'entreprise-cta',
-      title: 'Briefez votre événement corporate',
+      title: 'Briefez votre événement',
       lead: 'Date, lieu, format, nombre d’invités et contraintes. Devis professionnel, réponse sous 48 h.',
       href: '/mon-evenement?type=entreprise',
-      label: 'Organiser mon événement corporate',
+      label: 'Organiser mon événement',
       secondaryLinks: [
         { to: '/realisations?type=entreprise', label: 'Réalisations entreprise' },
         { to: '/avis#entreprises', label: 'Avis corporate' },

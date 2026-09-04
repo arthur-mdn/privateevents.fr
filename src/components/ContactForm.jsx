@@ -2,7 +2,7 @@ import { useId } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
 import { FaPaperPlane } from 'react-icons/fa6';
 
-function ContactForm({ subject, onSubjectChange }) {
+function ContactForm() {
   const formId = useId();
   const titleId = `${formId}-title`;
   const [state, handleSubmit] = useForm('mwkgrnyr');
@@ -65,17 +65,10 @@ function ContactForm({ subject, onSubjectChange }) {
       </label>
       <label className="field" htmlFor={`${formId}-subject`}>
         <span className="field__label">Sujet</span>
-        <select
-          id={`${formId}-subject`}
-          name="subject"
-          required
-          value={subject}
-          onChange={(e) => onSubjectChange(e.target.value)}
-        >
+        <select id={`${formId}-subject`} name="subject" required defaultValue="prise de contact">
           <option value="prise de contact">Prise de contact</option>
           <option value="demande de devis">Demande de devis</option>
           <option value="demande de renseignements">Demande de renseignements</option>
-          <option value="demander set sur mesure gratuit">Demander set sur mesure gratuit</option>
           <option value="autre">Autre</option>
         </select>
         <ValidationError
@@ -85,11 +78,6 @@ function ContactForm({ subject, onSubjectChange }) {
           errors={state.errors}
         />
       </label>
-      {subject === 'demander set sur mesure gratuit' && (
-        <p className="form-hint" role="note">
-          Vous pouvez joindre une liste de 10 à 15 titres pour un set personnalisé gratuit.
-        </p>
-      )}
       <label className="field" htmlFor={`${formId}-message`}>
         <span className="field__label">Message</span>
         <textarea

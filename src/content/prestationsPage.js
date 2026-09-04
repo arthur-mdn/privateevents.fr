@@ -30,6 +30,7 @@ export const prestationsSections = [
     body: [
       'La régie suit le déroulé : cérémonie ou cocktail, discours, repas, ouverture de bal et soirée dansante.',
       'Formule complète avec matériel fourni, ou plug and play sur une installation déjà en place.',
+      'Pendant la prestation, de petits cadres photo avec QR code et lien permettent aux invités de proposer des titres en direct. Les morceaux proposés sont diffusés quand ils s’y prêtent. Gratuit et inclus dans toutes les prestations.',
     ],
     images: [
       {
@@ -76,6 +77,7 @@ export const prestationsSections = [
       'Micros pour discours et prises de parole.',
       'Seconde zone de diffusion possible (cérémonie, cocktail, salle).',
       'Intérieur ou extérieur, selon les contraintes du site.',
+      'Matériel de secours présent sur chaque prestation pour couvrir l’installation principale en cas de panne.',
     ],
     images: [
       {
@@ -114,18 +116,18 @@ export const prestationsSections = [
     title: 'Effets visuels',
     delivery: 'mika',
     lead:
-      'Lasers, fumée, bulles, étincelles froides et éclairage spécifique pour marquer les temps forts.',
+      'Lasers, fumée légère ou lourde, bulles, mousse, étincelles froides et éclairage spécifique pour marquer les temps forts.',
     note: 'Feu d\'artifice extérieur uniquement sous réserve des autorisations.',
     items: [
       {
-        title: 'Fumée',
+        title: 'Fumée légère & fumée lourde',
         image: {
           src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.webp',
           alt: 'Ouverture de bal d’un mariage à Avignon avec fumée lourde et éclairages',
         },
       },
       {
-        title: 'Bulles',
+        title: 'Bulles & mousse',
         image: {
           src: '/elements/photos/prestations/machine-a-bulles-soiree-dansante.webp',
           alt: 'Piste de danse remplie de bulles sous éclairages violets lors d’une soirée',
@@ -234,7 +236,7 @@ export const prestationsSections = [
       },
       {
         title: 'Musicien live',
-        text: 'Cérémonie, cocktail ou ouverture de bal.',
+        text: 'Sax, guitare, clavier ou autre : pour compléter le set DJ en cérémonie, cocktail ou ouverture de bal.',
       },
       {
         title: 'Magicien, mentaliste, humour',

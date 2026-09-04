@@ -24,6 +24,7 @@ export const homeJsonLd = {
       priceRange: '€€',
       areaServed: [
         { '@type': 'AdministrativeArea', name: 'Provence-Alpes-Côte d\'Azur' },
+        { '@type': 'AdministrativeArea', name: 'Auvergne-Rhône-Alpes' },
         { '@type': 'AdministrativeArea', name: 'Vaucluse' },
         { '@type': 'AdministrativeArea', name: 'Bouches-du-Rhône' },
         { '@type': 'AdministrativeArea', name: 'Var' },
@@ -52,7 +53,7 @@ export const homeJsonLd = {
           name: 'Dans quelles zones intervient DJ Mika Private Events ?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: 'Les prestations couvrent principalement la Provence / PACA : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes, selon la date et le projet.',
+            text: 'Les prestations couvrent principalement le cœur du triangle Montpellier – Lyon – Nice (Provence / PACA et Rhône-Alpes) : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes, selon la date et le projet. Autres destinations sur demande.',
           },
         },
         {

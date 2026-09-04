@@ -97,8 +97,8 @@ export const prestationGroups = [
       { id: 'etincelles', label: 'Étincelles' },
       { id: 'decoration', label: 'Décoration' },
       { id: 'eclairage', label: 'Éclairage spécifique' },
-      { id: 'machine-fumee', label: 'Machine à fumée' },
-      { id: 'machine-bulles', label: 'Machine à bulles' },
+      { id: 'machine-fumee', label: 'Fumée légère / fumée lourde' },
+      { id: 'machine-bulles', label: 'Bulles & mousse' },
       { id: 'feu-artifice', label: 'Feu d\'artifice' },
     ],
   },
@@ -150,7 +150,7 @@ export const prestationHelp = {
   },
   'musicien-live': {
     description:
-      'Musicien ou groupe live pour cocktail, cérémonie ou ouverture de bal, coordonné avec la prestation DJ.',
+      'Sax, guitare, clavier ou autre musicien pour compléter le set DJ en cérémonie, cocktail ou ouverture de bal.',
     image: null,
     imageAlt: '',
     href: '/prestations#artistes',
@@ -206,7 +206,7 @@ export const prestationHelp = {
   },
   'machine-fumee': {
     description:
-      'Fumée lourde ou machine à fumée pour sublimer les lumières et les ouvertures de bal.',
+      'Fumée légère pour l’ambiance, ou fumée lourde pour sublimer les lumières et les ouvertures de bal.',
     image: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.webp',
     imageAlt: 'Ouverture de bal avec fumée lourde et lumières',
     href: '/prestations#mise-en-scene',
@@ -214,7 +214,7 @@ export const prestationHelp = {
   },
   'machine-bulles': {
     description:
-      'Machine à bulles pour une ambiance légère, souvent appréciée en cocktail ou pour un temps photo.',
+      'Bulles ou mousse pour une ambiance légère, souvent appréciée en cocktail, sur la piste ou pour un temps photo.',
     image: '/elements/photos/prestations/machine-a-bulles-soiree-dansante.webp',
     imageAlt: 'Piste de danse remplie de bulles sous éclairages violets lors d’une soirée',
     href: '/prestations#mise-en-scene',

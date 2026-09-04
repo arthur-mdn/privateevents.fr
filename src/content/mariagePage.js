@@ -20,7 +20,7 @@ export const mariageFaq = [
   {
     question: 'Dans quelles zones intervenez-vous pour un mariage ?',
     answer:
-      'Principalement en Provence / PACA : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes. D\'autres déplacements sont possibles selon la date.',
+      'Principalement au cœur du triangle Montpellier – Lyon – Nice (Provence / PACA et Rhône-Alpes) : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes. D\'autres déplacements sont possibles selon la date.',
   },
   {
     question: 'Comment obtenir une proposition pour notre mariage ?',
@@ -46,24 +46,27 @@ export const mariageLandingContent = {
     {
       type: 'editorialSplit',
       id: 'mariage-pourquoi',
-      title: 'Pourquoi confier la musique de votre mariage',
+      title: 'Pourquoi confier l’ambiance musicale de votre mariage',
       lead:
         'Une journée de mariage enchaîne des moments très différents. La musique accompagne le premier rituel, le cocktail, le repas et la piste, sans rupture de volume ni d’ambiance.',
       body: [
-        'Mika prépare avec vous le déroulé, les musiques incontournables et les moments à ne pas rater, puis s’adapte au rythme réel de la journée. Un interlocuteur unique pour la régie musicale, les discours et les temps forts.',
+        'Mika prépare avec vous le déroulé, les musiques incontournables et les moments à ne pas rater, puis s’adapte au rythme réel de la journée. Un interlocuteur unique pour la régie musicale, les discours, les temps forts et les animations.',
       ],
       points: [
         {
           title: 'Avant le jour J',
-          description: 'Échanges sur le lieu, les horaires, les styles et les surprises prévues avec les témoins.',
+          description:
+            'Échanges sur le lieu, les horaires, les styles, les projections de photos ou vidéos et les surprises prévues avec les témoins.',
         },
         {
           title: 'Sur place',
-          description: 'Installation anticipée, tests, coordination avec le traiteur et le photographe si besoin.',
+          description:
+            'Installation anticipée, tests, coordination avec les prestataires présents (traiteur, photographe, etc.).',
         },
         {
           title: 'Pendant la soirée',
-          description: 'La piste suit les invités sans perdre les moments préparés (entrée, ouverture de bal).',
+          description:
+            'La piste suit les invités sans perdre les moments préparés (entrée, ouverture de bal). Les invités peuvent aussi proposer des titres via QR code, inclus dans la prestation.',
         },
       ],
       image: '/elements/gallery/mariage-laura-maxime-ceremonie-piscine.webp',
@@ -173,7 +176,8 @@ export const mariageLandingContent = {
       type: 'options',
       id: 'mariage-options',
       title: 'Options souvent choisies pour un mariage',
-      lead: 'Ouverture de bal, entrée des mariés, micros, étincelles, photobooth ou karaoké : à combiner selon votre projet.',
+      lead:
+        'Ouverture de bal, entrée des mariés, micros, fumée, bulles, mousse, étincelles, photobooth, karaoké ou musiciens live : à combiner selon votre projet.',
       items: [
         {
           title: 'Ouverture de bal',
@@ -204,6 +208,24 @@ export const mariageLandingContent = {
           helpKey: 'micro-discours',
         },
         {
+          title: 'Fumée légère & fumée lourde',
+          description: 'Effets de fumée adaptés au moment : légère pour l’ambiance, lourde pour les temps forts.',
+          image: {
+            src: '/elements/gallery/mariage-avignon-2025-machine-a-fumee.webp',
+            alt: 'Ouverture de bal d’un mariage à Avignon avec fumée lourde et éclairages',
+          },
+          helpKey: 'machine-fumee',
+        },
+        {
+          title: 'Bulles & mousse',
+          description: 'Machine à bulles ou mousse pour un temps photo ou une ambiance festive sur la piste.',
+          image: {
+            src: '/elements/photos/prestations/machine-a-bulles-soiree-dansante.webp',
+            alt: 'Piste de danse remplie de bulles sous éclairages violets lors d’une soirée',
+          },
+          helpKey: 'machine-bulles',
+        },
+        {
           title: 'Étincelles froides',
           description: 'Mise en scène des temps forts avec effets adaptés au lieu.',
           image: {
@@ -229,6 +251,16 @@ export const mariageLandingContent = {
             alt: 'Poste DJ avec microphone pour animation karaoké',
           },
           helpKey: 'karaoke',
+        },
+        {
+          title: 'Musiciens live',
+          description:
+            'Compléter le set DJ avec sax, guitare, clavier ou autre musicien, selon le style recherché.',
+          image: {
+            src: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
+            alt: 'Prestation musicale live coordonnée avec la régie DJ',
+          },
+          helpKey: 'musicien-live',
         },
       ],
     },

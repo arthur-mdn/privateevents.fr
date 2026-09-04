@@ -10,7 +10,7 @@ export const soireePriveeFaq = [
   {
     question: 'Quels formats de soirée privée couvrez-vous ?',
     answer:
-      'Villa, pool party, garden party, cocktail, soirée à thème, réception privée, after ou soirée entre amis : la prestation s\'adapte au lieu et au format.',
+      'Villa, pool party, garden party, cocktail, bar ou restaurant, soirée à thème, réception privée, after ou soirée entre amis : la prestation s\'adapte au lieu et au format.',
   },
   {
     question: 'Comment gérer le voisinage ou un extérieur ?',
@@ -20,7 +20,7 @@ export const soireePriveeFaq = [
   {
     question: 'Dans quelles zones intervenez-vous ?',
     answer:
-      'Principalement en Provence / PACA. D\'autres déplacements sont possibles selon la date et le projet.',
+      'Principalement au cœur du triangle Montpellier – Lyon – Nice (Provence / PACA et Rhône-Alpes). D\'autres déplacements sont possibles selon la date et le projet.',
   },
   {
     question: 'Comment obtenir une proposition pour ma soirée ?',
@@ -35,7 +35,7 @@ export const soireePriveeLandingContent = {
     eyebrow: 'Soirée privée • Provence',
     title: 'Une soirée privée flexible, même sur un lieu déjà équipé.',
     intro:
-      'Villa, cocktail, pool party ou établissement : DJ en formule complète, ou plug and play si le lieu dispose déjà de sonorisation et d’éclairage.',
+      'Villa, cocktail, pool party, bar, restaurant ou établissement : DJ en formule complète, ou plug and play si le lieu dispose déjà de sonorisation et d’éclairage.',
     reassurance: ['Formule complète ou plug and play', 'Formats libres', 'Intérieur ou extérieur'],
     image: '/elements/gallery/soiree-nouvel-an-2026-zanzibar-sete.webp',
     imageAlt: 'DJ Mika mixe une soirée du Nouvel An au Zanzibar à Sète',
@@ -70,6 +70,10 @@ export const soireePriveeLandingContent = {
         {
           title: 'Villa / réception privée',
           description: 'Installation discrète, volume adapté au voisinage, ambiance lounge puis piste.',
+        },
+        {
+          title: 'Bars & restaurants',
+          description: 'Intervention en établissement : formule complète ou plug and play selon l’équipement du lieu.',
         },
         {
           title: 'Pool party / garden party',
@@ -132,8 +136,8 @@ export const soireePriveeLandingContent = {
         {
           title: 'Soirée en salle',
           description: 'Jeux de lumières et programmation sur mesure pour une nuit festive.',
-          image: '/elements/gallery/soiree-restaurant-lac-alaiade-piste-danse.webp',
-          imageAlt: 'Piste de danse lors d’une soirée en salle',
+          image: '/elements/gallery/mariage-oceane-anthony-valence-repas.webp',
+          imageAlt: 'Ambiance en salle lors d’une réception animée',
         },
         {
           title: 'Fête en extérieur',

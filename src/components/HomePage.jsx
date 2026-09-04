@@ -1,6 +1,5 @@
 import { FaEnvelope, FaPhone, FaSliders } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { PageMeta } from './PageMeta.jsx';
 import { routeMeta } from '../seo/siteMeta.js';
 import { SiteHeader } from './SiteHeader.jsx';
@@ -17,8 +16,6 @@ import GallerySection from './GallerySection.jsx';
 import ContactForm from './ContactForm.jsx';
 
 function HomePage() {
-  const [selectedSubject, setSelectedSubject] = useState('prise de contact');
-
   return (
     <>
       <PageMeta path="/" {...routeMeta['/']} />
@@ -46,9 +43,10 @@ function HomePage() {
             <div className="faq-item">
               <dt>Dans quelles zones intervenez-vous ?</dt>
               <dd>
-                Principalement en <strong>Provence / PACA</strong> : <strong>Vaucluse</strong>,{' '}
-                <strong>Bouches-du-Rhône</strong>, <strong>Var</strong> et départements limitrophes,
-                selon la date et le projet.
+                Au cœur du triangle <strong>Montpellier – Lyon – Nice</strong>, principalement en{' '}
+                <strong>Provence / PACA</strong> et <strong>Rhône-Alpes</strong> :{' '}
+                <strong>Vaucluse</strong>, <strong>Bouches-du-Rhône</strong>, <strong>Var</strong> et
+                départements limitrophes, selon la date et le projet. Autres destinations sur demande.
               </dd>
             </div>
             <div className="faq-item">
@@ -108,10 +106,11 @@ function HomePage() {
         <section id="contact" className="section section--contact">
           <h2 className="heading-section">Une question avant de construire votre projet&nbsp;?</h2>
           <p className="lead">
-            Pour une demande structurée, préférez le configurateur. Ce formulaire reste utile pour
-            une question rapide, une disponibilité ou une idée de playlist.
+            Pour une proposition sur mesure, utilisez le{' '}
+            <Link to="/mon-evenement">configurateur d&apos;événement</Link>, pensé pour décrire
+            votre projet. Ce formulaire reste utile pour une question rapide ou une disponibilité.
           </p>
-          <ContactForm subject={selectedSubject} onSubjectChange={setSelectedSubject} />
+          <ContactForm />
           <ul className="contact-chips" aria-label="Coordonnées">
             <li>
               <a className="btn btn--ghost" href="mailto:contact@privateevents.fr">
