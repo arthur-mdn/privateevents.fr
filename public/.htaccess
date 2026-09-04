@@ -4,10 +4,15 @@ RewriteEngine On
 # Existing files/directories are served as-is; unknown paths fall back to the SPA.
 DirectoryIndex index.html
 
+# www → apex (canonical https://privateevents.fr)
+RewriteCond %{HTTP_HOST} ^www\.privateevents\.fr$ [NC]
+RewriteRule ^(.*)$ https://privateevents.fr/$1 [R=301,L]
+
+# HTTP → HTTPS (apex host preserved by prior rule)
 RewriteCond %{HTTP:X-Forwarded-Proto} !https
 RewriteCond %{HTTPS} !on
-RewriteCond %{HTTP_HOST} ^(?:www\.)?privateevents\.fr(?:.*)$ [nc]
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [redirect=301,L]
+RewriteCond %{HTTP_HOST} ^privateevents\.fr$ [NC]
+RewriteRule ^(.*)$ https://privateevents.fr/$1 [R=301,L]
 
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

@@ -48,7 +48,7 @@ export function RealisationsPage() {
         <PageHero
           eyebrow="Réalisations"
           title="Projets et galerie photo"
-          intro="Mariages, anniversaires et événements corporate animés en Provence. Quelques projets récents et une sélection photo."
+          intro="Mariages, anniversaires et événements corporate animés en Provence et autour de Montpellier, Lyon, Avignon ou Marseille. Quelques projets récents et une sélection photo."
           titleId="realisations-hero-title"
           image="/elements/gallery/mariage-laura-maxime-soiree-nuit.webp"
         />

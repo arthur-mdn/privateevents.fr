@@ -5,7 +5,47 @@ export const DEFAULT_OG_IMAGE = `${SITE_URL}/elements/photos/dj-mixage-live-ecla
 export const DEFAULT_OG_IMAGE_ALT = 'DJ Mika en prestation lors d’une soirée événementielle';
 
 export const homeDescription =
-  'DJ Mika Private Events : DJ, sonorisation, éclairage et animations pour mariages, anniversaires, soirées privées et entreprises en Provence / PACA.';
+  'DJ Mika Private Events : DJ, sonorisation, éclairage et animations pour mariages, anniversaires, soirées privées et entreprises entre Montpellier, Lyon, Nice et en Provence.';
+
+export const homeTitle = 'DJ Mika Private Events | DJ & animation Montpellier, Lyon, Nice & Provence';
+
+export const homeFaqItems = [
+  {
+    question: 'Dans quelles zones intervient DJ Mika Private Events ?',
+    answer:
+      'Les prestations se déroulent principalement entre Montpellier, Lyon et Nice (Provence / PACA et Rhône-Alpes) : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes, selon la date et le projet. Autres destinations sur demande.',
+  },
+  {
+    question: 'Le matériel son et lumière est-il inclus ?',
+    answer:
+      'Deux formules sont possibles : prestation complète avec DJ, sonorisation et éclairage fournis et installés, ou intervention plug and play sur une installation déjà présente. Le détail est précisé au devis.',
+  },
+  {
+    question: 'Comment obtenir un devis pour un mariage ou une soirée d’entreprise ?',
+    answer:
+      'Utilisez le configurateur sur privateevents.fr ou appelez le 07 82 73 76 61 avec la date, le lieu et le type d’événement. Chaque prestation fait l’objet d’un devis personnalisé.',
+  },
+  {
+    question: 'Peut-on combiner DJ et karaoké lors d’une même soirée ?',
+    answer:
+      'Oui : des créneaux karaoké, quiz ou blind test peuvent s’intégrer dans la programmation DJ pour varier les moments tout en gardant une ambiance cohérente.',
+  },
+];
+
+export const areaServed = [
+  { '@type': 'AdministrativeArea', name: "Provence-Alpes-Côte d'Azur" },
+  { '@type': 'AdministrativeArea', name: 'Auvergne-Rhône-Alpes' },
+  { '@type': 'AdministrativeArea', name: 'Occitanie' },
+  { '@type': 'AdministrativeArea', name: 'Vaucluse' },
+  { '@type': 'AdministrativeArea', name: 'Bouches-du-Rhône' },
+  { '@type': 'AdministrativeArea', name: 'Var' },
+  { '@type': 'AdministrativeArea', name: 'Hérault' },
+  { '@type': 'City', name: 'Montpellier' },
+  { '@type': 'City', name: 'Lyon' },
+  { '@type': 'City', name: 'Nice' },
+  { '@type': 'City', name: 'Avignon' },
+  { '@type': 'City', name: 'Marseille' },
+];
 
 export const homeJsonLd = {
   '@context': 'https://schema.org',
@@ -20,15 +60,9 @@ export const homeJsonLd = {
       telephone: '+33782737661',
       email: 'contact@privateevents.fr',
       description:
-        'DJ, animation musicale, sonorisation et éclairage pour événements privés, mariages et soirées d’entreprise en Provence / PACA. Formule complète ou plug and play.',
+        'DJ, animation musicale, sonorisation et éclairage pour événements privés, mariages et soirées d’entreprise entre Montpellier, Lyon, Nice et en Provence / PACA. Formule complète ou plug and play.',
       priceRange: '€€',
-      areaServed: [
-        { '@type': 'AdministrativeArea', name: 'Provence-Alpes-Côte d\'Azur' },
-        { '@type': 'AdministrativeArea', name: 'Auvergne-Rhône-Alpes' },
-        { '@type': 'AdministrativeArea', name: 'Vaucluse' },
-        { '@type': 'AdministrativeArea', name: 'Bouches-du-Rhône' },
-        { '@type': 'AdministrativeArea', name: 'Var' },
-      ],
+      areaServed,
       serviceType: [
         'Animation DJ',
         'Sonorisation événementielle',
@@ -47,55 +81,29 @@ export const homeJsonLd = {
     },
     {
       '@type': 'FAQPage',
-      mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Dans quelles zones intervient DJ Mika Private Events ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Les prestations se déroulent principalement entre Montpellier, Lyon et Nice (Provence / PACA et Rhône-Alpes) : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes, selon la date et le projet. Autres destinations sur demande.',
-          },
+      mainEntity: homeFaqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
         },
-        {
-          '@type': 'Question',
-          name: 'Le matériel son et lumière est-il inclus ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Deux formules sont possibles : prestation complète avec DJ, sonorisation et éclairage fournis et installés, ou intervention plug and play sur une installation déjà présente. Le détail est précisé au devis.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Comment obtenir un devis pour un mariage ou une soirée d’entreprise ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Utilisez le configurateur sur privateevents.fr ou appelez le 07 82 73 76 61 avec la date, le lieu et le type d’événement. Chaque prestation fait l’objet d’un devis personnalisé.',
-          },
-        },
-        {
-          '@type': 'Question',
-          name: 'Peut-on combiner DJ et karaoké lors d’une même soirée ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Oui : des créneaux karaoké, quiz ou blind test peuvent s’intégrer dans la programmation DJ pour varier les moments tout en gardant une ambiance cohérente.',
-          },
-        },
-      ],
+      })),
     },
   ],
 };
 
 export const routeMeta = {
   '/': {
-    title: 'DJ Mika Private Events | DJ & animation en Provence',
+    title: homeTitle,
     description: homeDescription,
-    ogTitle: 'DJ Mika Private Events | DJ & animation en Provence',
+    ogTitle: homeTitle,
     jsonLd: homeJsonLd,
   },
   '/mariage': {
-    title: 'DJ mariage en Provence | Mika Private Events',
+    title: 'DJ mariage en Provence et alentours | Mika Private Events',
     description:
-      'DJ mariage en Provence : préparation musicale, sonorisation, éclairage, animations et options partenaires pour votre cérémonie, cocktail et soirée.',
+      'DJ mariage entre Montpellier, Lyon, Nice et en Provence : préparation musicale, sonorisation, éclairage, animations et options partenaires pour votre cérémonie, cocktail et soirée.',
   },
   '/anniversaire': {
     title: 'DJ anniversaire en Provence | Mika Private Events',
@@ -120,7 +128,7 @@ export const routeMeta = {
   '/realisations': {
     title: 'Mariages, anniversaires & événements réalisés | Mika Private Events',
     description:
-      'Mariages, anniversaires, soirées privées et événements corporate réalisés par DJ Mika Private Events en Provence.',
+      'Mariages, anniversaires, soirées privées et événements corporate réalisés par DJ Mika Private Events en Provence et sur l’axe Montpellier - Lyon - Nice.',
   },
   '/avis': {
     title: 'Avis clients | DJ Mika Private Events',

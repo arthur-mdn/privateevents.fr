@@ -32,7 +32,7 @@ export const mariageFaq = [
 export const mariageLandingContent = {
   hero: {
     titleId: 'mariage-hero-title',
-    eyebrow: 'Mariage • Provence',
+    eyebrow: 'Mariage • Provence et alentours',
     title: 'La coordination musicale d’une journée de mariage.',
     intro:
       'Cérémonie, cocktail, repas, discours, entrée des mariés et soirée dansante : une régie préparée avec vous, puis adaptée en direct. Formule complète ou plug and play selon le lieu.',

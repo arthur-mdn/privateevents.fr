@@ -1,7 +1,7 @@
 import { FaEnvelope, FaPhone, FaSliders } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 import { PageMeta } from './PageMeta.jsx';
-import { routeMeta } from '../seo/siteMeta.js';
+import { homeFaqItems, routeMeta } from '../seo/siteMeta.js';
 import { SiteHeader } from './SiteHeader.jsx';
 import { SiteFooter } from './SiteFooter.jsx';
 import { HomeHero } from './home/HomeHero.jsx';
@@ -14,6 +14,31 @@ import { ClientCaseSection } from './home/ClientCaseSection.jsx';
 import TestimonialsCarousel from './TestimonialsCarousel.jsx';
 import GallerySection from './GallerySection.jsx';
 import ContactForm from './ContactForm.jsx';
+
+function FaqAnswer({ question, answer }) {
+  if (question.startsWith('Comment obtenir un devis')) {
+    return (
+      <>
+        Utilisez le <Link to="/mon-evenement">configurateur</Link> sur privateevents.fr ou appelez le{' '}
+        <a href="tel:+33782737661">07&nbsp;82&nbsp;73&nbsp;76&nbsp;61</a> avec la date, le lieu et le
+        type d&apos;événement. Chaque prestation fait l&apos;objet d&apos;un devis personnalisé.
+      </>
+    );
+  }
+
+  if (question.startsWith('Dans quelles zones')) {
+    return (
+      <>
+        Les prestations se déroulent principalement entre{' '}
+        <strong>Montpellier, Lyon et Nice</strong> (Provence / PACA et Rhône-Alpes) :{' '}
+        <strong>Vaucluse</strong>, <strong>Bouches-du-Rhône</strong>, <strong>Var</strong> et
+        départements limitrophes, selon la date et le projet. Autres destinations sur demande.
+      </>
+    );
+  }
+
+  return answer;
+}
 
 function HomePage() {
   return (
@@ -40,40 +65,14 @@ function HomePage() {
             Informations utiles avant de démarrer un projet.
           </p>
           <dl className="faq-list">
-            <div className="faq-item">
-              <dt>Dans quelles zones intervenez-vous ?</dt>
-              <dd>
-                Au cœur du triangle <strong>Montpellier - Lyon - Nice</strong>, principalement en{' '}
-                <strong>Provence / PACA</strong> et <strong>Rhône-Alpes</strong> :{' '}
-                <strong>Vaucluse</strong>, <strong>Bouches-du-Rhône</strong>, <strong>Var</strong> et
-                départements limitrophes, selon la date et le projet. Autres destinations sur demande.
-              </dd>
-            </div>
-            <div className="faq-item">
-              <dt>Le matériel son et lumière est-il inclus ?</dt>
-              <dd>
-                Deux options : <strong>formule complète</strong> (DJ + sono + éclairage fournis et
-                installés) ou <strong>plug and play</strong> sur une installation déjà présente.
-                Le détail figure dans le devis.
-              </dd>
-            </div>
-            <div className="faq-item">
-              <dt>Comment sont calculés les tarifs ?</dt>
-              <dd>
-                Chaque prestation fait l&apos;objet d&apos;un <strong>devis personnalisé</strong> selon
-                le lieu, les horaires, le format technique et les options retenues. Aucun simulateur
-                tarifaire en ligne.
-              </dd>
-            </div>
-            <div className="faq-item">
-              <dt>Comment démarrer un projet ?</dt>
-              <dd>
-                Utilisez le{' '}
-                <Link to="/mon-evenement">configurateur</Link> pour une demande structurée, ou
-                le formulaire ci-dessous pour une question rapide. Vous pouvez aussi appeler le{' '}
-                <a href="tel:+33782737661">07&nbsp;82&nbsp;73&nbsp;76&nbsp;61</a>.
-              </dd>
-            </div>
+            {homeFaqItems.map((item) => (
+              <div key={item.question} className="faq-item">
+                <dt>{item.question}</dt>
+                <dd>
+                  <FaqAnswer question={item.question} answer={item.answer} />
+                </dd>
+              </div>
+            ))}
           </dl>
         </section>
 
