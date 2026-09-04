@@ -34,6 +34,13 @@ export const prestationsSections = [
     ],
     images: [
       {
+        id: 'cadre-qr-proposez-musique-soiree-entreprise',
+        src: '/elements/photos/prestations/cadre-qr-proposez-musique-soiree-entreprise.webp',
+        alt: 'Cadre photo QR code pour proposer une musique, posé sur une table lors d’une soirée d’entreprise en extérieur dans un domaine privatisé',
+        width: 1200,
+        height: 900,
+      },
+      {
         id: 'dj-mixage-live-eclairage-bleu',
         src: '/elements/photos/dj-mixage-live-eclairage-bleu.webp',
         alt: 'DJ Mika en plein mixage sous éclairage bleu lors d’une soirée',
