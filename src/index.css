@@ -965,6 +965,10 @@ main:not(:has(.hero)):not(.section--configurator) {
   max-width: 40rem;
 }
 
+.hero__copy--wide {
+  max-width: 48rem;
+}
+
 .hero .lead {
   margin-inline: 0;
 }

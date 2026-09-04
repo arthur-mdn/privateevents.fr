@@ -15,7 +15,7 @@ export function EventLandingHero({ hero }) {
       />
       <div className="hero__overlay" aria-hidden="true" />
       <section className="hero__inner section section--hero" aria-labelledby={hero.titleId}>
-        <div className="hero__copy">
+        <div className={`hero__copy${hero.copyWide ? ' hero__copy--wide' : ''}`}>
           <p className="eyebrow">{hero.eyebrow}</p>
           <h1 id={hero.titleId} className="heading-hero">
             {hero.title}
