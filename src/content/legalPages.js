@@ -43,7 +43,9 @@ export const mentionsLegalesContent = {
     {
       title: 'Cookies',
       paragraphs: [
-        'Le site peut utiliser des cookies techniques nécessaires à son fonctionnement. Aucun cookie publicitaire n\'est déposé sans votre consentement.',
+        'Le site utilise des cookies strictement nécessaires (mémorisation de vos choix de consentement).',
+        'Des cookies ou traceurs de contenus tiers (notamment vidéos Facebook) et, le cas échéant, de mesure d’audience, ne sont déposés qu’avec votre consentement via la bannière cookies.',
+        'Vous pouvez accepter, refuser ou personnaliser vos préférences à tout moment via le lien « Gérer les cookies » en bas de page.',
       ],
     },
     {
@@ -104,6 +106,15 @@ export const politiqueConfidentialiteContent = {
       paragraphs: [
         'Les données du formulaire sont transmises via Formspree (service de traitement de formulaires) pour la réception des messages. Formspree est conforme au RGPD.',
         'L\'hébergement du site est assuré par LWS (Ligne Web Services), 2 rue Jules Ferry, 88190 Golbey.',
+      ],
+    },
+    {
+      title: 'Cookies et traceurs',
+      paragraphs: [
+        'Cookies nécessaires : stockage de votre choix de consentement, indispensables au fonctionnement du site. Ils ne nécessitent pas de consentement.',
+        'Contenus tiers / médias : l’affichage de vidéos Facebook intégrées peut entraîner le dépôt de cookies par Meta. Ces contenus ne sont chargés qu’après acceptation de la catégorie « Contenus tiers / médias ».',
+        'Mesure d’audience : aucun outil d’audience n’est actif à ce jour. Si un outil est ajouté plus tard, il ne sera activé qu’avec votre consentement explicite.',
+        'Vous pouvez modifier ou retirer votre consentement à tout moment via « Gérer les cookies » en pied de page.',
       ],
     },
     {

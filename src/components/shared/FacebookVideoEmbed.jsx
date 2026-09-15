@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { FaCirclePlay } from 'react-icons/fa6';
+import { useCookieConsent } from '../../context/CookieConsentContext.jsx';
 
 function buildFacebookEmbedSrc(href) {
   const params = new URLSearchParams({
@@ -14,8 +15,44 @@ function buildFacebookEmbedSrc(href) {
 
 export function FacebookVideoEmbed({ href, label, previewSrc, previewAlt = '' }) {
   const [open, setOpen] = useState(false);
+  const { hasMediaConsent, acceptMedia } = useCookieConsent();
 
   if (!href) return null;
+
+  if (!hasMediaConsent) {
+    return (
+      <div className="project-card__fb">
+        <div className="project-card__fb-locked">
+          {previewSrc ? (
+            <img
+              className="project-card__fb-preview-img"
+              src={previewSrc}
+              alt={previewAlt}
+              width={267}
+              height={476}
+              loading="lazy"
+              decoding="async"
+            />
+          ) : (
+            <span className="project-card__fb-preview-fallback" aria-hidden />
+          )}
+          <div className="project-card__fb-preview-overlay project-card__fb-preview-overlay--locked">
+            <p>Vidéo Facebook bloquée</p>
+            <button
+              type="button"
+              className="btn btn--secondary btn--small"
+              onClick={() => {
+                acceptMedia();
+                setOpen(true);
+              }}
+            >
+              Autoriser les cookies médias
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="project-card__fb">

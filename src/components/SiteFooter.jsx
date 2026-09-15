@@ -1,5 +1,16 @@
 import { Link } from 'react-router-dom';
 
+import { useCookieConsent } from '../context/CookieConsentContext.jsx';
+
+function CookieSettingsLink() {
+  const { openPreferences } = useCookieConsent();
+  return (
+    <button type="button" className="site-footer__cookie-btn" onClick={openPreferences}>
+      Gérer les cookies
+    </button>
+  );
+}
+
 const navGroups = [
   {
     title: 'Événements',
@@ -80,6 +91,9 @@ export function SiteFooter() {
           </li>
           <li>
             <Link to="/politique-de-confidentialite">Politique de confidentialité</Link>
+          </li>
+          <li>
+            <CookieSettingsLink />
           </li>
         </ul>
       </div>

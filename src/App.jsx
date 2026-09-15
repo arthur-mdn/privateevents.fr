@@ -1,5 +1,6 @@
 import { lazy, Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
+import { CookieBanner } from './components/CookieBanner.jsx';
 import HomePage from './components/HomePage.jsx';
 import { ScrollToTop } from './components/ScrollToTop.jsx';
 
@@ -71,6 +72,7 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>
+      <CookieBanner />
     </>
   );
 }
