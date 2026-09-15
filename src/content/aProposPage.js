@@ -96,6 +96,13 @@ export const aProposPresence = {
       logo: '/elements/others/bark-logo.svg',
       logoAlt: 'Bark',
     },
+    {
+      name: 'Djaayz',
+      title: 'Événementiel pour tous',
+      href: 'https://app.djaayz.com/fr/dj/dj-mika',
+      logo: '/elements/others/djaayz-logo.svg',
+      logoAlt: 'Djaayz',
+    },
   ],
 };
 
