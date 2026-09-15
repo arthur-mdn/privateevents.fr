@@ -159,6 +159,12 @@ export const routeMeta = {
     description: 'Politique de confidentialité et traitement des données du site DJ Mika Private Events.',
     noindex: true,
   },
+  '/conditions-generales': {
+    title: 'Conditions générales de vente | DJ Mika Private Events',
+    description:
+      'Conditions générales de vente, annulation et remboursement des prestations DJ Mika Private Events.',
+    noindex: true,
+  },
 };
 
 export function canonicalPath(path) {

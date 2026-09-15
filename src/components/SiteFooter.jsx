@@ -90,6 +90,9 @@ export function SiteFooter() {
             <Link to="/mentions-legales">Mentions légales</Link>
           </li>
           <li>
+            <Link to="/conditions-generales">Conditions générales</Link>
+          </li>
+          <li>
             <Link to="/politique-de-confidentialite">Politique de confidentialité</Link>
           </li>
           <li>

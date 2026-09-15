@@ -9,6 +9,7 @@ export const mentionsLegalesContent = {
         'SIRET : 982 765 182 00018',
         'Contact : contact@privateevents.fr - Téléphone : 07 82 73 76 61',
         'Directeur de la publication : Mika.',
+        'L’adresse du siège et la forme juridique complètes figurent sur les devis et factures, et peuvent être communiquées sur demande à contact@privateevents.fr.',
       ],
     },
     {
@@ -31,6 +32,7 @@ export const mentionsLegalesContent = {
       title: 'Propriété intellectuelle',
       paragraphs: [
         'L\'ensemble du contenu du site (textes, images, logos, éléments graphiques) est protégé par le droit d\'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable de Private Events - DJ Mika.',
+        'Les photographies d’événements publiées sur le site sont des prises de vue réalisées dans le cadre de prestations, diffusées avec l’accord des clients ou partenaires concernés lorsqu’elles les identifient.',
       ],
     },
     {
@@ -70,7 +72,8 @@ export const politiqueConfidentialiteContent = {
     {
       title: 'Données collectées',
       paragraphs: [
-        'Via le configurateur et le formulaire de contact, nous collectons : nom, prénom, adresse e-mail, numéro de téléphone, type d\'événement, date, lieu, nombre d\'invités, prestations souhaitées et commentaires libres.',
+        'Via le formulaire de contact : nom, adresse e-mail, sujet et message.',
+        'Via le configurateur : nom, adresse e-mail, numéro de téléphone, type d\'événement, date, lieu, nombre d\'invités, prestations souhaitées et commentaires libres.',
         'Ces données sont nécessaires pour étudier votre demande et vous répondre.',
       ],
     },
@@ -121,6 +124,72 @@ export const politiqueConfidentialiteContent = {
       title: 'Sécurité',
       paragraphs: [
         'Des mesures techniques et organisationnelles sont mises en œuvre pour protéger vos données contre tout accès non autorisé, perte ou divulgation.',
+      ],
+    },
+  ],
+};
+
+export const conditionsGeneralesContent = {
+  title: 'Conditions générales de vente',
+  lastUpdated: 'septembre 2026',
+  sections: [
+    {
+      title: 'Objet',
+      paragraphs: [
+        'Les présentes conditions générales de vente (CGV) encadrent les prestations proposées par Private Events - DJ Mika (SIRET 982 765 182 00018) : DJ, sonorisation, éclairage, animations et, le cas échéant, coordination de partenaires.',
+        'Toute commande implique l’acceptation sans réserve des présentes CGV.',
+      ],
+    },
+    {
+      title: 'Devis et commande',
+      paragraphs: [
+        'Chaque prestation fait l’objet d’un devis personnalisé, selon la date, le lieu, la durée, le matériel et les options retenues.',
+        'Le devis est valable pour la durée indiquée sur le document. La commande est ferme après acceptation écrite du devis (e-mail ou signature) et, le cas échéant, réception de l’acompte prévu.',
+      ],
+    },
+    {
+      title: 'Tarifs et paiement',
+      paragraphs: [
+        'Les prix sont indiqués en euros, hors frais éventuels clairement mentionnés sur le devis (déplacement, location de matériel spécifique, prestations partenaires).',
+        'Sauf mention contraire sur le devis, un acompte peut être demandé à la réservation. Le solde est dû au plus tard le jour de l’événement, ou selon l’échéancier indiqué.',
+      ],
+    },
+    {
+      title: 'Annulation et remboursement',
+      paragraphs: [
+        'Annulation par le client : toute annulation doit être notifiée par écrit (e-mail). Sauf clause particulière du devis, les règles suivantes s’appliquent :',
+        'Plus de 30 jours avant la date : acompte remboursé, déduction faite des frais déjà engagés justifiés (location, déplacements préparatoires).',
+        'Entre 30 et 15 jours avant la date : acompte conservé au titre d’indemnité forfaitaire.',
+        'Moins de 15 jours avant la date, ou no-show : la totalité du montant prévu au devis reste due.',
+        'Annulation par Private Events - DJ Mika : si la prestation ne peut être assurée (cas de force majeure, indisponibilité exceptionnelle), le client est informé dès que possible. Les sommes déjà versées sont intégralement remboursées. Aucune autre indemnité n’est due, sauf disposition légale contraire.',
+        'Report : un report de date peut être étudié d’un commun accord, sous réserve de disponibilité. Les conditions financières du devis initial restent applicables sauf avenant.',
+      ],
+    },
+    {
+      title: 'Obligations du client',
+      paragraphs: [
+        'Le client fournit les accès, alimentations électriques adaptées, autorisations nécessaires (mairie, voisinage, droit d’auteur / SACEM le cas échéant) et un interlocuteur le jour J.',
+        'Le matériel mis à disposition doit être utilisé dans des conditions normales. Toute dégradation imputable au client ou à ses invités pourra être facturée.',
+      ],
+    },
+    {
+      title: 'Responsabilité',
+      paragraphs: [
+        'Private Events - DJ Mika s’engage à exécuter la prestation avec diligence professionnelle. Sa responsabilité est limitée au montant de la prestation concernée, hors dommages corporels ou faute lourde.',
+        'Le prestataire ne peut être tenu responsable des retards ou interruptions liés au lieu, à l’alimentation électrique, à des décisions de l’organisateur ou à un cas de force majeure.',
+      ],
+    },
+    {
+      title: 'Partenaires et prestations annexes',
+      paragraphs: [
+        'Certaines options (photobooth, artistes, décoration, etc.) peuvent être réalisées par des partenaires. Dans ce cas, le devis précise si Private Events - DJ Mika intervient en coordination ou en simple mise en relation. Les conditions propres au partenaire peuvent s’appliquer.',
+      ],
+    },
+    {
+      title: 'Droit applicable',
+      paragraphs: [
+        'Les présentes CGV sont soumises au droit français. En cas de litige, une solution amiable sera recherchée avant toute action judiciaire. À défaut, les tribunaux compétents seront ceux du ressort du siège du prestataire.',
+        'Pour toute question : contact@privateevents.fr - 07 82 73 76 61.',
       ],
     },
   ],

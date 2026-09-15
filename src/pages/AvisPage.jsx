@@ -112,7 +112,18 @@ function TestimonialCard({ t }) {
                   <span className="testimonial-card__sep" aria-hidden>
                     {' · '}
                   </span>
-                  <span className="testimonial-card__source">{t.source}</span>
+                  {t.source === 'Bark' ? (
+                    <a
+                      className="testimonial-card__source"
+                      href="https://www.bark.com/fr/fr/b/private-events/yal023/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Bark
+                    </a>
+                  ) : (
+                    <span className="testimonial-card__source">{t.source}</span>
+                  )}
                 </>
               ) : null}
             </p>

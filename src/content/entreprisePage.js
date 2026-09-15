@@ -41,7 +41,7 @@ export const entrepriseLandingContent = {
     title: 'Événements d’entreprise et d’association : timing tenu, technique et coordination.',
     intro:
       'Prises de parole, cocktail, gala, team building ou soirée associative : un interlocuteur unique, une installation anticipée et un déroulé respecté.',
-    reassurance: ['Horaires tenus', 'Sonorisation des interventions', 'Cadre professionnel'],
+    reassurance: ['Horaires respectés', 'Sonorisation des interventions', 'Cadre professionnel'],
     copyWide: true,
     image: '/elements/gallery/inauguration-ouverture-sephora-marseille-vieux-port.webp',
     imageAlt: 'DJ Mika anime l’ouverture Sephora Marseille Terrasses du Port',
@@ -239,7 +239,7 @@ export const entrepriseLandingContent = {
       type: 'cta',
       id: 'entreprise-cta',
       title: 'Briefez votre événement',
-      lead: 'Date, lieu, format, nombre d’invités et contraintes. Devis professionnel, réponse sous 48 h.',
+      lead: 'Date, lieu, format, nombre d’invités et contraintes. Devis professionnel, réponse sous 48 h ouvrés ouvrés en règle générale.',
       href: '/mon-evenement?type=entreprise',
       label: 'Organiser mon événement',
       secondaryLinks: [

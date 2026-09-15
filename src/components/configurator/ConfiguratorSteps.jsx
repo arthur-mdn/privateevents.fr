@@ -465,9 +465,15 @@ export function StepContact({ data, onChange, errors }) {
           name="name"
           autoComplete="name"
           value={data.name}
+          aria-invalid={errors.name ? true : undefined}
+          aria-describedby={errors.name ? 'config-error-name' : undefined}
           onChange={(e) => onChange({ name: e.target.value })}
         />
-        {errors.name ? <span className="field__error">{errors.name}</span> : null}
+        {errors.name ? (
+          <span id="config-error-name" className="field__error" role="alert">
+            {errors.name}
+          </span>
+        ) : null}
       </label>
       <label className="field">
         <span className="field__label">Adresse e-mail</span>
@@ -476,9 +482,15 @@ export function StepContact({ data, onChange, errors }) {
           name="email"
           autoComplete="email"
           value={data.email}
+          aria-invalid={errors.email ? true : undefined}
+          aria-describedby={errors.email ? 'config-error-email' : undefined}
           onChange={(e) => onChange({ email: e.target.value })}
         />
-        {errors.email ? <span className="field__error">{errors.email}</span> : null}
+        {errors.email ? (
+          <span id="config-error-email" className="field__error" role="alert">
+            {errors.email}
+          </span>
+        ) : null}
       </label>
       <label className="field">
         <span className="field__label">Téléphone</span>
@@ -497,6 +509,8 @@ export function StepContact({ data, onChange, errors }) {
             type="checkbox"
             name="rgpdConsent"
             checked={data.rgpdConsent}
+            aria-invalid={errors.rgpdConsent ? true : undefined}
+            aria-describedby={errors.rgpdConsent ? 'config-error-rgpd' : undefined}
             onChange={(e) => onChange({ rgpdConsent: e.target.checked })}
           />
           <span>
@@ -508,7 +522,11 @@ export function StepContact({ data, onChange, errors }) {
             .
           </span>
         </label>
-        {errors.rgpdConsent ? <span className="field__error">{errors.rgpdConsent}</span> : null}
+        {errors.rgpdConsent ? (
+          <span id="config-error-rgpd" className="field__error" role="alert">
+            {errors.rgpdConsent}
+          </span>
+        ) : null}
       </div>
     </div>
   );

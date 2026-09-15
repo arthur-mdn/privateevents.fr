@@ -22,6 +22,11 @@ const MariagePage = lazy(() =>
 const MentionsLegalesPage = lazy(() =>
   import('./pages/MentionsLegalesPage.jsx').then((m) => ({ default: m.MentionsLegalesPage })),
 );
+const ConditionsGeneralesPage = lazy(() =>
+  import('./pages/ConditionsGeneralesPage.jsx').then((m) => ({
+    default: m.ConditionsGeneralesPage,
+  })),
+);
 const MonEvenementPage = lazy(() =>
   import('./pages/MonEvenementPage.jsx').then((m) => ({ default: m.MonEvenementPage })),
 );
@@ -54,6 +59,9 @@ function RouteFallback() {
 function App() {
   return (
     <>
+      <a className="skip-link" href="#contenu-principal">
+        Aller au contenu
+      </a>
       <ScrollToTop />
       <Suspense fallback={<RouteFallback />}>
         <Routes>
@@ -68,6 +76,7 @@ function App() {
           <Route path="/a-propos" element={<AProposPage />} />
           <Route path="/mon-evenement" element={<MonEvenementPage />} />
           <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
+          <Route path="/conditions-generales" element={<ConditionsGeneralesPage />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialitePage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>

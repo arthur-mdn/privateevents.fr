@@ -9,7 +9,7 @@
   --color-text: #f4ece2;
   --color-text-muted: #b8a896;
   --color-accent: #c7b28f;
-  --color-accent-deep: #8b7349;
+  --color-accent-deep: #b0925a;
   --color-glow: #d4bc8c;
   --color-focus: #e8d4a8;
   --color-spotlight-bg: #ede4d6;
@@ -76,6 +76,27 @@ a {
 
 a:hover {
   color: var(--color-glow);
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 2000;
+  padding: 0.65rem 1rem;
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-bg-deep);
+  font-weight: 600;
+  text-decoration: none;
+  transform: translateY(-200%);
+  transition: transform 0.15s ease;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
 }
 
 :focus-visible {
@@ -2330,7 +2351,7 @@ main:not(:has(.hero)):not(.section--configurator) {
 .field input::placeholder,
 .field textarea::placeholder {
   color: var(--color-text-muted);
-  opacity: 0.65;
+  opacity: 0.9;
 }
 
 .field input:not([type='checkbox']):not([type='radio']):not([type='range']):hover,
@@ -2483,6 +2504,15 @@ main:not(:has(.hero)):not(.section--configurator) {
 
 .testimonial-card__source {
   color: var(--color-text-muted);
+}
+
+a.testimonial-card__source {
+  text-decoration: underline;
+  text-underline-offset: 0.12em;
+}
+
+a.testimonial-card__source:hover {
+  color: var(--color-accent);
 }
 
 .testimonial-card__toggle {
