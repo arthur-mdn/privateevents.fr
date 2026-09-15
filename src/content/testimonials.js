@@ -2,7 +2,7 @@ const testimonialsUnsorted = [
   {
     id: '2024-11',
     quote:
-      'Très content d’avoir fait appel à DJ Mika pour ma soirée. Il a vraiment été à l’écoute de ce qu’on voulait et a réussi à mettre une super ambiance. Les invités se sont bien amusés et la soirée s’est super bien passée. Je recommande !',
+      'Très content d’avoir fait appel à DJ Micha pour ma soirée. Il a vraiment été à l’écoute de ce qu’on voulait et a réussi à mettre une super ambiance. Les invités se sont bien amusés et la soirée s’est super bien passée. Je recommande !',
     author: 'Client particulier',
     context: 'Soirée privée',
     dateISO: '2024-11-23',
