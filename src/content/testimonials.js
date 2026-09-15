@@ -2,7 +2,7 @@ const testimonialsUnsorted = [
   {
     id: '2024-11',
     quote:
-      'Ravi d’avoir choisi DJ Mika pour animer ma soirée. Il a su créer une ambiance qui a rendu l’événement inoubliable.',
+      'Très content d’avoir fait appel à DJ Mika pour ma soirée. Il a vraiment été à l’écoute de ce qu’on voulait et a réussi à mettre une super ambiance. Les invités se sont bien amusés et la soirée s’est super bien passée. Je recommande !',
     author: 'Client particulier',
     context: 'Soirée privée',
     dateISO: '2024-11-23',
@@ -34,7 +34,7 @@ const testimonialsUnsorted = [
   {
     id: '2025-09',
     quote:
-      'DJ Mika a su s’adapter au lieu et au thème de la fête. Ambiance fluide du cocktail jusqu’au dernier titre.',
+      'Merci à DJ Mika pour l’anniversaire de Louis ! Il s’est très bien adapté au lieu et à ce qu’on avait prévu. La musique était top, aussi bien pendant le cocktail que pour la soirée. Tout le monde a passé un très bon moment, merci encore',
     author: 'Père de Louis',
     context: 'Anniversaire de Louis - Sorgues',
     dateISO: '2025-09-19',
