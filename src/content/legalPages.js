@@ -180,6 +180,13 @@ export const conditionsGeneralesContent = {
       ],
     },
     {
+      title: 'Assurance',
+      paragraphs: [
+        'Private Events - DJ Mika est assuré auprès de MAAF Assurances SA, société anonyme au capital de 160 000 000 euros entièrement versé, entreprise régie par le code des assurances, RCS Niort n° 542 073 580, siège social : Chaban - 79180 Chauray, adresse postale : Chauray - 79036 Niort Cedex 9.',
+        'Cette assurance couvre la responsabilité civile professionnelle et la responsabilité civile liée à l’exploitation de l’entreprise.',
+      ],
+    },
+    {
       title: 'Partenaires et prestations annexes',
       paragraphs: [
         'Certaines options (photobooth, artistes, décoration, etc.) peuvent être réalisées par des partenaires. Dans ce cas, le devis précise si Private Events - DJ Mika intervient en coordination ou en simple mise en relation. Les conditions propres au partenaire peuvent s’appliquer.',
