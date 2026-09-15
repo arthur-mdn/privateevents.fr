@@ -246,15 +246,15 @@ const realisationProjectsUnsorted = [
     title: 'Inauguration - Sephora Marseille',
     type: 'Entreprise',
     location: 'Marseille, Terrasses du Port',
-    date: '2025-07-05',
-    dateLabel: '5 juillet 2025',
+    date: '2026-03-07',
+    dateLabel: '7 mars 2026',
     brief:
       'Ouverture du Sephora aux Terrasses du Port, à Marseille : accueil musical des invités, cadre corporate et sonorisation calée sur le magasin et ses flux.',
     highlight:
       'Prestation discrète pour une inauguration de marque, horaires et image du lieu respectés.',
     prestations: ['DJ', 'Sonorisation', 'Accueil musical'],
     imageIds: ['inauguration-ouverture-sephora-marseille-vieux-port'],
-    testimonialId: '2025-07',
+    testimonialId: '2026-03-07',
   },
   {
     id: 'anniversaire-sorgues',

@@ -1,11 +1,11 @@
 const testimonialsUnsorted = [
   {
-    id: '2024-11',
+    id: '2025-11-22',
     quote:
-      'Très content d’avoir fait appel à DJ Micha pour ma soirée. Il a vraiment été à l’écoute de ce qu’on voulait et a réussi à mettre une super ambiance. Les invités se sont bien amusés et la soirée s’est super bien passée. Je recommande !',
+      'Très content d’avoir fait appel à DJ Mika pour ma soirée. Il a vraiment été à l’écoute de ce qu’on voulait et a réussi à mettre une super ambiance. Les invités se sont bien amusés et la soirée s’est super bien passée. Je recommande !',
     author: 'Client particulier',
     context: 'Soirée privée',
-    dateISO: '2024-11-23',
+    dateISO: '2025-11-22',
     rating: 5,
     source: 'Message reçu après l’événement',
   },
@@ -21,12 +21,12 @@ const testimonialsUnsorted = [
     realisationId: 'mariage-avignon-2025',
   },
   {
-    id: '2025-07',
+    id: '2026-03-07',
     quote:
       "Mika est venu mixer pour l’inauguration de notre boutique. L’ambiance était pile ce qu’il fallait : accueillante pour les clientes, dynamique sans prendre le dessus. On a pu profiter de l'après-midi sans se soucier de la technique.",
     author: 'Équipe boutique',
     context: 'Entreprise - Inauguration Sephora, Marseille',
-    dateISO: '2025-07-05',
+    dateISO: '2026-03-07',
     rating: 5,
     source: 'Message reçu après l’événement',
     realisationId: 'sephora-marseille',

@@ -199,7 +199,7 @@ export const entrepriseLandingContent = {
       type: 'caseStudy',
       id: 'entreprise-case',
       title: 'Exemple : inauguration Sephora, Marseille',
-      meta: ['Inauguration - Sephora Marseille', 'Juillet 2025', 'Terrasses du Port'],
+      meta: ['Inauguration - Sephora Marseille', '7 mars 2026', 'Terrasses du Port'],
       brief:
         'Ouverture de magasin : accueil musical des invités, cadre corporate et sonorisation adaptée au lieu, sans surjouer l’ambiance.',
       prestations: ['DJ', 'Sonorisation', 'Accueil musical'],
@@ -209,7 +209,7 @@ export const entrepriseLandingContent = {
       imageAlt: 'DJ Mika anime l’ouverture Sephora Marseille Terrasses du Port',
       links: [
         { href: '/realisations#sephora-marseille', label: 'Voir la réalisation' },
-        { href: '/avis#avis-2025-07', label: 'Lire l’avis' },
+        { href: '/avis#avis-2026-03-07', label: 'Lire l’avis' },
       ],
     },
     {
