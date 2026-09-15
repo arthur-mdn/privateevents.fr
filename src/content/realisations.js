@@ -3,6 +3,41 @@ import { testimonials } from './testimonials.js';
 
 const realisationProjectsUnsorted = [
   {
+    id: 'rentree-associative-carpentras-2026',
+    title: 'Rentrée associative - Carpentras',
+    type: 'Entreprise',
+    location: 'Carpentras, Vaucluse',
+    date: '2026-09-13',
+    dateLabel: '13 septembre 2026',
+    brief:
+      'Rentrée associative en plein air à Carpentras : ambiance musicale louange et session karaoké pour accompagner la journée.',
+    highlight:
+      'Format associatif en extérieur, avec une programmation adaptée au public et un créneau karaoké participatif.',
+    prestations: ['DJ', 'Sonorisation extérieure', 'Ambiance louange', 'Karaoké'],
+    imageIds: ['rentree-associative-carpentras'],
+  },
+  {
+    id: 'anniversaire-60-casanaize-vernegues-2026',
+    title: 'Anniversaire 60 ans - La Caza’naise',
+    type: 'Anniversaire',
+    location: 'Vernègues (Cazan), Bouches-du-Rhône',
+    date: '2026-09-12',
+    dateLabel: '12 septembre 2026',
+    brief:
+      'Anniversaire 60 ans sur le thème des années 80 à la brasserie La Caza’naise : ambiance musicale pendant l’apéritif et le repas, blind test années 80 et karaoké avec lots à gagner.',
+    highlight:
+      'Soirée thématique construite autour des années 80, avec blind test et karaoké pour lancer la piste.',
+    prestations: [
+      'DJ & éclairage',
+      'Ambiance années 80',
+      'Blind test',
+      'Karaoké',
+      'Apéritif & repas',
+    ],
+    imageIds: ['restaurant-annee-80-anniversaire-60ans-la-casanaize'],
+    testimonialId: '2026-09-12-casanaize',
+  },
+  {
     id: 'mariage-laura-maxime-2026',
     title: 'Mariage Laura & Maxime',
     type: 'Mariage',
@@ -334,7 +369,9 @@ export function getEntrepriseGalleryItems() {
         caption.includes('corporate') ||
         caption.includes('sephora') ||
         caption.includes('inauguration') ||
-        caption.includes('entreprise')
+        caption.includes('entreprise') ||
+        caption.includes('associative') ||
+        caption.includes('carpentras')
       );
     })
     .slice(0, 10);

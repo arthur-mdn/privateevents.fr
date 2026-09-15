@@ -76,6 +76,17 @@ const testimonialsUnsorted = [
     realisationId: 'anniversaire-canelle-marseille-2026',
   },
   {
+    id: '2026-09-12-casanaize',
+    quote:
+      "Mika est très professionnel. Avant la prestation, en nous demandant nos playlists et nos préférences dans l'organisation, puis pendant la soirée pendant laquelle j'ai retrouvé toutes mes demandes intégrées de manière transparente. Matériel au top pour le karaoké et blind test qui a lancé la soirée, puis animation lumière et musicale qui ont tenu tout le monde sur la piste jusqu'au bout de la nuit, soirée inoubliable garantie avec Mika !",
+    author: 'Hôte de la soirée',
+    context: 'Anniversaire 60 ans - La Caza’naise, Vernègues',
+    dateISO: '2026-09-12',
+    rating: 5,
+    source: 'Message reçu après l’événement',
+    realisationId: 'anniversaire-60-casanaize-vernegues-2026',
+  },
+  {
     id: '2026-08-laura-maxime',
     quote:
       "Bonjour Mickaël, c'est Laura et Maxime, les mariés de samedi dernier, le 29 août. Vous avez principalement tout organisé et échangé avec ma sœur, mais on tenait vraiment à vous écrire personnellement pour vous remercier. Vous avez été extrêmement professionnel et nous, comme nos invités, avons adoré votre travail. Vous avez accepté de reprendre notre mariage à seulement un mois de la date, en catastrophe après que notre premier DJ nous ait plantés... et finalement, on est vraiment très contents que les choses se soient passées ainsi et que ce soit vous qui ayez animé notre mariage ! Vous avez fait danser tout le monde plus que de raison, l'ambiance était géniale et on a passé une soirée incroyable. On espère aussi que vous avez apprécié nos macarons ! Encore un immense merci pour tout.",
