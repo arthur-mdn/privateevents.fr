@@ -10,7 +10,7 @@ export const heroContent = {
 
 export const stats = [
   { value: '2011', label: 'début', detail: 'en événementiel' },
-  { value: '50', label: 'événements', detail: 'réalisés' },
+  { value: '50', label: 'événements', detail: 'réalisés cette année' },
   { value: 'Zone', label: 'd\'intervention', detail: 'Montpellier - Lyon - Nice' },
   { value: 'Excellents avis', label: 'clients', detail: 'témoignages disponibles', href: '/avis' },
 ];
