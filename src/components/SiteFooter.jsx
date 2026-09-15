@@ -1,3 +1,4 @@
+import { FaFacebook } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 import { useCookieConsent } from '../context/CookieConsentContext.jsx';
@@ -45,6 +46,15 @@ export function SiteFooter() {
             DJ, sonorisation, éclairage et animations. Formule complète ou plug and play
             selon le lieu.
           </p>
+          <a
+            className="site-footer__social"
+            href="https://www.facebook.com/profile.php?id=61560919780375"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Page Facebook de DJ Mika Private Events"
+          >
+            <FaFacebook aria-hidden />
+          </a>
         </div>
         <nav className="site-footer__nav" aria-label="Liens du pied de page">
           {navGroups.map((group) => (

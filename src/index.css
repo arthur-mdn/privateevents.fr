@@ -2462,6 +2462,26 @@ main:not(:has(.hero)):not(.section--configurator) {
   line-height: 1.55;
 }
 
+.site-footer__social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.85rem;
+  color: var(--color-text-muted);
+  font-size: 1.25rem;
+  transition: color 0.15s ease;
+}
+
+.site-footer__social:hover {
+  color: var(--color-accent);
+}
+
+.site-footer__social:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
 .site-footer__zone {
   margin: 1rem 0 0;
   font-size: 0.875rem;
