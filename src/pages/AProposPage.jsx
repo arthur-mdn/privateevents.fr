@@ -4,10 +4,12 @@ import { PageHero } from '../components/shared/PageHero.jsx';
 import { SiteFooter } from '../components/SiteFooter.jsx';
 import { SiteHeader } from '../components/SiteHeader.jsx';
 import {
+  aProposClubPartner,
   aProposCta,
   aProposHero,
   aProposMethod,
   aProposPartners,
+  aProposPresence,
   aProposProfile,
   aProposProofs,
 } from '../content/aProposPage.js';
@@ -108,6 +110,71 @@ export function AProposPage() {
               <li key={category}>{category}</li>
             ))}
           </ul>
+        </section>
+
+        <section className="section section--about-aside" aria-labelledby="apropos-club-title">
+          <div className="about-aside">
+            <div className="about-aside__block">
+              <p className="about-aside__eyebrow">{aProposClubPartner.eyebrow}</p>
+              <a
+                className="about-aside__partner"
+                href={aProposClubPartner.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {aProposClubPartner.logo ? (
+                  <img
+                    className="about-aside__logo"
+                    src={aProposClubPartner.logo}
+                    alt={aProposClubPartner.logoAlt || aProposClubPartner.name}
+                    width={72}
+                    height={72}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : null}
+                <span className="about-aside__partner-copy">
+                  <span id="apropos-club-title" className="about-aside__title">
+                    {aProposClubPartner.name}
+                  </span>
+                  <span className="about-aside__text">{aProposClubPartner.description}</span>
+                </span>
+              </a>
+            </div>
+
+            <div className="about-aside__block about-aside__block--presence">
+              <p className="about-aside__eyebrow">{aProposPresence.label}</p>
+              <ul className="about-presence">
+                {aProposPresence.items.map((item) => (
+                  <li key={item.name}>
+                    <a
+                      className="about-presence__link"
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.logo ? (
+                        <img
+                          className="about-presence__logo"
+                          src={item.logo}
+                          alt={item.logoAlt || item.name}
+                          width={120}
+                          height={40}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <span className="about-presence__name">{item.name}</span>
+                      )}
+                      {item.title ? (
+                        <span className="about-presence__title">{item.title}</span>
+                      ) : null}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </section>
 
         <section className="section section--cta-banner" aria-labelledby="apropos-cta-title">

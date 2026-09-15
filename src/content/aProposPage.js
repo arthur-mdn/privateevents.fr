@@ -77,6 +77,28 @@ export const aProposPartners = {
   ],
 };
 
+export const aProposClubPartner = {
+  eyebrow: 'Partenaire',
+  name: 'XV du Centurion',
+  description: 'Club de rugby loisir à Pernes-les-Fontaines.',
+  href: 'https://www.xvducenturion.club',
+  logo: '/elements/others/xv-du-centurion.webp',
+  logoAlt: 'Logo XV du Centurion, club de rugby loisir à Pernes-les-Fontaines',
+};
+
+export const aProposPresence = {
+  label: 'Aussi visible sur',
+  items: [
+    {
+      name: 'Bark',
+      title: 'Avis clients et demandes de devis',
+      href: 'https://www.bark.com/fr/fr/b/private-events/yal023/',
+      logo: '/elements/others/bark-logo.svg',
+      logoAlt: 'Bark',
+    },
+  ],
+};
+
 export const aProposCta = {
   title: 'Parlons de votre projet',
   lead: 'Mariage, anniversaire, soirée privée ou événement corporate : décrivez votre projet et recevez une réponse personnalisée.',
