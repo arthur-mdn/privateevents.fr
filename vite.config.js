@@ -3,9 +3,13 @@ import react from '@vitejs/plugin-react'
 import {
   DEFAULT_OG_IMAGE,
   DEFAULT_OG_IMAGE_ALT,
+  DEFAULT_OG_IMAGE_HEIGHT,
+  DEFAULT_OG_IMAGE_TYPE,
+  DEFAULT_OG_IMAGE_WIDTH,
   homeDescription,
   homeJsonLd,
   homeTitle,
+  SITE_NAME,
 } from './src/seo/siteMeta.js'
 
 function escapeHtmlAttr(value) {
@@ -21,8 +25,12 @@ function injectHomeSeoFromSiteMeta() {
     transformIndexHtml(html) {
       const title = escapeHtmlAttr(homeTitle)
       const description = escapeHtmlAttr(homeDescription)
+      const siteName = escapeHtmlAttr(SITE_NAME)
       const ogImage = escapeHtmlAttr(DEFAULT_OG_IMAGE)
       const ogImageAlt = escapeHtmlAttr(DEFAULT_OG_IMAGE_ALT)
+      const ogImageType = escapeHtmlAttr(DEFAULT_OG_IMAGE_TYPE)
+      const ogImageWidth = String(DEFAULT_OG_IMAGE_WIDTH)
+      const ogImageHeight = String(DEFAULT_OG_IMAGE_HEIGHT)
       const jsonLd = JSON.stringify(homeJsonLd, null, 2)
 
       return html
@@ -43,8 +51,28 @@ function injectHomeSeoFromSiteMeta() {
           `<meta property="og:description" content="${description}" />`,
         )
         .replace(
+          /<meta property="og:site_name" content="[^"]*" \/>/,
+          `<meta property="og:site_name" content="${siteName}" />`,
+        )
+        .replace(
           /<meta property="og:image" content="[^"]*" \/>/,
           `<meta property="og:image" content="${ogImage}" />`,
+        )
+        .replace(
+          /<meta property="og:image:secure_url" content="[^"]*" \/>/,
+          `<meta property="og:image:secure_url" content="${ogImage}" />`,
+        )
+        .replace(
+          /<meta property="og:image:type" content="[^"]*" \/>/,
+          `<meta property="og:image:type" content="${ogImageType}" />`,
+        )
+        .replace(
+          /<meta property="og:image:width" content="[^"]*" \/>/,
+          `<meta property="og:image:width" content="${ogImageWidth}" />`,
+        )
+        .replace(
+          /<meta property="og:image:height" content="[^"]*" \/>/,
+          `<meta property="og:image:height" content="${ogImageHeight}" />`,
         )
         .replace(
           /<meta property="og:image:alt" content="[^"]*" \/>/,
@@ -61,6 +89,10 @@ function injectHomeSeoFromSiteMeta() {
         .replace(
           /<meta name="twitter:image" content="[^"]*" \/>/,
           `<meta name="twitter:image" content="${ogImage}" />`,
+        )
+        .replace(
+          /<meta name="twitter:image:alt" content="[^"]*" \/>/,
+          `<meta name="twitter:image:alt" content="${ogImageAlt}" />`,
         )
         .replace(
           /<script type="application\/ld\+json">[\s\S]*?<\/script>/,

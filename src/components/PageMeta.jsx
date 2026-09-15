@@ -3,6 +3,10 @@ import {
   buildCanonicalUrl,
   DEFAULT_OG_IMAGE,
   DEFAULT_OG_IMAGE_ALT,
+  DEFAULT_OG_IMAGE_HEIGHT,
+  DEFAULT_OG_IMAGE_TYPE,
+  DEFAULT_OG_IMAGE_WIDTH,
+  SITE_NAME,
 } from '../seo/siteMeta.js';
 
 export function PageMeta({ path, title, description, ogTitle, noindex, jsonLd }) {
@@ -20,13 +24,19 @@ export function PageMeta({ path, title, description, ogTitle, noindex, jsonLd })
       <meta property="og:description" content={description} />
       <meta property="og:type" content="website" />
       <meta property="og:url" content={canonical} />
+      <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content="fr_FR" />
       <meta property="og:image" content={DEFAULT_OG_IMAGE} />
+      <meta property="og:image:secure_url" content={DEFAULT_OG_IMAGE} />
+      <meta property="og:image:type" content={DEFAULT_OG_IMAGE_TYPE} />
+      <meta property="og:image:width" content={String(DEFAULT_OG_IMAGE_WIDTH)} />
+      <meta property="og:image:height" content={String(DEFAULT_OG_IMAGE_HEIGHT)} />
       <meta property="og:image:alt" content={DEFAULT_OG_IMAGE_ALT} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={ogTitleValue} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={DEFAULT_OG_IMAGE} />
+      <meta name="twitter:image:alt" content={DEFAULT_OG_IMAGE_ALT} />
       {jsonLd ? (
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       ) : null}

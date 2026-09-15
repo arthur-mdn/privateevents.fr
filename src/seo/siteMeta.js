@@ -1,8 +1,12 @@
 export const SITE_URL = 'https://privateevents.fr';
 export const SITE_NAME = 'DJ Mika Private Events';
 export const BRAND_SHORT = 'Mika Private Events';
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/elements/photos/dj-mixage-live-eclairage-bleu.webp`;
-export const DEFAULT_OG_IMAGE_ALT = 'DJ Mika en prestation lors d’une soirée événementielle';
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/elements/covers/og-private-events.jpg`;
+export const DEFAULT_OG_IMAGE_ALT =
+  'MKA Private Events : des soirées qui vous ressemblent, DJ et animations sur mesure en Provence / PACA';
+export const DEFAULT_OG_IMAGE_WIDTH = 1200;
+export const DEFAULT_OG_IMAGE_HEIGHT = 630;
+export const DEFAULT_OG_IMAGE_TYPE = 'image/jpeg';
 
 export const homeDescription =
   'DJ Mika Private Events : DJ, sonorisation, éclairage et animations pour mariages, anniversaires, soirées privées et entreprises entre Montpellier, Lyon, Nice et en Provence.';
@@ -55,7 +59,7 @@ export const homeJsonLd = {
       '@id': `${SITE_URL}/#organisation`,
       name: 'DJ Mika Private Events',
       alternateName: ['Mika Private Events', 'Private Events - DJ Mika'],
-      image: `${SITE_URL}/elements/logo.svg`,
+      image: [DEFAULT_OG_IMAGE, `${SITE_URL}/elements/logo.svg`],
       url: `${SITE_URL}/`,
       telephone: '+33782737661',
       email: 'contact@privateevents.fr',
