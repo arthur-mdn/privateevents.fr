@@ -23,7 +23,7 @@ const testimonialsUnsorted = [
   {
     id: '2026-03-07',
     quote:
-      "Mika est venu mixer pour l’inauguration de notre boutique. L’ambiance était pile ce qu’il fallait : accueillante pour les clientes, dynamique sans prendre le dessus. On a pu profiter de l'après-midi sans se soucier de la technique.",
+      "Mika est venu mixer pour l’inauguration de notre boutique. L’ambiance était exactement comme on le souhaitait, dynamique mais sans prendre le dessus. On a pu profiter de l’après-midi avec nos clientes sans avoir à gérer toute la partie technique. Merci encore !",
     author: 'Équipe boutique',
     context: 'Entreprise - Inauguration Sephora, Marseille',
     dateISO: '2026-03-07',
