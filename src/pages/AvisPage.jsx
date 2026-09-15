@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaChevronDown, FaChevronUp } from 'react-icons/fa6';
 import { PageMeta } from '../components/PageMeta.jsx';
 import { PageHero } from '../components/shared/PageHero.jsx';
 import { PhotoCarousel } from '../components/shared/PhotoCarousel.jsx';
@@ -10,6 +12,8 @@ import {
 } from '../content/realisations.js';
 import { testimonials } from '../content/testimonials.js';
 import { routeMeta, SITE_URL } from '../seo/siteMeta.js';
+
+const EXCERPT_LENGTH = 280;
 
 const avisJsonLd = {
   '@context': 'https://schema.org',
@@ -45,13 +49,15 @@ const avisGroups = [
 ];
 
 function TestimonialCard({ t }) {
+  const [expanded, setExpanded] = useState(false);
   const realisation = t.realisationId ? getRealisationById(t.realisationId) : null;
   const images = realisation
     ? realisation.imageIds.map((id) => getGalleryItemById(id)).filter(Boolean)
     : [];
   const hasMedia = images.length > 0;
-  const excerpt =
-    t.quote.length > 280 ? `${t.quote.slice(0, 280).trimEnd()}…` : t.quote;
+  const isLong = t.quote.length > EXCERPT_LENGTH;
+  const displayQuote =
+    isLong && !expanded ? `${t.quote.slice(0, EXCERPT_LENGTH).trimEnd()}…` : t.quote;
 
   return (
     <li id={`avis-${t.id}`}>
@@ -68,13 +74,18 @@ function TestimonialCard({ t }) {
         ) : null}
         <div className="testimonial-card__content">
           <blockquote className="testimonial-card__quote">
-            <p>«&nbsp;{excerpt}&nbsp;»</p>
+            <p>«&nbsp;{displayQuote}&nbsp;»</p>
           </blockquote>
-          {t.quote.length > 280 ? (
-            <details className="testimonial-card__full">
-              <summary>Lire le témoignage complet</summary>
-              <p>«&nbsp;{t.quote}&nbsp;»</p>
-            </details>
+          {isLong ? (
+            <button
+              type="button"
+              className="testimonial-card__toggle"
+              aria-expanded={expanded}
+              onClick={() => setExpanded((value) => !value)}
+            >
+              {expanded ? 'Réduire le témoignage' : 'Lire le témoignage complet'}
+              {expanded ? <FaChevronUp aria-hidden /> : <FaChevronDown aria-hidden />}
+            </button>
           ) : null}
           <footer className="testimonial-card__footer">
             <p className="testimonial-card__meta">

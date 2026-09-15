@@ -2162,6 +2162,12 @@ main:not(:has(.hero)):not(.section--configurator) {
   letter-spacing: -0.01em;
 }
 
+.testimonial-list--full .testimonial-card__quote p {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  font-weight: 500;
+  line-height: 1.55;
+}
+
 .testimonial-card__footer {
   margin: 1.35rem 0 0;
   padding-top: 1.1rem;
@@ -2474,23 +2480,36 @@ main:not(:has(.hero)):not(.section--configurator) {
   color: var(--color-text-muted);
 }
 
-.testimonial-card__full {
-  margin: 0.65rem 0 0;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-.testimonial-card__full summary {
-  cursor: pointer;
-  color: var(--color-accent);
-  font-weight: 500;
-}
-
-.testimonial-card__full p {
+.testimonial-card__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   margin: 0.75rem 0 0;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--color-accent);
+  font-family: var(--font-primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.testimonial-card__content > .testimonial-card__full + .testimonial-card__footer {
+.testimonial-card__toggle:hover {
+  color: var(--color-accent-deep);
+}
+
+.testimonial-card__toggle:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.testimonial-card__toggle svg {
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.testimonial-card__content > .testimonial-card__toggle + .testimonial-card__footer {
   margin-top: 1rem;
 }
 
