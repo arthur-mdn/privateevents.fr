@@ -2,6 +2,7 @@ import { Link, useSearchParams } from 'react-router-dom';
 import { PageMeta } from '../components/PageMeta.jsx';
 import { PageHero } from '../components/shared/PageHero.jsx';
 import { PhotoCarousel } from '../components/shared/PhotoCarousel.jsx';
+import { FacebookVideoEmbed } from '../components/shared/FacebookVideoEmbed.jsx';
 import { SiteFooter } from '../components/SiteFooter.jsx';
 import { SiteHeader } from '../components/SiteHeader.jsx';
 import { GalleryGrid } from '../components/shared/PageSections.jsx';
@@ -90,14 +91,24 @@ export function RealisationsPage() {
 
                 return (
                   <li key={project.id} id={project.id} className="project-card">
-                    {images.length > 0 ? (
-                      <PhotoCarousel
-                        images={images}
-                        className="project-card__carousel"
-                        imgClassName="project-card__img"
-                        label={`Photos : ${project.title}`}
-                      />
-                    ) : null}
+                    <div className="project-card__media">
+                      {images.length > 0 ? (
+                        <PhotoCarousel
+                          images={images}
+                          className="project-card__carousel"
+                          imgClassName="project-card__img"
+                          label={`Photos : ${project.title}`}
+                        />
+                      ) : null}
+                      {project.facebookVideo ? (
+                        <FacebookVideoEmbed
+                          href={project.facebookVideo.href}
+                          label={project.facebookVideo.label}
+                          previewSrc={images[0]?.src}
+                          previewAlt={images[0]?.alt || ''}
+                        />
+                      ) : null}
+                    </div>
                     <div className="project-card__body">
                       <p className="project-card__type">
                         {typeFilter.href ? (

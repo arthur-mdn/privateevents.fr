@@ -32,6 +32,10 @@ const realisationProjectsUnsorted = [
     ],
     imageIds: ['restaurant-annee-80-anniversaire-60ans-la-casanaize'],
     testimonialId: '2026-09-12-casanaize',
+    facebookVideo: {
+      href: 'https://www.facebook.com/reel/1629596948559946/',
+      label: 'Vidéo Facebook · La Caza’naise',
+    },
   },
   {
     id: 'mariage-laura-maxime-2026',
@@ -255,6 +259,10 @@ const realisationProjectsUnsorted = [
     prestations: ['DJ', 'Sonorisation', 'Accueil musical'],
     imageIds: ['inauguration-ouverture-sephora-marseille-vieux-port'],
     testimonialId: '2026-03-07',
+    facebookVideo: {
+      href: 'https://www.facebook.com/reel/1810021153023628/',
+      label: 'Vidéo Facebook · Sephora',
+    },
   },
   {
     id: 'anniversaire-sorgues',
@@ -276,6 +284,8 @@ const realisationProjectsUnsorted = [
     title: 'Anniversaire 18 ans Yogan',
     type: 'Anniversaire',
     location: 'Provence',
+    date: '2026-04-11',
+    dateLabel: '11 avril 2026',
     brief:
       'Anniversaire des 18 ans de Yogan, en Provence : public jeune, éclairage dynamique et animation DJ clairement orientée dancefloor.',
     prestations: ['DJ', 'Éclairage', 'Ambiance festive'],
