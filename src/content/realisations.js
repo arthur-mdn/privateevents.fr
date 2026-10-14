@@ -16,6 +16,18 @@ const realisationProjectsUnsorted = [
     imageIds: ['anniversaire-18-ans-alicya-genas'],
   },
   {
+    id: 'soiree-association-boulistes-sete-2026',
+    title: 'Soirée association de boulistes',
+    type: 'Entreprise',
+    location: 'Aux alentours de Sète, Hérault',
+    date: '2026-10-03',
+    dateLabel: '3 octobre 2026',
+    brief:
+      'Soirée d’association de boulistes en intérieur, en petit comité, aux alentours de Sète : animation musicale adaptée à un format intimiste.',
+    prestations: ['DJ', 'Sonorisation', 'Petit comité'],
+    imageIds: ['soiree-association-boulistes-sete'],
+  },
+  {
     id: 'anniversaire-50-emilie-carnon-2026',
     title: 'Anniversaire 50 ans Émilie',
     type: 'Anniversaire',
@@ -418,7 +430,10 @@ export function getEntrepriseGalleryItems() {
         caption.includes('séminaire') ||
         caption.includes('seminaire') ||
         caption.includes('pharma') ||
-        caption.includes('grande-motte')
+        caption.includes('grande-motte') ||
+        caption.includes('boulistes') ||
+        caption.includes('sète') ||
+        caption.includes('sete')
       );
     })
     .slice(0, 10);

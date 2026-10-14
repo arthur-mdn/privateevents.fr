@@ -10,6 +10,15 @@ export const galleryItems = [
     height: 1200,
   },
   {
+    id: 'soiree-association-boulistes-sete',
+    src: '/elements/gallery/soiree-association-boulistes-sete.webp',
+    alt: 'Soirée en intérieur pour une association de boulistes aux alentours de Sète',
+    caption: 'Association boulistes - soirée près de Sète',
+    orientation: 'landscape',
+    width: 1600,
+    height: 1200,
+  },
+  {
     id: 'seminaire-pharma-grande-motte',
     src: '/elements/gallery/seminaire-pharma-grande-motte.webp',
     alt: 'Animation DJ pour un séminaire pharmaceutique dans un restaurant privatisé à La Grande-Motte',
