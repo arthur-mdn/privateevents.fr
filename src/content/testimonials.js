@@ -1,5 +1,16 @@
 const testimonialsUnsorted = [
   {
+    id: '2026-09-26-emilie',
+    quote:
+      'Merci DJ Micka! La soirée fut excellente ! Merci pour votre précieuse organisation et votre écoute. Je n’ai eu que des compliments sur votre prestation !',
+    author: 'Émilie',
+    context: 'Anniversaire 50 ans - Carnon-Plage',
+    dateISO: '2026-09-26',
+    rating: 5,
+    source: 'Message reçu après l’événement',
+    realisationId: 'anniversaire-50-emilie-carnon-2026',
+  },
+  {
     id: '2025-11-22',
     quote:
       'Très content d’avoir fait appel à DJ Mika pour ma soirée. Il a vraiment été à l’écoute de ce qu’on voulait et a réussi à mettre une super ambiance. Les invités se sont bien amusés et la soirée s’est super bien passée. Je recommande !',

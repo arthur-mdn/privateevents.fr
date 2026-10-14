@@ -3,6 +3,60 @@ import { testimonials } from './testimonials.js';
 
 const realisationProjectsUnsorted = [
   {
+    id: 'anniversaire-18-alicya-genas-2026',
+    title: 'Anniversaire 18 ans Alicya',
+    type: 'Anniversaire',
+    location: 'Genas, Rhône',
+    date: '2026-10-11',
+    dateLabel: '11 octobre 2026',
+    brief:
+      'Après-midi dansante pour les 18 ans d’Alicya à Genas, avec un moment fort à l’arrivée du gâteau : étincelles froides couleur or.',
+    highlight: 'Étincelles froides dorées synchronisées à l’arrivée du gâteau.',
+    prestations: ['DJ', 'Après-midi dansante', 'Étincelles froides'],
+    imageIds: ['anniversaire-18-ans-alicya-genas'],
+  },
+  {
+    id: 'anniversaire-50-emilie-carnon-2026',
+    title: 'Anniversaire 50 ans Émilie',
+    type: 'Anniversaire',
+    location: 'Carnon-Plage, Hérault',
+    date: '2026-09-26',
+    dateLabel: '26 septembre 2026',
+    brief:
+      'Anniversaire 50 ans en bord de plage à Carnon : installation DJ, sonorisation et éclairage adaptés au cadre extérieur, organisation calée avec l’hôtesse.',
+    prestations: ['DJ', 'Sonorisation extérieure', 'Éclairage'],
+    imageIds: [
+      'anniversaire-50-ans-emilie-carnon-plage-setup',
+      'anniversaire-50-ans-emilie-carnon-plage-vue',
+    ],
+    testimonialId: '2026-09-26-emilie',
+  },
+  {
+    id: 'seminaire-pharma-grande-motte-2026',
+    title: 'Séminaire pharmaceutique',
+    type: 'Entreprise',
+    location: 'La Grande-Motte, Hérault',
+    date: '2026-09-24',
+    dateLabel: '24 septembre 2026',
+    brief:
+      'Séminaire pharmaceutique à La Grande-Motte dans un restaurant privatisé : animation musicale adaptée au format corporate et au cadre du lieu.',
+    prestations: ['DJ', 'Sonorisation', 'Restaurant privatisé'],
+    imageIds: ['seminaire-pharma-grande-motte'],
+  },
+  {
+    id: 'entreprise-arenes-montpellier-2026',
+    title: 'Soirée d’entreprise en arène',
+    type: 'Entreprise',
+    location: 'Près de Montpellier, Hérault',
+    date: '2026-09-19',
+    dateLabel: '19 septembre 2026',
+    brief:
+      'Soirée d’entreprise dans une arène près de Montpellier : sonorisation, éclairage et régie DJ avec écran d’interaction (demandes musicales par QR code).',
+    highlight: 'Cadre outdoor type arène, avec interaction invitée via QR code.',
+    prestations: ['DJ', 'Sonorisation', 'Éclairage', 'Écran & QR code'],
+    imageIds: ['entreprise-soiree-arenes-montpellier'],
+  },
+  {
     id: 'rentree-associative-carpentras-2026',
     title: 'Rentrée associative - Carpentras',
     type: 'Entreprise',
@@ -358,7 +412,13 @@ export function getEntrepriseGalleryItems() {
         caption.includes('inauguration') ||
         caption.includes('entreprise') ||
         caption.includes('associative') ||
-        caption.includes('carpentras')
+        caption.includes('carpentras') ||
+        caption.includes('arène') ||
+        caption.includes('arenes') ||
+        caption.includes('séminaire') ||
+        caption.includes('seminaire') ||
+        caption.includes('pharma') ||
+        caption.includes('grande-motte')
       );
     })
     .slice(0, 10);
