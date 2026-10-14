@@ -1,3 +1,5 @@
+import { createReadStream, existsSync, statSync } from 'node:fs'
+import { extname, join } from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import {
@@ -11,6 +13,46 @@ import {
   homeTitle,
   SITE_NAME,
 } from './src/seo/siteMeta.js'
+
+const RECORDINGS_MIME = {
+  '.mp3': 'audio/mpeg',
+  '.wav': 'audio/wav',
+  '.ogg': 'audio/ogg',
+  '.m4a': 'audio/mp4',
+}
+
+function serveLocalRecordings() {
+  const sourceDir = join(process.cwd(), 'recordings')
+
+  return {
+    name: 'serve-local-recordings',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        if (!req.url?.startsWith('/recordings/')) return next()
+
+        const name = decodeURIComponent(req.url.slice('/recordings/'.length).split('?')[0] || '')
+        if (!name || name.includes('..') || name === '.gitkeep') {
+          res.statusCode = 404
+          res.end('Not found')
+          return
+        }
+
+        const filePath = join(sourceDir, name)
+        if (!existsSync(filePath) || !statSync(filePath).isFile()) {
+          res.statusCode = 404
+          res.end('Not found')
+          return
+        }
+
+        res.setHeader(
+          'Content-Type',
+          RECORDINGS_MIME[extname(filePath).toLowerCase()] || 'application/octet-stream',
+        )
+        createReadStream(filePath).pipe(res)
+      })
+    },
+  }
+}
 
 function escapeHtmlAttr(value) {
   return String(value)
@@ -104,5 +146,10 @@ function injectHomeSeoFromSiteMeta() {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), injectHomeSeoFromSiteMeta()],
+  plugins: [react(), injectHomeSeoFromSiteMeta(), serveLocalRecordings()],
+  server: {
+    fs: {
+      allow: ['.', 'recordings'],
+    },
+  },
 })

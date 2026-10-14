@@ -11,6 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
+# Large audio mixes live in recordings/ and are copied into dist at build
+recordings/*
+!recordings/.gitkeep
 public/recordings/*
 !public/recordings/.gitkeep
 
