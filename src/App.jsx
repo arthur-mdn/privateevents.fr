@@ -47,6 +47,9 @@ const RealisationsPage = lazy(() =>
 const SoireePriveePage = lazy(() =>
   import('./pages/SoireePriveePage.jsx').then((m) => ({ default: m.SoireePriveePage })),
 );
+const MixPage = lazy(() =>
+  import('./pages/MixPage.jsx').then((m) => ({ default: m.MixPage })),
+);
 
 function RouteFallback() {
   return (
@@ -78,6 +81,7 @@ function App() {
           <Route path="/mentions-legales" element={<MentionsLegalesPage />} />
           <Route path="/conditions-generales" element={<ConditionsGeneralesPage />} />
           <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialitePage />} />
+          <Route path="/mix" element={<MixPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

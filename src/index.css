@@ -1963,6 +1963,14 @@ main:not(:has(.hero)):not(.section--configurator) {
 }
 
 /* --- Audio --- */
+.section--audio-page .audio-page {
+  max-width: 40rem;
+}
+
+.audio-page__lead {
+  margin-bottom: 1.75rem;
+}
+
 .audio-showcase {
   display: flex;
   flex-direction: column;
@@ -1973,48 +1981,175 @@ main:not(:has(.hero)):not(.section--configurator) {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 1.25rem 1.5rem;
+  padding: 1.25rem 1.35rem 1.15rem;
   box-shadow: var(--shadow-soft);
 }
 
 .audio-card__header {
   display: flex;
-  gap: 1.25rem;
-  margin-bottom: 1rem;
+  gap: 1.15rem;
+  margin-bottom: 1.1rem;
 }
 
 .audio-card__cover {
-  width: 120px;
-  height: 120px;
+  width: 7.5rem;
+  height: 7.5rem;
   object-fit: cover;
   border-radius: var(--radius-md);
   flex-shrink: 0;
+  border: 1px solid var(--color-border);
 }
 
 .audio-card__title {
-  margin: 0 0 0.35rem;
+  margin: 0 0 0.3rem;
   font-family: var(--font-primary);
-  font-size: 1.2rem;
+  font-size: 1.125rem;
   font-weight: 700;
   color: var(--color-text);
 }
 
 .audio-card__writer {
-  margin: 0 0 0.5rem;
-  font-size: 0.9rem;
-  color: var(--color-accent-deep);
+  margin: 0 0 0.45rem;
+  font-size: 0.875rem;
+  color: var(--color-accent);
 }
 
 .audio-card__desc {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.925rem;
+  line-height: 1.5;
   color: var(--color-text-muted);
 }
 
-.audio-card__player {
+.audio-card__disclaimer {
+  margin: 0.75rem 0 0;
+  padding: 0.55rem 0.7rem;
+  border-left: 3px solid #c9896a;
+  background: rgba(201, 137, 106, 0.12);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.8125rem;
+  line-height: 1.45;
+  color: #e8c4b0;
+}
+
+.audio-player {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
   width: 100%;
-  height: 40px;
-  margin-top: 0.25rem;
+}
+
+.audio-player__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.audio-player__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0.55rem 0.95rem 0.55rem 0.75rem;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 999px;
+  background: var(--color-bg-elevated);
+  color: var(--color-text);
+  font-family: var(--font-primary);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.audio-player__toggle svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  flex-shrink: 0;
+}
+
+.audio-player__toggle:hover {
+  background: rgba(199, 178, 143, 0.12);
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.audio-player__toggle.is-playing {
+  background: var(--color-accent-deep);
+  border-color: var(--color-accent-deep);
+  color: var(--color-text);
+}
+
+.audio-player__toggle.is-playing:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg-deep);
+}
+
+.audio-player__toggle:focus-visible {
+  outline: 2px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+.audio-player__times {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+}
+
+.audio-player__range {
+  -webkit-appearance: none;
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 0.35rem;
+  margin: 0;
+  padding: 0;
+  border-radius: 999px;
+  background: rgba(199, 178, 143, 0.22);
+  cursor: pointer;
+}
+
+.audio-player__range:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.audio-player__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-bg-elevated);
+  background: var(--color-accent);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.audio-player__range::-moz-range-thumb {
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  border: 2px solid var(--color-bg-elevated);
+  background: var(--color-accent);
+  cursor: pointer;
+}
+
+.audio-player__range:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(199, 178, 143, 0.28);
+}
+
+.audio-card audio {
+  display: none;
 }
 
 @media (max-width: 540px) {
@@ -2024,8 +2159,9 @@ main:not(:has(.hero)):not(.section--configurator) {
   }
 
   .audio-card__cover {
-    width: 100%;
-    height: 160px;
+    width: min(100%, 12rem);
+    height: auto;
+    aspect-ratio: 1;
   }
 }
 

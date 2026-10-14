@@ -165,6 +165,11 @@ export const routeMeta = {
       'Conditions générales de vente, annulation et remboursement des prestations DJ Mika Private Events.',
     noindex: true,
   },
+  '/mix': {
+    title: 'Mix en écoute | DJ Mika Private Events',
+    description: 'Écoute libre de mix live réalisés par DJ Mika Private Events.',
+    noindex: true,
+  },
 };
 
 export function canonicalPath(path) {

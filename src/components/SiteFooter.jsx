@@ -28,6 +28,7 @@ const navGroups = [
       { to: '/prestations', label: 'Prestations' },
       { to: '/realisations', label: 'Réalisations' },
       { to: '/avis', label: 'Avis clients' },
+      { to: '/mix', label: 'Écouter des mix' },
       { to: '/a-propos', label: 'À propos' },
     ],
   },

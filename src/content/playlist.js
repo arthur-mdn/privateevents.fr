@@ -1,4 +1,4 @@
-/** @typedef {{ id: number; name: string; description: string; writer: string; img: string; src: string; mime: string }} PlaylistItem */
+/** @typedef {{ id: number; name: string; description: string; writer: string; img: string; src: string; mime: string; disclaimer?: string }} PlaylistItem */
 
 /** @type {PlaylistItem[]} */
 export const playlist = [
@@ -9,8 +9,10 @@ export const playlist = [
       'Un mix d’environ 30 minutes réalisé en live - rap français 2024. Écoute libre.',
     writer: 'DJ Mika - Private Events',
     img: '/elements/covers/private-events-mix-rap-2024.webp',
-    src: '/recordings/Mix_Rap_Francais_2024_DJ-MIKA_Private-Events.wav',
-    mime: 'audio/wav',
+    src: '/recordings/Mix_Rap_Francais_2024_DJ-MIKA_Private-Events.mp3',
+    mime: 'audio/mpeg',
+    disclaimer:
+      'Attention : ce mix contient des paroles vulgaires. Déconseillé aux oreilles sensibles et aux mineurs.',
   },
   {
     id: 1,
