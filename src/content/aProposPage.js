@@ -14,7 +14,7 @@ export const aProposProfile = {
   image: '/elements/photos/dj-mains-console-pioneer-exterieur.webp',
   imageAlt: 'Mains de DJ Mika sur une console Pioneer lors d’un événement en extérieur',
   bio:
-    'Les débuts remontent à 2010/2011 avec des soirées amateur et du karaoké, puis une évolution progressive vers le mix live. Environ huit ans de prestations avec une configuration professionnelle, et environ 50 événements durant 2025 - 2026. Les avis publiés correspondent à des retours de clients après prestation.',
+    'Les débuts remontent à 2010/2011 avec des soirées amateur et du karaoké, puis une évolution progressive vers le mix live. Environ huit ans de prestations avec une configuration professionnelle, et environ 50 événements sur la période 2025-2026. Les avis publiés correspondent à des retours de clients après prestation.',
 };
 
 export const aProposProofs = [
@@ -28,7 +28,7 @@ export const aProposProofs = [
   },
   {
     title: 'Environ 50 événements',
-    description: 'Durant 2025 - 2026 : mariages, anniversaires, soirées privées et événements corporate en Provence.',
+    description: 'Sur la période 2025-2026 : mariages, anniversaires, soirées privées et événements corporate en Provence.',
   },
   {
     title: 'Réseau de partenaires',
