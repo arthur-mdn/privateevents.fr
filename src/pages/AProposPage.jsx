@@ -1,0 +1,197 @@
+import { Link } from 'react-router-dom';
+import { PageMeta } from '../components/PageMeta.jsx';
+import { PageHero } from '../components/shared/PageHero.jsx';
+import { SiteFooter } from '../components/SiteFooter.jsx';
+import { SiteHeader } from '../components/SiteHeader.jsx';
+import {
+  aProposClubPartner,
+  aProposCta,
+  aProposHero,
+  aProposMethod,
+  aProposPartners,
+  aProposPresence,
+  aProposProfile,
+  aProposProofs,
+} from '../content/aProposPage.js';
+import { routeMeta, SITE_URL } from '../seo/siteMeta.js';
+
+const aProposJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name: 'À propos', item: `${SITE_URL}/a-propos` },
+      ],
+    },
+    {
+      '@type': 'Person',
+      name: 'Mika',
+      jobTitle: 'DJ événementiel',
+      worksFor: { '@id': `${SITE_URL}/#organisation` },
+      image: `${SITE_URL}/elements/photos/dj-mains-console-pioneer-exterieur.webp`,
+      description:
+        'Amateur dès 2010/2011, puis évolution vers le mix live et l’équipement professionnel. DJ, animation musicale et coordination de prestations partenaires en Provence / PACA.',
+    },
+  ],
+};
+
+export function AProposPage() {
+  return (
+    <>
+      <PageMeta path="/a-propos" {...routeMeta['/a-propos']} jsonLd={aProposJsonLd} />
+      <SiteHeader />
+      <main id="contenu-principal">
+        <PageHero {...aProposHero} />
+
+        <section className="section" aria-labelledby="apropos-profile-title">
+          <div className="about-profile">
+            <img
+              className="about-profile__img"
+              src={aProposProfile.image}
+              alt={aProposProfile.imageAlt}
+              width={480}
+              height={560}
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="about-profile__copy">
+              <h2 id="apropos-profile-title" className="heading-section">
+                {aProposProfile.name}
+              </h2>
+              <p className="about-profile__role">{aProposProfile.role}</p>
+              <p className="lead">{aProposProfile.bio}</p>
+            </div>
+          </div>
+        </section>
+
+        <section className="section" aria-labelledby="apropos-proofs-title">
+          <h2 id="apropos-proofs-title" className="heading-section">
+            Expérience &amp; approche
+          </h2>
+          <ul className="info-cards info-cards--two">
+            {aProposProofs.map((proof) => (
+              <li key={proof.title} className="info-card">
+                <h3 className="info-card__title">{proof.title}</h3>
+                <p className="info-card__desc">{proof.description}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="section section--process" aria-labelledby="apropos-method-title">
+          <h2 id="apropos-method-title" className="heading-section">
+            {aProposMethod.title}
+          </h2>
+          <p className="lead">{aProposMethod.lead}</p>
+          <ol className="process-steps">
+            {aProposMethod.steps.map((step) => (
+              <li key={step.step} className="process-step">
+                <span className="process-step__num" aria-hidden="true">
+                  {step.step}
+                </span>
+                <div className="process-step__body">
+                  <h3 className="process-step__title">{step.title}</h3>
+                  <p className="process-step__desc">{step.description}</p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="section" aria-labelledby="apropos-partners-title">
+          <h2 id="apropos-partners-title" className="heading-section">
+            {aProposPartners.title}
+          </h2>
+          <p className="lead">{aProposPartners.lead}</p>
+          <ul className="about-partners">
+            {aProposPartners.categories.map((category) => (
+              <li key={category}>{category}</li>
+            ))}
+          </ul>
+        </section>
+
+        <section className="section section--about-aside" aria-labelledby="apropos-club-title">
+          <div className="about-aside">
+            <div className="about-aside__block">
+              <p className="about-aside__eyebrow">{aProposClubPartner.eyebrow}</p>
+              <a
+                className="about-aside__partner"
+                href={aProposClubPartner.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {aProposClubPartner.logo ? (
+                  <img
+                    className="about-aside__logo"
+                    src={aProposClubPartner.logo}
+                    alt={aProposClubPartner.logoAlt || aProposClubPartner.name}
+                    width={72}
+                    height={72}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                ) : null}
+                <span className="about-aside__partner-copy">
+                  <span id="apropos-club-title" className="about-aside__title">
+                    {aProposClubPartner.name}
+                  </span>
+                  <span className="about-aside__text">{aProposClubPartner.description}</span>
+                </span>
+              </a>
+            </div>
+
+            <div className="about-aside__block about-aside__block--presence">
+              <p className="about-aside__eyebrow">{aProposPresence.label}</p>
+              <ul className="about-presence">
+                {aProposPresence.items.map((item) => (
+                  <li key={item.name}>
+                    <a
+                      className="about-presence__link"
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.logo ? (
+                        <img
+                          className="about-presence__logo"
+                          src={item.logo}
+                          alt={item.logoAlt || item.name}
+                          width={120}
+                          height={40}
+                          loading="lazy"
+                          decoding="async"
+                        />
+                      ) : (
+                        <span className="about-presence__name">{item.name}</span>
+                      )}
+                      {item.title ? (
+                        <span className="about-presence__title">{item.title}</span>
+                      ) : null}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className="section section--cta-banner" aria-labelledby="apropos-cta-title">
+          <div className="cta-banner">
+            <h2 id="apropos-cta-title" className="heading-section">
+              {aProposCta.title}
+            </h2>
+            <p className="lead">{aProposCta.lead}</p>
+            <Link className="btn btn--primary" to={aProposCta.href}>
+              {aProposCta.label}
+            </Link>
+          </div>
+        </section>
+      </main>
+      <SiteFooter />
+    </>
+  );
+}
+
+export default AProposPage;

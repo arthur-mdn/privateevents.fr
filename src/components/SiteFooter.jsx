@@ -1,10 +1,116 @@
+import { FaFacebook } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
+
+import { useCookieConsent } from '../context/CookieConsentContext.jsx';
+
+function CookieSettingsLink() {
+  const { openPreferences } = useCookieConsent();
+  return (
+    <button type="button" className="site-footer__cookie-btn" onClick={openPreferences}>
+      Gérer les cookies
+    </button>
+  );
+}
+
+const navGroups = [
+  {
+    title: 'Événements',
+    links: [
+      { to: '/mariage', label: 'Mariage' },
+      { to: '/anniversaire', label: 'Anniversaire' },
+      { to: '/soiree-privee', label: 'Soirée privée' },
+      { to: '/entreprise', label: 'Entreprise' },
+    ],
+  },
+  {
+    title: 'Private Events',
+    links: [
+      { to: '/prestations', label: 'Prestations' },
+      { to: '/realisations', label: 'Réalisations' },
+      { to: '/avis', label: 'Avis clients' },
+      { to: '/mix', label: 'Écouter des mix' },
+      { to: '/a-propos', label: 'À propos' },
+    ],
+  },
+];
+
 export function SiteFooter() {
   return (
     <footer className="site-footer">
-      <p className="site-footer__credit">
-        Site réalisé par{' '}
-        <a href="https://mondon.pro">Arthur Mondon</a>
-      </p>
+      <div className="site-footer__inner">
+        <div className="site-footer__brand">
+          <Link to="/">
+            <img src="/elements/logo.svg" alt="DJ Mika Private Events" width={98} height={48} loading="lazy" />
+          </Link>
+          <p className="site-footer__brand-name">DJ Mika Private Events</p>
+          <p className="site-footer__tagline">
+            DJ, sonorisation, éclairage et animations. Formule complète ou plug and play
+            selon le lieu.
+          </p>
+          <a
+            className="site-footer__social"
+            href="https://www.facebook.com/profile.php?id=61560919780375"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Page Facebook de DJ Mika Private Events"
+          >
+            <FaFacebook aria-hidden />
+          </a>
+        </div>
+        <nav className="site-footer__nav" aria-label="Liens du pied de page">
+          {navGroups.map((group) => (
+            <div key={group.title} className="site-footer__group">
+              <p className="site-footer__group-title">{group.title}</p>
+              <ul className="site-footer__links">
+                {group.links.map(({ to, label }) => (
+                  <li key={to}>
+                    <Link to={to}>{label}</Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </nav>
+        <div className="site-footer__contact">
+          <p className="site-footer__group-title">Contact</p>
+          <ul className="site-footer__links">
+            <li>
+              <a href="mailto:contact@privateevents.fr">contact@privateevents.fr</a>
+            </li>
+            <li>
+              <a href="tel:+33782737661">07 82 73 76 61</a>
+            </li>
+            <li>
+              <Link to="/mon-evenement">Construire mon événement</Link>
+            </li>
+          </ul>
+          <p className="site-footer__zone">
+            Montpellier - Lyon - Nice · Autres destinations sur demande
+          </p>
+        </div>
+      </div>
+      <div className="site-footer__legal">
+        <p className="site-footer__credit">
+          Réalisé avec ❤️ par{' '}
+          <a href="https://mondon.pro" target="_blank" rel="noopener noreferrer">
+            Arthur Mondon
+          </a>
+        </p>
+        <ul className="site-footer__legal-links">
+          <li>
+            <Link to="/mentions-legales">Mentions légales</Link>
+          </li>
+          <li>
+            <Link to="/conditions-generales">Conditions générales</Link>
+          </li>
+          <li>
+            <Link to="/politique-de-confidentialite">Politique de confidentialité</Link>
+          </li>
+          <li>
+            <CookieSettingsLink />
+          </li>
+        </ul>
+      </div>
     </footer>
   );
 }

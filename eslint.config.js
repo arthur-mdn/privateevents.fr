@@ -6,7 +6,7 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 
 export default [
   {
-    ignores: ['dist/**', 'node_modules/**'],
+    ignores: ['dist/**', 'node_modules/**', 'scripts/**'],
   },
   js.configs.recommended,
   react.configs.flat.recommended,
@@ -34,6 +34,12 @@ export default [
       ],
       'react/prop-types': 'off',
       'react/no-unescaped-entities': 'off',
+    },
+  },
+  {
+    files: ['vite.config.js'],
+    languageOptions: {
+      globals: globals.node,
     },
   },
 ];

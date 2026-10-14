@@ -1,0 +1,211 @@
+export const SITE_URL = 'https://privateevents.fr';
+export const SITE_NAME = 'DJ Mika Private Events';
+export const BRAND_SHORT = 'Mika Private Events';
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/elements/covers/og-private-events.jpg`;
+export const DEFAULT_OG_IMAGE_ALT =
+  'MKA Private Events : des soirées qui vous ressemblent, DJ et animations sur mesure en Provence / PACA';
+export const DEFAULT_OG_IMAGE_WIDTH = 1200;
+export const DEFAULT_OG_IMAGE_HEIGHT = 630;
+export const DEFAULT_OG_IMAGE_TYPE = 'image/jpeg';
+
+export const homeDescription =
+  'DJ Mika Private Events : DJ, sonorisation, éclairage et animations pour mariages, anniversaires, soirées privées et entreprises entre Montpellier, Lyon, Nice et en Provence.';
+
+export const homeTitle = 'DJ Mika Private Events | DJ & animation Montpellier, Lyon, Nice & Provence';
+
+export const homeFaqItems = [
+  {
+    question: 'Dans quelles zones intervient DJ Mika Private Events ?',
+    answer:
+      'Les prestations se déroulent principalement entre Montpellier, Lyon et Nice (Provence / PACA et Rhône-Alpes) : Vaucluse, Bouches-du-Rhône, Var et départements limitrophes, selon la date et le projet. Autres destinations sur demande.',
+  },
+  {
+    question: 'Le matériel son et lumière est-il inclus ?',
+    answer:
+      'Deux formules sont possibles : prestation complète avec DJ, sonorisation et éclairage fournis et installés, ou intervention plug and play sur une installation déjà présente. Le détail est précisé au devis.',
+  },
+  {
+    question: 'Comment obtenir un devis pour un mariage ou une soirée d’entreprise ?',
+    answer:
+      'Utilisez le configurateur sur privateevents.fr ou appelez le 07 82 73 76 61 avec la date, le lieu et le type d’événement. Chaque prestation fait l’objet d’un devis personnalisé.',
+  },
+  {
+    question: 'Peut-on combiner DJ et karaoké lors d’une même soirée ?',
+    answer:
+      'Oui : des créneaux karaoké, quiz ou blind test peuvent s’intégrer dans la programmation DJ pour varier les moments tout en gardant une ambiance cohérente.',
+  },
+];
+
+export const areaServed = [
+  { '@type': 'AdministrativeArea', name: "Provence-Alpes-Côte d'Azur" },
+  { '@type': 'AdministrativeArea', name: 'Auvergne-Rhône-Alpes' },
+  { '@type': 'AdministrativeArea', name: 'Occitanie' },
+  { '@type': 'AdministrativeArea', name: 'Vaucluse' },
+  { '@type': 'AdministrativeArea', name: 'Bouches-du-Rhône' },
+  { '@type': 'AdministrativeArea', name: 'Var' },
+  { '@type': 'AdministrativeArea', name: 'Hérault' },
+  { '@type': 'City', name: 'Montpellier' },
+  { '@type': 'City', name: 'Lyon' },
+  { '@type': 'City', name: 'Nice' },
+  { '@type': 'City', name: 'Avignon' },
+  { '@type': 'City', name: 'Marseille' },
+];
+
+export const homeJsonLd = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'ProfessionalService',
+      '@id': `${SITE_URL}/#organisation`,
+      name: 'DJ Mika Private Events',
+      alternateName: ['Mika Private Events', 'Private Events - DJ Mika'],
+      image: [DEFAULT_OG_IMAGE, `${SITE_URL}/elements/logo.svg`],
+      url: `${SITE_URL}/`,
+      telephone: '+33782737661',
+      email: 'contact@privateevents.fr',
+      description:
+        'DJ, animation musicale, sonorisation et éclairage pour événements privés, mariages et soirées d’entreprise entre Montpellier, Lyon, Nice et en Provence / PACA. Formule complète ou plug and play.',
+      priceRange: '€€',
+      areaServed,
+      serviceType: [
+        'Animation DJ',
+        'Sonorisation événementielle',
+        'Éclairage événementiel',
+        'Karaoké',
+        'Animations musicales',
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
+      url: `${SITE_URL}/`,
+      name: 'DJ Mika Private Events',
+      inLanguage: 'fr-FR',
+      publisher: { '@id': `${SITE_URL}/#organisation` },
+    },
+    {
+      '@type': 'FAQPage',
+      mainEntity: homeFaqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    },
+  ],
+};
+
+export const routeMeta = {
+  '/': {
+    title: homeTitle,
+    description: homeDescription,
+    ogTitle: homeTitle,
+    jsonLd: homeJsonLd,
+  },
+  '/mariage': {
+    title: 'DJ mariage en Provence et alentours | Mika Private Events',
+    description:
+      'DJ mariage entre Montpellier, Lyon, Nice et en Provence : préparation musicale, sonorisation, éclairage, animations et options partenaires pour votre cérémonie, cocktail et soirée.',
+  },
+  '/anniversaire': {
+    title: 'DJ anniversaire en Provence | Mika Private Events',
+    description:
+      'DJ et animations pour fêtes d’anniversaire en Provence : ambiance intergénérationnelle, karaoké, quiz, diaporama et options selon l’âge et les invités.',
+  },
+  '/soiree-privee': {
+    title: 'DJ soirée privée en Provence | Mika Private Events',
+    description:
+      'DJ soirée privée en Provence : villa, cocktail, pool party ou lieu déjà équipé. Formule complète ou plug and play selon votre configuration.',
+  },
+  '/entreprise': {
+    title: 'DJ soirée d’entreprise en Provence | Mika Private Events',
+    description:
+      'DJ et animation pour événements d’entreprise en Provence : sonorisation, prises de parole, ambiance, quiz, karaoké et prestations complémentaires.',
+  },
+  '/prestations': {
+    title: 'DJ, sonorisation, animations & effets | Mika Private Events',
+    description:
+      'DJ, sonorisation, éclairage, effets, karaoké, quiz et prestations partenaires coordonnées pour vos événements en Provence / PACA.',
+  },
+  '/realisations': {
+    title: 'Mariages, anniversaires & événements réalisés | Mika Private Events',
+    description:
+      'Mariages, anniversaires, soirées privées et événements corporate réalisés par DJ Mika Private Events en Provence et sur l’axe Montpellier - Lyon - Nice.',
+  },
+  '/avis': {
+    title: 'Avis clients | DJ Mika Private Events',
+    description:
+      'Avis de mariages, anniversaires, soirées privées et entreprises ayant confié leur événement à DJ Mika Private Events.',
+  },
+  '/a-propos': {
+    title: 'DJ Mika | À propos de Mika Private Events',
+    description:
+      'Amateur dès 2010/2011, Mika propose DJ, animation et coordination de partenaires en Provence / PACA.',
+  },
+  '/mon-evenement': {
+    title: 'Construire mon événement | Mika Private Events',
+    description:
+      'Décrivez votre projet : type d’événement, date, lieu, ambiance et prestations. Demande structurée, devis personnalisé, sans simulateur tarifaire.',
+  },
+  '/mentions-legales': {
+    title: 'Mentions légales | DJ Mika Private Events',
+    description: 'Mentions légales du site DJ Mika Private Events.',
+    noindex: true,
+  },
+  '/politique-de-confidentialite': {
+    title: 'Politique de confidentialité | DJ Mika Private Events',
+    description: 'Politique de confidentialité et traitement des données du site DJ Mika Private Events.',
+    noindex: true,
+  },
+  '/conditions-generales': {
+    title: 'Conditions générales de vente | DJ Mika Private Events',
+    description:
+      'Conditions générales de vente, annulation et remboursement des prestations DJ Mika Private Events.',
+    noindex: true,
+  },
+  '/mix': {
+    title: 'Écouter des mix | DJ Mika Private Events',
+    description: 'Écoute libre de mix live réalisés par DJ Mika Private Events.',
+    noindex: true,
+  },
+};
+
+export function canonicalPath(path) {
+  if (!path || path === '/') return '/';
+  const withoutQuery = path.split('?')[0].split('#')[0];
+  return withoutQuery.endsWith('/') && withoutQuery.length > 1
+    ? withoutQuery.slice(0, -1)
+    : withoutQuery;
+}
+
+export function buildCanonicalUrl(path) {
+  const clean = canonicalPath(path);
+  return clean === '/' ? `${SITE_URL}/` : `${SITE_URL}${clean}`;
+}
+
+export function buildLandingJsonLd(path, name, faq) {
+  const graph = [
+    {
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE_URL}/` },
+        { '@type': 'ListItem', position: 2, name, item: `${SITE_URL}${path}` },
+      ],
+    },
+  ];
+
+  if (faq?.length) {
+    graph.push({
+      '@type': 'FAQPage',
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: { '@type': 'Answer', text: item.answer },
+      })),
+    });
+  }
+
+  return { '@context': 'https://schema.org', '@graph': graph };
+}
