@@ -36,4 +36,10 @@ export default [
       'react/no-unescaped-entities': 'off',
     },
   },
+  {
+    files: ['vite.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ];
