@@ -10,12 +10,19 @@ function formatTime(seconds) {
   return `${mins}:${secs}`;
 }
 
+function readFiniteDuration(audio) {
+  const value = audio?.duration;
+  return Number.isFinite(value) && value > 0 ? value : 0;
+}
+
 function AudioPlayer({ record, isActive, onPlay }) {
   const audioRef = useRef(null);
   const progressId = useId();
   const [playing, setPlaying] = useState(false);
   const [current, setCurrent] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [seeking, setSeeking] = useState(false);
+  const [seekValue, setSeekValue] = useState(0);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -42,6 +49,19 @@ function AudioPlayer({ record, isActive, onPlay }) {
     audio.pause();
     setPlaying(false);
   }, [onPlay, record.id]);
+
+  const commitSeek = useCallback((next) => {
+    const audio = audioRef.current;
+    if (!audio || !Number.isFinite(next)) return;
+    const max = readFiniteDuration(audio) || duration;
+    const clamped = Math.min(Math.max(next, 0), max || next);
+    audio.currentTime = clamped;
+    setCurrent(clamped);
+    setSeekValue(clamped);
+  }, [duration]);
+
+  const displayTime = seeking ? seekValue : current;
+  const canSeek = duration > 0;
 
   return (
     <article className="audio-card">
@@ -79,7 +99,7 @@ function AudioPlayer({ record, isActive, onPlay }) {
             <span className="audio-player__toggle-label">{playing ? 'Pause' : 'Écouter'}</span>
           </button>
           <div className="audio-player__times" aria-hidden>
-            <span>{formatTime(current)}</span>
+            <span>{formatTime(displayTime)}</span>
             <span aria-hidden>·</span>
             <span>{formatTime(duration)}</span>
           </div>
@@ -95,14 +115,25 @@ function AudioPlayer({ record, isActive, onPlay }) {
           min={0}
           max={duration || 0}
           step={0.1}
-          value={current}
-          disabled={!duration}
+          value={canSeek ? displayTime : 0}
+          disabled={!canSeek}
+          onPointerDown={() => {
+            setSeeking(true);
+            setSeekValue(current);
+          }}
+          onPointerUp={(event) => {
+            commitSeek(Number(event.currentTarget.value));
+            setSeeking(false);
+          }}
+          onKeyUp={(event) => {
+            if (event.key === 'ArrowLeft' || event.key === 'ArrowRight' || event.key === 'Home' || event.key === 'End') {
+              commitSeek(Number(event.currentTarget.value));
+            }
+          }}
           onChange={(event) => {
             const next = Number(event.target.value);
-            const audio = audioRef.current;
-            if (!audio) return;
-            audio.currentTime = next;
-            setCurrent(next);
+            setSeekValue(next);
+            if (!seeking) commitSeek(next);
           }}
         />
       </div>
@@ -119,9 +150,22 @@ function AudioPlayer({ record, isActive, onPlay }) {
         onEnded={() => {
           setPlaying(false);
           setCurrent(0);
+          setSeekValue(0);
+          setSeeking(false);
         }}
-        onLoadedMetadata={(event) => setDuration(event.currentTarget.duration || 0)}
-        onTimeUpdate={(event) => setCurrent(event.currentTarget.currentTime || 0)}
+        onLoadedMetadata={(event) => {
+          setDuration(readFiniteDuration(event.currentTarget));
+        }}
+        onDurationChange={(event) => {
+          setDuration(readFiniteDuration(event.currentTarget));
+        }}
+        onTimeUpdate={(event) => {
+          if (seeking) return;
+          setCurrent(event.currentTarget.currentTime || 0);
+          if (!duration) {
+            setDuration(readFiniteDuration(event.currentTarget));
+          }
+        }}
       >
         <track kind="captions" />
       </audio>

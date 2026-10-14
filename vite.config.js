@@ -21,6 +21,54 @@ const RECORDINGS_MIME = {
   '.m4a': 'audio/mp4',
 }
 
+function sendRecordingFile(req, res, filePath) {
+  const { size } = statSync(filePath)
+  const contentType =
+    RECORDINGS_MIME[extname(filePath).toLowerCase()] || 'application/octet-stream'
+  const rangeHeader = req.headers.range
+
+  res.setHeader('Accept-Ranges', 'bytes')
+  res.setHeader('Content-Type', contentType)
+  res.setHeader('Cache-Control', 'no-cache')
+
+  if (!rangeHeader) {
+    res.statusCode = 200
+    res.setHeader('Content-Length', size)
+    createReadStream(filePath).pipe(res)
+    return
+  }
+
+  const match = /^bytes=(\d*)-(\d*)$/.exec(rangeHeader)
+  if (!match) {
+    res.statusCode = 416
+    res.setHeader('Content-Range', `bytes */${size}`)
+    res.end()
+    return
+  }
+
+  const start = match[1] ? Number.parseInt(match[1], 10) : 0
+  const end = match[2] ? Number.parseInt(match[2], 10) : size - 1
+
+  if (
+    Number.isNaN(start) ||
+    Number.isNaN(end) ||
+    start < 0 ||
+    end < start ||
+    start >= size
+  ) {
+    res.statusCode = 416
+    res.setHeader('Content-Range', `bytes */${size}`)
+    res.end()
+    return
+  }
+
+  const safeEnd = Math.min(end, size - 1)
+  res.statusCode = 206
+  res.setHeader('Content-Range', `bytes ${start}-${safeEnd}/${size}`)
+  res.setHeader('Content-Length', safeEnd - start + 1)
+  createReadStream(filePath, { start, end: safeEnd }).pipe(res)
+}
+
 function serveLocalRecordings() {
   const sourceDir = join(process.cwd(), 'recordings')
 
@@ -44,11 +92,7 @@ function serveLocalRecordings() {
           return
         }
 
-        res.setHeader(
-          'Content-Type',
-          RECORDINGS_MIME[extname(filePath).toLowerCase()] || 'application/octet-stream',
-        )
-        createReadStream(filePath).pipe(res)
+        sendRecordingFile(req, res, filePath)
       })
     },
   }
