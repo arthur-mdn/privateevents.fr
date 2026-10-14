@@ -12,10 +12,9 @@ export function MixPage() {
       <main id="contenu-principal" className="section section--audio-page">
         <article className="prose prose--measure audio-page">
           <p className="eyebrow">Écoute libre</p>
-          <h1 className="heading-section">Mix en écoute</h1>
+          <h1 className="heading-section">Écouter des mix</h1>
           <p className="lead audio-page__lead">
-            Quelques enregistrements live pour se faire une idée de l’ambiance. Cette page n’est pas
-            mise en avant dans le menu : elle reste accessible depuis le pied de page.
+            Quelques enregistrements live pour se faire une idée de l’ambiance.
           </p>
           <AudioShowcase />
         </article>

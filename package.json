@@ -8,10 +8,11 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-seo-files.mjs && vite build && node scripts/run-copy-recordings.mjs && node scripts/prerender.mjs",
-    "build:only": "node scripts/generate-seo-files.mjs && vite build && node scripts/run-copy-recordings.mjs",
+    "build": "node scripts/generate-seo-files.mjs && vite build && node scripts/run-copy-recordings.mjs && node scripts/run-clean-ds-store.mjs && node scripts/prerender.mjs",
+    "build:only": "node scripts/generate-seo-files.mjs && vite build && node scripts/run-copy-recordings.mjs && node scripts/run-clean-ds-store.mjs",
     "seo": "node scripts/generate-seo-files.mjs",
     "copy:recordings": "node scripts/run-copy-recordings.mjs",
+    "clean:dsstore": "node scripts/run-clean-ds-store.mjs",
     "prerender": "node scripts/prerender.mjs",
     "lint": "eslint . --max-warnings 0",
     "preview": "vite preview"

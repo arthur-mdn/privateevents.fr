@@ -2,6 +2,7 @@ import { createReadStream, existsSync, statSync } from 'node:fs'
 import { extname, join } from 'node:path'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { removeDsStoreFiles } from './scripts/clean-ds-store.mjs'
 import {
   DEFAULT_OG_IMAGE,
   DEFAULT_OG_IMAGE_ALT,
@@ -98,6 +99,20 @@ function serveLocalRecordings() {
   }
 }
 
+function stripDsStoreFromDist() {
+  return {
+    name: 'strip-ds-store-from-dist',
+    apply: 'build',
+    closeBundle() {
+      const outDir = join(process.cwd(), 'dist')
+      const removed = removeDsStoreFiles(outDir)
+      if (removed > 0) {
+        console.log(`Removed ${removed} .DS_Store file(s) from dist`)
+      }
+    },
+  }
+}
+
 function escapeHtmlAttr(value) {
   return String(value)
     .replace(/&/g, '&amp;')
@@ -190,7 +205,12 @@ function injectHomeSeoFromSiteMeta() {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), injectHomeSeoFromSiteMeta(), serveLocalRecordings()],
+  plugins: [
+    react(),
+    injectHomeSeoFromSiteMeta(),
+    serveLocalRecordings(),
+    stripDsStoreFromDist(),
+  ],
   server: {
     fs: {
       allow: ['.', 'recordings'],
