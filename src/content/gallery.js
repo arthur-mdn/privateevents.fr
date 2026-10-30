@@ -1,6 +1,15 @@
 /** @type {GalleryItem[]} */
 export const galleryItems = [
   {
+    id: 'anniversaire-40-ans-emilie-vitrolles',
+    src: '/elements/gallery/anniversaire-40-ans-emilie-vitrolles.webp',
+    alt: 'Animation DJ et karaoké pour l’anniversaire 40 ans d’Émilie à Vitrolles',
+    caption: 'Anniversaire 40 ans Émilie - Vitrolles',
+    orientation: 'landscape',
+    width: 1600,
+    height: 1200,
+  },
+  {
     id: 'anniversaire-18-ans-alicya-genas',
     src: '/elements/gallery/anniversaire-18-ans-alicya-genas.webp',
     alt: 'Après-midi dansante pour l’anniversaire 18 ans d’Alicya à Genas, avec étincelles froides dorées',

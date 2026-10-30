@@ -3,6 +3,20 @@ import { testimonials } from './testimonials.js';
 
 const realisationProjectsUnsorted = [
   {
+    id: 'anniversaire-40-emilie-vitrolles-2026',
+    title: 'Anniversaire 40 ans Émilie',
+    type: 'Anniversaire',
+    location: 'Vitrolles, Bouches-du-Rhône',
+    date: '2026-10-24',
+    dateLabel: '24 octobre 2026',
+    brief:
+      'Anniversaire réunissant environ 60 personnes à Vitrolles : animation DJ calée sur les goûts des hôtes, avec karaoké très apprécié des invités et des enfants.',
+    highlight: 'Karaoké familial et playlist respectée, sur recommandation.',
+    prestations: ['DJ', 'Karaoké', 'Animation soirée'],
+    imageIds: ['anniversaire-40-ans-emilie-vitrolles'],
+    testimonialId: '2026-10-24-emilie-vitrolles',
+  },
+  {
     id: 'anniversaire-18-alicya-genas-2026',
     title: 'Anniversaire 18 ans Alicya',
     type: 'Anniversaire',
