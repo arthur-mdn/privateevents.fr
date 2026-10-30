@@ -1,6 +1,5 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
 
@@ -9,8 +8,6 @@ export default [
     ignores: ['dist/**', 'node_modules/**', 'scripts/**'],
   },
   js.configs.recommended,
-  react.configs.flat.recommended,
-  react.configs.flat['jsx-runtime'],
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -21,7 +18,6 @@ export default [
         sourceType: 'module',
       },
     },
-    settings: { react: { version: 'detect' } },
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
@@ -30,10 +26,8 @@ export default [
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        { allowConstantExport: true },
+        { allowConstantExport: true, allowExportNames: ['useCookieConsent'] },
       ],
-      'react/prop-types': 'off',
-      'react/no-unescaped-entities': 'off',
     },
   },
   {

@@ -54,10 +54,11 @@ function EventsDropdown({ onNavigate }) {
   const isEventActive = eventLinks.some((link) => location.pathname === link.to);
 
   const close = useCallback(() => setOpen(false), []);
-
-  useEffect(() => {
-    close();
-  }, [location.pathname, close]);
+  const [menuPath, setMenuPath] = useState(location.pathname);
+  if (location.pathname !== menuPath) {
+    setMenuPath(location.pathname);
+    setOpen(false);
+  }
 
   const focusItem = useCallback((index) => {
     const items = menuRef.current?.querySelectorAll('a[href]');
@@ -228,9 +229,11 @@ export function SiteHeader() {
     setMenuOpen(true);
   }, []);
 
-  useEffect(() => {
-    closeMenu();
-  }, [location.pathname, closeMenu]);
+  const [menuPath, setMenuPath] = useState(location.pathname);
+  if (location.pathname !== menuPath) {
+    setMenuPath(location.pathname);
+    setMenuOpen(false);
+  }
 
   useEffect(() => {
     if (!menuOpen) return;

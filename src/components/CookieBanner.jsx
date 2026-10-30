@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useCookieConsent } from '../context/CookieConsentContext.jsx';
 import { cookieCategories } from '../seo/cookieConsent.js';
 
-function PreferencesPanel({ open, onClose, onSave, initial }) {
+function PreferencesPanel({ onClose, onSave, initial }) {
   const titleId = useId();
   const [draft, setDraft] = useState({
     analytics: initial.analytics,
@@ -11,15 +11,6 @@ function PreferencesPanel({ open, onClose, onSave, initial }) {
   });
 
   useEffect(() => {
-    if (!open) return;
-    setDraft({
-      analytics: initial.analytics,
-      media: initial.media,
-    });
-  }, [open, initial.analytics, initial.media]);
-
-  useEffect(() => {
-    if (!open) return;
     const onKeyDown = (event) => {
       if (event.key === 'Escape') onClose();
     };
@@ -30,9 +21,7 @@ function PreferencesPanel({ open, onClose, onSave, initial }) {
       document.body.style.overflow = previousOverflow;
       document.removeEventListener('keydown', onKeyDown);
     };
-  }, [open, onClose]);
-
-  if (!open) return null;
+  }, [onClose]);
 
   return (
     <div className="cookie-prefs" role="presentation">
@@ -139,12 +128,14 @@ export function CookieBanner() {
         </div>
       ) : null}
 
-      <PreferencesPanel
-        open={prefsOpen}
-        onClose={closePreferences}
-        onSave={savePreferences}
-        initial={consent}
-      />
+      {prefsOpen ? (
+        <PreferencesPanel
+          key={consent.updatedAt ?? 'undecided'}
+          onClose={closePreferences}
+          onSave={savePreferences}
+          initial={consent}
+        />
+      ) : null}
     </>
   );
 }
