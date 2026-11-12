@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaChevronDown, FaChevronUp } from 'react-icons/fa6';
+import { FaChevronDown, FaChevronUp, FaCircleInfo } from 'react-icons/fa6';
 import { PageMeta } from '../components/PageMeta.jsx';
 import { PageHero } from '../components/shared/PageHero.jsx';
 import { PhotoCarousel } from '../components/shared/PhotoCarousel.jsx';
@@ -165,6 +165,23 @@ export function AvisPage() {
           titleId="avis-hero-title"
           image="/elements/gallery/anniversaire-30-ans-canelle-marseille-plein-air.webp"
         />
+
+        <section className="section section--tight" aria-labelledby="avis-authenticite-title">
+          <aside className="info-note" role="note" aria-labelledby="avis-authenticite-title">
+            <FaCircleInfo className="info-note__icon" aria-hidden />
+            <div className="info-note__body">
+              <h2 id="avis-authenticite-title" className="info-note__title">
+                Avis authentiques
+              </h2>
+              <p className="info-note__text">
+                Tous les avis présentés sur cette page sont authentiques. Ils ont été écrits par de
+                vrais clients après leur événement, via message, e-mail ou des plateformes comme
+                Bark. Aucun témoignage n&apos;est inventé, modifié pour enjoliver le propos, ni
+                rémunéré.
+              </p>
+            </div>
+          </aside>
+        </section>
 
         {grouped.map((group) =>
           group.items.length > 0 ? (

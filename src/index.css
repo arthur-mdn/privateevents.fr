@@ -945,6 +945,7 @@ main:not(:has(.hero)):not(.section--configurator) {
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
+  background-color: var(--color-bg-deep);
 }
 
 .hero__media {
@@ -960,17 +961,18 @@ main:not(:has(.hero)):not(.section--configurator) {
 .hero__overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background:
     linear-gradient(
       to bottom,
-      rgba(16, 12, 8, 0.55) 0%,
-      rgba(16, 12, 8, 0.72) 42%,
-      rgba(16, 12, 8, 0.78) 68%,
-      var(--color-bg) 100%
+      rgba(16, 12, 8, 0.52) 0%,
+      rgba(16, 12, 8, 0.58) 45%,
+      rgba(16, 12, 8, 0.82) 78%,
+      var(--color-bg-deep) 100%
     ),
     radial-gradient(
       ellipse 70% 55% at 50% 48%,
-      rgba(16, 12, 8, 0.45) 0%,
+      rgba(16, 12, 8, 0.3) 0%,
       transparent 70%
     );
   pointer-events: none;
@@ -978,7 +980,7 @@ main:not(:has(.hero)):not(.section--configurator) {
 
 .hero__inner {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: 100%;
 }
 
@@ -2808,38 +2810,82 @@ a.testimonial-card__source:hover {
 }
 
 .hero--mini {
+  --hero-fade-size: clamp(3.5rem, 9vw, 5.5rem);
   min-height: 0;
   justify-content: center;
   background-position: center 40%;
+  padding-bottom: var(--hero-fade-size);
 }
 
 .hero--mini-solid {
   background-color: var(--color-bg-elevated);
   background-image: none;
   border-bottom: 1px solid var(--color-border);
+  padding-bottom: 0;
+}
+
+.hero--mini .hero__media {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: auto;
+  width: 100%;
+  height: calc(100% - var(--hero-fade-size));
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 50%,
+    rgba(0, 0, 0, 0.4) 78%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    #000 0%,
+    #000 50%,
+    rgba(0, 0, 0, 0.4) 78%,
+    transparent 100%
+  );
 }
 
 .hero--mini .hero__overlay {
-  background:
-    linear-gradient(
-      to bottom,
-      rgba(16, 12, 8, 0.58) 0%,
-      rgba(16, 12, 8, 0.78) 55%,
-      var(--color-bg) 100%
-    ),
-    radial-gradient(
-      ellipse 75% 60% at 50% 45%,
-      rgba(16, 12, 8, 0.4) 0%,
-      transparent 72%
-    );
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(16, 12, 8, 0.45) 0%,
+    rgba(16, 12, 8, 0.55) 45%,
+    rgba(16, 12, 8, 0.78) 72%,
+    var(--color-bg-deep) 100%
+  );
+}
+
+.hero--mini::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--hero-fade-size);
+  background: var(--color-bg-deep);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero--mini-solid .hero__overlay {
   background: linear-gradient(
     to bottom,
     rgba(16, 12, 8, 0.15) 0%,
-    var(--color-bg) 100%
+    var(--color-bg-deep) 100%
   );
+}
+
+.hero--mini-solid .hero__media {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  -webkit-mask-image: none;
+  mask-image: none;
 }
 
 .section--hero-mini {
@@ -2895,6 +2941,41 @@ a.testimonial-card__source:hover {
   margin: 0;
   color: var(--color-text-muted);
   font-size: 0.975rem;
+}
+
+.info-note {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated);
+}
+
+.info-note__icon {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+  font-size: 1.15rem;
+  color: var(--color-accent);
+}
+
+.info-note__body {
+  min-width: 0;
+}
+
+.info-note__title {
+  margin: 0 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.info-note__text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-muted);
 }
 
 .moment-grid {
