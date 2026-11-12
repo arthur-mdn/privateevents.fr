@@ -1,5 +1,16 @@
 const testimonialsUnsorted = [
   {
+    id: '2026-10-31-faustine',
+    quote:
+      "Nous avons fait appel à DJ Mika pour l'anniversaire de notre fille at nous ne pouvons que le recommander !\nUne prestation vraiment au top du début à la fin. DJ Mika a su être à l'ecoute, s'adapter parfaitement à nos envies et à celles de nos invités. Tout le monde a passé un excellent noment, et l'ambiance étais au rendez-vous jusqu'au bout !\nAu-dela de son professionnalisme, nous avons particulièrement apprécie sa gentillesse, sa disponiblité et son implication.\nUn grand merci à lui d'avoir contribué à rendre cette soirée encore plus belle et mémorable pour notre fille et pour nous tous.\nNous le recommandons les yeux fermés ! Encore merci DJ Mika !\nN'hésitez pas !",
+    author: 'Parents de Faustine',
+    context: 'Anniversaire 20 ans - Saint-Pantaléon',
+    dateISO: '2026-10-31',
+    rating: 5,
+    source: 'Message reçu après l’événement',
+    realisationId: 'anniversaire-20-faustine-saint-pantaleon-2026',
+  },
+  {
     id: '2026-10-24-emilie-vitrolles',
     quote:
       "Nous avons fait appel à Michael sur recommandation pour animer notre soirée d'anniversaire réunissant 60 personnes, et nous ne regrettons absolument pas notre choix :\nDès les premiers échanges, Michael s'est montré très à l'écoute et soucieux de connaître nos goûts et nos envies afin d'adapter au mieux sa prestation. Il a partaitement respecté nos choix musicaux et assure une super animation, avec notamment la mise en place d'un karaoké qui a rencontré un beau succès auprès de nos invités et des enfants !\nMichael est très bien équipé, professionnel, ponctuel, gentil et d'une grande patience, y compris avec les enfants.\nNos invités ont eux aussi passé un excellent moment ! Certains ont meme été séduits par sa prestation au point de lui demander directement ses coordonnées. C'est certainement le meilleur témoianage de la qualité de son travail !\nUn grand merci à Michael pour sa disponibilité, son professionnalisme et sa bonne humeur. Il a largement contribué à la réussite de notre soirée.\nNous le recommandons sans la moindre hésitation. Vous pouvez lui faire confiance les yeux fermés !",

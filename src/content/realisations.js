@@ -3,6 +3,19 @@ import { testimonials } from './testimonials.js';
 
 const realisationProjectsUnsorted = [
   {
+    id: 'anniversaire-20-faustine-saint-pantaleon-2026',
+    title: 'Anniversaire 20 ans Faustine',
+    type: 'Anniversaire',
+    location: 'Saint-Pantaléon, Vaucluse',
+    date: '2026-10-31',
+    dateLabel: '31 octobre 2026',
+    brief:
+      'Anniversaire 20 ans de Faustine à Saint-Pantaléon : animation DJ calée sur les envies de la famille et des invités, jusqu’à la fin de soirée.',
+    prestations: ['DJ', 'Animation soirée'],
+    imageIds: ['anniversaire-20-ans-faustine-saint-pantaleon'],
+    testimonialId: '2026-10-31-faustine',
+  },
+  {
     id: 'anniversaire-40-emilie-vitrolles-2026',
     title: 'Anniversaire 40 ans Émilie',
     type: 'Anniversaire',

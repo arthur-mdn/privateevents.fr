@@ -1,6 +1,15 @@
 /** @type {GalleryItem[]} */
 export const galleryItems = [
   {
+    id: 'anniversaire-20-ans-faustine-saint-pantaleon',
+    src: '/elements/gallery/anniversaire-20-ans-faustine-saint-pantaleon.webp',
+    alt: 'Animation DJ pour l’anniversaire 20 ans de Faustine à Saint-Pantaléon',
+    caption: 'Anniversaire 20 ans Faustine - Saint-Pantaléon',
+    orientation: 'landscape',
+    width: 1600,
+    height: 1200,
+  },
+  {
     id: 'anniversaire-40-ans-emilie-vitrolles',
     src: '/elements/gallery/anniversaire-40-ans-emilie-vitrolles.webp',
     alt: 'Animation DJ et karaoké pour l’anniversaire 40 ans d’Émilie à Vitrolles',
