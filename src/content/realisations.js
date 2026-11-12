@@ -26,7 +26,10 @@ const realisationProjectsUnsorted = [
       'Anniversaire réunissant environ 60 personnes à Vitrolles : animation DJ calée sur les goûts des hôtes, avec karaoké très apprécié des invités et des enfants.',
     highlight: 'Karaoké familial et playlist respectée, sur recommandation.',
     prestations: ['DJ', 'Karaoké', 'Animation soirée'],
-    imageIds: ['anniversaire-40-ans-emilie-vitrolles'],
+    imageIds: [
+      'anniversaire-40-ans-emilie-vitrolles',
+      'anniversaire-40-ans-emilie-vitrolles-soiree',
+    ],
     testimonialId: '2026-10-24-emilie-vitrolles',
   },
   {

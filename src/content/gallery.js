@@ -19,6 +19,15 @@ export const galleryItems = [
     height: 1200,
   },
   {
+    id: 'anniversaire-40-ans-emilie-vitrolles-soiree',
+    src: '/elements/gallery/anniversaire-40-ans-emilie-vitrolles-soiree.webp',
+    alt: 'Salle décorée pour l’anniversaire 40 ans d’Émilie à Vitrolles, avec écran DJ, bar et chiffres lumineux',
+    caption: 'Anniversaire 40 ans Émilie - Vitrolles',
+    orientation: 'landscape',
+    width: 1600,
+    height: 1070,
+  },
+  {
     id: 'anniversaire-18-ans-alicya-genas',
     src: '/elements/gallery/anniversaire-18-ans-alicya-genas.webp',
     alt: 'Après-midi dansante pour l’anniversaire 18 ans d’Alicya à Genas, avec étincelles froides dorées',
